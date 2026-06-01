@@ -136,6 +136,16 @@ const THEME_STORAGE_KEY = 'crm_ui_theme';
 const DEFAULT_THEME = 'light';
 const DATASETS_STORAGE_KEY = 'crm_datasets_v2';
 const LEGACY_DATASET_STORAGE_KEYS = ['crm_datasets_v1'];
+let lastSyncedDatasetsSignature = '';
+const REMOTE_CONFIG = (typeof window !== 'undefined' && window.CRM_REMOTE) ? window.CRM_REMOTE : {};
+const SUPABASE_URL = String(REMOTE_CONFIG.supabaseUrl || '').trim();
+const SUPABASE_ANON_KEY = String(REMOTE_CONFIG.supabaseAnonKey || '').trim();
+const SUPABASE_TABLE = String(REMOTE_CONFIG.supabaseTable || 'crm_state').trim();
+const SUPABASE_ROW_ID = String(REMOTE_CONFIG.supabaseRowId || 'main').trim();
+
+function hasSupabaseFrontendConfig() {
+    return !!SUPABASE_URL && !!SUPABASE_ANON_KEY;
+}
 
 function getSavedTheme() {
     const saved = localStorage.getItem(THEME_STORAGE_KEY);
@@ -577,11 +587,36 @@ function wireDatasetAutoPersist() {
     });
 }
 
+function getDatasetsSignature() {
+    try {
+        return JSON.stringify(DATASETS);
+    } catch (err) {
+        return '';
+    }
+}
+
 async function loadDatasetsFromApi() {
     try {
-        const res = await fetch('/api/data', { cache: 'no-store' });
-        if (!res.ok) throw new Error(`API data failed: ${res.status}`);
-        const remote = await res.json();
+        let remote;
+        if (hasSupabaseFrontendConfig()) {
+            const url = `${SUPABASE_URL}/rest/v1/${SUPABASE_TABLE}?id=eq.${encodeURIComponent(SUPABASE_ROW_ID)}&select=payload`;
+            const res = await fetch(url, {
+                method: 'GET',
+                headers: {
+                    apikey: SUPABASE_ANON_KEY,
+                    Authorization: `Bearer ${SUPABASE_ANON_KEY}`
+                },
+                cache: 'no-store'
+            });
+            if (!res.ok) throw new Error(`Supabase data failed: ${res.status}`);
+            const rows = await res.json();
+            remote = Array.isArray(rows) && rows.length && rows[0].payload ? rows[0].payload : null;
+            if (!remote) return false;
+        } else {
+            const res = await fetch('/api/data', { cache: 'no-store' });
+            if (!res.ok) throw new Error(`API data failed: ${res.status}`);
+            remote = await res.json();
+        }
         Object.keys(DATASETS).forEach(key => delete DATASETS[key]);
         Object.assign(DATASETS, remote);
         if (remote.segnalazioni) segnalazioni.splice(0, segnalazioni.length, ...remote.segnalazioni);
@@ -596,10 +631,43 @@ async function loadDatasetsFromApi() {
         if (remote.prodotti) prodotti.splice(0, prodotti.length, ...remote.prodotti);
         if (remote.distintaBase) distintaBase.splice(0, distintaBase.length, ...remote.distintaBase);
         if (remote.magazzino) magazzino.splice(0, magazzino.length, ...remote.magazzino);
+        lastSyncedDatasetsSignature = getDatasetsSignature();
         return true;
     } catch (err) {
         console.warn('Uso dataset locali di fallback:', err);
         return false;
+    }
+}
+
+async function saveDatasetsToApiIfChanged() {
+    try {
+        const currentSignature = getDatasetsSignature();
+        if (!currentSignature || currentSignature === lastSyncedDatasetsSignature) return;
+        if (hasSupabaseFrontendConfig()) {
+            const url = `${SUPABASE_URL}/rest/v1/${SUPABASE_TABLE}?on_conflict=id`;
+            const body = JSON.stringify([{ id: SUPABASE_ROW_ID, payload: JSON.parse(currentSignature) }]);
+            const res = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    apikey: SUPABASE_ANON_KEY,
+                    Authorization: `Bearer ${SUPABASE_ANON_KEY}`,
+                    Prefer: 'resolution=merge-duplicates,return=minimal'
+                },
+                body
+            });
+            if (!res.ok) throw new Error(`Supabase save failed: ${res.status}`);
+        } else {
+            const res = await fetch('/api/data', {
+                method: 'PUT',
+                headers: { 'Content-Type': 'application/json' },
+                body: currentSignature
+            });
+            if (!res.ok) throw new Error(`API save failed: ${res.status}`);
+        }
+        lastSyncedDatasetsSignature = currentSignature;
+    } catch (err) {
+        console.warn('Sync dataset verso API fallito:', err);
     }
 }
 
@@ -1673,10 +1741,10 @@ function layoutRadialMenu() {
 document.addEventListener('DOMContentLoaded', async () => {
     applyTheme(getSavedTheme());
     clearLegacyDatasetsFromLocal();
-    await loadDatasetsFromApi();
+    const loadedFromApi = await loadDatasetsFromApi();
     wireDatasetAutoPersist();
-    const restoredFromLocal = restoreDatasetsFromLocal();
-    if (!restoredFromLocal) {
+    const restoredFromLocal = loadedFromApi ? false : restoreDatasetsFromLocal();
+    if (!loadedFromApi && !restoredFromLocal) {
         saveDatasetsToLocal();
     }
     initSidebarState();
@@ -1686,7 +1754,10 @@ document.addEventListener('DOMContentLoaded', async () => {
     bindTopNavEvents();
     initRadialHoverEffects(); // Inizializza gli effetti hover sul menu radiale
     cambiaPagina('segnalazioni'); // Avvia sulla prima pagina delle Segnalazioni
-    setInterval(saveDatasetsToLocal, 2000);
+    setInterval(() => {
+        saveDatasetsToLocal();
+        saveDatasetsToApiIfChanged();
+    }, 2500);
     window.addEventListener('beforeunload', saveDatasetsToLocal);
     document.addEventListener('click', (event) => {
         if (!event.target.closest('.app-sidebar')) {

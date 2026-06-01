@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>PROD — CRM Dashboard</title>
+    <meta name="theme-color" content="#f8fafc">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="style.css?v=crm-redesign-20">
+    <script>
+        // Cattura e mostra gli errori JavaScript a schermo per facilitare il debug
+        window.addEventListener('error', function(e) {
+            var errDiv = document.getElementById('debug-error-console');
+            if (!errDiv) {
+                errDiv = document.createElement('div');
+                errDiv.id = 'debug-error-console';
+                errDiv.style.position = 'fixed';
+                errDiv.style.top = '0';
+                errDiv.style.left = '0';
+                errDiv.style.width = '100%';
+                errDiv.style.background = '#ef4444';
+                errDiv.style.color = '#ffffff';
+                errDiv.style.padding = '16px';
+                errDiv.style.zIndex = '999999';
+                errDiv.style.fontFamily = 'monospace';
+                errDiv.style.fontSize = '12px';
+                errDiv.style.whiteSpace = 'pre-wrap';
+                errDiv.style.boxShadow = '0 4px 12px rgba(0,0,0,0.15)';
+                document.body.insertBefore(errDiv, document.body.firstChild);
+            }
+            errDiv.innerText += 'JS Error: ' + e.message + ' in ' + e.filename + ':' + e.lineno + '
+' + (e.error ? e.error.stack : '') + '
+
+';
+        });
+    </script>
+    <script src="script.js?v=crm-redesign-20" defer></script>
+</head>
+<body>
+    <!-- OVERLAY BLOCCO ORIENTAMENTO (Landscape su smartphone) -->
+    <div id="rotate-overlay">
+        <i class="fas fa-mobile-alt"></i>
+        <p>Ruota il dispositivo<br>per usare l'app</p>
+    </div>
+
+    <aside class="app-sidebar" id="app-sidebar" aria-label="Navigazione principale CRM">
+        <div class="app-sidebar-top">
+            <button class="app-sidebar-brand" type="button" onclick="cambiaPagina('segnalazioni')" title="Dashboard">
+                <i class="fas fa-bolt"></i>
+            </button>
+            <button class="app-sidebar-item active" data-sidebar-page="segnalazioni" type="button" onclick="cambiaPagina('segnalazioni')" title="Dashboard">
+                <i class="fas fa-table-columns"></i>
+            </button>
+            <button class="app-sidebar-item" data-sidebar-page="clienti" type="button" onclick="cambiaPagina('clienti')" title="Clienti e Lead">
+                <i class="fas fa-user-group"></i>
+            </button>
+            <button class="app-sidebar-item" data-sidebar-group="preventivi" type="button" onclick="toggleSidebarGroup('preventivi')" title="Preventivi">
+                <i class="fas fa-file-invoice-dollar"></i>
+            </button>
+            <button class="app-sidebar-item" data-sidebar-group="ordini" type="button" onclick="toggleSidebarGroup('ordini')" title="Ordini">
+                <i class="fas fa-cart-shopping"></i>
+            </button>
+            <button class="app-sidebar-item" data-sidebar-group="ddt" type="button" onclick="toggleSidebarGroup('ddt')" title="DDT">
+                <i class="fas fa-truck-fast"></i>
+            </button>
+            <button class="app-sidebar-item" data-sidebar-group="catalogo" type="button" onclick="toggleSidebarGroup('catalogo')" title="Catalogo">
+                <i class="fas fa-boxes-stacked"></i>
+            </button>
+        </div>
+        <div class="app-sidebar-bottom">
+            <button class="app-sidebar-item" data-sidebar-page="impostazioni" type="button" onclick="cambiaPagina('impostazioni')" title="Impostazioni">
+                <i class="fas fa-gear"></i>
+            </button>
+        </div>
+        <div class="app-sidebar-submenu" id="app-sidebar-submenu"></div>
+    </aside>
+
+    <!-- TOP BAR FLOTTANTE (Desktop & Tablet) -->
+    <div class="top-float-bar" id="top-float-bar">
+        <div class="top-brand-card" id="top-brand-card">
+            <button class="top-hamburger-btn" id="top-hamburger-btn" onclick="handleTopHeaderMenuAction()" title="Mostra/Nascondi sezioni menu" aria-label="Mostra o nascondi sezioni menu">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+            <button class="top-brand-home-btn" onclick="cambiaPagina('segnalazioni')" title="Home">
+                <div class="sidebar-brand-icon">
+                    <span style="font-size: 20px;">💡</span>
+                </div>
+                <div class="sidebar-brand-text">
+                    <span class="sidebar-brand-name">PROD <span style="font-size: 11px; font-weight: 800; color: #64748b; letter-spacing: 0.05em; margin-left: 2px;">CRM</span></span>
+                </div>
+            </button>
+        </div>
+        <div class="top-search-card">
+            <i class="fas fa-search top-search-icon" aria-hidden="true"></i>
+            <input type="text" id="universal-search" class="top-search-input" placeholder="Cerca in tutte le tabelle..." aria-label="Ricerca globale" oninput="filtraUniversale()">
+        </div>
+        <div id="top-nav-menu" aria-hidden="true"></div>
+    </div>
+
+    <!-- COMMAND HUB: PREMIUM FLOATING MENU -->
+    <div class="command-hub-container" id="command-hub">
+        <!-- Floating Hub Button -->
+        <button type="button" class="hub-trigger" onclick="toggleRadialMenu()" title="Hub di Navigazione" aria-label="Apri menu CRM" aria-expanded="false" aria-controls="radial-nav-ring">
+            <div class="hub-trigger-inner">
+                <span class="hub-icon" aria-hidden="true"><i class="fas fa-grip"></i></span>
+                <span class="hub-close-icon"><i class="fas fa-times" aria-hidden="true"></i></span>
+            </div>
+            <div class="hub-glow"></div>
+        </button>
+
+        <!-- Command Navigation Panel -->
+        <div class="radial-nav-ring" id="radial-nav-ring" aria-hidden="true">
+            <div class="radial-menu-panel" id="radial-menu-panel" role="navigation" aria-label="Menu CRM"></div>
+        </div>
+    </div>
+
+    <!-- CONTENT AREA -->
+    <div class="main-content">
+        <!-- TOPBAR MOBILE -->
+        <div class="mobile-topbar">
+            <div class="mobile-topbar-row">
+                <div class="mobile-topbar-copy">
+                    <h1 id="titolo-pagina">Segnalazioni</h1>
+                </div>
+                <div class="mobile-topbar-actions">
+                    <button type="button" class="mobile-header-action" id="btn-mobile-search-toggle" onclick="toggleMobileSearch()" title="Cerca">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    <button type="button" class="mobile-header-action mobile-header-action-primary" onclick="apriModalGenericCrea()" title="Aggiungi">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <button type="button" class="mobile-header-action mobile-header-action-menu" onclick="toggleSidebar()" aria-label="Apri menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="mobile-topbar-search-panel" id="mobile-search-panel">
+                <div class="mobile-search-shell">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                    <input type="text" id="mobile-search" placeholder="Cerca..." oninput="filtraUniversale()">
+                    <button type="button" class="mobile-search-close" onclick="chiudiMobileSearch()" aria-label="Chiudi ricerca">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- CONTENITORE DATI DINAMICO -->
+        <div id="contenitore-dati" class="fade-in">
+            <!-- Rendered by script.js -->
+        </div>
+    </div>
+
+    <!-- MODALE GENERICA CRUD (POPOLATA DALLA CONFIGURAZIONE) -->
+    <div id="modal-generic" class="modal-overlay" onclick="if(event.target===this) chiudiModalGeneric()">
+        <div class="modal-content">
+            <button type="button" class="modal-close-x" onclick="chiudiModalGeneric()" aria-label="Chiudi">&times;</button>
+            <h2 id="modal-generic-titolo">Aggiungi Elemento</h2>
+            <form id="form-generic" onsubmit="event.preventDefault(); confermaSalvaGeneric();">
+                <div class="modal-fields-container" id="modal-generic-fields">
+                    <!-- Campi iniettati dinamicamente via JS -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" onclick="chiudiModalGeneric()" class="btn-modal-cancel">Annulla</button>
+                    <button type="submit" class="btn-modal-send">
+                        <i class="fas fa-check"></i> Salva record
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODALE IMPORTAZIONE CSV -->
+    <div id="modal-csv-import" class="modal-overlay" onclick="if(event.target===this) chiudiModalCsv()">
+        <div class="modal-content" style="max-width: 800px;">
+            <button type="button" class="modal-close-x" onclick="chiudiModalCsv()" aria-label="Chiudi">&times;</button>
+            <h2>Importa Dati da CSV / File</h2>
+            <p class="modal-label" style="margin-bottom: 12px;">Seleziona la tabella di destinazione e inserisci il contenuto CSV.</p>
+            
+            <div class="form-field" style="margin-bottom: 16px;">
+                <label class="modal-label">Tabella Destinazione</label>
+                <select id="csv-target-table" class="input-field-modern select-custom" onchange="aggiornaTemplateCSV()">
+                    <option value="segnalazioni">Segnalazioni</option>
+                    <option value="clienti">Clienti & Leads</option>
+                    <option value="preventivi">Preventivi</option>
+                    <option value="ordiniVendita">Ordini di Vendita</option>
+                    <option value="ddtVendita">DDT di Vendita</option>
+                    <option value="fornitori">Fornitori</option>
+                    <option value="ordiniAcquisto">Ordini di Acquisto</option>
+                    <option value="ddtAcquisto">DDT di Acquisto</option>
+                    <option value="prodotti">Prodotti</option>
+                    <option value="distintaBase">Distinta Base (BOM)</option>
+                    <option value="magazzino">Magazzino</option>
+                </select>
+            </div>
+
+            <div style="background: #f1f5f9; border-radius: 12px; padding: 12px; margin-bottom: 16px; border: 1px solid var(--border-color);">
+                <span class="modal-label" style="display: block; margin-bottom: 4px; font-size: 10px;">Header e Campi suggeriti:</span>
+                <code id="csv-fields-template" style="font-family: monospace; font-size: 11px; color: #1e293b; word-break: break-all;">titolo,cliente,prodottoInteresse,zona,priorita,stato,descrizione</code>
+            </div>
+
+            <!-- Upload File o incolla testo -->
+            <div class="form-field" style="margin-bottom: 16px;">
+                <div class="modal-label">Carica un file CSV dal PC (oppure incolla testo CSV)</div>
+                <button type="button" id="csv-pick-button" class="btn-dark" style="width: 100%; min-height: 40px; margin: 6px 0 0 0; display: inline-flex; align-items: center; justify-content: center; gap: 8px;" onclick="selezionaFileCSV()">
+                    <i class="fas fa-folder-open"></i> Carica CSV dal PC
+                </button>
+                <input type="file" id="csv-file-input" accept=".csv,.txt" style="display: none;" onchange="leggiFileCSV(event)">
+                <div id="csv-file-status" style="font-size: 11px; color: var(--text-muted); margin: 6px 0 0 0;">Nessun file selezionato</div>
+                <textarea id="csv-raw-data" placeholder="titolo,cliente,prodottoInteresse,zona,priorita,stato,descrizione&#10;Fornitura Faro Villa,c1,prod_aura,Nord,alta,aperto,Descrizione..." style="margin: 6px 0 0 0; min-height: 140px;"></textarea>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" onclick="chiudiModalCsv()" class="btn-modal-cancel">Annulla</button>
+                <button type="button" onclick="avviaImportazioneCSV()" class="btn-modal-send">
+                    <i class="fas fa-file-import"></i> Avvia Import
+                </button>
+            </div>
+
+            <div id="csv-product-cleaner" style="display:none; margin-top: 16px; border-top: 1px solid var(--border-color); padding-top: 16px;">
+                <h3 style="font-size: 15px; margin-bottom: 8px;">Console scrematura prodotti</h3>
+                <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 12px;">
+                    Applica filtri automatici e poi rifinisci manualmente i record prima dell'import.
+                </p>
+                <div id="csv-cleaner-stats" style="display:grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap:8px; margin-bottom: 12px;"></div>
+                <div style="display:grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap:8px; margin-bottom: 12px;">
+                    <label style="display:flex; gap:8px; align-items:flex-start; font-size:12px;"><input type="checkbox" id="rule-remove-dismissed" checked onchange="ricalcolaScrematuraProdotti()"> Escludi dismessi/obsoleti</label>
+                    <label style="display:flex; gap:8px; align-items:flex-start; font-size:12px;"><input type="checkbox" id="rule-merge-exact" checked onchange="ricalcolaScrematuraProdotti()"> Mantieni solo una riga per duplicati esatti</label>
+                    <label style="display:flex; gap:8px; align-items:flex-start; font-size:12px;"><input type="checkbox" id="rule-skip-existing" checked onchange="ricalcolaScrematuraProdotti()"> Scarta codici già presenti nel CRM</label>
+                    <label style="display:flex; gap:8px; align-items:flex-start; font-size:12px;"><input type="checkbox" id="rule-mark-similar" checked onchange="ricalcolaScrematuraProdotti()"> Metti in revisione i prodotti molto simili</label>
+                </div>
+                <div class="csv-cleaner-select-row">
+                    <button type="button" class="csv-cleaner-select-btn" onclick="toggleSelezioneScrematuraVisibili(true)">Seleziona tutti</button>
+                    <button type="button" class="csv-cleaner-select-btn" onclick="toggleSelezioneScrematuraVisibili(false)">Deseleziona tutti</button>
+                </div>
+                <div class="csv-cleaner-actions">
+                    <button type="button" class="csv-cleaner-action-btn is-keep" onclick="impostaDecisioneSelezionatiScrematura('keep')">
+                        <i class="fas fa-check-circle"></i> Da importare
+                    </button>
+                    <button type="button" class="csv-cleaner-action-btn is-drop" onclick="impostaDecisioneSelezionatiScrematura('drop')">
+                        <i class="fas fa-times-circle"></i> Scarta
+                    </button>
+                    <button type="button" class="csv-cleaner-action-btn is-review" onclick="impostaDecisioneSelezionatiScrematura('review')">
+                        <i class="fas fa-clock"></i> In sospeso
+                    </button>
+                </div>
+                <div class="csv-cleaner-view-row">
+                    <button type="button" id="csv-view-main" class="csv-cleaner-view-btn is-active" onclick="setViewScrematura('main')">Da scremare</button>
+                    <button type="button" id="csv-view-keep" class="csv-cleaner-view-btn" onclick="setViewScrematura('keep')">Da importare</button>
+                    <button type="button" id="csv-view-review" class="csv-cleaner-view-btn" onclick="setViewScrematura('review')">In sospeso</button>
+                    <button type="button" id="csv-view-drop" class="csv-cleaner-view-btn" onclick="setViewScrematura('drop')">Scarta</button>
+                </div>
+                <div style="margin-bottom:10px;">
+                    <input type="text" id="csv-cleaner-search" class="input-field-modern" placeholder="Cerca codice, nome, sku, barcode..." oninput="aggiornaRicercaScrematura(this.value)">
+                </div>
+                <div style="max-height: 280px; overflow:auto; border:1px solid var(--border-color); border-radius:10px;">
+                    <table style="width:100%; border-collapse: collapse; font-size:12px;">
+                        <thead style="position:sticky; top:0; background:#f8fafc;">
+                            <tr>
+                                <th style="text-align:left; padding:8px;">Sel.</th>
+                                <th style="text-align:left; padding:8px;">Stato</th>
+                                <th style="text-align:left; padding:8px;">Codice</th>
+                                <th style="text-align:left; padding:8px;">Nome</th>
+                                <th style="text-align:left; padding:8px;">Brand</th>
+                                <th style="text-align:left; padding:8px;">Motivo</th>
+                            </tr>
+                        </thead>
+                        <tbody id="csv-cleaner-rows"></tbody>
+                    </table>
+                </div>
+                <div class="modal-footer" style="margin-top: 12px;">
+                    <button type="button" class="btn-modal-cancel" onclick="chiudiConsoleScrematuraProdotti()">Torna al CSV</button>
+                    <button type="button" class="btn-modal-send" onclick="confermaImportScrematoProdotti()">
+                        <i class="fas fa-filter"></i> Importa selezionati
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODALE: REGISTRA INTERAZIONE (TIMELINE CLIENTE) -->
+    <div id="modal-interazione" class="modal-overlay" onclick="if(event.target===this) chiudiModalInterazione()">
+        <div class="modal-content">
+            <button type="button" class="modal-close-x" onclick="chiudiModalInterazione()" aria-label="Chiudi">&times;</button>
+            <h2>Nuova Attività / Interazione</h2>
+            <p class="modal-label" id="interazione-cliente-nome" style="font-weight: 700; margin-bottom: 12px; color: #1e293b;"></p>
+            <input type="hidden" id="interazione-cliente-id">
+            
+            <p class="modal-label">Tipo Attività:</p>
+            <div class="modal-action-row">
+                <button type="button" id="btn-tipo-nota" class="btn-tipo active" onclick="setTipoInterazione('nota')">
+                    <i class="fas fa-sticky-note"></i> Nota
+                </button>
+                <button type="button" id="btn-tipo-chiamata" class="btn-tipo" onclick="setTipoInterazione('chiamata')">
+                    <i class="fas fa-phone"></i> Chiamata
+                </button>
+                <button type="button" id="btn-tipo-email" class="btn-tipo" onclick="setTipoInterazione('envelope')">
+                    <i class="fas fa-envelope"></i> Email
+                </button>
+                <button type="button" id="btn-tipo-incontro" class="btn-tipo" onclick="setTipoInterazione('handshake')">
+                    <i class="fas fa-handshake"></i> Incontro
+                </button>
+            </div>
+
+            <p class="modal-label">Dettagli / Note:</p>
+            <textarea id="interazione-dettagli" placeholder="Descrivi l'esito della chiamata, il contenuto dell'incontro o una semplice nota interna..." style="margin: 8px 0 20px 0;"></textarea>
+            
+            <div class="modal-footer">
+                <button type="button" onclick="chiudiModalInterazione()" class="btn-modal-cancel">Annulla</button>
+                <button type="button" onclick="confermaAggiungiInterazione()" class="btn-modal-send">
+                    <i class="fas fa-paper-plane"></i> Registra Attività
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTENITORE NOTIFICHE FLOTTANTI -->
+    <div id="toast-container"></div>
+</body>
+</html>

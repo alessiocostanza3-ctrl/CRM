@@ -1,0 +1,11 @@
+node_modules/
+.env
+.env.*
+*.log
+server-out.log
+server-err.log
+_chrome-profile/
+_chrome-profile2/
+.codex/
+Thumbs.db
+Desktop.ini

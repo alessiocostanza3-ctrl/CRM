@@ -4223,8 +4223,8 @@ body[data-theme="dark"] {
 
 .app-sidebar-submenu {
     position: absolute;
-    left: 86px;
-    top: 160px;
+    left: calc(100% + 14px);
+    top: 12px;
     width: 210px;
     background: #ffffff;
     border: 1px solid var(--border-color);
@@ -4233,8 +4233,9 @@ body[data-theme="dark"] {
     padding: 10px;
     opacity: 0;
     pointer-events: none;
-    transform: translateY(8px);
+    transform: translate3d(0, 8px, 0);
     transition: all 0.18s ease;
+    z-index: 60;
 }
 
 .app-sidebar-submenu.active {

@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="style.css?v=crm-redesign-23">
+    <link rel="stylesheet" href="style.css?v=crm-redesign-24">
     <script>
         window.CRM_REMOTE = {
             supabaseUrl: "https://wkvqpizkmsdqmyxbhnnu.supabase.co",
@@ -44,7 +44,7 @@
         });
     </script>
     <script src="seed-data.js?v=sideis-seed-2"></script>
-    <script src="script.js?v=crm-redesign-28" defer></script>
+    <script src="script.js?v=crm-redesign-29" defer></script>
 </head>
 <body>
     <!-- OVERLAY BLOCCO ORIENTAMENTO (Landscape su smartphone) -->
@@ -55,16 +55,16 @@
 
     <aside class="app-sidebar" id="app-sidebar" aria-label="Navigazione principale CRM">
         <div class="app-sidebar-top">
-            <button class="app-sidebar-item" data-sidebar-group="preventivi" type="button" onclick="apriSezioneSidebar('preventivi')" title="Preventivi">
+            <button class="app-sidebar-item" data-sidebar-group="preventivi" type="button" onclick="apriSezioneSidebar('preventivi', this)" title="Preventivi">
                 <i class="fas fa-file-invoice-dollar"></i>
             </button>
-            <button class="app-sidebar-item active" data-sidebar-group="ordini" type="button" onclick="apriSezioneSidebar('ordini')" title="Ordini">
+            <button class="app-sidebar-item active" data-sidebar-group="ordini" type="button" onclick="apriSezioneSidebar('ordini', this)" title="Ordini">
                 <i class="fas fa-cart-shopping"></i>
             </button>
-            <button class="app-sidebar-item" data-sidebar-group="ddt" type="button" onclick="apriSezioneSidebar('ddt')" title="DDT">
+            <button class="app-sidebar-item" data-sidebar-group="ddt" type="button" onclick="apriSezioneSidebar('ddt', this)" title="DDT">
                 <i class="fas fa-truck-fast"></i>
             </button>
-            <button class="app-sidebar-item" data-sidebar-group="catalogo" type="button" onclick="apriSezioneSidebar('catalogo')" title="Catalogo">
+            <button class="app-sidebar-item" data-sidebar-group="catalogo" type="button" onclick="apriSezioneSidebar('catalogo', this)" title="Catalogo">
                 <i class="fas fa-boxes-stacked"></i>
             </button>
         </div>

@@ -1306,15 +1306,34 @@ const SIDEBAR_SUBNAV = {
 };
 
 let activeSidebarGroup = null;
+let activeSidebarTrigger = null;
 
-function renderSidebarSubmenu(groupKey) {
+function positionSidebarSubmenu(triggerEl) {
+    const sidebar = document.getElementById('app-sidebar');
+    const container = document.getElementById('app-sidebar-submenu');
+    if (!sidebar || !container || !triggerEl) return;
+
+    const sidebarRect = sidebar.getBoundingClientRect();
+    const triggerRect = triggerEl.getBoundingClientRect();
+    const rawTop = (triggerRect.top - sidebarRect.top) + (triggerRect.height / 2) - (container.offsetHeight / 2);
+    const maxTop = Math.max(12, sidebar.clientHeight - container.offsetHeight - 12);
+    const clampedTop = Math.min(Math.max(12, rawTop), maxTop);
+
+    container.style.top = `${Math.round(clampedTop)}px`;
+    container.style.left = `${sidebar.offsetWidth + 14}px`;
+}
+
+function renderSidebarSubmenu(groupKey, triggerEl = activeSidebarTrigger) {
     const container = document.getElementById('app-sidebar-submenu');
     if (!container) return;
     const group = SIDEBAR_SUBNAV[groupKey];
     if (!group) {
         container.classList.remove('active');
         container.innerHTML = '';
+        container.style.top = '';
+        container.style.left = '';
         activeSidebarGroup = null;
+        activeSidebarTrigger = null;
         return;
     }
     const buttons = group.items.map(item => {
@@ -1327,23 +1346,25 @@ function renderSidebarSubmenu(groupKey) {
     `;
     container.classList.add('active');
     activeSidebarGroup = groupKey;
+    activeSidebarTrigger = triggerEl || activeSidebarTrigger;
+    positionSidebarSubmenu(activeSidebarTrigger);
 }
 
-function toggleSidebarGroup(groupKey) {
+function toggleSidebarGroup(groupKey, triggerEl = null) {
     const group = SIDEBAR_SUBNAV[groupKey];
     if (!group) return;
     if (activeSidebarGroup === groupKey) {
         renderSidebarSubmenu(null);
         return;
     }
-    renderSidebarSubmenu(groupKey);
+    renderSidebarSubmenu(groupKey, triggerEl);
     syncSidebarActiveState(paginaAttuale);
 }
 
-function apriSezioneSidebar(groupKey) {
+function apriSezioneSidebar(groupKey, triggerEl = null) {
     const group = SIDEBAR_SUBNAV[groupKey];
     if (!group || !group.items?.length) return;
-    renderSidebarSubmenu(groupKey);
+    renderSidebarSubmenu(groupKey, triggerEl);
     const activeItem = group.items.find(item => item.page === paginaAttuale);
     cambiaPagina(activeItem?.page || group.items[0].page);
 }
@@ -1357,7 +1378,10 @@ function syncSidebarActiveState(page) {
         btn.classList.toggle('active', !!isActive);
     });
     if (activeSidebarGroup && SIDEBAR_SUBNAV[activeSidebarGroup]) {
-        renderSidebarSubmenu(activeSidebarGroup);
+        if (!activeSidebarTrigger || !document.body.contains(activeSidebarTrigger)) {
+            activeSidebarTrigger = document.querySelector(`.app-sidebar-item[data-sidebar-group="${activeSidebarGroup}"]`);
+        }
+        renderSidebarSubmenu(activeSidebarGroup, activeSidebarTrigger);
     }
 }
 
@@ -1882,8 +1906,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         saveDatasetsToApiIfChanged();
     }, 2500);
     window.addEventListener('beforeunload', saveDatasetsToLocal);
-    document.addEventListener('click', (event) => {
-        if (!event.target.closest('.app-sidebar')) {
+    document.addEventListener('pointerdown', (event) => {
+        const clickedSidebar = event.target.closest('.app-sidebar');
+        const clickedSubmenu = event.target.closest('#app-sidebar-submenu');
+        if (!clickedSidebar && !clickedSubmenu) {
             renderSidebarSubmenu(null);
         }
         if (!event.target.closest('.kpi-mini-item')) {

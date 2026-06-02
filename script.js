@@ -1338,7 +1338,7 @@ function renderSidebarSubmenu(groupKey, triggerEl = activeSidebarTrigger) {
     }
     const buttons = group.items.map(item => {
         const isActive = item.page === paginaAttuale;
-        return `<button type="button" class="app-subtab-btn ${isActive ? 'active' : ''}" onclick="cambiaPagina('${item.page}')">${item.label}</button>`;
+        return `<button type="button" class="app-subtab-btn ${isActive ? 'active' : ''}" onclick="selezionaSidebarSubtab('${item.page}')">${item.label}</button>`;
     }).join('');
     container.innerHTML = `
         <div class="app-subtab-title">${group.title}</div>
@@ -1364,9 +1364,16 @@ function toggleSidebarGroup(groupKey, triggerEl = null) {
 function apriSezioneSidebar(groupKey, triggerEl = null) {
     const group = SIDEBAR_SUBNAV[groupKey];
     if (!group || !group.items?.length) return;
+    if (activeSidebarGroup === groupKey) {
+        renderSidebarSubmenu(null);
+        return;
+    }
     renderSidebarSubmenu(groupKey, triggerEl);
-    const activeItem = group.items.find(item => item.page === paginaAttuale);
-    cambiaPagina(activeItem?.page || group.items[0].page);
+}
+
+function selezionaSidebarSubtab(page) {
+    cambiaPagina(page);
+    renderSidebarSubmenu(null);
 }
 
 function syncSidebarActiveState(page) {

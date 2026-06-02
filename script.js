@@ -1263,12 +1263,9 @@ function getRadialCenterTitle(page) {
 }
 
 function getSidebarAnchorPage(page) {
-    if (page === 'ordiniVendita') return 'ordiniVendita';
     if (page === 'analisiDati') return 'analisiDati';
-    if (['segnalazioni'].includes(page)) return 'segnalazioni';
-    if (['clienti'].includes(page)) return 'clienti';
     if (['preventivi', 'preventiviAcquisto'].includes(page)) return 'preventivi';
-    if (['ordiniAcquisto'].includes(page)) return 'ordini';
+    if (['ordiniVendita', 'ordiniAcquisto'].includes(page)) return 'ordini';
     if (['ddtVendita', 'ddtAcquisto'].includes(page)) return 'ddt';
     if (['prodotti', 'distintaBase', 'magazzino', 'fornitori'].includes(page)) return 'catalogo';
     if (page === 'impostazioni') return 'impostazioni';
@@ -1341,6 +1338,14 @@ function toggleSidebarGroup(groupKey) {
     }
     renderSidebarSubmenu(groupKey);
     syncSidebarActiveState(paginaAttuale);
+}
+
+function apriSezioneSidebar(groupKey) {
+    const group = SIDEBAR_SUBNAV[groupKey];
+    if (!group || !group.items?.length) return;
+    renderSidebarSubmenu(groupKey);
+    const activeItem = group.items.find(item => item.page === paginaAttuale);
+    cambiaPagina(activeItem?.page || group.items[0].page);
 }
 
 function syncSidebarActiveState(page) {

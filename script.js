@@ -137,6 +137,7 @@ const DEFAULT_THEME = 'light';
 const DATASETS_STORAGE_KEY = 'crm_datasets_v2';
 const LEGACY_DATASET_STORAGE_KEYS = ['crm_datasets_v1'];
 let lastSyncedDatasetsSignature = '';
+let staticSeedDatasetsCache = null;
 const REMOTE_CONFIG = (typeof window !== 'undefined' && window.CRM_REMOTE) ? window.CRM_REMOTE : {};
 const SUPABASE_URL = String(REMOTE_CONFIG.supabaseUrl || '').trim();
 const SUPABASE_ANON_KEY = String(REMOTE_CONFIG.supabaseAnonKey || '').trim();
@@ -560,7 +561,6 @@ const DATASETS = {
     distintaBase: distintaBase,
     magazzino: magazzino
 };
-const INITIAL_DATASETS_SNAPSHOT = JSON.parse(JSON.stringify(DATASETS));
 
 function wireDatasetAutoPersist() {
     const methods = ['push', 'unshift', 'splice', 'pop', 'shift', 'sort', 'reverse'];
@@ -586,6 +586,23 @@ function wireDatasetAutoPersist() {
             writable: false
         });
     });
+}
+
+async function loadStaticSeedDatasets() {
+    if (staticSeedDatasetsCache) return JSON.parse(JSON.stringify(staticSeedDatasetsCache));
+    try {
+        const res = await fetch(`data.js?v=${Date.now()}`, { cache: 'no-store' });
+        if (!res.ok) throw new Error(`Static seed fetch failed: ${res.status}`);
+        const raw = await res.text();
+        const match = raw.match(/module\.exports\s*=\s*([\s\S]*);?\s*$/);
+        if (!match) throw new Error('Static seed parse failed');
+        const parsed = Function(`return (${match[1]});`)();
+        staticSeedDatasetsCache = parsed;
+        return JSON.parse(JSON.stringify(parsed));
+    } catch (err) {
+        console.warn('Caricamento seed statico fallito:', err);
+        return null;
+    }
 }
 
 function getDatasetsSignature() {
@@ -667,8 +684,10 @@ async function saveDatasetsToApiIfChanged() {
             if (!res.ok) throw new Error(`API save failed: ${res.status}`);
         }
         lastSyncedDatasetsSignature = currentSignature;
+        return { ok: true };
     } catch (err) {
         console.warn('Sync dataset verso API fallito:', err);
+        return { ok: false, error: String(err.message || err) };
     }
 }
 
@@ -710,14 +729,23 @@ function restoreDatasetsFromLocal() {
 async function ripristinaSeedSuCloud() {
     const ok = confirm("Questa azione ripristina tutti i dati demo (magazzino incluso) e sovrascrive lo stato corrente. Continuare?");
     if (!ok) return;
+    const seed = await loadStaticSeedDatasets();
+    if (!seed) {
+        mostraNotifica("Seed statico non disponibile", "error");
+        return;
+    }
     Object.keys(DATASETS).forEach(key => {
-        const source = Array.isArray(INITIAL_DATASETS_SNAPSHOT[key]) ? INITIAL_DATASETS_SNAPSHOT[key] : [];
+        const source = Array.isArray(seed[key]) ? seed[key] : [];
         if (!Array.isArray(DATASETS[key])) DATASETS[key] = [];
         DATASETS[key].splice(0, DATASETS[key].length, ...JSON.parse(JSON.stringify(source)));
     });
     saveDatasetsToLocal();
     lastSyncedDatasetsSignature = '';
-    await saveDatasetsToApiIfChanged();
+    const syncResult = await saveDatasetsToApiIfChanged();
+    if (!syncResult?.ok) {
+        mostraNotifica(`Scrittura Supabase fallita: ${syncResult?.error || 'errore sconosciuto'}`, "error");
+        return;
+    }
     aggiornaTuttiBadgeSidebar();
     cambiaPagina(paginaAttuale || 'segnalazioni');
     mostraNotifica("Seed demo ripristinato e sincronizzato su Supabase", "success");
@@ -1762,6 +1790,13 @@ document.addEventListener('DOMContentLoaded', async () => {
     wireDatasetAutoPersist();
     const restoredFromLocal = loadedFromApi ? false : restoreDatasetsFromLocal();
     if (!loadedFromApi && !restoredFromLocal) {
+        const seed = await loadStaticSeedDatasets();
+        if (seed) {
+            Object.keys(DATASETS).forEach(key => {
+                const source = Array.isArray(seed[key]) ? seed[key] : [];
+                DATASETS[key].splice(0, DATASETS[key].length, ...JSON.parse(JSON.stringify(source)));
+            });
+        }
         saveDatasetsToLocal();
     }
     initSidebarState();

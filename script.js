@@ -560,6 +560,7 @@ const DATASETS = {
     distintaBase: distintaBase,
     magazzino: magazzino
 };
+const INITIAL_DATASETS_SNAPSHOT = JSON.parse(JSON.stringify(DATASETS));
 
 function wireDatasetAutoPersist() {
     const methods = ['push', 'unshift', 'splice', 'pop', 'shift', 'sort', 'reverse'];
@@ -704,6 +705,22 @@ function restoreDatasetsFromLocal() {
         console.warn('Ripristino locale dataset fallito:', err);
         return false;
     }
+}
+
+async function ripristinaSeedSuCloud() {
+    const ok = confirm("Questa azione ripristina tutti i dati demo (magazzino incluso) e sovrascrive lo stato corrente. Continuare?");
+    if (!ok) return;
+    Object.keys(DATASETS).forEach(key => {
+        const source = Array.isArray(INITIAL_DATASETS_SNAPSHOT[key]) ? INITIAL_DATASETS_SNAPSHOT[key] : [];
+        if (!Array.isArray(DATASETS[key])) DATASETS[key] = [];
+        DATASETS[key].splice(0, DATASETS[key].length, ...JSON.parse(JSON.stringify(source)));
+    });
+    saveDatasetsToLocal();
+    lastSyncedDatasetsSignature = '';
+    await saveDatasetsToApiIfChanged();
+    aggiornaTuttiBadgeSidebar();
+    cambiaPagina(paginaAttuale || 'segnalazioni');
+    mostraNotifica("Seed demo ripristinato e sincronizzato su Supabase", "success");
 }
 
 // ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ 2. CONFIGURAZIONI DELLE TABELLE & CAMPI DEI FORM ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬
@@ -4346,6 +4363,9 @@ function renderImpostazioni(container) {
                 </p>
                 <button class="btn-secondary" onclick="resetDatabaseCompleto()" style="min-height: 42px; background-color: #fff; color: #ef4444; border-color: #fca5a5;">
                     <i class="fas fa-undo"></i> Reset Database Demo
+                </button>
+                <button class="btn-dark" onclick="ripristinaSeedSuCloud()" style="min-height: 42px; margin-left: 8px;">
+                    <i class="fas fa-database"></i> Ripristina Seed su Supabase
                 </button>
             </div>
         </div>

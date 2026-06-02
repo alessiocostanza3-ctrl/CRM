@@ -589,6 +589,9 @@ function wireDatasetAutoPersist() {
 }
 
 async function loadStaticSeedDatasets() {
+    if (typeof window !== 'undefined' && window.CRM_SEED_DATA) {
+        return JSON.parse(JSON.stringify(window.CRM_SEED_DATA));
+    }
     if (staticSeedDatasetsCache) return JSON.parse(JSON.stringify(staticSeedDatasetsCache));
     try {
         const res = await fetch(`data.js?v=${Date.now()}`, { cache: 'no-store' });
@@ -615,8 +618,11 @@ function getDatasetsSignature() {
 
 function isDatasetsEffectivelyEmpty(payload) {
     if (!payload || typeof payload !== 'object') return true;
-    const keys = ['prodotti', 'distintaBase', 'magazzino', 'fornitori', 'clienti'];
-    return keys.every(key => !Array.isArray(payload[key]) || payload[key].length === 0);
+    const criticalKeys = ['prodotti', 'distintaBase', 'magazzino'];
+    if (criticalKeys.some(key => !Array.isArray(payload[key]) || payload[key].length === 0)) return true;
+    const productIds = new Set(payload.prodotti.map(item => item && item.id).filter(Boolean));
+    const hasSideisProducts = productIds.has('prod_sideis_one_cc') && productIds.has('prod_sideis_one_cv');
+    return !hasSideisProducts || payload.magazzino.length < 20;
 }
 
 async function loadDatasetsFromApi() {
@@ -2952,7 +2958,7 @@ function renderTimelineDettaglio(container, cliente) {
                     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
                         <span style="font-size: 10px; font-weight: 800; color: var(--text-muted); text-transform: uppercase;">Logger Rapido (Premi Invio per salvare)</span>
                     </div>
-                    <div style="display: flex; gap: 10px;">
+                    <div class="detail-quick-note-row">
                         <input type="text" id="fast-note-input" class="input-field-modern" placeholder="Aggiungi una nota al volo..." onkeydown="if(event.key==='Enter') aggiungiNotaRapida('${cliente.id}')" style="font-size: 13px;">
                         <button class="btn-dark" onclick="aggiungiNotaRapida('${cliente.id}')" style="min-height: auto; height: 38px; padding: 0 14px; font-size: 12px; border-radius: 10px;">
                             Invia
@@ -4680,7 +4686,7 @@ function toggleSidebar() {
         document.body.classList.toggle('sidebar-is-open');
         return;
     }
-    const sidebar = document.getElementById('main-sidebar');
+    const sidebar = document.getElementById('app-sidebar');
     if (!sidebar) return;
     const isCollapsed = sidebar.classList.toggle('collapsed');
     document.body.classList.toggle('sidebar-collapsed', isCollapsed);
@@ -4704,7 +4710,7 @@ function chiudiMobileSearch() {
 }
 
 window.addEventListener('resize', () => {
-    const sidebar = document.getElementById('main-sidebar');
+    const sidebar = document.getElementById('app-sidebar');
     if (!isMobileViewport()) {
         document.body.classList.remove('sidebar-is-open');
         if (sidebar) sidebar.classList.remove('collapsed');

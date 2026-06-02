@@ -719,6 +719,10 @@ function restoreDatasetsFromLocal() {
         const raw = localStorage.getItem(DATASETS_STORAGE_KEY);
         if (!raw) return false;
         const parsed = JSON.parse(raw);
+        if (isDatasetsEffectivelyEmpty(parsed)) {
+            localStorage.removeItem(DATASETS_STORAGE_KEY);
+            return false;
+        }
         let restoredAny = false;
         Object.keys(DATASETS).forEach(key => {
             if (Array.isArray(parsed[key])) {

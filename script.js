@@ -613,6 +613,12 @@ function getDatasetsSignature() {
     }
 }
 
+function isDatasetsEffectivelyEmpty(payload) {
+    if (!payload || typeof payload !== 'object') return true;
+    const keys = ['prodotti', 'distintaBase', 'magazzino', 'fornitori', 'clienti'];
+    return keys.every(key => !Array.isArray(payload[key]) || payload[key].length === 0);
+}
+
 async function loadDatasetsFromApi() {
     try {
         let remote;
@@ -629,11 +635,12 @@ async function loadDatasetsFromApi() {
             if (!res.ok) throw new Error(`Supabase data failed: ${res.status}`);
             const rows = await res.json();
             remote = Array.isArray(rows) && rows.length && rows[0].payload ? rows[0].payload : null;
-            if (!remote) return false;
+            if (!remote || isDatasetsEffectivelyEmpty(remote)) return false;
         } else {
             const res = await fetch('/api/data', { cache: 'no-store' });
             if (!res.ok) throw new Error(`API data failed: ${res.status}`);
             remote = await res.json();
+            if (isDatasetsEffectivelyEmpty(remote)) return false;
         }
         Object.keys(DATASETS).forEach(key => delete DATASETS[key]);
         Object.assign(DATASETS, remote);
@@ -1796,6 +1803,8 @@ document.addEventListener('DOMContentLoaded', async () => {
                 const source = Array.isArray(seed[key]) ? seed[key] : [];
                 DATASETS[key].splice(0, DATASETS[key].length, ...JSON.parse(JSON.stringify(source)));
             });
+            lastSyncedDatasetsSignature = '';
+            await saveDatasetsToApiIfChanged();
         }
         saveDatasetsToLocal();
     }

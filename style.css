@@ -4914,6 +4914,9 @@ body[data-theme="dark"] #contenitore-dati .crm-th-sortable.is-sorted .crm-th-sor
         z-index: 10010 !important;
         overflow-y: auto;
         overflow-x: hidden;
+        justify-content: flex-start !important;
+        align-items: stretch !important;
+        gap: 12px;
     }
 
     body.sidebar-is-open .app-sidebar {
@@ -4928,10 +4931,21 @@ body[data-theme="dark"] #contenitore-dati .crm-th-sortable.is-sorted .crm-th-sor
         align-items: stretch;
     }
 
+    .app-sidebar-top {
+        order: 1;
+    }
+
+    .app-sidebar-bottom {
+        order: 3;
+        margin-top: auto;
+    }
+
     .app-sidebar-brand,
     .app-sidebar-item {
         width: 100%;
         height: 46px;
+        display: flex;
+        align-items: center;
         justify-content: flex-start;
         padding: 0 14px;
         gap: 12px;
@@ -4959,15 +4973,19 @@ body[data-theme="dark"] #contenitore-dati .crm-th-sortable.is-sorted .crm-th-sor
     .app-sidebar-item[data-sidebar-page="impostazioni"]::after { content: "Impostazioni"; }
 
     .app-sidebar-submenu {
+        order: 2;
         position: static;
         width: 100%;
-        margin-top: 8px;
+        margin-top: 0;
         opacity: 1;
         pointer-events: auto;
         transform: none;
         display: none;
         box-shadow: none;
         border-radius: 16px;
+        padding: 12px;
+        background: #f6f3ec;
+        border: 1px solid rgba(125, 115, 96, 0.14);
     }
 
     .app-sidebar-submenu.active {
@@ -5053,9 +5071,7 @@ body[data-theme="dark"] #contenitore-dati .crm-th-sortable.is-sorted .crm-th-sor
     }
 
     .crm-table-container {
-        overflow-x: auto;
-        overflow-y: hidden;
-        -webkit-overflow-scrolling: touch;
+        overflow: hidden;
     }
 
     .crm-table-toolbar {
@@ -5067,10 +5083,6 @@ body[data-theme="dark"] #contenitore-dati .crm-th-sortable.is-sorted .crm-th-sor
 
     .crm-table-count {
         align-self: flex-start;
-    }
-
-    .crm-table {
-        min-width: 820px;
     }
 
     .detail-sidebar-card,
@@ -5165,6 +5177,112 @@ body[data-theme="dark"] #contenitore-dati .crm-th-sortable.is-sorted .crm-th-sor
     .settings-switch-grid,
     .settings-theme-grid {
         grid-template-columns: 1fr;
+    }
+
+    .app-subtab-title {
+        margin-bottom: 10px;
+    }
+
+    .app-subtab-row {
+        gap: 10px;
+    }
+
+    .app-subtab-btn {
+        width: 100%;
+        min-height: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0 14px;
+        text-align: left;
+        background: #ffffff;
+    }
+
+    .crm-mobile-card-list {
+        display: grid;
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .crm-mobile-record {
+        border: 1px solid #e6dece;
+        border-radius: 18px;
+        background: linear-gradient(180deg, rgba(255,253,248,0.98), rgba(248,244,236,0.94));
+        box-shadow: 0 8px 24px rgba(24, 32, 28, 0.06);
+        overflow: hidden;
+    }
+
+    .crm-mobile-record__head {
+        padding: 16px 16px 12px;
+        border-bottom: 1px solid rgba(221, 214, 200, 0.7);
+    }
+
+    .crm-mobile-record__lead {
+        min-width: 0;
+    }
+
+    .crm-mobile-record__lead[role="button"] {
+        cursor: pointer;
+    }
+
+    .crm-mobile-record__body {
+        display: grid;
+        gap: 10px;
+        padding: 14px 16px;
+    }
+
+    .crm-mobile-record__field,
+    .crm-mobile-record__footer {
+        display: grid;
+        gap: 6px;
+    }
+
+    .crm-mobile-record__label {
+        font-size: 10px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: #7b6f5d;
+    }
+
+    .crm-mobile-record__value {
+        font-size: 13px;
+        color: #1c2621;
+        min-width: 0;
+    }
+
+    .crm-mobile-record__value > *,
+    .crm-mobile-record__lead > * {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .crm-mobile-record__footer {
+        padding: 0 16px 16px;
+    }
+
+    .crm-mobile-record__actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        align-items: center;
+    }
+
+    .crm-mobile-record .actions-cell {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .crm-mobile-record .btn-workflow-next {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .crm-empty-state-mobile {
+        margin: 12px;
+        border: 1px dashed #d8d1c3;
+        border-radius: 18px;
+        background: rgba(255, 253, 248, 0.9);
     }
 }
 

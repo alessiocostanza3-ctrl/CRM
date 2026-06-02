@@ -136,6 +136,8 @@ const THEME_STORAGE_KEY = 'crm_ui_theme';
 const DEFAULT_THEME = 'light';
 const DATASETS_STORAGE_KEY = 'crm_datasets_v2';
 const LEGACY_DATASET_STORAGE_KEYS = ['crm_datasets_v1'];
+const NAV_PAGE_STORAGE_KEY = 'crm_current_page_state_v1';
+const DEFAULT_PAGE = 'ordiniVendita';
 let lastSyncedDatasetsSignature = '';
 let staticSeedDatasetsCache = null;
 const REMOTE_CONFIG = (typeof window !== 'undefined' && window.CRM_REMOTE) ? window.CRM_REMOTE : {};
@@ -764,7 +766,7 @@ async function ripristinaSeedSuCloud() {
         return;
     }
     aggiornaTuttiBadgeSidebar();
-    cambiaPagina(paginaAttuale || 'segnalazioni');
+    cambiaPagina(paginaAttuale || DEFAULT_PAGE);
     mostraNotifica("Seed demo ripristinato e sincronizzato su Supabase", "success");
 }
 
@@ -1132,7 +1134,7 @@ const TABLE_CONFIGS = {
 };
 
 // ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ 3. STATE DI NAVIGAZIONE ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬
-let paginaAttuale = 'segnalazioni';
+let paginaAttuale = DEFAULT_PAGE;
 let editingRecordId = null;
 let radialExpandedGroup = 'vendite';
 let ricercaQuery = '';
@@ -1155,6 +1157,49 @@ let topNavOpenGroup = null;
 let topNavEventsBound = false;
 let topNavActiveSection = 'commerciale';
 let topNavSectionsCollapsed = false;
+const CUSTOM_PAGE_TITLES = {
+    scrematura_prodotti: 'Scrematura Prodotti',
+    timeline_dettagli: 'Timeline Cliente',
+    impostazioni: 'Impostazioni / CSV',
+    analisiDati: 'Analisi Dati'
+};
+
+function isCustomPage(page) {
+    return ['scrematura_prodotti', 'timeline_dettagli', 'impostazioni', 'analisiDati'].includes(page);
+}
+
+function isKnownPage(page) {
+    return !!TABLE_CONFIGS[page] || isCustomPage(page);
+}
+
+function persistCurrentPageState(page) {
+    const state = {
+        page,
+        detailClientId: page === 'timeline_dettagli' ? String(window.dettagliClienteIdAttivo || '') : ''
+    };
+    localStorage.setItem(NAV_PAGE_STORAGE_KEY, JSON.stringify(state));
+    const nextHash = `#${page}`;
+    if (window.location.hash !== nextHash) {
+        history.replaceState(null, '', nextHash);
+    }
+}
+
+function restoreCurrentPageState() {
+    let stored = {};
+    try {
+        stored = JSON.parse(localStorage.getItem(NAV_PAGE_STORAGE_KEY) || '{}');
+    } catch {
+        stored = {};
+    }
+    const hashPage = String(window.location.hash || '').replace(/^#/, '').trim();
+    const page = isKnownPage(hashPage)
+        ? hashPage
+        : (isKnownPage(stored.page) ? stored.page : DEFAULT_PAGE);
+    if (page === 'timeline_dettagli' && stored.detailClientId) {
+        window.dettagliClienteIdAttivo = stored.detailClientId;
+    }
+    return page;
+}
 
 function cleanUiText(value) {
     const text = String(value ?? '');
@@ -1199,15 +1244,15 @@ function getRadialSectorLabel(page) {
     if (['prodotti', 'distintaBase', 'magazzino'].includes(page)) {
         return 'Prodotti';
     }
-    if (page === 'impostazioni') {
+    if (['impostazioni', 'analisiDati'].includes(page)) {
         return 'Sistema';
     }
     return 'Sistema';
 }
 
 function getRadialCenterTitle(page) {
-    if (page === 'impostazioni') {
-        return 'Impostazioni';
+    if (CUSTOM_PAGE_TITLES[page]) {
+        return CUSTOM_PAGE_TITLES[page];
     }
     const activeItem = document.querySelector(`.radial-item[data-page="${page}"]`);
     if (activeItem) {
@@ -1218,14 +1263,16 @@ function getRadialCenterTitle(page) {
 }
 
 function getSidebarAnchorPage(page) {
+    if (page === 'ordiniVendita') return 'ordiniVendita';
+    if (page === 'analisiDati') return 'analisiDati';
     if (['segnalazioni'].includes(page)) return 'segnalazioni';
     if (['clienti'].includes(page)) return 'clienti';
     if (['preventivi', 'preventiviAcquisto'].includes(page)) return 'preventivi';
-    if (['ordiniVendita', 'ordiniAcquisto'].includes(page)) return 'ordini';
+    if (['ordiniAcquisto'].includes(page)) return 'ordini';
     if (['ddtVendita', 'ddtAcquisto'].includes(page)) return 'ddt';
     if (['prodotti', 'distintaBase', 'magazzino', 'fornitori'].includes(page)) return 'catalogo';
     if (page === 'impostazioni') return 'impostazioni';
-    return 'segnalazioni';
+    return DEFAULT_PAGE;
 }
 
 const SIDEBAR_SUBNAV = {
@@ -1499,7 +1546,7 @@ function buildRadialItemChip(item, x, y) {
 }
 
 function buildCommandMenuMarkup() {
-    const activePage = paginaAttuale || 'segnalazioni';
+    const activePage = paginaAttuale || DEFAULT_PAGE;
     const activeGroupKey = getRadialGroupConfigByPage(activePage)?.key || RADIAL_MENU_GROUPS[0].key;
     const expandedGroupKey = radialExpandedGroup || activeGroupKey;
 
@@ -1565,7 +1612,7 @@ function renderTopNavMenu() {
     const groupsToRender = activeSection.groups
         .map(groupKey => getRadialGroupByKey(groupKey))
         .filter(Boolean);
-    const activePage = paginaAttuale || 'segnalazioni';
+    const activePage = paginaAttuale || DEFAULT_PAGE;
     const activeGroup = getRadialGroupConfigByPage(activePage)?.key || RADIAL_MENU_GROUPS[0].key;
     host.innerHTML = `
         <div class="top-nav-shell ${topNavSectionsCollapsed ? 'is-sections-collapsed' : ''}">
@@ -1617,7 +1664,7 @@ function handleTopNavDetailsToggle(groupKey, isOpen) {
 }
 
 function buildRadialMenuMarkup() {
-    const activePage = paginaAttuale || 'segnalazioni';
+    const activePage = paginaAttuale || DEFAULT_PAGE;
     const activeGroupKey = getRadialGroupConfigByPage(activePage)?.key || null;
     const expandedGroupKey = radialExpandedGroup || activeGroupKey || RADIAL_MENU_GROUPS[0].key;
     const geometry = RADIAL_MENU_GEOMETRY;
@@ -1785,7 +1832,7 @@ function layoutRadialMenu() {
         panel.dataset.rendered = 'true';
         initRadialHoverEffects();
         aggiornaTuttiBadgeSidebar();
-        syncRadialMenuState(paginaAttuale || 'segnalazioni');
+        syncRadialMenuState(paginaAttuale || DEFAULT_PAGE);
         return;
     }
 
@@ -1796,7 +1843,7 @@ function layoutRadialMenu() {
         aggiornaTuttiBadgeSidebar();
     }
 
-    syncRadialMenuState(paginaAttuale || 'segnalazioni');
+    syncRadialMenuState(paginaAttuale || DEFAULT_PAGE);
 }
 
 // ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ 4. LIFECYCLE ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬
@@ -1824,7 +1871,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     renderTopNavMenu();
     bindTopNavEvents();
     initRadialHoverEffects(); // Inizializza gli effetti hover sul menu radiale
-    cambiaPagina('segnalazioni'); // Avvia sulla prima pagina delle Segnalazioni
+    cambiaPagina(restoreCurrentPageState());
     setInterval(() => {
         saveDatasetsToLocal();
         saveDatasetsToApiIfChanged();
@@ -1855,7 +1902,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 hub.classList.remove('active');
                 if (trigger) trigger.setAttribute('aria-expanded', 'false');
                 if (ring) ring.setAttribute('aria-hidden', 'true');
-                syncRadialMenuState(paginaAttuale || 'segnalazioni', { forceCollapsed: true });
+                syncRadialMenuState(paginaAttuale || DEFAULT_PAGE, { forceCollapsed: true });
             }
         }
     });
@@ -1918,9 +1965,14 @@ function handleTopHeaderMenuAction() {
 
 // Router SPA
 function cambiaPagina(page) {
+    if (!isKnownPage(page)) page = DEFAULT_PAGE;
     paginaAttuale = page;
     editingRecordId = null;
     timelineClienteSelezionatoId = null;
+    if (page !== 'timeline_dettagli') {
+        window.dettagliClienteIdAttivo = null;
+    }
+    persistCurrentPageState(page);
     
     // Resetta ricerca
     document.getElementById('universal-search').value = '';
@@ -1981,6 +2033,9 @@ function cambiaPagina(page) {
     } else if (page === 'impostazioni') {
         if (titleElMobile) titleElMobile.innerText = "Impostazioni / CSV";
         renderImpostazioni(contentEl);
+    } else if (page === 'analisiDati') {
+        if (titleElMobile) titleElMobile.innerText = "Analisi Dati";
+        renderAnalisiDati(contentEl);
     }
 }
 
@@ -2089,6 +2144,279 @@ function renderScrematuraProdottiPage(container) {
     if (periodEl) periodEl.value = String(productScreeningState.usage.months || 36);
     aggiornaStatiFileUsoProdotti();
     renderProductScreening();
+}
+
+const ANALISI_DATE_FIELDS = {
+    segnalazioni: ['data', 'creato'],
+    clienti: ['creato', 'data'],
+    preventivi: ['data', 'dataScadenza'],
+    preventiviAcquisto: ['data', 'dataScadenza'],
+    ordiniVendita: ['data', 'dataConsegna', 'dataPrevistaFattura'],
+    ordiniAcquisto: ['data', 'dataConsegna'],
+    ddtVendita: ['data'],
+    ddtAcquisto: ['data'],
+    fornitori: ['data', 'creato'],
+    prodotti: ['dataNascita', 'data'],
+    distintaBase: ['data', 'creato'],
+    magazzino: ['data', 'creato']
+};
+
+function getAnalisiDocumentOptions() {
+    return Object.keys(TABLE_CONFIGS).map(page => ({
+        page,
+        label: TABLE_CONFIGS[page].title
+    }));
+}
+
+function getRecordPrimaryDate(page, record) {
+    const candidateFields = ANALISI_DATE_FIELDS[page] || ['data', 'creato'];
+    for (const field of candidateFields) {
+        const parsed = parseFlexibleDate(record?.[field]);
+        if (parsed) return parsed;
+    }
+    return null;
+}
+
+function formatAnalysisDateInput(date) {
+    return date.toISOString().slice(0, 10);
+}
+
+function getAnalisiDateRange() {
+    const end = new Date();
+    const start = new Date();
+    start.setMonth(start.getMonth() - 3);
+    return {
+        start: formatAnalysisDateInput(start),
+        end: formatAnalysisDateInput(end)
+    };
+}
+
+function getAnalysisCurrentValue(fieldId, fallback = '') {
+    const el = document.getElementById(fieldId);
+    return el ? String(el.value || '').trim() : fallback;
+}
+
+function getFilteredAnalysisRows(page, startDateRaw, endDateRaw) {
+    const dataset = getVisibleDataset(page);
+    const startDate = parseFlexibleDate(startDateRaw);
+    const endDate = parseFlexibleDate(endDateRaw);
+    if (endDate) endDate.setHours(23, 59, 59, 999);
+
+    return dataset
+        .map(record => ({
+            record,
+            date: getRecordPrimaryDate(page, record)
+        }))
+        .filter(item => item.date)
+        .filter(item => (!startDate || item.date >= startDate) && (!endDate || item.date <= endDate))
+        .sort((a, b) => b.date - a.date);
+}
+
+function getAnalysisRecordLabel(record) {
+    return record.numero || record.codice || record.titolo || record.azienda || record.nome || record.id || '-';
+}
+
+function getAnalysisCounterparty(record) {
+    return record.cliente || record.fornitore || record.azienda || record.nome || record.referente || record.produttore || '-';
+}
+
+function getAnalysisStatus(record) {
+    const status = record.stato || record.statoPagamento || record.statoQualifica || '';
+    return status ? mappaNomeStato(status) : '-';
+}
+
+function getAnalysisValue(record) {
+    return Number(record.totale ?? record.valore ?? record.valoreFIFO ?? record.prezzoVendita ?? record.prezzoAcquisto ?? 0);
+}
+
+function renderAnalisiMovimentiMensili(rows) {
+    if (!rows.length) {
+        return '<div class="crm-table-container" style="padding:16px; color:var(--text-muted);">Nessun movimento nel periodo selezionato.</div>';
+    }
+    const monthly = rows.reduce((acc, item) => {
+        const key = item.date.toISOString().slice(0, 7);
+        if (!acc[key]) acc[key] = { count: 0, total: 0 };
+        acc[key].count += 1;
+        acc[key].total += getAnalysisValue(item.record);
+        return acc;
+    }, {});
+    const monthRows = Object.entries(monthly)
+        .sort((a, b) => a[0].localeCompare(b[0]))
+        .map(([month, values]) => `
+            <tr>
+                <td style="padding:10px;">${month}</td>
+                <td style="padding:10px;">${values.count}</td>
+                <td style="padding:10px;">${formatCrmMoney(values.total)}</td>
+            </tr>
+        `).join('');
+    return `
+        <div class="crm-table-container" style="padding:16px;">
+            <div class="crm-table-toolbar">
+                <div>
+                    <span class="crm-table-eyebrow">Serie temporale</span>
+                    <strong>Movimenti per mese</strong>
+                </div>
+            </div>
+            <table class="crm-table">
+                <thead>
+                    <tr>
+                        <th>Mese</th>
+                        <th>Movimenti</th>
+                        <th>Valore</th>
+                    </tr>
+                </thead>
+                <tbody>${monthRows}</tbody>
+            </table>
+        </div>
+    `;
+}
+
+function aggiornaAnalisiDati() {
+    const page = getAnalysisCurrentValue('analysis-document-type', DEFAULT_PAGE);
+    const startDate = getAnalysisCurrentValue('analysis-date-start');
+    const endDate = getAnalysisCurrentValue('analysis-date-end');
+    const target = document.getElementById('analysis-results');
+    if (!target) return;
+
+    const rows = getFilteredAnalysisRows(page, startDate, endDate);
+    const config = TABLE_CONFIGS[page];
+    const totalValue = rows.reduce((sum, item) => sum + getAnalysisValue(item.record), 0);
+    const stats = [
+        { label: 'Movimenti', value: formatCompactNumber(rows.length), detail: 'Record nel periodo' },
+        { label: 'Valore', value: formatCrmMoney(totalValue), detail: 'Somma valori disponibili' },
+        { label: 'Da', value: startDate || '-', detail: 'Inizio intervallo' },
+        { label: 'A', value: endDate || '-', detail: 'Fine intervallo' }
+    ];
+
+    const previewRows = rows.slice(0, 100).map(item => `
+        <tr>
+            <td>${formatAnalysisDateInput(item.date)}</td>
+            <td>${cleanUiText(getAnalysisRecordLabel(item.record))}</td>
+            <td>${cleanUiText(getAnalysisCounterparty(item.record))}</td>
+            <td>${cleanUiText(getAnalysisStatus(item.record))}</td>
+            <td>${formatCrmMoney(getAnalysisValue(item.record))}</td>
+        </tr>
+    `).join('');
+
+    target.innerHTML = `
+        ${renderCrmMetricStrip(page, rows.map(item => ({ ...item.record, valore: getAnalysisValue(item.record) })))}
+        <div class="crm-table-container" style="padding:16px; margin-top:16px;">
+            <div style="display:grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap:12px; margin-bottom:16px;">
+                ${stats.map(item => `
+                    <div style="border:1px solid var(--border-color); border-radius:16px; padding:14px; background:rgba(255,255,255,0.82);">
+                        <div style="font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-muted);">${item.label}</div>
+                        <div style="font-size:20px; font-weight:800; margin-top:4px;">${item.value}</div>
+                        <div style="font-size:12px; color:var(--text-muted); margin-top:4px;">${item.detail}</div>
+                    </div>
+                `).join('')}
+            </div>
+            <div class="crm-table-toolbar">
+                <div>
+                    <span class="crm-table-eyebrow">Risultati filtrati</span>
+                    <strong>${cleanUiText(config.title)}</strong>
+                </div>
+                <span class="crm-table-count">${rows.length} righe</span>
+            </div>
+            <table class="crm-table">
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Documento</th>
+                        <th>Controparte</th>
+                        <th>Stato</th>
+                        <th>Valore</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${previewRows || `<tr><td colspan="5" class="crm-empty-state"><i class="fas fa-chart-line"></i><strong>Nessun movimento</strong><span>Modifica filtri o cambia tipologia documento.</span></td></tr>`}
+                </tbody>
+            </table>
+        </div>
+        ${renderAnalisiMovimentiMensili(rows)}
+    `;
+}
+
+function scaricaCsvAnalisiDati() {
+    const page = getAnalysisCurrentValue('analysis-document-type', DEFAULT_PAGE);
+    const startDate = getAnalysisCurrentValue('analysis-date-start');
+    const endDate = getAnalysisCurrentValue('analysis-date-end');
+    const config = TABLE_CONFIGS[page];
+    const rows = getFilteredAnalysisRows(page, startDate, endDate).map(item => item.record);
+    const headers = config.csvTemplate.split(',');
+    const csv = [
+        headers.join(','),
+        ...rows.map(record => headers.map(field => {
+            const value = record[field] ?? '';
+            const safe = String(value).replace(/\"/g, '""');
+            return `"${safe}"`;
+        }).join(','))
+    ].join('\n');
+    const link = document.createElement('a');
+    link.href = `data:text/csv;charset=utf-8,${encodeURIComponent(csv)}`;
+    link.download = `analisi_${page}_${startDate || 'inizio'}_${endDate || 'fine'}.csv`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    mostraNotifica('CSV analisi scaricato', 'success');
+}
+
+function apriImportatoreAnalisiDati() {
+    apriImportatoreCSV(getAnalysisCurrentValue('analysis-document-type', DEFAULT_PAGE));
+}
+
+function renderAnalisiDati(container) {
+    const defaultRange = getAnalisiDateRange();
+    const options = getAnalisiDocumentOptions().map(item => `
+        <option value="${item.page}" ${item.page === DEFAULT_PAGE ? 'selected' : ''}>${cleanUiText(item.label)}</option>
+    `).join('');
+
+    container.innerHTML = `
+        <section class="crm-workbench">
+            <div class="crm-page-header">
+                <div class="crm-header-card">
+                    <div class="crm-header-info">
+                        <span class="crm-header-eyebrow">CSV e Reporting</span>
+                        <h2 class="crm-header-title">Analisi Dati</h2>
+                        <p class="crm-header-subtitle">Import centralizzato, filtro per tipologia documento e export CSV del periodo.</p>
+                    </div>
+                    <div class="crm-header-actions">
+                        <button class="btn-secondary" onclick="apriImportatoreAnalisiDati()">
+                            <i class="fas fa-file-import"></i> Importa CSV
+                        </button>
+                        <button class="btn-primary" onclick="scaricaCsvAnalisiDati()">
+                            <i class="fas fa-download"></i> Scarica CSV
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="crm-table-container" style="padding:16px;">
+                <div style="display:grid; grid-template-columns: 1.4fr 1fr 1fr auto; gap:12px; align-items:end;">
+                    <label style="display:block;">
+                        <span class="modal-label">Tipologia documento</span>
+                        <select id="analysis-document-type" class="input-field-modern select-custom">${options}</select>
+                    </label>
+                    <label style="display:block;">
+                        <span class="modal-label">Data iniziale</span>
+                        <input id="analysis-date-start" type="date" class="input-field-modern" value="${defaultRange.start}">
+                    </label>
+                    <label style="display:block;">
+                        <span class="modal-label">Data finale</span>
+                        <input id="analysis-date-end" type="date" class="input-field-modern" value="${defaultRange.end}">
+                    </label>
+                    <button class="btn-dark" style="min-height:42px;" onclick="aggiornaAnalisiDati()">
+                        <i class="fas fa-magnifying-glass-chart"></i> Analizza
+                    </button>
+                </div>
+            </div>
+            <div id="analysis-results"></div>
+        </section>
+    `;
+
+    ['analysis-document-type', 'analysis-date-start', 'analysis-date-end'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.addEventListener('change', aggiornaAnalisiDati);
+    });
+    aggiornaAnalisiDati();
 }
 
 // ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ 5. DISPATCH DI RENDERING TABELLE DINAMICHE ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬
@@ -2391,6 +2719,7 @@ function renderDatabaseTable(container, pageName) {
     const config = TABLE_CONFIGS[pageName];
     const dataset = getVisibleDataset(pageName);
     const sortedDataset = getSortedDataset(pageName, dataset);
+    const mobileViewport = isMobileViewport();
 
     let html = `
         <section class="crm-workbench">
@@ -2404,7 +2733,7 @@ function renderDatabaseTable(container, pageName) {
                 <div class="crm-header-actions">
                     ${renderKpiMiniDock(pageName, dataset)}
                     <button class="btn-secondary" onclick="apriImportatoreCSV('${pageName}')">
-                        <i class="fas fa-file-import"></i> Importa CSV
+                        <i class="fas fa-upload"></i> Carica CSV
                     </button>
                     <button class="btn-primary" onclick="apriModalGenericCrea()">
                         <i class="fas fa-plus"></i> Aggiungi Record
@@ -2416,43 +2745,53 @@ function renderDatabaseTable(container, pageName) {
         <div class="crm-table-container">
             <div class="crm-table-toolbar">
                 <div>
-                    <span class="crm-table-eyebrow">Vista tabellare</span>
+                    <span class="crm-table-eyebrow">${mobileViewport ? 'Vista mobile' : 'Vista tabellare'}</span>
                     <strong>${cleanUiText(config.title)}</strong>
                 </div>
                 <span class="crm-table-count">${dataset.length} righe</span>
             </div>
+    `;
+
+    if (mobileViewport) {
+        html += renderMobileRecordCards(pageName, sortedDataset, config);
+    } else {
+        html += `
             <table class="crm-table">
                 <thead>
                     <tr>
-    `;
-
-    config.headers.forEach((h, idx) => {
-        const sortState = getColumnSortState(pageName, idx);
-        const badge = sortState === 'asc' ? '1' : (sortState === 'desc' ? '2' : '');
-        html += `
-            <th class="crm-th-sortable ${sortState !== 'none' ? 'is-sorted' : ''}" onclick="toggleColumnSort(${idx})">
-                <span>${cleanUiText(h)}</span>
-                <span class="crm-th-sort-badge">${badge}</span>
-            </th>
         `;
-    });
 
-    html += `
+        config.headers.forEach((h, idx) => {
+            const sortState = getColumnSortState(pageName, idx);
+            const badge = sortState === 'asc' ? '1' : (sortState === 'desc' ? '2' : '');
+            html += `
+                <th class="crm-th-sortable ${sortState !== 'none' ? 'is-sorted' : ''}" onclick="toggleColumnSort(${idx})">
+                    <span>${cleanUiText(h)}</span>
+                    <span class="crm-th-sort-badge">${badge}</span>
+                </th>
+            `;
+        });
+
+        html += `
                 </thead>
                 <tbody id="crm-table-body-rows">
-    `;
+        `;
 
-    if (sortedDataset && sortedDataset.length > 0) {
-        sortedDataset.forEach(record => {
-            html += renderRigaTabella(pageName, record);
-        });
-    } else {
-        html += `<tr><td colspan="${config.headers.length}" class="crm-empty-state"><i class="fas fa-folder-open" aria-hidden="true"></i><strong>Nessun record trovato</strong><span>Clicca su "Aggiungi" o importa un CSV per iniziare.</span></td></tr>`;
+        if (sortedDataset && sortedDataset.length > 0) {
+            sortedDataset.forEach(record => {
+                html += renderRigaTabella(pageName, record);
+            });
+        } else {
+            html += `<tr><td colspan="${config.headers.length}" class="crm-empty-state"><i class="fas fa-folder-open" aria-hidden="true"></i><strong>Nessun record trovato</strong><span>Clicca su "Aggiungi" o importa un CSV per iniziare.</span></td></tr>`;
+        }
+
+        html += `
+                </tbody>
+            </table>
+        `;
     }
 
     html += `
-                </tbody>
-            </table>
         </div>
         </section>
     `;
@@ -2529,6 +2868,74 @@ function extractRowCellTexts(rowHtml) {
                 .replace(/\s+/g, ' ')
                 .trim()
         ) || [];
+}
+
+function extractRowCells(rowHtml) {
+    const cells = [];
+    const regex = /<td([^>]*)>([\s\S]*?)<\/td>/gi;
+    let match;
+    while ((match = regex.exec(String(rowHtml || ''))) !== null) {
+        const attrs = match[1] || '';
+        const html = match[2] || '';
+        const text = html
+            .replace(/<br\s*\/?>/gi, ' ')
+            .replace(/<[^>]*>/g, ' ')
+            .replace(/\s+/g, ' ')
+            .trim();
+        cells.push({ attrs, html, text });
+    }
+    return cells;
+}
+
+function renderMobileRecordCards(pageName, rows, config) {
+    if (!rows || !rows.length) {
+        return `
+            <div id="crm-mobile-card-list" class="crm-mobile-card-list">
+                <div class="crm-empty-state crm-empty-state-mobile">
+                    <i class="fas fa-folder-open" aria-hidden="true"></i>
+                    <strong>Nessun record trovato</strong>
+                    <span>Clicca su "Aggiungi" o importa un CSV per iniziare.</span>
+                </div>
+            </div>
+        `;
+    }
+
+    const cards = rows.map(record => {
+        const rowHtml = renderRigaTabella(pageName, record);
+        const cells = extractRowCells(rowHtml);
+        if (!cells.length) return '';
+
+        const headers = config.headers || [];
+        const actionCell = cells[cells.length - 1];
+        const detailCells = cells.slice(1, -1);
+        const primaryCell = cells[0];
+        const searchIndex = cells.map(cell => cell.text).join(' ').toLowerCase();
+        const primaryAttrs = primaryCell.attrs && /onclick=/.test(primaryCell.attrs)
+            ? `${primaryCell.attrs} role="button" tabindex="0"`
+            : '';
+
+        const detailMarkup = detailCells.map((cell, index) => `
+            <div class="crm-mobile-record__field">
+                <span class="crm-mobile-record__label">${cleanUiText(headers[index + 1] || `Campo ${index + 2}`)}</span>
+                <div class="crm-mobile-record__value">${cell.html}</div>
+            </div>
+        `).join('');
+
+        return `
+            <article class="crm-mobile-record" data-search-index="${escapeHtmlAttr(searchIndex)}">
+                <div class="crm-mobile-record__head">
+                    <div class="crm-mobile-record__lead" ${primaryAttrs}>${primaryCell.html}</div>
+                </div>
+                ${detailMarkup ? `<div class="crm-mobile-record__body">${detailMarkup}</div>` : ''}
+                <div class="crm-mobile-record__footer">
+                    <span class="crm-mobile-record__label">${cleanUiText(headers[cells.length - 1] || 'Azioni')}</span>
+                    <div class="crm-mobile-record__actions">${actionCell.html}</div>
+                </div>
+            </article>
+        `;
+    }).join('');
+
+    return `<div id="crm-mobile-card-list" class="crm-mobile-card-list">${cards}</div>`;
 }
 
 function escapeHtmlAttr(value) {
@@ -4530,6 +4937,13 @@ function filtraUniversale() {
         const globalMatch = !ricercaQuery || rowText.includes(ricercaQuery);
         riga.style.display = globalMatch ? '' : 'none';
     });
+
+    const cards = document.querySelectorAll('.crm-mobile-record');
+    cards.forEach(card => {
+        const cardText = String(card.getAttribute('data-search-index') || card.innerText || '').toLowerCase();
+        const globalMatch = !ricercaQuery || cardText.includes(ricercaQuery);
+        card.style.display = globalMatch ? '' : 'none';
+    });
 }
 
 function aggiornaTuttiBadgeSidebar() {
@@ -4730,11 +5144,11 @@ function toggleRadialMenu() {
         if (trigger) trigger.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
         if (ring) ring.setAttribute('aria-hidden', willOpen ? 'false' : 'true');
         if (willOpen) {
-            radialExpandedGroup = getRadialGroupConfigByPage(paginaAttuale || 'segnalazioni')?.key || RADIAL_MENU_GROUPS[0].key;
-            syncRadialMenuState(paginaAttuale || 'segnalazioni');
-            updateRadialCenter(paginaAttuale || 'segnalazioni');
+            radialExpandedGroup = getRadialGroupConfigByPage(paginaAttuale || DEFAULT_PAGE)?.key || RADIAL_MENU_GROUPS[0].key;
+            syncRadialMenuState(paginaAttuale || DEFAULT_PAGE);
+            updateRadialCenter(paginaAttuale || DEFAULT_PAGE);
         } else {
-            syncRadialMenuState(paginaAttuale || 'segnalazioni', { forceCollapsed: true });
+            syncRadialMenuState(paginaAttuale || DEFAULT_PAGE, { forceCollapsed: true });
         }
     }
 }

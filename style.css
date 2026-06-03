@@ -5000,12 +5000,12 @@ body[data-theme="dark"] {
     position: absolute;
     left: calc(100% + 14px);
     top: 12px;
-    width: 210px;
+    width: 280px;
     background: #ffffff;
     border: 1px solid var(--border-color);
     border-radius: 14px;
-    box-shadow: var(--shadow-md);
-    padding: 10px;
+    box-shadow: var(--shadow-lg);
+    padding: 16px;
     opacity: 0;
     pointer-events: none;
     transform: translate3d(0, 8px, 0);
@@ -5025,14 +5025,14 @@ body[data-theme="dark"] {
     text-transform: uppercase;
     color: #6f7c79;
     font-weight: 700;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
 }
 
 .app-subtab-summary,
 .app-subtab-actions {
     display: grid;
-    gap: 8px;
-    margin-bottom: 10px;
+    gap: 10px;
+    margin-bottom: 14px;
 }
 
 .app-subtab-summary {
@@ -5043,13 +5043,14 @@ body[data-theme="dark"] {
     border: 1px solid #dfe8e6;
     border-radius: 10px;
     background: #ffffff;
-    padding: 8px 9px;
+    padding: 8px 6px;
+    text-align: center;
 }
 
 .app-subtab-stat span {
     display: block;
     color: #8b7f6a;
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -5057,9 +5058,9 @@ body[data-theme="dark"] {
 
 .app-subtab-stat strong {
     display: block;
-    margin-top: 2px;
+    margin-top: 4px;
     color: #1d2f2b;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .app-subtab-actions {
@@ -5070,15 +5071,20 @@ body[data-theme="dark"] {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    min-height: 38px;
+    gap: 6px;
+    min-height: 36px;
     border: 1px solid rgba(31, 111, 92, 0.18);
     border-radius: 10px;
     background: rgba(31, 111, 92, 0.08);
     color: #165646;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 800;
     cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.app-subtab-action:hover {
+    background: rgba(31, 111, 92, 0.15);
 }
 
 .app-subtab-row {
@@ -5091,19 +5097,25 @@ body[data-theme="dark"] {
     align-items: center;
     justify-content: space-between;
     gap: 10px;
+    padding: 0 14px;
     border: 1px solid #dfe8e6;
     border-radius: 10px;
     background: #ffffff;
     color: #1d2f2b;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 700;
-    min-height: 36px;
+    min-height: 40px;
     cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.app-subtab-btn:hover {
+    background: #f7faf9;
 }
 
 .app-subtab-btn small {
     color: #8b7f6a;
-    font-size: 11px;
+    font-size: 10px;
     font-weight: 800;
 }
 

@@ -3380,8 +3380,8 @@ function getQuickFiltersForPage(pageName) {
     return filters[pageName] || [{ key: 'all', label: 'Tutti' }];
 }
 
-function applyQuickFilter(pageName, rows) {
-    const filter = getPageQuickFilter(pageName);
+function applyQuickFilter(pageName, rows, overrideFilter = null) {
+    const filter = overrideFilter || getPageQuickFilter(pageName);
     if (filter === 'all') return rows;
 
     if (pageName === 'segnalazioni') {
@@ -3420,6 +3420,198 @@ function applyQuickFilter(pageName, rows) {
     }
 
     return rows;
+}
+
+function getRowsByFilter(pageName, rows, filterKey = 'all') {
+    return applyQuickFilter(pageName, rows, filterKey);
+}
+
+function openFirstRecordForFilter(pageName, filterKey = 'all') {
+    const dataset = getSortedDataset(pageName, getRowsByFilter(pageName, getVisibleDataset(pageName), filterKey));
+    if (!dataset.length) {
+        mostraNotifica('Nessun record disponibile per questa vista.', 'warning');
+        return;
+    }
+    const first = dataset[0];
+    if (pageName === 'clienti') {
+        apriVisualizzazioneTimeline(first.id);
+        return;
+    }
+    apriRecordDettaglio(pageName, first.id);
+}
+
+function openModuleAndApplyFilter(pageName, filterKey = 'all') {
+    setPageQuickFilter(pageName, filterKey);
+    if (paginaAttuale !== pageName) cambiaPagina(pageName);
+}
+
+function renderModuleWorkspace(pageName, rows) {
+    const cards = [];
+    const actions = [];
+    const queue = [];
+    const playbook = [];
+
+    if (pageName === 'preventivi') {
+        const aperti = rows.filter(item => !['accettato', 'rifiutato'].includes(item.stato));
+        const inScadenza = aperti.filter(item => {
+            const days = daysFromToday(item.dataScadenza);
+            return days !== null && days <= 7;
+        });
+        const accettati = rows.filter(item => item.stato === 'accettato');
+        const valoreAperto = aperti.reduce((sum, item) => sum + toFiniteNumber(item.totale), 0);
+        cards.push(
+            { label: 'Da seguire', value: formatCompactNumber(aperti.length), detail: 'Preventivi ancora aperti' },
+            { label: 'In scadenza', value: formatCompactNumber(inScadenza.length), detail: 'Entro 7 giorni' },
+            { label: 'Valore aperto', value: formatCrmMoney(valoreAperto), detail: 'Pipeline offerta attiva' },
+            { label: 'Accettati', value: formatCompactNumber(accettati.length), detail: 'Pronti per ordine o conferma' }
+        );
+        actions.push(
+            { label: 'Apri scadenze', icon: 'fa-hourglass-half', onclick: `openModuleAndApplyFilter('preventivi', 'scadenza')` },
+            { label: 'Scheda piu urgente', icon: 'fa-bolt', onclick: `openFirstRecordForFilter('preventivi', 'scadenza')` },
+            { label: 'Nuovo preventivo', icon: 'fa-plus', onclick: 'apriModalGenericCrea()' },
+            { label: 'Importa offerte', icon: 'fa-file-import', onclick: `apriImportatoreCSV('preventivi')` }
+        );
+        queue.push(...[...inScadenza]
+            .sort((a, b) => (daysFromToday(a.dataScadenza) ?? 999) - (daysFromToday(b.dataScadenza) ?? 999))
+            .slice(0, 4)
+            .map(item => ({
+                title: item.numero,
+                meta: `${formatRelativeDays(daysFromToday(item.dataScadenza))} · ${formatCrmMoney(item.totale || 0)}`,
+                onclick: `apriRecordDettaglio('preventivi', '${item.id}')`
+            })));
+        playbook.push(
+            'Presidia prima i preventivi entro 7 giorni.',
+            'Converti in ordine solo dopo verifica righe e pagamento.',
+            'Usa la board per vedere subito bozza, inviato, accettato, rifiutato.'
+        );
+    }
+
+    if (pageName === 'ordiniVendita') {
+        const urgenti = rows.filter(item => {
+            const days = daysFromToday(item.dataConsegna);
+            return days !== null && days <= 3 && !['spedito', 'consegnato'].includes(item.stato);
+        });
+        const nonPagati = rows.filter(item => item.statoPagamento === 'nonpagato' || item.statoPagamento === 'parziale');
+        const evasione = rows.filter(item => !['spedito', 'consegnato'].includes(item.stato));
+        const fatturazione = rows.filter(item => {
+            const days = daysFromToday(item.dataPrevistaFattura);
+            return days !== null && days <= 7;
+        });
+        cards.push(
+            { label: 'Urgenti', value: formatCompactNumber(urgenti.length), detail: 'Consegna entro 72 ore' },
+            { label: 'Da evadere', value: formatCompactNumber(evasione.length), detail: 'Ordini non spediti' },
+            { label: 'Non pagati', value: formatCompactNumber(nonPagati.length), detail: 'Totale da presidiare' },
+            { label: 'Fatturazione', value: formatCompactNumber(fatturazione.length), detail: 'Prevista entro 7 giorni' }
+        );
+        actions.push(
+            { label: 'Apri urgenti', icon: 'fa-triangle-exclamation', onclick: `openModuleAndApplyFilter('ordiniVendita', 'urgenti')` },
+            { label: 'Apri non pagati', icon: 'fa-wallet', onclick: `openModuleAndApplyFilter('ordiniVendita', 'nonpagati')` },
+            { label: 'Ordine piu vicino', icon: 'fa-truck-fast', onclick: `openFirstRecordForFilter('ordiniVendita', 'urgenti')` },
+            { label: 'Nuovo ordine', icon: 'fa-plus', onclick: 'apriModalGenericCrea()' }
+        );
+        queue.push(...[...evasione]
+            .sort((a, b) => (daysFromToday(a.dataConsegna) ?? 999) - (daysFromToday(b.dataConsegna) ?? 999))
+            .slice(0, 4)
+            .map(item => ({
+                title: item.numero,
+                meta: `${formatRelativeDays(daysFromToday(item.dataConsegna))} · ${item.statoPagamento || 'nonpagato'}`,
+                onclick: `apriRecordDettaglio('ordiniVendita', '${item.id}')`
+            })));
+        playbook.push(
+            'Presidia per primi gli ordini in consegna e con pagamento aperto.',
+            'Apri la scheda ordine per controllare DDT collegati e data fattura.',
+            'Usa la board per separare in lavorazione, spedito e consegnato.'
+        );
+    }
+
+    if (pageName === 'magazzino') {
+        const critici = rows.filter(item => toFiniteNumber(item.quantita) <= toFiniteNumber(item.quantitaMinima || 0));
+        const topValore = [...rows].sort((a, b) => toFiniteNumber(b.valoreFIFO) - toFiniteNumber(a.valoreFIFO)).slice(0, 3);
+        const quantitaTotale = rows.reduce((sum, item) => sum + toFiniteNumber(item.quantita), 0);
+        const valoreTotale = rows.reduce((sum, item) => sum + toFiniteNumber(item.valoreFIFO), 0);
+        cards.push(
+            { label: 'Scorte critiche', value: formatCompactNumber(critici.length), detail: 'Articoli sotto minimo' },
+            { label: 'Quantita totale', value: formatCompactNumber(quantitaTotale), detail: 'Unita presidiate' },
+            { label: 'Valore stock', value: formatCrmMoney(valoreTotale), detail: 'Inventario visibile' },
+            { label: 'Top valore', value: formatCompactNumber(topValore.length), detail: 'Articoli da monitorare' }
+        );
+        actions.push(
+            { label: 'Apri scorte critiche', icon: 'fa-warehouse', onclick: `openModuleAndApplyFilter('magazzino', 'critico')` },
+            { label: 'Articolo piu critico', icon: 'fa-circle-exclamation', onclick: `openFirstRecordForFilter('magazzino', 'critico')` },
+            { label: 'Nuova giacenza', icon: 'fa-plus', onclick: 'apriModalGenericCrea()' },
+            { label: 'Apri distinta base', icon: 'fa-diagram-project', onclick: `cambiaPagina('distintaBase')` }
+        );
+        queue.push(...critici
+            .slice(0, 4)
+            .map(item => {
+                const prodotto = DATASETS.prodotti.find(prod => prod.id === item.prodotto);
+                return {
+                    title: prodotto?.codice || item.prodotto || 'Articolo',
+                    meta: `${toFiniteNumber(item.quantita)} su minimo ${toFiniteNumber(item.quantitaMinima)} · ${item.ubicazione || 'Ubicazione da definire'}`,
+                    onclick: `apriRecordDettaglio('magazzino', '${item.id}')`
+                };
+            }));
+        playbook.push(
+            'Ricarica prima gli articoli sotto minimo e ad alto assorbimento.',
+            'Apri la distinta base quando una spedizione consuma componenti collegati.',
+            'Controlla il valore FIFO per isolare stock costoso fermo.'
+        );
+    }
+
+    if (!cards.length) return '';
+
+    return `
+        <section class="crm-module-workspace">
+            <div class="crm-module-workspace__metrics">
+                ${cards.map(item => `
+                    <article class="crm-module-metric">
+                        <span>${item.label}</span>
+                        <strong>${item.value}</strong>
+                        <small>${item.detail}</small>
+                    </article>
+                `).join('')}
+            </div>
+            <div class="crm-module-workspace__grid">
+                <div class="crm-module-card">
+                    <div class="crm-module-card__head">
+                        <span class="crm-table-eyebrow">Azioni rapide</span>
+                        <strong>Workspace operativo</strong>
+                    </div>
+                    <div class="crm-module-actions">
+                        ${actions.map(item => `
+                            <button type="button" class="crm-module-action" onclick="${item.onclick}">
+                                <i class="fas ${item.icon}"></i>
+                                <span>${item.label}</span>
+                            </button>
+                        `).join('')}
+                    </div>
+                </div>
+                <div class="crm-module-card">
+                    <div class="crm-module-card__head">
+                        <span class="crm-table-eyebrow">Coda prioritaria</span>
+                        <strong>Record da presidiare</strong>
+                    </div>
+                    <div class="crm-module-queue">
+                        ${queue.length ? queue.map(item => `
+                            <button type="button" class="crm-module-queue__item" onclick="${item.onclick}">
+                                <strong>${cleanUiText(item.title)}</strong>
+                                <small>${cleanUiText(item.meta)}</small>
+                            </button>
+                        `).join('') : '<div class="dashboard-empty">Nessuna eccezione attiva in questo momento.</div>'}
+                    </div>
+                </div>
+                <div class="crm-module-card">
+                    <div class="crm-module-card__head">
+                        <span class="crm-table-eyebrow">Playbook</span>
+                        <strong>Uso consigliato del modulo</strong>
+                    </div>
+                    <div class="crm-module-playbook">
+                        ${playbook.map(item => `<div class="crm-module-playbook__item">${cleanUiText(item)}</div>`).join('')}
+                    </div>
+                </div>
+            </div>
+        </section>
+    `;
 }
 
 function getPageInsightSummary(pageName, rows) {
@@ -3792,6 +3984,8 @@ function renderDatabaseTable(container, pageName) {
                 ${renderPageViewSwitch(pageName)}
             </div>
         </div>
+
+        ${renderModuleWorkspace(pageName, sortedDataset)}
 
         <div class="crm-dense-layout">
         <div class="crm-table-container">

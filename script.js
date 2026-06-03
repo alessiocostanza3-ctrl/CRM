@@ -137,7 +137,7 @@ const DEFAULT_THEME = 'light';
 const DATASETS_STORAGE_KEY = 'crm_datasets_v2';
 const LEGACY_DATASET_STORAGE_KEYS = ['crm_datasets_v1'];
 const NAV_PAGE_STORAGE_KEY = 'crm_current_page_state_v1';
-const DEFAULT_PAGE = 'ordiniVendita';
+const DEFAULT_PAGE = 'dashboard_operativa';
 let lastSyncedDatasetsSignature = '';
 let staticSeedDatasetsCache = null;
 const REMOTE_CONFIG = (typeof window !== 'undefined' && window.CRM_REMOTE) ? window.CRM_REMOTE : {};
@@ -625,6 +625,36 @@ function isDatasetsEffectivelyEmpty(payload) {
     const productIds = new Set(payload.prodotti.map(item => item && item.id).filter(Boolean));
     const hasSideisProducts = productIds.has('prod_sideis_one_cc') && productIds.has('prod_sideis_one_cv');
     return !hasSideisProducts || payload.magazzino.length < 20;
+}
+
+function toFiniteNumber(value) {
+    const parsed = Number(value);
+    return Number.isFinite(parsed) ? parsed : 0;
+}
+
+function parseIsoDateSafe(value) {
+    if (!value) return null;
+    const parsed = new Date(value);
+    return Number.isNaN(parsed.getTime()) ? null : parsed;
+}
+
+function daysFromToday(value) {
+    const date = parseIsoDateSafe(value);
+    if (!date) return null;
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const target = new Date(date);
+    target.setHours(0, 0, 0, 0);
+    return Math.round((target.getTime() - today.getTime()) / 86400000);
+}
+
+function formatRelativeDays(days) {
+    if (days === null || days === undefined) return 'Data non disponibile';
+    if (days === 0) return 'Oggi';
+    if (days === 1) return 'Domani';
+    if (days === -1) return 'Ieri';
+    if (days > 1) return `Tra ${days} giorni`;
+    return `${Math.abs(days)} giorni fa`;
 }
 
 async function loadDatasetsFromApi() {
@@ -1141,6 +1171,8 @@ let ricercaQuery = '';
 const tableSortByPage = {};
 let timelineClienteSelezionatoId = null;
 let tipoInterazioneSelezionato = 'nota';
+const PAGE_UI_STATE_STORAGE_KEY = 'crm_page_ui_state_v1';
+let recordDetailContext = null;
 const DEFAULT_ORDER_SALES_OPTIONAL_FIELDS = {
     contatto: false,
     referente: false,
@@ -1158,6 +1190,8 @@ let topNavEventsBound = false;
 let topNavActiveSection = 'commerciale';
 let topNavSectionsCollapsed = false;
 const CUSTOM_PAGE_TITLES = {
+    dashboard_operativa: 'Dashboard Operativa',
+    record_dettaglio: 'Scheda Record',
     scrematura_prodotti: 'Scrematura Prodotti',
     timeline_dettagli: 'Timeline Cliente',
     impostazioni: 'Impostazioni / CSV',
@@ -1165,7 +1199,7 @@ const CUSTOM_PAGE_TITLES = {
 };
 
 function isCustomPage(page) {
-    return ['scrematura_prodotti', 'timeline_dettagli', 'impostazioni', 'analisiDati'].includes(page);
+    return ['dashboard_operativa', 'record_dettaglio', 'scrematura_prodotti', 'timeline_dettagli', 'impostazioni', 'analisiDati'].includes(page);
 }
 
 function isKnownPage(page) {
@@ -1175,7 +1209,9 @@ function isKnownPage(page) {
 function persistCurrentPageState(page) {
     const state = {
         page,
-        detailClientId: page === 'timeline_dettagli' ? String(window.dettagliClienteIdAttivo || '') : ''
+        detailClientId: page === 'timeline_dettagli' ? String(window.dettagliClienteIdAttivo || '') : '',
+        detailPage: page === 'record_dettaglio' ? String(recordDetailContext?.page || '') : '',
+        detailRecordId: page === 'record_dettaglio' ? String(recordDetailContext?.id || '') : ''
     };
     localStorage.setItem(NAV_PAGE_STORAGE_KEY, JSON.stringify(state));
     const nextHash = `#${page}`;
@@ -1198,7 +1234,33 @@ function restoreCurrentPageState() {
     if (page === 'timeline_dettagli' && stored.detailClientId) {
         window.dettagliClienteIdAttivo = stored.detailClientId;
     }
+    if (page === 'record_dettaglio' && stored.detailPage && stored.detailRecordId) {
+        recordDetailContext = { page: stored.detailPage, id: stored.detailRecordId };
+    }
     return page;
+}
+
+function readPageUiState() {
+    try {
+        return JSON.parse(localStorage.getItem(PAGE_UI_STATE_STORAGE_KEY) || '{}');
+    } catch {
+        return {};
+    }
+}
+
+function writePageUiState(nextState) {
+    localStorage.setItem(PAGE_UI_STATE_STORAGE_KEY, JSON.stringify(nextState));
+}
+
+function getPageUiState(pageName) {
+    const state = readPageUiState();
+    return state[pageName] || {};
+}
+
+function updatePageUiState(pageName, partial) {
+    const state = readPageUiState();
+    state[pageName] = { ...(state[pageName] || {}), ...partial };
+    writePageUiState(state);
 }
 
 function cleanUiText(value) {
@@ -1263,6 +1325,7 @@ function getRadialCenterTitle(page) {
 }
 
 function getSidebarAnchorPage(page) {
+    if (page === 'dashboard_operativa') return 'dashboard_operativa';
     if (page === 'analisiDati') return 'analisiDati';
     if (['preventivi', 'preventiviAcquisto'].includes(page)) return 'preventivi';
     if (['ordiniVendita', 'ordiniAcquisto'].includes(page)) return 'ordini';
@@ -1409,6 +1472,7 @@ const RADIAL_MENU_GROUPS = [
         startAngle: 306,
         endAngle: 66,
         items: [
+            { page: 'dashboard_operativa', title: 'Dashboard', chip: 'DB', icon: 'fa-house' },
             { page: 'segnalazioni', title: 'Segnalazioni', chip: 'SG', icon: 'fa-bullseye' },
             { page: 'clienti', title: 'Clienti e Lead', chip: 'CL', icon: 'fa-user-group' },
             { page: 'preventivi', title: 'Preventivi', chip: 'PV', icon: 'fa-file-signature' },
@@ -2057,6 +2121,12 @@ function cambiaPagina(page) {
     if (TABLE_CONFIGS[page]) {
         if (titleElMobile) titleElMobile.innerText = cleanUiText(TABLE_CONFIGS[page].title);
         renderDatabaseTable(contentEl, page);
+    } else if (page === 'dashboard_operativa') {
+        if (titleElMobile) titleElMobile.innerText = "Dashboard Operativa";
+        renderDashboardOperativa(contentEl);
+    } else if (page === 'record_dettaglio' && recordDetailContext?.page && recordDetailContext?.id) {
+        if (titleElMobile) titleElMobile.innerText = "Scheda Record";
+        renderRecordDettaglio(contentEl, recordDetailContext.page, recordDetailContext.id);
     } else if (page === 'scrematura_prodotti') {
         if (titleElMobile) titleElMobile.innerText = "Scrematura Prodotti";
         renderScrematuraProdottiPage(contentEl);
@@ -2075,6 +2145,415 @@ function cambiaPagina(page) {
         if (titleElMobile) titleElMobile.innerText = "Analisi Dati";
         renderAnalisiDati(contentEl);
     }
+}
+
+function apriRecordDettaglio(pageName, recordId) {
+    recordDetailContext = { page: pageName, id: recordId };
+    cambiaPagina('record_dettaglio');
+}
+
+function getRecordByPage(pageName, recordId) {
+    const rows = DATASETS[pageName] || [];
+    return rows.find(item => item.id === recordId) || null;
+}
+
+function renderRecordDettaglio(container, pageName, recordId) {
+    const record = getRecordByPage(pageName, recordId);
+    if (!record) {
+        container.innerHTML = `
+            <div class="crm-page-header">
+                <div class="crm-header-card">
+                    <div class="crm-header-info">
+                        <span class="crm-header-eyebrow">Record</span>
+                        <h2 class="crm-header-title">Scheda non disponibile</h2>
+                    </div>
+                    <div class="crm-header-actions">
+                        <button class="btn-primary" onclick="cambiaPagina('${pageName}')">Torna al modulo</button>
+                    </div>
+                </div>
+            </div>
+        `;
+        return;
+    }
+
+    const title = record.numero || record.nome || record.azienda || record.titolo || record.codice || record.id;
+    const rows = Array.isArray(record.righe) ? record.righe : [];
+    const linkedName = record.cliente
+        ? (DATASETS.clienti.find(item => item.id === record.cliente)?.azienda || 'Cliente')
+        : record.fornitore
+            ? (DATASETS.fornitori.find(item => item.id === record.fornitore)?.nome || 'Fornitore')
+            : '';
+
+    const detailStats = [
+        { label: 'Stato', value: mappaNomeStato(record.stato || record.statoQualifica || record.statoPagamento || 'attivo') },
+        { label: 'Valore', value: formatCrmMoney(record.totale || record.valore || record.valoreFIFO || record.prezzoVendita || 0) },
+        { label: 'Righe', value: formatCompactNumber(rows.length) },
+        { label: 'Prossima scadenza', value: formatRelativeDays(daysFromToday(record.dataScadenza || record.dataConsegna || record.data || '')) }
+    ];
+
+    container.innerHTML = `
+        <section class="crm-workbench">
+            <div class="crm-page-header">
+                <div class="crm-header-card">
+                    <div class="crm-header-info">
+                        <span class="crm-header-eyebrow">Scheda record</span>
+                        <h2 class="crm-header-title">${cleanUiText(title)}</h2>
+                        <p class="crm-header-subtitle">${cleanUiText(TABLE_CONFIGS[pageName]?.title || pageName)}${linkedName ? ` · ${linkedName}` : ''}</p>
+                    </div>
+                    <div class="crm-header-actions">
+                        <button class="btn-secondary" onclick="cambiaPagina('${pageName}')"><i class="fas fa-chevron-left"></i> Torna al modulo</button>
+                        <button class="btn-primary" onclick="apriModalGenericModifica('${record.id}')"><i class="fas fa-pen"></i> Modifica</button>
+                    </div>
+                </div>
+            </div>
+            <div class="dashboard-metric-grid">
+                ${detailStats.map(item => `
+                    <article class="dashboard-metric-card">
+                        <div class="dashboard-metric-copy">
+                            <span class="dashboard-metric-label">${item.label}</span>
+                            <strong class="dashboard-metric-value">${item.value}</strong>
+                        </div>
+                    </article>
+                `).join('')}
+            </div>
+            <div class="dashboard-grid">
+                <section class="dashboard-panel">
+                    <div class="dashboard-panel-head">
+                        <div>
+                            <span class="dashboard-panel-eyebrow">Contesto</span>
+                            <h3>Dati principali</h3>
+                        </div>
+                    </div>
+                    <div class="record-detail-grid">
+                        ${Object.entries(record)
+                            .filter(([key, value]) => !['id', 'righe', 'timeline'].includes(key) && value !== undefined && value !== null && value !== '')
+                            .slice(0, 14)
+                            .map(([key, value]) => `
+                                <div class="record-detail-item">
+                                    <span>${cleanUiText(key)}</span>
+                                    <strong>${Array.isArray(value) ? value.length : value}</strong>
+                                </div>
+                            `).join('')}
+                    </div>
+                </section>
+                <section class="dashboard-panel">
+                    <div class="dashboard-panel-head">
+                        <div>
+                            <span class="dashboard-panel-eyebrow">Azioni consigliate</span>
+                            <h3>Next actions</h3>
+                        </div>
+                    </div>
+                    <div class="dashboard-task-list">
+                        ${renderRecordActionSuggestions(pageName, record)}
+                    </div>
+                </section>
+            </div>
+            ${rows.length ? `
+                <section class="dashboard-panel">
+                    <div class="dashboard-panel-head">
+                        <div>
+                            <span class="dashboard-panel-eyebrow">Contenuto</span>
+                            <h3>Righe documento</h3>
+                        </div>
+                    </div>
+                    <div class="record-lines-table">
+                        <table class="crm-table">
+                            <thead>
+                                <tr><th>Prodotto</th><th>Quantita</th><th>Prezzo</th><th>IVA</th></tr>
+                            </thead>
+                            <tbody>
+                                ${rows.map(line => {
+                                    const prodotto = DATASETS.prodotti.find(item => item.id === line.prodotto);
+                                    return `
+                                        <tr>
+                                            <td>${prodotto?.codice || line.prodotto}<div class="client-company-sub">${prodotto?.nome || line.descrizione || ''}</div></td>
+                                            <td>${line.quantita || 0}</td>
+                                            <td>${formatCrmMoney(line.prezzo || 0)}</td>
+                                            <td>${line.iva || 0}%</td>
+                                        </tr>
+                                    `;
+                                }).join('')}
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            ` : ''}
+        </section>
+    `;
+}
+
+function renderRecordActionSuggestions(pageName, record) {
+    const items = [];
+    if (pageName === 'preventivi' && record.stato !== 'accettato') {
+        items.push(`<div class="dashboard-task-row"><div><strong>Converti il preventivo</strong><span>Se il cliente conferma, genera subito l'ordine di vendita.</span></div><button type="button" class="btn-dark dashboard-mini-btn" onclick="convertiPreventivoInOrdine('${record.id}')">Crea ordine</button></div>`);
+    }
+    if (pageName === 'ordiniVendita' && !['spedito', 'consegnato'].includes(record.stato)) {
+        items.push(`<div class="dashboard-task-row"><div><strong>Prepara evasione</strong><span>Controlla disponibilita, consegna e pagamento prima di creare il DDT.</span></div><button type="button" class="btn-dark dashboard-mini-btn" onclick="convertiOrdineInDDT('${record.id}')">Genera DDT</button></div>`);
+    }
+    if (pageName === 'prodotti') {
+        items.push(`<div class="dashboard-task-row"><div><strong>Verifica copertura stock</strong><span>Controlla distinta base, prezzo e disponibilita di magazzino collegata.</span></div><button type="button" class="btn-dark dashboard-mini-btn" onclick="cambiaPagina('magazzino')">Apri magazzino</button></div>`);
+    }
+    if (!items.length) {
+        items.push('<div class="dashboard-empty">Nessuna azione guidata disponibile per questo record.</div>');
+    }
+    return items.join('');
+}
+
+function getDashboardSummaryMetrics() {
+    const openLeads = DATASETS.clienti.filter(item => !['vinto', 'perso'].includes(item.stato)).length;
+    const openQuotes = DATASETS.preventivi.filter(item => !['accettato', 'rifiutato'].includes(item.stato)).length;
+    const activeOrders = DATASETS.ordiniVendita.filter(item => !['spedito', 'consegnato'].includes(item.stato)).length;
+    const criticalStock = DATASETS.magazzino.filter(item => toFiniteNumber(item.quantita) <= toFiniteNumber(item.quantitaMinima || 0)).length;
+    const forecastValue = DATASETS.preventivi
+        .filter(item => !['rifiutato'].includes(item.stato))
+        .reduce((sum, item) => sum + toFiniteNumber(item.totale), 0);
+    const portfolioValue = DATASETS.ordiniVendita
+        .filter(item => !['consegnato'].includes(item.stato))
+        .reduce((sum, item) => sum + toFiniteNumber(item.totale), 0);
+
+    return [
+        { label: 'Lead aperti', value: formatCompactNumber(openLeads), subtext: 'Clienti ancora in pipeline', icon: 'fa-user-plus' },
+        { label: 'Preventivi attivi', value: formatCompactNumber(openQuotes), subtext: 'Offerte da seguire', icon: 'fa-file-signature' },
+        { label: 'Portafoglio ordini', value: formatCrmMoney(portfolioValue), subtext: `${activeOrders} ordini non chiusi`, icon: 'fa-box-open' },
+        { label: 'Forecast commerciale', value: formatCrmMoney(forecastValue), subtext: `${criticalStock} scorte critiche`, icon: 'fa-chart-line' }
+    ];
+}
+
+function getDashboardAlerts() {
+    const alerts = [];
+
+    DATASETS.preventivi.forEach(item => {
+        if (['accettato', 'rifiutato'].includes(item.stato)) return;
+        const days = daysFromToday(item.dataScadenza);
+        if (days !== null && days <= 3) {
+            const cliente = DATASETS.clienti.find(c => c.id === item.cliente);
+            alerts.push({
+                tone: days < 0 ? 'critical' : 'warning',
+                title: `Preventivo ${item.numero} in scadenza`,
+                detail: `${cliente?.azienda || 'Cliente'} · ${formatRelativeDays(days)}`,
+                cta: 'Apri preventivi',
+                page: 'preventivi'
+            });
+        }
+    });
+
+    DATASETS.ordiniVendita.forEach(item => {
+        if (['spedito', 'consegnato'].includes(item.stato)) return;
+        const days = daysFromToday(item.dataConsegna);
+        if (days !== null && days <= 2) {
+            const cliente = DATASETS.clienti.find(c => c.id === item.cliente);
+            alerts.push({
+                tone: days < 0 ? 'critical' : 'info',
+                title: `Ordine ${item.numero} vicino consegna`,
+                detail: `${cliente?.azienda || 'Cliente'} · ${formatRelativeDays(days)}`,
+                cta: 'Apri ordini',
+                page: 'ordiniVendita'
+            });
+        }
+    });
+
+    DATASETS.magazzino.forEach(item => {
+        if (toFiniteNumber(item.quantita) > toFiniteNumber(item.quantitaMinima || 0)) return;
+        const prodotto = DATASETS.prodotti.find(p => p.id === item.prodotto);
+        alerts.push({
+            tone: 'critical',
+            title: `Scorta critica ${prodotto?.codice || 'Articolo'}`,
+            detail: `${prodotto?.nome || 'Prodotto'} · ${toFiniteNumber(item.quantita)} disponibili`,
+            cta: 'Apri magazzino',
+            page: 'magazzino'
+        });
+    });
+
+    return alerts.slice(0, 6);
+}
+
+function getDashboardFocusActions() {
+    const actions = [];
+
+    DATASETS.clienti
+        .filter(item => ['lead', 'contattato', 'offerta', 'trattativa'].includes(item.stato))
+        .sort((a, b) => toFiniteNumber(b.valore) - toFiniteNumber(a.valore))
+        .slice(0, 4)
+        .forEach(item => {
+            actions.push({
+                title: item.azienda,
+                meta: `${mappaNomeStato(item.stato)} · ${formatCrmMoney(item.valore || 0)}`,
+                action: 'Apri scheda cliente',
+                handler: `apriVisualizzazioneTimeline('${item.id}')`
+            });
+        });
+
+    DATASETS.ordiniVendita
+        .filter(item => item.statoPagamento === 'nonpagato' || item.statoPagamento === 'parziale')
+        .slice(0, 4)
+        .forEach(item => {
+            const cliente = DATASETS.clienti.find(c => c.id === item.cliente);
+            actions.push({
+                title: `${item.numero} da presidiare`,
+                meta: `${cliente?.azienda || 'Cliente'} · ${item.statoPagamento === 'parziale' ? 'Pagamento parziale' : 'Non pagato'}`,
+                action: 'Apri ordini',
+                handler: `cambiaPagina('ordiniVendita')`
+            });
+        });
+
+    return actions.slice(0, 8);
+}
+
+function getDashboardPipelineCards() {
+    return [
+        {
+            title: 'Commerciale',
+            value: formatCompactNumber(DATASETS.clienti.filter(item => !['vinto', 'perso'].includes(item.stato)).length),
+            detail: 'Lead e trattative aperte',
+            page: 'clienti',
+            icon: 'fa-user-group'
+        },
+        {
+            title: 'Offerte',
+            value: formatCompactNumber(DATASETS.preventivi.filter(item => !['accettato', 'rifiutato'].includes(item.stato)).length),
+            detail: 'Preventivi da convertire',
+            page: 'preventivi',
+            icon: 'fa-file-signature'
+        },
+        {
+            title: 'Consegne',
+            value: formatCompactNumber(DATASETS.ordiniVendita.filter(item => !['spedito', 'consegnato'].includes(item.stato)).length),
+            detail: 'Ordini da preparare',
+            page: 'ordiniVendita',
+            icon: 'fa-truck-fast'
+        },
+        {
+            title: 'Supply',
+            value: formatCompactNumber(DATASETS.ordiniAcquisto.filter(item => item.stato !== 'ricevuto').length),
+            detail: 'Acquisti da seguire',
+            page: 'ordiniAcquisto',
+            icon: 'fa-receipt'
+        }
+    ];
+}
+
+function renderDashboardOperativa(container) {
+    const metrics = getDashboardSummaryMetrics();
+    const alerts = getDashboardAlerts();
+    const focusActions = getDashboardFocusActions();
+    const pipelines = getDashboardPipelineCards();
+
+    container.innerHTML = `
+        <section class="crm-workbench dashboard-operativa">
+            <div class="crm-page-header">
+                <div class="crm-header-card">
+                    <div class="crm-header-info">
+                        <span class="crm-header-eyebrow">Workspace CRM</span>
+                        <h2 class="crm-header-title">Dashboard Operativa</h2>
+                        <p class="crm-header-subtitle">Una home unica per capire priorita, eccezioni, pipeline e prossime azioni prima di entrare nei moduli.</p>
+                    </div>
+                    <div class="crm-header-actions">
+                        <button class="btn-secondary" onclick="cambiaPagina('analisiDati')">
+                            <i class="fas fa-chart-column"></i> Apri Analisi
+                        </button>
+                        <button class="btn-primary" onclick="cambiaPagina('clienti')">
+                            <i class="fas fa-arrow-right"></i> Vai al CRM
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-metric-grid">
+                ${metrics.map(metric => `
+                    <article class="dashboard-metric-card">
+                        <div class="dashboard-metric-icon"><i class="fas ${metric.icon}" aria-hidden="true"></i></div>
+                        <div class="dashboard-metric-copy">
+                            <span class="dashboard-metric-label">${metric.label}</span>
+                            <strong class="dashboard-metric-value">${metric.value}</strong>
+                            <span class="dashboard-metric-subtext">${metric.subtext}</span>
+                        </div>
+                    </article>
+                `).join('')}
+            </div>
+
+            <div class="dashboard-grid">
+                <section class="dashboard-panel">
+                    <div class="dashboard-panel-head">
+                        <div>
+                            <span class="dashboard-panel-eyebrow">Priorita</span>
+                            <h3>Eccezioni da presidiare</h3>
+                        </div>
+                        <button type="button" class="dashboard-inline-link" onclick="cambiaPagina('ordiniVendita')">Apri operativita</button>
+                    </div>
+                    <div class="dashboard-alert-list">
+                        ${alerts.length ? alerts.map(alert => `
+                            <button type="button" class="dashboard-alert-card tone-${alert.tone}" onclick="cambiaPagina('${alert.page}')">
+                                <span class="dashboard-alert-title">${alert.title}</span>
+                                <span class="dashboard-alert-detail">${alert.detail}</span>
+                                <span class="dashboard-alert-cta">${alert.cta}</span>
+                            </button>
+                        `).join('') : '<div class="dashboard-empty">Nessuna eccezione critica sui dati correnti.</div>'}
+                    </div>
+                </section>
+
+                <section class="dashboard-panel">
+                    <div class="dashboard-panel-head">
+                        <div>
+                            <span class="dashboard-panel-eyebrow">Focus del giorno</span>
+                            <h3>Work queue commerciale</h3>
+                        </div>
+                        <button type="button" class="dashboard-inline-link" onclick="cambiaPagina('clienti')">Apri clienti</button>
+                    </div>
+                    <div class="dashboard-task-list">
+                        ${focusActions.length ? focusActions.map(item => `
+                            <div class="dashboard-task-row">
+                                <div>
+                                    <strong>${item.title}</strong>
+                                    <span>${item.meta}</span>
+                                </div>
+                                <button type="button" class="btn-dark dashboard-mini-btn" onclick="${item.handler}">
+                                    ${item.action}
+                                </button>
+                            </div>
+                        `).join('') : '<div class="dashboard-empty">Nessuna attivita suggerita con i dati attuali.</div>'}
+                    </div>
+                </section>
+            </div>
+
+            <div class="dashboard-grid">
+                <section class="dashboard-panel">
+                    <div class="dashboard-panel-head">
+                        <div>
+                            <span class="dashboard-panel-eyebrow">Pipeline</span>
+                            <h3>Flussi principali</h3>
+                        </div>
+                    </div>
+                    <div class="dashboard-pipeline-grid">
+                        ${pipelines.map(item => `
+                            <button type="button" class="dashboard-pipeline-card" onclick="cambiaPagina('${item.page}')">
+                                <i class="fas ${item.icon}" aria-hidden="true"></i>
+                                <strong>${item.title}</strong>
+                                <span>${item.value}</span>
+                                <small>${item.detail}</small>
+                            </button>
+                        `).join('')}
+                    </div>
+                </section>
+
+                <section class="dashboard-panel">
+                    <div class="dashboard-panel-head">
+                        <div>
+                            <span class="dashboard-panel-eyebrow">Azioni rapide</span>
+                            <h3>Entrate operative</h3>
+                        </div>
+                    </div>
+                    <div class="dashboard-quick-actions">
+                        <button type="button" class="dashboard-quick-action" onclick="cambiaPagina('segnalazioni')"><i class="fas fa-bullseye"></i><span>Nuove opportunita</span></button>
+                        <button type="button" class="dashboard-quick-action" onclick="cambiaPagina('preventivi')"><i class="fas fa-file-signature"></i><span>Preventivi</span></button>
+                        <button type="button" class="dashboard-quick-action" onclick="cambiaPagina('ordiniVendita')"><i class="fas fa-box-open"></i><span>Ordini vendita</span></button>
+                        <button type="button" class="dashboard-quick-action" onclick="cambiaPagina('magazzino')"><i class="fas fa-warehouse"></i><span>Scorte</span></button>
+                        <button type="button" class="dashboard-quick-action" onclick="cambiaPagina('fornitori')"><i class="fas fa-industry"></i><span>Fornitori</span></button>
+                        <button type="button" class="dashboard-quick-action" onclick="cambiaPagina('analisiDati')"><i class="fas fa-chart-line"></i><span>Report</span></button>
+                    </div>
+                </section>
+            </div>
+        </section>
+    `;
 }
 
 function renderScrematuraProdottiPage(container) {
@@ -2568,6 +3047,250 @@ function getVisibleDataset(pageName) {
     return dataset;
 }
 
+function getPageViewMode(pageName) {
+    const state = getPageUiState(pageName);
+    return state.viewMode || 'table';
+}
+
+function setPageViewMode(pageName, viewMode) {
+    updatePageUiState(pageName, { viewMode });
+    if (paginaAttuale === pageName) cambiaPagina(pageName);
+}
+
+function getPageQuickFilter(pageName) {
+    const state = getPageUiState(pageName);
+    return state.quickFilter || 'all';
+}
+
+function setPageQuickFilter(pageName, quickFilter) {
+    updatePageUiState(pageName, { quickFilter });
+    if (paginaAttuale === pageName) cambiaPagina(pageName);
+}
+
+function getQuickFiltersForPage(pageName) {
+    const filters = {
+        segnalazioni: [
+            { key: 'all', label: 'Tutte' },
+            { key: 'aperte', label: 'Aperte' },
+            { key: 'prioritarie', label: 'Alta priorita' },
+            { key: 'convertite', label: 'Convertite' }
+        ],
+        clienti: [
+            { key: 'all', label: 'Tutti' },
+            { key: 'pipeline', label: 'In pipeline' },
+            { key: 'caldi', label: 'Top valore' },
+            { key: 'vinti', label: 'Clienti vinti' }
+        ],
+        preventivi: [
+            { key: 'all', label: 'Tutti' },
+            { key: 'aperti', label: 'Da seguire' },
+            { key: 'scadenza', label: 'In scadenza' },
+            { key: 'accettati', label: 'Accettati' }
+        ],
+        ordiniVendita: [
+            { key: 'all', label: 'Tutti' },
+            { key: 'urgenti', label: 'Urgenti' },
+            { key: 'nonpagati', label: 'Non pagati' },
+            { key: 'evasione', label: 'Da evadere' }
+        ],
+        magazzino: [
+            { key: 'all', label: 'Tutto' },
+            { key: 'critico', label: 'Scorte critiche' },
+            { key: 'valore', label: 'Top valore' }
+        ]
+    };
+    return filters[pageName] || [{ key: 'all', label: 'Tutti' }];
+}
+
+function applyQuickFilter(pageName, rows) {
+    const filter = getPageQuickFilter(pageName);
+    if (filter === 'all') return rows;
+
+    if (pageName === 'segnalazioni') {
+        if (filter === 'aperte') return rows.filter(item => item.stato !== 'risolto');
+        if (filter === 'prioritarie') return rows.filter(item => item.priorita === 'alta');
+        if (filter === 'convertite') return rows.filter(item => item.stato === 'risolto');
+    }
+
+    if (pageName === 'clienti') {
+        if (filter === 'pipeline') return rows.filter(item => !['vinto', 'perso'].includes(item.stato));
+        if (filter === 'caldi') return [...rows].sort((a, b) => toFiniteNumber(b.valore) - toFiniteNumber(a.valore)).slice(0, 12);
+        if (filter === 'vinti') return rows.filter(item => item.stato === 'vinto');
+    }
+
+    if (pageName === 'preventivi') {
+        if (filter === 'aperti') return rows.filter(item => !['accettato', 'rifiutato'].includes(item.stato));
+        if (filter === 'scadenza') return rows.filter(item => {
+            const days = daysFromToday(item.dataScadenza);
+            return days !== null && days <= 7 && item.stato !== 'accettato';
+        });
+        if (filter === 'accettati') return rows.filter(item => item.stato === 'accettato');
+    }
+
+    if (pageName === 'ordiniVendita') {
+        if (filter === 'urgenti') return rows.filter(item => {
+            const days = daysFromToday(item.dataConsegna);
+            return days !== null && days <= 3 && !['spedito', 'consegnato'].includes(item.stato);
+        });
+        if (filter === 'nonpagati') return rows.filter(item => item.statoPagamento === 'nonpagato' || item.statoPagamento === 'parziale');
+        if (filter === 'evasione') return rows.filter(item => !['spedito', 'consegnato'].includes(item.stato));
+    }
+
+    if (pageName === 'magazzino') {
+        if (filter === 'critico') return rows.filter(item => toFiniteNumber(item.quantita) <= toFiniteNumber(item.quantitaMinima || 0));
+        if (filter === 'valore') return [...rows].sort((a, b) => toFiniteNumber(b.valoreFIFO) - toFiniteNumber(a.valoreFIFO)).slice(0, 12);
+    }
+
+    return rows;
+}
+
+function getPageInsightSummary(pageName, rows) {
+    if (pageName === 'clienti') {
+        const top = [...rows].sort((a, b) => toFiniteNumber(b.valore) - toFiniteNumber(a.valore)).slice(0, 3);
+        return {
+            title: 'Account da presidiare',
+            items: top.map(item => ({
+                title: item.azienda,
+                meta: `${mappaNomeStato(item.stato)} · ${formatCrmMoney(item.valore || 0)}`
+            }))
+        };
+    }
+    if (pageName === 'preventivi') {
+        const top = [...rows].sort((a, b) => (daysFromToday(a.dataScadenza) ?? 999) - (daysFromToday(b.dataScadenza) ?? 999)).slice(0, 3);
+        return {
+            title: 'Preventivi da seguire',
+            items: top.map(item => ({
+                title: item.numero,
+                meta: `${formatRelativeDays(daysFromToday(item.dataScadenza))} · ${formatCrmMoney(item.totale || 0)}`
+            }))
+        };
+    }
+    if (pageName === 'ordiniVendita') {
+        const top = [...rows].filter(item => !['spedito', 'consegnato'].includes(item.stato)).slice(0, 3);
+        return {
+            title: 'Ordini in lavorazione',
+            items: top.map(item => ({
+                title: item.numero,
+                meta: `${formatRelativeDays(daysFromToday(item.dataConsegna))} · ${item.statoPagamento || 'nonpagato'}`
+            }))
+        };
+    }
+    if (pageName === 'magazzino') {
+        const top = [...rows].filter(item => toFiniteNumber(item.quantita) <= toFiniteNumber(item.quantitaMinima || 0)).slice(0, 3);
+        return {
+            title: 'Sotto scorta',
+            items: top.map(item => {
+                const prodotto = DATASETS.prodotti.find(p => p.id === item.prodotto);
+                return {
+                    title: prodotto?.codice || 'Articolo',
+                    meta: `${toFiniteNumber(item.quantita)} disponibili su minimo ${toFiniteNumber(item.quantitaMinima)}`
+                };
+            })
+        };
+    }
+    return null;
+}
+
+function renderPageQuickFilters(pageName) {
+    const active = getPageQuickFilter(pageName);
+    return `
+        <div class="crm-quick-filters">
+            ${getQuickFiltersForPage(pageName).map(filter => `
+                <button type="button" class="crm-filter-chip ${filter.key === active ? 'is-active' : ''}" onclick="setPageQuickFilter('${pageName}', '${filter.key}')">${filter.label}</button>
+            `).join('')}
+        </div>
+    `;
+}
+
+function renderPageViewSwitch(pageName) {
+    const current = getPageViewMode(pageName);
+    const supportsBoard = ['segnalazioni', 'clienti', 'preventivi', 'ordiniVendita'].includes(pageName);
+    if (!supportsBoard) return '';
+    return `
+        <div class="crm-view-switch">
+            <button type="button" class="crm-view-switch-btn ${current === 'table' ? 'is-active' : ''}" onclick="setPageViewMode('${pageName}', 'table')"><i class="fas fa-table"></i> Tabella</button>
+            <button type="button" class="crm-view-switch-btn ${current === 'board' ? 'is-active' : ''}" onclick="setPageViewMode('${pageName}', 'board')"><i class="fas fa-table-columns"></i> Board</button>
+        </div>
+    `;
+}
+
+function getBoardColumns(pageName) {
+    const map = {
+        segnalazioni: ['aperto', 'inlavorazione', 'risolto'],
+        clienti: ['lead', 'contattato', 'offerta', 'trattativa', 'vinto', 'perso'],
+        preventivi: ['bozza', 'inviato', 'accettato', 'rifiutato'],
+        ordiniVendita: ['inlavorazione', 'spedito', 'consegnato']
+    };
+    return map[pageName] || [];
+}
+
+function renderBoardView(pageName, rows) {
+    const columns = getBoardColumns(pageName);
+    if (!columns.length) return '';
+    return `
+        <div class="crm-board">
+            ${columns.map(column => {
+                const columnRows = rows.filter(item => (item.stato || 'inlavorazione') === column);
+                return `
+                    <section class="crm-board-column">
+                        <header class="crm-board-column-head">
+                            <strong>${mappaNomeStato(column)}</strong>
+                            <span>${columnRows.length}</span>
+                        </header>
+                        <div class="crm-board-card-list">
+                            ${columnRows.length ? columnRows.map(item => renderBoardCard(pageName, item)).join('') : '<div class="crm-board-empty">Nessun record</div>'}
+                        </div>
+                    </section>
+                `;
+            }).join('')}
+        </div>
+    `;
+}
+
+function renderBoardCard(pageName, record) {
+    if (pageName === 'segnalazioni') {
+        return `
+            <button type="button" class="crm-board-card" onclick="apriRecordDettaglio('segnalazioni', '${record.id}')">
+                <strong>${record.titolo}</strong>
+                <span>${record.zona || 'Area non indicata'}</span>
+                <small>${record.priorita || 'media'}</small>
+            </button>
+        `;
+    }
+    if (pageName === 'clienti') {
+        return `
+            <button type="button" class="crm-board-card" onclick="apriVisualizzazioneTimeline('${record.id}')">
+                <strong>${record.azienda}</strong>
+                <span>${record.nome || 'Referente non indicato'}</span>
+                <small>${formatCrmMoney(record.valore || 0)}</small>
+            </button>
+        `;
+    }
+    if (pageName === 'preventivi') {
+        return `
+            <button type="button" class="crm-board-card" onclick="apriRecordDettaglio('preventivi', '${record.id}')">
+                <strong>${record.numero}</strong>
+                <span>${formatRelativeDays(daysFromToday(record.dataScadenza))}</span>
+                <small>${formatCrmMoney(record.totale || 0)}</small>
+            </button>
+        `;
+    }
+    if (pageName === 'ordiniVendita') {
+        return `
+            <button type="button" class="crm-board-card" onclick="apriRecordDettaglio('ordiniVendita', '${record.id}')">
+                <strong>${record.numero}</strong>
+                <span>${formatRelativeDays(daysFromToday(record.dataConsegna))}</span>
+                <small>${formatCrmMoney(record.totale || 0)}</small>
+            </button>
+        `;
+    }
+    return `
+        <button type="button" class="crm-board-card">
+            <strong>${record.titolo || record.numero || record.nome || record.id}</strong>
+        </button>
+    `;
+}
+
 function getSelectableProducts(context = {}) {
     const { pageName = paginaAttuale, fieldKey = '', documentType = '', supplierId = '' } = context;
     const allProducts = DATASETS.prodotti || [];
@@ -2756,20 +3479,23 @@ function applyDdtVenditaStock(record) {
 function renderDatabaseTable(container, pageName) {
     const config = TABLE_CONFIGS[pageName];
     const dataset = getVisibleDataset(pageName);
-    const sortedDataset = getSortedDataset(pageName, dataset);
+    const filteredDataset = applyQuickFilter(pageName, dataset);
+    const sortedDataset = getSortedDataset(pageName, filteredDataset);
     const mobileViewport = isMobileViewport();
+    const viewMode = getPageViewMode(pageName);
+    const insightSummary = getPageInsightSummary(pageName, sortedDataset);
 
     let html = `
-        <section class="crm-workbench">
+        <section class="crm-workbench crm-workbench--dense">
         <div class="crm-page-header">
             <div class="crm-header-card">
                 <div class="crm-header-info">
                     <span class="crm-header-eyebrow">${cleanUiText(config.eyebrow)}</span>
                     <h2 class="crm-header-title">${cleanUiText(config.title)}</h2>
-                    <p class="crm-header-subtitle">${dataset.length} record nel modulo corrente</p>
+                    <p class="crm-header-subtitle">${sortedDataset.length} record visibili su ${dataset.length} totali nel modulo corrente</p>
                 </div>
                 <div class="crm-header-actions">
-                    ${renderKpiMiniDock(pageName, dataset)}
+                    ${renderKpiMiniDock(pageName, sortedDataset)}
                     <button class="btn-secondary" onclick="apriImportatoreCSV('${pageName}')">
                         <i class="fas fa-upload"></i> Carica CSV
                     </button>
@@ -2780,17 +3506,29 @@ function renderDatabaseTable(container, pageName) {
             </div>
         </div>
 
+        <div class="crm-toolbar-shell">
+            <div class="crm-toolbar-shell__left">
+                ${renderPageQuickFilters(pageName)}
+            </div>
+            <div class="crm-toolbar-shell__right">
+                ${renderPageViewSwitch(pageName)}
+            </div>
+        </div>
+
+        <div class="crm-dense-layout">
         <div class="crm-table-container">
             <div class="crm-table-toolbar">
                 <div>
-                    <span class="crm-table-eyebrow">${mobileViewport ? 'Vista mobile' : 'Vista tabellare'}</span>
+                    <span class="crm-table-eyebrow">${mobileViewport ? 'Vista mobile' : viewMode === 'board' ? 'Board operativa' : 'Vista tabellare'}</span>
                     <strong>${cleanUiText(config.title)}</strong>
                 </div>
-                <span class="crm-table-count">${dataset.length} righe</span>
+                <span class="crm-table-count">${sortedDataset.length} righe</span>
             </div>
     `;
 
-    if (mobileViewport) {
+    if (!mobileViewport && viewMode === 'board' && ['segnalazioni', 'clienti', 'preventivi', 'ordiniVendita'].includes(pageName)) {
+        html += renderBoardView(pageName, sortedDataset);
+    } else if (mobileViewport) {
         html += renderMobileRecordCards(pageName, sortedDataset, config);
     } else {
         html += `
@@ -2830,6 +3568,28 @@ function renderDatabaseTable(container, pageName) {
     }
 
     html += `
+        </div>
+        ${insightSummary ? `
+            <aside class="crm-side-insights">
+                <div class="crm-side-insights__card">
+                    <span class="crm-table-eyebrow">Focus modulo</span>
+                    <strong>${insightSummary.title}</strong>
+                    <div class="crm-side-insights__list">
+                        ${insightSummary.items.map(item => `
+                            <div class="crm-side-insights__item">
+                                <span>${item.title}</span>
+                                <small>${item.meta}</small>
+                            </div>
+                        `).join('')}
+                    </div>
+                </div>
+                <div class="crm-side-insights__card">
+                    <span class="crm-table-eyebrow">Prossimo passo</span>
+                    <strong>Riduci il tempo di lettura</strong>
+                    <p class="crm-side-insights__copy">Usa filtri rapidi, board view e schede record per lavorare per eccezioni invece che per semplice elenco.</p>
+                </div>
+            </aside>
+        ` : ''}
         </div>
         </section>
     `;
@@ -2990,11 +3750,13 @@ function renderRigaTabella(pageName, r) {
 
     if (pageName === 'segnalazioni') {
         const cli = DATASETS.clienti.find(c => c.id === r.cliente) || { azienda: "Sconosciuto" };
+        const leadDays = daysFromToday(r.data);
         
         rigaHtml += `
-            <td>
+            <td onclick="apriRecordDettaglio('segnalazioni', '${r.id}')" style="cursor: pointer;">
                 <div class="client-name-bold">${r.titolo}</div>
                 <div class="client-company-sub">${r.descrizione || ''}</div>
+                <div class="crm-inline-tags"><span class="crm-inline-tag is-warning">${r.priorita}</span><span class="crm-inline-tag">${formatRelativeDays(leadDays)}</span></div>
             </td>
             <td>${cli.azienda}</td>
             <td><span class="status-pill status-media">${r.zona}</span></td>
@@ -3009,10 +3771,12 @@ function renderRigaTabella(pageName, r) {
             </td>
         `;
     } else if (pageName === 'clienti') {
+        const lastTimeline = Array.isArray(r.timeline) && r.timeline.length ? r.timeline[0] : null;
         rigaHtml += `
             <td onclick="apriVisualizzazioneTimeline('${r.id}')" style="cursor: pointer;">
                 <div class="client-name-bold">${r.azienda}</div>
                 <div class="client-company-sub">P.IVA: ${r.piva || 'N/D'}</div>
+                <div class="crm-inline-tags"><span class="crm-inline-tag">${mappaNomeStato(r.stato)}</span>${lastTimeline ? `<span class="crm-inline-tag">Ultimo touch: ${lastTimeline.date}</span>` : ''}</div>
             </td>
             <td>
                 <div class="client-name-bold">${r.nome}</div>
@@ -3030,13 +3794,14 @@ function renderRigaTabella(pageName, r) {
     } else if (pageName === 'preventivi') {
         const cli = DATASETS.clienti.find(c => c.id === r.cliente) || { azienda: "Sconosciuto" };
         const righeCount = r.righe ? r.righe.length : 0;
+        const quoteDays = daysFromToday(r.dataScadenza);
         const righeDesc = r.righe ? r.righe.map(li => {
             const p = prodotti.find(item => item.id === li.prodotto);
             return `${p ? p.codice : li.prodotto} (x${li.quantita})`;
         }).join(', ') : 'Nessun articolo';
 
         rigaHtml += `
-            <td style="font-weight: 700;">${r.numero}</td>
+            <td onclick="apriRecordDettaglio('preventivi', '${r.id}')" style="font-weight: 700; cursor: pointer;">${r.numero}<div class="crm-inline-tags"><span class="crm-inline-tag ${quoteDays !== null && quoteDays <= 3 ? 'is-danger' : ''}">${formatRelativeDays(quoteDays)}</span></div></td>
             <td>${cli.azienda}</td>
             <td>
                 <div>Offerta: ${r.data}</div>
@@ -3068,7 +3833,7 @@ function renderRigaTabella(pageName, r) {
         }).join(', ') : 'Nessun articolo';
 
         rigaHtml += `
-            <td style="font-weight: 700;">${r.numero}</td>
+            <td onclick="apriRecordDettaglio('preventiviAcquisto', '${r.id}')" style="font-weight: 700; cursor: pointer;">${r.numero}</td>
             <td>${forn.nome}</td>
             <td>
                 <div>Richiesta: ${r.data}</div>
@@ -3087,13 +3852,14 @@ function renderRigaTabella(pageName, r) {
     } else if (pageName === 'ordiniVendita') {
         const cli = DATASETS.clienti.find(c => c.id === r.cliente) || { azienda: "Sconosciuto" };
         const righeCount = r.righe ? r.righe.length : 0;
+        const orderDays = daysFromToday(r.dataConsegna);
         const righeDesc = r.righe ? r.righe.map(li => {
             const p = prodotti.find(item => item.id === li.prodotto);
             return `${p ? p.codice : li.prodotto} (x${li.quantita})`;
         }).join(', ') : 'Nessun articolo';
 
         rigaHtml += `
-            <td style="font-weight: 700;">${r.numero}</td>
+            <td onclick="apriRecordDettaglio('ordiniVendita', '${r.id}')" style="font-weight: 700; cursor: pointer;">${r.numero}<div class="crm-inline-tags"><span class="crm-inline-tag ${orderDays !== null && orderDays <= 2 ? 'is-danger' : ''}">${formatRelativeDays(orderDays)}</span></div></td>
             <td>${cli.azienda}</td>
             <td>
                 <div>Ord: ${r.data}</div>
@@ -3128,7 +3894,7 @@ function renderRigaTabella(pageName, r) {
             return `${p ? p.codice : li.prodotto} (x${li.quantita})`;
         }).join(', ');
         rigaHtml += `
-            <td style="font-weight: 700;">${r.numero}</td>
+            <td onclick="apriRecordDettaglio('ddtVendita', '${r.id}')" style="font-weight: 700; cursor: pointer;">${r.numero}</td>
             <td>${cli.azienda}</td>
             <td>${r.data}</td>
             <td>${r.ordineRif || 'N/A'}</td>
@@ -3148,7 +3914,7 @@ function renderRigaTabella(pageName, r) {
         `;
     } else if (pageName === 'fornitori') {
         rigaHtml += `
-            <td style="font-weight: 700;">
+            <td onclick="apriRecordDettaglio('fornitori', '${r.id}')" style="font-weight: 700; cursor: pointer;">
                 <div>${r.nome}</div>
                 <div class="client-company-sub">P.IVA: ${r.piva || 'N/D'}</div>
             </td>
@@ -3168,7 +3934,7 @@ function renderRigaTabella(pageName, r) {
         const forn = DATASETS.fornitori.find(f => f.id === r.fornitore) || { nome: "Sconosciuto" };
         const righeCount = r.righe ? r.righe.length : 0;
         rigaHtml += `
-            <td style="font-weight: 700;">${r.numero}</td>
+            <td onclick="apriRecordDettaglio('ordiniAcquisto', '${r.id}')" style="font-weight: 700; cursor: pointer;">${r.numero}</td>
             <td>${forn.nome}</td>
             <td>
                 <div>Inviato: ${r.data}</div>
@@ -3200,7 +3966,7 @@ function renderRigaTabella(pageName, r) {
             return `${p ? p.codice : li.prodotto} (x${li.quantita})`;
         }).join(', ');
         rigaHtml += `
-            <td style="font-weight: 700;">${r.numero}</td>
+            <td onclick="apriRecordDettaglio('ddtAcquisto', '${r.id}')" style="font-weight: 700; cursor: pointer;">${r.numero}</td>
             <td>${forn.nome}</td>
             <td>${r.data}</td>
             <td>${r.ordineRif || 'N/A'}</td>
@@ -3220,9 +3986,10 @@ function renderRigaTabella(pageName, r) {
         `;
     } else if (pageName === 'prodotti') {
         rigaHtml += `
-            <td style="font-family: monospace; font-weight: 700;">
+            <td onclick="apriRecordDettaglio('prodotti', '${r.id}')" style="font-family: monospace; font-weight: 700; cursor: pointer;">
                 <div>${r.codice}</div>
                 <div style="font-size: 10px; color: var(--text-muted); font-weight: normal;">EAN: ${r.ean || 'N/D'}</div>
+                <div class="crm-inline-tags"><span class="crm-inline-tag">${r.categoria || 'Categoria'}</span></div>
             </td>
             <td style="font-weight: 700;">
                 <div>${r.nome}</div>
@@ -3240,7 +4007,7 @@ function renderRigaTabella(pageName, r) {
         const costoTotale = calcolaCostoBOM(r.componentiCsv);
         
         rigaHtml += `
-            <td>
+            <td onclick="apriRecordDettaglio('distintaBase', '${r.id}')" style="cursor: pointer;">
                 <div class="client-name-bold">${prod.nome}</div>
                 <div class="client-company-sub">Cod. Finito: ${prod.codice}</div>
             </td>
@@ -3256,9 +4023,10 @@ function renderRigaTabella(pageName, r) {
         const prod = DATASETS.prodotti.find(p => p.id === r.prodotto) || { codice: "N/A", nome: "Sconosciuto" };
         const sottoScorta = Number(r.quantita) <= Number(r.quantitaMinima || 0);
         rigaHtml += `
-            <td>
+            <td onclick="apriRecordDettaglio('magazzino', '${r.id}')" style="cursor: pointer;">
                 <div class="client-name-bold">${prod.nome}</div>
                 <div class="client-company-sub">SKU: ${prod.codice}</div>
+                <div class="crm-inline-tags"><span class="crm-inline-tag ${sottoScorta ? 'is-danger' : ''}">${sottoScorta ? 'Sotto scorta' : 'Stock ok'}</span></div>
             </td>
             <td style="font-weight: 800; font-size: 14px;">${r.quantita} unita</td>
             <td style="color: var(--text-muted);">${r.quantitaMinima || 0} unita</td>
@@ -4982,6 +5750,33 @@ function filtraUniversale() {
         const globalMatch = !ricercaQuery || cardText.includes(ricercaQuery);
         card.style.display = globalMatch ? '' : 'none';
     });
+
+    const boardCards = document.querySelectorAll('.crm-board-card');
+    boardCards.forEach(card => {
+        const cardText = String(card.innerText || '').toLowerCase();
+        const globalMatch = !ricercaQuery || cardText.includes(ricercaQuery);
+        card.style.display = globalMatch ? '' : 'none';
+    });
+}
+
+function ensureSidebarBadge(button) {
+    if (!button) return null;
+    let badge = button.querySelector('.app-sidebar-badge');
+    if (!badge) {
+        badge = document.createElement('span');
+        badge.className = 'app-sidebar-badge';
+        button.appendChild(badge);
+    }
+    return badge;
+}
+
+function setSidebarBadge(selector, value) {
+    const button = document.querySelector(selector);
+    const badge = ensureSidebarBadge(button);
+    if (!badge) return;
+    const numericValue = Number(value || 0);
+    badge.textContent = numericValue > 99 ? '99+' : String(numericValue);
+    badge.style.display = numericValue > 0 ? 'inline-flex' : 'none';
 }
 
 function aggiornaTuttiBadgeSidebar() {
@@ -4991,6 +5786,10 @@ function aggiornaTuttiBadgeSidebar() {
             badge.textContent = DATASETS[key].length;
         }
     });
+    setSidebarBadge('[data-sidebar-page="dashboard_operativa"]', getDashboardAlerts().length);
+    setSidebarBadge('[data-sidebar-group="preventivi"]', DATASETS.preventivi.filter(item => !['accettato', 'rifiutato'].includes(item.stato)).length);
+    setSidebarBadge('[data-sidebar-group="ordini"]', DATASETS.ordiniVendita.filter(item => !['spedito', 'consegnato'].includes(item.stato)).length);
+    setSidebarBadge('[data-sidebar-group="catalogo"]', DATASETS.magazzino.filter(item => toFiniteNumber(item.quantita) <= toFiniteNumber(item.quantitaMinima || 0)).length);
 }
 
 function apriModalInterazione(clientId) {

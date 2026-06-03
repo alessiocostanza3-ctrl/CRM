@@ -3578,7 +3578,10 @@ body {
 .dashboard-metric-grid,
 .dashboard-grid,
 .dashboard-pipeline-grid,
-.dashboard-quick-actions {
+.dashboard-quick-actions,
+.dashboard-module-grid,
+.analysis-snapshot-grid,
+.analysis-health-grid {
     display: grid;
     gap: 16px;
 }
@@ -3587,11 +3590,18 @@ body {
     grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.dashboard-module-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .dashboard-metric-card,
 .dashboard-panel,
 .dashboard-pipeline-card,
 .dashboard-quick-action,
-.dashboard-alert-card {
+.dashboard-alert-card,
+.dashboard-module-card,
+.analysis-snapshot-card,
+.analysis-health-card {
     border: 1px solid #ddd6c8;
     background: #fffdf8;
     border-radius: 18px;
@@ -3789,6 +3799,75 @@ body {
     border: 1px dashed #ddd6c8;
     border-radius: 14px;
     background: rgba(255,255,255,0.45);
+}
+
+.dashboard-module-card {
+    padding: 16px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.dashboard-module-card span,
+.analysis-health-card span {
+    display: block;
+    color: #7b6f5d;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 800;
+}
+
+.dashboard-module-card strong,
+.analysis-top-row strong,
+.analysis-state-row strong,
+.analysis-health-card strong {
+    display: block;
+    margin-top: 6px;
+    color: #18201c;
+}
+
+.dashboard-module-card small,
+.analysis-health-card small,
+.analysis-top-row small {
+    display: block;
+    margin-top: 6px;
+    color: var(--text-muted);
+}
+
+.analysis-health-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: 16px;
+}
+
+.analysis-health-card,
+.analysis-snapshot-card {
+    padding: 16px;
+}
+
+.analysis-snapshot-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 16px;
+}
+
+.analysis-state-list {
+    display: grid;
+    gap: 10px;
+}
+
+.analysis-state-row,
+.analysis-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 0;
+    border-top: 1px solid #eee8dc;
+}
+
+.analysis-state-row:first-child,
+.analysis-top-row:first-child {
+    border-top: 0;
+    padding-top: 0;
 }
 
 .crm-workbench--dense {
@@ -4177,6 +4256,9 @@ textarea:focus {
     .dashboard-grid,
     .dashboard-pipeline-grid,
     .dashboard-quick-actions,
+    .dashboard-module-grid,
+    .analysis-snapshot-grid,
+    .analysis-health-grid,
     .crm-dense-layout,
     .record-detail-grid {
         grid-template-columns: 1fr !important;
@@ -4708,6 +4790,10 @@ body[data-theme="dark"] {
 }
 
 .app-subtab-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
     border: 1px solid #dfe8e6;
     border-radius: 10px;
     background: #ffffff;
@@ -4716,6 +4802,12 @@ body[data-theme="dark"] {
     font-weight: 700;
     min-height: 36px;
     cursor: pointer;
+}
+
+.app-subtab-btn small {
+    color: #8b7f6a;
+    font-size: 11px;
+    font-weight: 800;
 }
 
 .app-subtab-btn.active {

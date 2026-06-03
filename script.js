@@ -1399,9 +1399,15 @@ function renderSidebarSubmenu(groupKey, triggerEl = activeSidebarTrigger) {
         activeSidebarTrigger = null;
         return;
     }
+    const getCount = (page) => getSidebarOperationalCount(page);
     const buttons = group.items.map(item => {
         const isActive = item.page === paginaAttuale;
-        return `<button type="button" class="app-subtab-btn ${isActive ? 'active' : ''}" onclick="selezionaSidebarSubtab('${item.page}')">${item.label}</button>`;
+        return `
+            <button type="button" class="app-subtab-btn ${isActive ? 'active' : ''}" onclick="selezionaSidebarSubtab('${item.page}')">
+                <span>${item.label}</span>
+                <small>${getCount(item.page)}</small>
+            </button>
+        `;
     }).join('');
     container.innerHTML = `
         <div class="app-subtab-title">${group.title}</div>
@@ -1411,6 +1417,16 @@ function renderSidebarSubmenu(groupKey, triggerEl = activeSidebarTrigger) {
     activeSidebarGroup = groupKey;
     activeSidebarTrigger = triggerEl || activeSidebarTrigger;
     positionSidebarSubmenu(activeSidebarTrigger);
+}
+
+function getSidebarOperationalCount(page) {
+    if (page === 'preventivi') return DATASETS.preventivi.filter(item => !['accettato', 'rifiutato'].includes(item.stato)).length;
+    if (page === 'preventiviAcquisto') return DATASETS.preventiviAcquisto.filter(item => item.stato !== 'accettato').length;
+    if (page === 'ordiniVendita') return DATASETS.ordiniVendita.filter(item => !['spedito', 'consegnato'].includes(item.stato)).length;
+    if (page === 'ordiniAcquisto') return DATASETS.ordiniAcquisto.filter(item => item.stato !== 'ricevuto').length;
+    if (page === 'magazzino') return DATASETS.magazzino.filter(item => toFiniteNumber(item.quantita) <= toFiniteNumber(item.quantitaMinima || 0)).length;
+    if (page === 'clienti') return DATASETS.clienti.filter(item => !['vinto', 'perso'].includes(item.stato)).length;
+    return (DATASETS[page] || []).length;
 }
 
 function toggleSidebarGroup(groupKey, triggerEl = null) {
@@ -2432,6 +2448,46 @@ function getDashboardPipelineCards() {
     ];
 }
 
+function renderDashboardModuleHighlights() {
+    const modules = [
+        {
+            title: 'Commerciale',
+            subtitle: 'Lead aperti e trattative',
+            stats: `${DATASETS.clienti.filter(item => !['vinto', 'perso'].includes(item.stato)).length} account`,
+            page: 'clienti'
+        },
+        {
+            title: 'Preventivi',
+            subtitle: 'Offerte da chiudere',
+            stats: `${DATASETS.preventivi.filter(item => !['accettato', 'rifiutato'].includes(item.stato)).length} in corso`,
+            page: 'preventivi'
+        },
+        {
+            title: 'Operations',
+            subtitle: 'Ordini da evadere',
+            stats: `${DATASETS.ordiniVendita.filter(item => !['spedito', 'consegnato'].includes(item.stato)).length} ordini`,
+            page: 'ordiniVendita'
+        },
+        {
+            title: 'Supply',
+            subtitle: 'Scorte e acquisti',
+            stats: `${DATASETS.magazzino.filter(item => toFiniteNumber(item.quantita) <= toFiniteNumber(item.quantitaMinima || 0)).length} criticita`,
+            page: 'magazzino'
+        }
+    ];
+    return `
+        <div class="dashboard-module-grid">
+            ${modules.map(item => `
+                <button type="button" class="dashboard-module-card" onclick="cambiaPagina('${item.page}')">
+                    <span>${item.title}</span>
+                    <strong>${item.subtitle}</strong>
+                    <small>${item.stats}</small>
+                </button>
+            `).join('')}
+        </div>
+    `;
+}
+
 function renderDashboardOperativa(container) {
     const metrics = getDashboardSummaryMetrics();
     const alerts = getDashboardAlerts();
@@ -2470,6 +2526,8 @@ function renderDashboardOperativa(container) {
                     </article>
                 `).join('')}
             </div>
+
+            ${renderDashboardModuleHighlights()}
 
             <div class="dashboard-grid">
                 <section class="dashboard-panel">
@@ -2788,6 +2846,88 @@ function renderAnalisiMovimentiMensili(rows) {
     `;
 }
 
+function renderAnalisiStatoBreakdown(rows) {
+    if (!rows.length) return '';
+    const grouped = rows.reduce((acc, item) => {
+        const key = getAnalysisStatus(item.record);
+        acc[key] = (acc[key] || 0) + 1;
+        return acc;
+    }, {});
+    return `
+        <div class="analysis-snapshot-card">
+            <div class="crm-table-toolbar">
+                <div>
+                    <span class="crm-table-eyebrow">Distribuzione</span>
+                    <strong>Stati nel periodo</strong>
+                </div>
+            </div>
+            <div class="analysis-state-list">
+                ${Object.entries(grouped).sort((a, b) => b[1] - a[1]).map(([label, count]) => `
+                    <div class="analysis-state-row">
+                        <span>${cleanUiText(label)}</span>
+                        <strong>${count}</strong>
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+    `;
+}
+
+function renderAnalisiTopRecords(rows) {
+    if (!rows.length) return '';
+    const top = [...rows]
+        .sort((a, b) => getAnalysisValue(b.record) - getAnalysisValue(a.record))
+        .slice(0, 5);
+    return `
+        <div class="analysis-snapshot-card">
+            <div class="crm-table-toolbar">
+                <div>
+                    <span class="crm-table-eyebrow">Top list</span>
+                    <strong>Record a maggior valore</strong>
+                </div>
+            </div>
+            <div class="analysis-state-list">
+                ${top.map(item => `
+                    <div class="analysis-top-row">
+                        <div>
+                            <span>${cleanUiText(getAnalysisRecordLabel(item.record))}</span>
+                            <small>${cleanUiText(getAnalysisCounterparty(item.record))}</small>
+                        </div>
+                        <strong>${formatCrmMoney(getAnalysisValue(item.record))}</strong>
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+    `;
+}
+
+function renderAnalisiHealthCards(page, rows) {
+    const datedRows = rows.map(item => item.date).filter(Boolean);
+    const latest = datedRows.length ? new Date(Math.max(...datedRows.map(item => item.getTime()))) : null;
+    const avgValue = rows.length ? getAnalysisValueSummary(rows) / rows.length : 0;
+    const statusCount = new Set(rows.map(item => getAnalysisStatus(item.record))).size;
+    const metrics = [
+        { label: 'Ultimo movimento', value: latest ? formatAnalysisDateInput(latest) : '-', detail: cleanUiText(TABLE_CONFIGS[page].title) },
+        { label: 'Valore medio', value: formatCrmMoney(avgValue), detail: 'Per record nel periodo' },
+        { label: 'Stati attivi', value: formatCompactNumber(statusCount), detail: 'Varieta di avanzamento' }
+    ];
+    return `
+        <div class="analysis-health-grid">
+            ${metrics.map(item => `
+                <div class="analysis-health-card">
+                    <span>${item.label}</span>
+                    <strong>${item.value}</strong>
+                    <small>${item.detail}</small>
+                </div>
+            `).join('')}
+        </div>
+    `;
+}
+
+function getAnalysisValueSummary(rows) {
+    return rows.reduce((sum, item) => sum + getAnalysisValue(item.record), 0);
+}
+
 function aggiornaAnalisiDati() {
     const page = getAnalysisCurrentValue('analysis-document-type', DEFAULT_PAGE);
     const startDate = getAnalysisCurrentValue('analysis-date-start');
@@ -2797,7 +2937,7 @@ function aggiornaAnalisiDati() {
 
     const rows = getFilteredAnalysisRows(page, startDate, endDate);
     const config = TABLE_CONFIGS[page];
-    const totalValue = rows.reduce((sum, item) => sum + getAnalysisValue(item.record), 0);
+    const totalValue = getAnalysisValueSummary(rows);
     const stats = [
         { label: 'Movimenti', value: formatCompactNumber(rows.length), detail: 'Record nel periodo' },
         { label: 'Valore', value: formatCrmMoney(totalValue), detail: 'Somma valori disponibili' },
@@ -2817,6 +2957,11 @@ function aggiornaAnalisiDati() {
 
     target.innerHTML = `
         ${renderCrmMetricStrip(page, rows.map(item => ({ ...item.record, valore: getAnalysisValue(item.record) })))}
+        ${renderAnalisiHealthCards(page, rows)}
+        <div class="analysis-snapshot-grid">
+            ${renderAnalisiStatoBreakdown(rows)}
+            ${renderAnalisiTopRecords(rows)}
+        </div>
         <div class="crm-table-container" style="padding:16px; margin-top:16px;">
             <div style="display:grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap:12px; margin-bottom:16px;">
                 ${stats.map(item => `
@@ -2894,7 +3039,7 @@ function renderAnalisiDati(container) {
                     <div class="crm-header-info">
                         <span class="crm-header-eyebrow">CSV e Reporting</span>
                         <h2 class="crm-header-title">Analisi Dati</h2>
-                        <p class="crm-header-subtitle">Import centralizzato, filtro per tipologia documento e export CSV del periodo.</p>
+                        <p class="crm-header-subtitle">Workspace manageriale per trend, distribuzione stati, record di maggior valore ed export nel periodo.</p>
                     </div>
                     <div class="crm-header-actions">
                         <button class="btn-secondary" onclick="apriImportatoreAnalisiDati()">

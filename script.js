@@ -2173,6 +2173,116 @@ function getRecordByPage(pageName, recordId) {
     return rows.find(item => item.id === recordId) || null;
 }
 
+function getClientRelatedRecords(clientId) {
+    return {
+        segnalazioni: DATASETS.segnalazioni.filter(item => item.cliente === clientId),
+        preventivi: DATASETS.preventivi.filter(item => item.cliente === clientId),
+        ordiniVendita: DATASETS.ordiniVendita.filter(item => item.cliente === clientId),
+        ddtVendita: DATASETS.ddtVendita.filter(item => item.cliente === clientId)
+    };
+}
+
+function renderCompactRelationList(items, options = {}) {
+    const { emptyLabel = 'Nessun record collegato', pageName = '' } = options;
+    if (!items?.length) return `<div class="dashboard-empty">${emptyLabel}</div>`;
+    return `
+        <div class="relation-list">
+            ${items.map(item => `
+                <button type="button" class="relation-row" onclick="${pageName === 'clienti' ? `apriVisualizzazioneTimeline('${item.id}')` : `apriRecordDettaglio('${pageName}', '${item.id}')`}">
+                    <div>
+                        <strong>${cleanUiText(item.numero || item.titolo || item.nome || item.azienda || item.id)}</strong>
+                        <small>${cleanUiText(mappaNomeStato(item.stato || item.statoPagamento || ''))}</small>
+                    </div>
+                    <span>${formatCrmMoney(item.totale || item.valore || 0)}</span>
+                </button>
+            `).join('')}
+        </div>
+    `;
+}
+
+function renderClientSummaryCards(cliente) {
+    const related = getClientRelatedRecords(cliente.id);
+    const timelineCount = Array.isArray(cliente.timeline) ? cliente.timeline.length : 0;
+    const items = [
+        { label: 'Interazioni', value: formatCompactNumber(timelineCount), detail: 'Touchpoint registrati' },
+        { label: 'Preventivi', value: formatCompactNumber(related.preventivi.length), detail: 'Offerte emesse' },
+        { label: 'Ordini', value: formatCompactNumber(related.ordiniVendita.length), detail: 'Ordini di vendita' },
+        { label: 'DDT', value: formatCompactNumber(related.ddtVendita.length), detail: 'Spedizioni collegate' }
+    ];
+    return `
+        <div class="dashboard-metric-grid dashboard-metric-grid--compact">
+            ${items.map(item => `
+                <article class="dashboard-metric-card">
+                    <div class="dashboard-metric-copy">
+                        <span class="dashboard-metric-label">${item.label}</span>
+                        <strong class="dashboard-metric-value">${item.value}</strong>
+                        <span class="dashboard-metric-subtext">${item.detail}</span>
+                    </div>
+                </article>
+            `).join('')}
+        </div>
+    `;
+}
+
+function getRecordContextPanels(pageName, record) {
+    if (pageName === 'preventivi') {
+        const cliente = DATASETS.clienti.find(item => item.id === record.cliente);
+        return {
+            leftTitle: 'Cliente collegato',
+            leftBody: cliente
+                ? `<div class="relation-card"><strong>${cliente.azienda}</strong><small>${cliente.nome || ''}</small><button type="button" class="btn-dark dashboard-mini-btn" onclick="apriVisualizzazioneTimeline('${cliente.id}')">Apri scheda</button></div>`
+                : '<div class="dashboard-empty">Cliente non disponibile.</div>',
+            rightTitle: 'Controlli operativi',
+            rightBody: `
+                <div class="record-checklist">
+                    <div class="record-checklist__item ${record.stato === 'inviato' || record.stato === 'accettato' ? 'is-done' : ''}">Preventivo inviato al cliente</div>
+                    <div class="record-checklist__item ${daysFromToday(record.dataScadenza) !== null && daysFromToday(record.dataScadenza) >= 0 ? 'is-done' : 'is-danger'}">Scadenza ancora valida</div>
+                    <div class="record-checklist__item ${Array.isArray(record.righe) && record.righe.length ? 'is-done' : 'is-danger'}">Righe documento valorizzate</div>
+                </div>
+            `
+        };
+    }
+    if (pageName === 'ordiniVendita') {
+        const cliente = DATASETS.clienti.find(item => item.id === record.cliente);
+        const linkedDdt = DATASETS.ddtVendita.filter(item => item.ordineRif === record.numero);
+        return {
+            leftTitle: 'Cliente e spedizioni',
+            leftBody: `
+                ${cliente ? `<div class="relation-card"><strong>${cliente.azienda}</strong><small>${cliente.nome || ''}</small><button type="button" class="btn-dark dashboard-mini-btn" onclick="apriVisualizzazioneTimeline('${cliente.id}')">Apri cliente</button></div>` : '<div class="dashboard-empty">Cliente non disponibile.</div>'}
+                ${renderCompactRelationList(linkedDdt, { emptyLabel: 'Nessun DDT collegato', pageName: 'ddtVendita' })}
+            `,
+            rightTitle: 'Controlli operativi',
+            rightBody: `
+                <div class="record-checklist">
+                    <div class="record-checklist__item ${record.statoPagamento === 'pagato' ? 'is-done' : record.statoPagamento === 'parziale' ? 'is-warning' : 'is-danger'}">Stato pagamento: ${record.statoPagamento || 'non definito'}</div>
+                    <div class="record-checklist__item ${daysFromToday(record.dataConsegna) !== null && daysFromToday(record.dataConsegna) >= 0 ? 'is-done' : 'is-danger'}">Data consegna monitorata</div>
+                    <div class="record-checklist__item ${linkedDdt.length ? 'is-done' : 'is-warning'}">Presenza documenti di trasporto</div>
+                </div>
+            `
+        };
+    }
+    if (pageName === 'prodotti') {
+        const stock = DATASETS.magazzino.find(item => item.prodotto === record.id);
+        const bom = DATASETS.distintaBase.find(item => item.prodotto === record.id);
+        return {
+            leftTitle: 'Contesto articolo',
+            leftBody: `
+                <div class="relation-card"><strong>Magazzino</strong><small>${stock ? `${stock.quantita} unita disponibili` : 'Nessuna giacenza collegata'}</small></div>
+                <div class="relation-card"><strong>Distinta base</strong><small>${bom ? 'Presente e configurata' : 'Nessuna BOM collegata'}</small></div>
+            `,
+            rightTitle: 'Controlli operativi',
+            rightBody: `
+                <div class="record-checklist">
+                    <div class="record-checklist__item ${toFiniteNumber(record.prezzoVendita) > 0 ? 'is-done' : 'is-danger'}">Prezzo vendita valorizzato</div>
+                    <div class="record-checklist__item ${toFiniteNumber(record.prezzoAcquisto) > 0 ? 'is-done' : 'is-danger'}">Prezzo acquisto valorizzato</div>
+                    <div class="record-checklist__item ${stock ? 'is-done' : 'is-warning'}">Record magazzino presente</div>
+                </div>
+            `
+        };
+    }
+    return null;
+}
+
 function renderRecordDettaglio(container, pageName, recordId) {
     const record = getRecordByPage(pageName, recordId);
     if (!record) {
@@ -2206,6 +2316,7 @@ function renderRecordDettaglio(container, pageName, recordId) {
         { label: 'Righe', value: formatCompactNumber(rows.length) },
         { label: 'Prossima scadenza', value: formatRelativeDays(daysFromToday(record.dataScadenza || record.dataConsegna || record.data || '')) }
     ];
+    const contextPanels = getRecordContextPanels(pageName, record);
 
     container.innerHTML = `
         <section class="crm-workbench">
@@ -2264,6 +2375,28 @@ function renderRecordDettaglio(container, pageName, recordId) {
                     </div>
                 </section>
             </div>
+            ${contextPanels ? `
+                <div class="dashboard-grid">
+                    <section class="dashboard-panel">
+                        <div class="dashboard-panel-head">
+                            <div>
+                                <span class="dashboard-panel-eyebrow">Relazioni</span>
+                                <h3>${contextPanels.leftTitle}</h3>
+                            </div>
+                        </div>
+                        ${contextPanels.leftBody}
+                    </section>
+                    <section class="dashboard-panel">
+                        <div class="dashboard-panel-head">
+                            <div>
+                                <span class="dashboard-panel-eyebrow">Verifica</span>
+                                <h3>${contextPanels.rightTitle}</h3>
+                            </div>
+                        </div>
+                        ${contextPanels.rightBody}
+                    </section>
+                </div>
+            ` : ''}
             ${rows.length ? `
                 <section class="dashboard-panel">
                     <div class="dashboard-panel-head">
@@ -4248,6 +4381,7 @@ function renderTimelineDettaglio(container, cliente) {
         cliente.timeline = [{ type: "nota", text: "Record inserito.", date: ottieniDataOraAttuale() }];
     }
 
+    const related = getClientRelatedRecords(cliente.id);
     let html = `
         <div class="crm-page-header">
             <div class="crm-header-card">
@@ -4265,6 +4399,8 @@ function renderTimelineDettaglio(container, cliente) {
                 </div>
             </div>
         </div>
+
+        ${renderClientSummaryCards(cliente)}
 
         <div class="detail-layout">
             <div class="detail-sidebar-card">
@@ -4300,6 +4436,17 @@ function renderTimelineDettaglio(container, cliente) {
                     <div class="detail-info-item">
                         <span class="detail-info-label">Data Creazione Anagrafica</span>
                         <span class="detail-info-value"><i class="far fa-calendar-alt" style="margin-right: 5px;"></i> ${cliente.creato || "N/D"}</span>
+                    </div>
+                </div>
+
+                <div class="detail-related-stack">
+                    <div class="detail-related-card">
+                        <span class="detail-info-label">Preventivi collegati</span>
+                        ${renderCompactRelationList(related.preventivi.slice(0, 4), { emptyLabel: 'Nessun preventivo collegato', pageName: 'preventivi' })}
+                    </div>
+                    <div class="detail-related-card">
+                        <span class="detail-info-label">Ordini collegati</span>
+                        ${renderCompactRelationList(related.ordiniVendita.slice(0, 4), { emptyLabel: 'Nessun ordine collegato', pageName: 'ordiniVendita' })}
                     </div>
                 </div>
             </div>

@@ -1400,6 +1400,7 @@ function renderSidebarSubmenu(groupKey, triggerEl = activeSidebarTrigger) {
         return;
     }
     const getCount = (page) => getSidebarOperationalCount(page);
+    const stats = getSidebarGroupStats(groupKey);
     const buttons = group.items.map(item => {
         const isActive = item.page === paginaAttuale;
         return `
@@ -1411,6 +1412,32 @@ function renderSidebarSubmenu(groupKey, triggerEl = activeSidebarTrigger) {
     }).join('');
     container.innerHTML = `
         <div class="app-subtab-title">${group.title}</div>
+        ${stats ? `
+            <div class="app-subtab-summary">
+                <div class="app-subtab-stat">
+                    <span>Operativi</span>
+                    <strong>${stats.operational}</strong>
+                </div>
+                <div class="app-subtab-stat">
+                    <span>Totale</span>
+                    <strong>${stats.total}</strong>
+                </div>
+                <div class="app-subtab-stat">
+                    <span>Focus</span>
+                    <strong>${stats.focusCount}</strong>
+                </div>
+            </div>
+            <div class="app-subtab-actions">
+                <button type="button" class="app-subtab-action" onclick="openSidebarFocus('${groupKey}')">
+                    <i class="fas fa-bolt"></i>
+                    <span>Apri focus</span>
+                </button>
+                <button type="button" class="app-subtab-action" onclick="cambiaPagina('${group.items[0].page}')">
+                    <i class="fas fa-list"></i>
+                    <span>Apri lista</span>
+                </button>
+            </div>
+        ` : ''}
         <div class="app-subtab-row">${buttons}</div>
     `;
     container.classList.add('active');
@@ -1427,6 +1454,50 @@ function getSidebarOperationalCount(page) {
     if (page === 'magazzino') return DATASETS.magazzino.filter(item => toFiniteNumber(item.quantita) <= toFiniteNumber(item.quantitaMinima || 0)).length;
     if (page === 'clienti') return DATASETS.clienti.filter(item => !['vinto', 'perso'].includes(item.stato)).length;
     return (DATASETS[page] || []).length;
+}
+
+function getSidebarGroupStats(groupKey) {
+    const group = SIDEBAR_SUBNAV[groupKey];
+    if (!group) return null;
+    const pages = group.items.map(item => item.page);
+    const total = pages.reduce((sum, page) => sum + (DATASETS[page]?.length || 0), 0);
+    const operational = pages.reduce((sum, page) => sum + getSidebarOperationalCount(page), 0);
+    const focusPage = pages
+        .map(page => ({ page, count: getSidebarOperationalCount(page) }))
+        .sort((a, b) => b.count - a.count)[0];
+    return {
+        total,
+        operational,
+        focusPage: focusPage?.page || group.items[0]?.page || '',
+        focusCount: focusPage?.count || 0
+    };
+}
+
+function openSidebarFocus(groupKey) {
+    const group = SIDEBAR_SUBNAV[groupKey];
+    const stats = getSidebarGroupStats(groupKey);
+    const page = stats?.focusPage || group?.items?.[0]?.page;
+    if (!page) return;
+    const filterMap = {
+        preventivi: 'scadenza',
+        preventiviAcquisto: 'aperti',
+        ordiniVendita: 'urgenti',
+        ordiniAcquisto: 'all',
+        magazzino: 'critico',
+        clienti: 'caldi',
+        fornitori: 'all',
+        ddtVendita: 'all',
+        ddtAcquisto: 'all',
+        prodotti: 'all',
+        distintaBase: 'all',
+        segnalazioni: 'prioritarie'
+    };
+    const filter = filterMap[page] || 'all';
+    if (filter !== 'all') {
+        openModuleAndApplyFilter(page, filter);
+        return;
+    }
+    cambiaPagina(page);
 }
 
 function toggleSidebarGroup(groupKey, triggerEl = null) {

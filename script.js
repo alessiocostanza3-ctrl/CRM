@@ -1,4 +1,4 @@
-﻿// ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ 1. DATI E DATABASE INTEGRATO (MOCK DATA) ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬
+// ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ 1. DATI E DATABASE INTEGRATO (MOCK DATA) ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬
 const prodotti = [
     {
         id: "prod_aura_xs",
@@ -11,7 +11,7 @@ const prodotti = [
         produttore: "PROD S.r.l.",
         peso: 1.2,
         volume: 0.003,
-        descrizioneTecnica: "Faretto LED ad alta efficienza per esterni, corpo in alluminio pressofuso, impermeabilitÃƒÆ’Ã‚Â  IP67, finitura standard grigio antracite."
+        descrizioneTecnica: "Faretto LED ad alta efficienza per esterni, corpo in alluminio pressofuso, impermeabilità IP67, finitura standard grigio antracite."
     },
     {
         id: "prod_aura_xl",
@@ -63,7 +63,7 @@ const prodotti = [
         produttore: "LumiTech Semiconduttori SpA",
         peso: 0.01,
         volume: 0.0001,
-        descrizioneTecnica: "Chip LED COB da 10W ad alta luminositÃƒÆ’Ã‚Â , temperatura colore 4000K, efficienza 130 lm/W."
+        descrizioneTecnica: "Chip LED COB da 10W ad alta luminosità, temperatura colore 4000K, efficienza 130 lm/W."
     },
     {
         id: "comp_led_50w",
@@ -102,7 +102,7 @@ const prodotti = [
         produttore: "MeanWell",
         peso: 0.45,
         volume: 0.001,
-        descrizioneTecnica: "Alimentatore IP65 corrente costante 1050mA, ingresso universale, PFC attivo, alta affidabilitÃƒÆ’Ã‚Â ."
+        descrizioneTecnica: "Alimentatore IP65 corrente costante 1050mA, ingresso universale, PFC attivo, alta affidabilità."
     },
     {
         id: "comp_body_aura",
@@ -207,7 +207,7 @@ const clienti = [
         creato: "2026-05-10",
         timeline: [
             { type: "chiamata", text: "Laura Bianchi richiede quotazione speciale per fornitura fari esterni per progetto villa Porto Cervo (circa 35 fari).", date: "20 Mag 2026, 16:00" },
-            { type: "nota", text: "Inserita opportunitÃƒÆ’Ã‚Â  commerciale in dashboard per villa Porto Cervo.", date: "20 Mag 2026, 16:15" }
+            { type: "nota", text: "Inserita opportunità commerciale in dashboard per villa Porto Cervo.", date: "20 Mag 2026, 16:15" }
         ]
     },
     {
@@ -330,7 +330,7 @@ const segnalazioni = [
         zona: "Toscana",
         priorita: "media",
         stato: "risolto",
-        descrizione: "OpportunitÃƒÆ’Ã‚Â  chiusa positivamente e convertita in preventivo PRV-2026-001."
+        descrizione: "Opportunità chiusa positivamente e convertita in preventivo PRV-2026-001."
     }
 ];
 
@@ -804,14 +804,14 @@ async function ripristinaSeedSuCloud() {
 const TABLE_CONFIGS = {
     segnalazioni: {
         title: "Segnalazioni (Pre-preventivi)",
-        eyebrow: "OpportunitÃƒÆ’Ã‚Â  Commerciali",
-        headers: ["OpportunitÃƒÆ’Ã‚Â  / Prodotto", "Cliente Segnalante", "Zona", "PrioritÃƒÆ’Ã‚Â ", "Stato", "Workflow", "Azioni"],
+        eyebrow: "Opportunità Commerciali",
+        headers: ["Opportunità / Prodotto", "Cliente Segnalante", "Zona", "Priorità", "Stato", "Workflow", "Azioni"],
         fields: [
-            { key: "titolo", label: "Titolo OpportunitÃƒÆ’Ã‚Â ", type: "text", required: true, fullWidth: true, placeholder: "Fornitura fari per villa" },
+            { key: "titolo", label: "Titolo Opportunità", type: "text", required: true, fullWidth: true, placeholder: "Fornitura fari per villa" },
             { key: "cliente", label: "Cliente di Riferimento", type: "select", required: true, dynamicOptions: "clienti" },
             { key: "prodottoInteresse", label: "Prodotto d'Interesse", type: "select", required: true, dynamicOptions: "prodotti" },
             { key: "zona", label: "Zona / Area Geografica", type: "text", required: true, placeholder: "Roma Nord" },
-            { key: "priorita", label: "PrioritÃƒÆ’Ã‚Â  OpportunitÃƒÆ’Ã‚Â ", type: "select", required: true, options: [
+            { key: "priorita", label: "Priorità Opportunità", type: "select", required: true, options: [
                 { value: "bassa", label: "Bassa" },
                 { value: "media", label: "Media" },
                 { value: "alta", label: "Alta" }
@@ -866,7 +866,7 @@ const TABLE_CONFIGS = {
             { key: "paese", label: "Nazione", type: "text", placeholder: "Italia" },
             { key: "provincia", label: "Provincia", type: "text", placeholder: "FI" },
             { key: "iban", label: "IBAN per accrediti", type: "text", fullWidth: true, placeholder: "IT60P0123456789012345678901" },
-            { key: "valore", label: "Valore Stimato Pipeline (ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬)", type: "number", placeholder: "10000" },
+            { key: "valore", label: "Valore Stimato Pipeline (€)", type: "number", placeholder: "10000" },
             { key: "sconto1", label: "Sconto 1 %", type: "number", placeholder: "0" },
             { key: "sconto2", label: "Sconto 2 %", type: "number", placeholder: "0" },
             { key: "sconto3", label: "Sconto 3 %", type: "number", placeholder: "0" },
@@ -992,7 +992,7 @@ const TABLE_CONFIGS = {
             { key: "data", label: "Data Spedizione", type: "date", required: true },
             { key: "ordineRif", label: "Ordine di Riferimento", type: "text", placeholder: "ORDV-2026-101" },
             { key: "vettore", label: "Vettore / Corriere", type: "text", required: true, placeholder: "DHL Express" },
-            { key: "colli", label: "QuantitÃƒÆ’Ã‚Â  Colli", type: "number", required: true, placeholder: "2" },
+            { key: "colli", label: "Quantità Colli", type: "number", required: true, placeholder: "2" },
             { key: "aspettoBeni", label: "Aspetto dei Beni", type: "text", placeholder: "Scatole di cartone / Bancale" },
             { key: "pesoLordo", label: "Peso Lordo (kg)", type: "number", placeholder: "25.5" },
             { key: "volumeMc", label: "Volume (mc)", type: "number", placeholder: "0.5" },
@@ -1082,7 +1082,7 @@ const TABLE_CONFIGS = {
             { key: "data", label: "Data Ricezione", type: "date", required: true },
             { key: "ordineRif", label: "Ordine di Acquisto Rif.", type: "text", placeholder: "ORDA-2026-501" },
             { key: "vettore", label: "Vettore / Corriere", type: "text", placeholder: "Artoni Trasporti" },
-            { key: "colli", label: "QuantitÃƒÆ’Ã‚Â  Colli", type: "number", placeholder: "2" },
+            { key: "colli", label: "Quantità Colli", type: "number", placeholder: "2" },
             { key: "aspettoBeni", label: "Aspetto dei Beni", type: "text", placeholder: "Scatole di cartone / Bancale" },
             { key: "pesoLordo", label: "Peso Lordo (kg)", type: "number", placeholder: "18.5" },
             { key: "volumeMc", label: "Volume (mc)", type: "number", placeholder: "0.2" }
@@ -1111,23 +1111,23 @@ const TABLE_CONFIGS = {
                 { value: "4", label: "4%" },
                 { value: "0", label: "0%" }
             ]},
-            { key: "prezzoAcquisto", label: "Prezzo di Costo Acquisto (ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬)", type: "number", required: true, placeholder: "22.00" },
-            { key: "prezzoVendita", label: "Prezzo di Vendita (ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬)", type: "number", required: true, placeholder: "85.00" },
+            { key: "prezzoAcquisto", label: "Prezzo di Costo Acquisto (€)", type: "number", required: true, placeholder: "22.00" },
+            { key: "prezzoVendita", label: "Prezzo di Vendita (€)", type: "number", required: true, placeholder: "85.00" },
             { key: "sku", label: "SKU", type: "text", placeholder: "AURA-XS" },
-            { key: "unitaMisura", label: "UnitÃƒÆ’Ã‚Â  di misura", type: "select", required: true, options: [
+            { key: "unitaMisura", label: "Unità di misura", type: "select", required: true, options: [
                 { value: "pz", label: "Pezzi" },
                 { value: "m", label: "Metri" },
                 { value: "kg", label: "Kg" },
                 { value: "scatola", label: "Scatola" }
             ]},
-            { key: "quantitaConfezione", label: "QuantitÃƒÆ’Ã‚Â  per confezione", type: "number", placeholder: "1" },
+            { key: "quantitaConfezione", label: "Quantità per confezione", type: "number", placeholder: "1" },
             { key: "quantitaEsistente", label: "Giacenza", type: "number", placeholder: "0" },
             { key: "brand", label: "Brand", type: "text", placeholder: "PROD" },
             { key: "provvigione", label: "Provvigione %", type: "number", placeholder: "0" },
             { key: "barcode", label: "Barcode", type: "text", placeholder: "8012345678901" },
             { key: "metel", label: "METEL", type: "text", placeholder: "METEL" },
             { key: "magazzino", label: "Magazzino", type: "select", required: true, options: [
-                { value: "si", label: "SÃƒÆ’Ã‚Â¬" },
+                { value: "si", label: "Sì" },
                 { value: "no", label: "No" }
             ]},
             { key: "codDocumento", label: "Cod. Documento", type: "text", placeholder: "DOC-0001" },
@@ -1144,19 +1144,19 @@ const TABLE_CONFIGS = {
         headers: ["Prodotto Finito", "Componenti Richiesti", "Costo Tot. Componenti", "Prezzo Vendita Listino", "Azioni"],
         fields: [
             { key: "prodotto", label: "Seleziona Prodotto Finito", type: "select", required: true, dynamicOptions: "prodotti" },
-            { key: "componentiCsv", label: "Elenco Componenti (Formato SKU:QuantitÃƒÆ’Ã‚Â , separati da virgola)", type: "textarea", required: true, fullWidth: true, placeholder: "LED-10W:1, DRV-10W:1, BODY-AURA:1, CAB-NEO:1" }
+            { key: "componentiCsv", label: "Elenco Componenti (Formato SKU:Quantità, separati da virgola)", type: "textarea", required: true, fullWidth: true, placeholder: "LED-10W:1, DRV-10W:1, BODY-AURA:1, CAB-NEO:1" }
         ],
         csvTemplate: "prodotto,componentiCsv"
     },
     magazzino: {
         title: "Magazzino",
         eyebrow: "Giacenze e Scorte",
-        headers: ["Codice / Articolo", "QuantitÃƒÆ’Ã‚Â  Disponibile", "Scorta Minima", "Stato Scorta", "Valore Scorta FIFO", "Ubicazione", "Azioni"],
+        headers: ["Codice / Articolo", "Quantità Disponibile", "Scorta Minima", "Stato Scorta", "Valore Scorta FIFO", "Ubicazione", "Azioni"],
         fields: [
             { key: "prodotto", label: "Articolo Prodotto", type: "select", required: true, dynamicOptions: "prodotti" },
             { key: "quantita", label: "Giacenza Attuale", type: "number", required: true, placeholder: "100" },
             { key: "quantitaMinima", label: "Livello Sotto-scorta Minimo", type: "number", placeholder: "10" },
-            { key: "valoreFIFO", label: "Valore di Inventario FIFO (ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬)", type: "number", placeholder: "5000" },
+            { key: "valoreFIFO", label: "Valore di Inventario FIFO (€)", type: "number", placeholder: "5000" },
             { key: "ubicazione", label: "Ubicazione Magazzino", type: "text", placeholder: "Scaffale B-18" }
         ],
         csvTemplate: "prodotto,quantita,quantitaMinima,valoreFIFO,ubicazione"
@@ -1266,21 +1266,15 @@ function updatePageUiState(pageName, partial) {
 function cleanUiText(value) {
     const text = String(value ?? '');
     return text
-        .replaceAll('â‚¬', 'EUR ')
-        .replaceAll('ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬', 'EUR ')
-        .replaceAll('ÃƒÆ’Ã‚Â ', 'a')
-        .replaceAll('ÃƒÆ’Ã‚Â¨', 'e')
-        .replaceAll('ÃƒÆ’Ã‚Â©', 'e')
-        .replaceAll('ÃƒÆ’Ã‚Â¬', 'i')
-        .replaceAll('ÃƒÆ’Ã‚Â²', 'o')
-        .replaceAll('ÃƒÆ’Ã‚Â¹', 'u')
-        .replaceAll('Ã ', 'a')
-        .replaceAll('Ã¨', 'e')
-        .replaceAll('Ã©', 'e')
-        .replaceAll('Ã¬', 'i')
-        .replaceAll('Ã²', 'o')
-        .replaceAll('Ã¹', 'u')
-        .replaceAll('Ã', 'a');
+        .replaceAll('â‚¬', '€')
+        .replaceAll('ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬', '€')
+        .replaceAll('Ã ', 'à')
+        .replaceAll('Ã¨', 'è')
+        .replaceAll('Ã©', 'é')
+        .replaceAll('Ã¬', 'ì')
+        .replaceAll('Ã²', 'ò')
+        .replaceAll('Ã¹', 'ù')
+        .replaceAll('Ã', 'à');
 }
 
 function getOrdiniVenditaFieldOptions() {
@@ -4720,7 +4714,7 @@ function renderTimelineDettaglio(container, cliente) {
                 <div class="detail-panel-title">
                     <span>Timeline Interazioni</span>
                     <button class="btn-dark" style="min-height: 36px; padding: 0 14px; font-size: 12px;" onclick="apriModalInterazione('${cliente.id}')">
-                        <i class="fas fa-plus"></i> Registra AttivitÃƒÆ’Ã‚Â 
+                        <i class="fas fa-plus"></i> Registra Attività
                     </button>
                 </div>
                 
@@ -6389,7 +6383,7 @@ function confermaAggiungiInterazione() {
     const dettagli = document.getElementById('interazione-dettagli').value.trim();
 
     if (!dettagli) {
-        mostraNotifica("Inserisci una descrizione per registrare l'attivitÃƒÆ’Ã‚Â ", "error");
+        mostraNotifica("Inserisci una descrizione per registrare l'attività", "error");
         return;
     }
 
@@ -6406,7 +6400,7 @@ function confermaAggiungiInterazione() {
             date: ottieniDataOraAttuale()
         });
 
-        mostraNotifica("AttivitÃƒÆ’Ã‚Â  registrata con successo", "success");
+        mostraNotifica("Attività registrata con successo", "success");
         renderTimelineDettaglio(document.getElementById('contenitore-dati'), DATASETS.clienti[cIdx]);
     }
 

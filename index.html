@@ -55,6 +55,9 @@
 
     <aside class="app-sidebar" id="app-sidebar" aria-label="Navigazione principale CRM">
         <div class="app-sidebar-top">
+            <button class="app-sidebar-item" data-sidebar-page="dashboard_operativa" type="button" onclick="cambiaPagina('dashboard_operativa')" title="Dashboard">
+                <i class="fas fa-house"></i>
+            </button>
             <button class="app-sidebar-item" data-sidebar-group="preventivi" type="button" onclick="apriSezioneSidebar('preventivi', this)" title="Preventivi">
                 <i class="fas fa-file-invoice-dollar"></i>
             </button>
@@ -69,9 +72,6 @@
             </button>
         </div>
         <div class="app-sidebar-bottom">
-            <button class="app-sidebar-item" data-sidebar-page="dashboard_operativa" type="button" onclick="cambiaPagina('dashboard_operativa')" title="Dashboard">
-                <i class="fas fa-house"></i>
-            </button>
             <button class="app-sidebar-item" data-sidebar-page="analisiDati" type="button" onclick="cambiaPagina('analisiDati')" title="Analisi Dati">
                 <i class="fas fa-chart-line"></i>
             </button>

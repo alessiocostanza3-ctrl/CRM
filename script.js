@@ -2393,6 +2393,7 @@ function renderRecordDettaglio(container, pageName, recordId) {
                         <p class="crm-header-subtitle">${cleanUiText(TABLE_CONFIGS[pageName]?.title || pageName)}${linkedName ? ` · ${linkedName}` : ''}</p>
                     </div>
                     <div class="crm-header-actions">
+                        <button class="btn-secondary" onclick="stampaDocumento('${pageName}', '${record.id}')"><i class="fas fa-print"></i> Stampa</button>
                         <button class="btn-secondary" onclick="cambiaPagina('${pageName}')"><i class="fas fa-chevron-left"></i> Torna al modulo</button>
                         <button class="btn-primary" onclick="apriModalGenericModifica('${record.id}')"><i class="fas fa-pen"></i> Modifica</button>
                     </div>
@@ -6610,8 +6611,134 @@ function initRadialHoverEffects() {
         });
     });
 }
- 
 
+function stampaDocumento(pageName, recordId) {
+    const record = getRecordByPage(pageName, recordId);
+    if (!record) return;
+    
+    let container = document.getElementById('print-container');
+    if (!container) {
+        container = document.createElement('div');
+        container.id = 'print-container';
+        document.body.appendChild(container);
+    }
+    
+    const isDoc = ['preventivi', 'ordiniVendita', 'ddtVendita', 'ordiniAcquisto', 'ddtAcquisto'].includes(pageName);
+    
+    const docTitle = cleanUiText(TABLE_CONFIGS[pageName]?.title || pageName);
+    const linkedName = record.cliente
+        ? (DATASETS.clienti.find(item => item.id === record.cliente)?.azienda || 'Cliente Sconosciuto')
+        : record.fornitore
+            ? (DATASETS.fornitori.find(item => item.id === record.fornitore)?.nome || 'Fornitore Sconosciuto')
+            : 'Destinatario Sconosciuto';
+            
+    const linkedAddress = record.cliente
+        ? (DATASETS.clienti.find(item => item.id === record.cliente)?.indirizzo || '')
+        : record.fornitore
+            ? (DATASETS.fornitori.find(item => item.id === record.fornitore)?.indirizzo || '')
+            : '';
+            
+    const linkedPiva = record.cliente
+        ? (DATASETS.clienti.find(item => item.id === record.cliente)?.piva || '')
+        : record.fornitore
+            ? (DATASETS.fornitori.find(item => item.id === record.fornitore)?.piva || '')
+            : '';
 
+    const rows = Array.isArray(record.righe) ? record.righe : [];
+    
+    let rowsHtml = '';
+    if (rows.length > 0) {
+        rowsHtml = `
+            <table class="print-table">
+                <thead>
+                    <tr>
+                        <th>Codice</th>
+                        <th>Descrizione</th>
+                        <th class="num">Q.tà</th>
+                        <th class="num">Prezzo</th>
+                        <th class="num">Totale</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${rows.map(r => {
+                        const prod = DATASETS.prodotti?.find(p => p.id === r.prodotto);
+                        const desc = prod ? prod.nome : (r.descrizione || 'Articolo');
+                        const qta = r.quantita || 1;
+                        const pz = r.prezzoUnitario || r.prezzo || 0;
+                        const tot = qta * pz;
+                        return `
+                        <tr>
+                            <td>${prod ? prod.sku : ''}</td>
+                            <td>${desc}</td>
+                            <td class="num">${qta}</td>
+                            <td class="num">${formatCrmMoney(pz)}</td>
+                            <td class="num">${formatCrmMoney(tot)}</td>
+                        </tr>
+                        `;
+                    }).join('')}
+                </tbody>
+            </table>
+            
+            <div class="print-totals">
+                <div class="print-totals-row">
+                    <span>Imponibile:</span>
+                    <span>${formatCrmMoney(record.imponibile || record.totale || 0)}</span>
+                </div>
+                <div class="print-totals-row">
+                    <span>IVA:</span>
+                    <span>${formatCrmMoney(record.tasse || 0)}</span>
+                </div>
+                <div class="print-totals-row grand-total">
+                    <span>Totale Documento:</span>
+                    <span>${formatCrmMoney((record.imponibile || record.totale || 0) + (record.tasse || 0))}</span>
+                </div>
+            </div>
+        `;
+    }
 
-
+    container.innerHTML = `
+        <div class="print-document">
+            <div class="print-header">
+                <div class="print-logo">
+                    <h1>SIDEIS SRL</h1>
+                    <p>P.IVA: 09876543210 - C.F. 09876543210</p>
+                    <p>Via dell'Innovazione 1, 20100 Milano (MI) - Italia</p>
+                    <p>Tel: +39 02 1234567 | Email: info@sideis.it</p>
+                </div>
+                <div class="print-doc-info">
+                    <h2>${docTitle}</h2>
+                    <p>Numero: <strong>${record.numero || record.codice || record.id}</strong></p>
+                    <p>Data: <strong>${record.data || formatDisplayDate(new Date())}</strong></p>
+                    ${record.dataScadenza ? `<p>Scadenza: <strong>${record.dataScadenza}</strong></p>` : ''}
+                </div>
+            </div>
+            
+            <div class="print-addresses">
+                <div class="print-address-box">
+                    <h3>Intestatario Documento</h3>
+                    <p><strong>${linkedName}</strong></p>
+                    <p>${linkedAddress}</p>
+                    <p>P.IVA: ${linkedPiva}</p>
+                </div>
+                <div class="print-address-box">
+                    <h3>Destinazione Merce</h3>
+                    <p>Come Intestatario</p>
+                </div>
+            </div>
+            
+            ${rowsHtml}
+            
+            <div class="print-notes">
+                <p><strong>Note:</strong> ${record.note || 'Nessuna nota aggiuntiva.'}</p>
+            </div>
+            
+            <div class="print-footer">
+                Documento generato da CRM SIDEIS - Pagina 1 di 1
+            </div>
+        </div>
+    `;
+    
+    setTimeout(() => {
+        window.print();
+    }, 300);
+}

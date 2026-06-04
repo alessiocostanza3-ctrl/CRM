@@ -104,6 +104,16 @@
                 <i class="fas fa-gear"></i>
                 <span class="sidebar-label">Impostazioni</span>
             </button>
+            <div class="sidebar-user-block">
+                <div class="sidebar-user-avatar">
+                    AC
+                    <span class="sidebar-user-status-dot"></span>
+                </div>
+                <div class="sidebar-user-info">
+                    <span class="sidebar-user-name">Alessio C.</span>
+                    <span class="sidebar-user-role">Amministratore</span>
+                </div>
+            </div>
         </div>
         <div class="app-sidebar-submenu" id="app-sidebar-submenu"></div>
     </aside>
@@ -348,6 +358,28 @@
                 <button type="button" onclick="confermaAggiungiInterazione()" class="btn-modal-send">
                     <i class="fas fa-paper-plane"></i> Registra Attività
                 </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SLIDE-OVER DRAWER COMPACT PER VISUALIZZAZIONE E CRUD -->
+    <div id="crm-drawer" class="crm-drawer-overlay" onclick="if(event.target===this) chiudiCrmDrawer()">
+        <div class="crm-drawer-content">
+            <div class="crm-drawer-header">
+                <div class="crm-drawer-header-left">
+                    <span id="crm-drawer-eyebrow" class="crm-drawer-eyebrow">Dettaglio Record</span>
+                    <h2 id="crm-drawer-title" class="crm-drawer-title">Caricamento...</h2>
+                </div>
+                <button type="button" class="btn-drawer-close" onclick="chiudiCrmDrawer()" aria-label="Chiudi pannello">&times;</button>
+            </div>
+            <div class="crm-drawer-tabs" id="crm-drawer-tabs">
+                <!-- Tab dinamici -->
+            </div>
+            <div class="crm-drawer-body" id="crm-drawer-body">
+                <!-- Contenuto dinamico -->
+            </div>
+            <div class="crm-drawer-footer" id="crm-drawer-footer">
+                <!-- Bottoni salvataggio/chiusura -->
             </div>
         </div>
     </div>

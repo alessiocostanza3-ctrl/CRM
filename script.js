@@ -1374,7 +1374,10 @@ let activeSidebarTrigger = null;
 function positionSidebarSubmenu(triggerEl) {
     const sidebar = document.getElementById('app-sidebar');
     const container = document.getElementById('app-sidebar-submenu');
-    if (!sidebar || !container || !triggerEl) return;
+    if (!sidebar || !container || !triggerEl) {
+        console.error('positionSidebarSubmenu missing elements:', { sidebar, container, triggerEl });
+        return;
+    }
 
     const sidebarRect = sidebar.getBoundingClientRect();
     const triggerRect = triggerEl.getBoundingClientRect();
@@ -1383,14 +1386,20 @@ function positionSidebarSubmenu(triggerEl) {
     const clampedTop = Math.min(Math.max(12, rawTop), maxTop);
 
     container.style.top = `${Math.round(clampedTop)}px`;
-    container.style.left = `${sidebar.offsetWidth + 14}px`;
+    container.style.left = '';
+    console.log('Submenu positioned at top:', container.style.top, 'sidebar.offsetWidth:', sidebar.offsetWidth);
 }
 
 function renderSidebarSubmenu(groupKey, triggerEl = activeSidebarTrigger) {
+    console.log('renderSidebarSubmenu called for groupKey:', groupKey);
     const container = document.getElementById('app-sidebar-submenu');
-    if (!container) return;
+    if (!container) {
+        console.error('Submenu container #app-sidebar-submenu not found!');
+        return;
+    }
     const group = SIDEBAR_SUBNAV[groupKey];
     if (!group) {
+        console.log('No group - hiding submenu');
         container.classList.remove('active');
         container.innerHTML = '';
         container.style.top = '';
@@ -1447,12 +1456,12 @@ function renderSidebarSubmenu(groupKey, triggerEl = activeSidebarTrigger) {
 }
 
 function getSidebarOperationalCount(page) {
-    if (page === 'preventivi') return DATASETS.preventivi.filter(item => !['accettato', 'rifiutato'].includes(item.stato)).length;
-    if (page === 'preventiviAcquisto') return DATASETS.preventiviAcquisto.filter(item => item.stato !== 'accettato').length;
-    if (page === 'ordiniVendita') return DATASETS.ordiniVendita.filter(item => !['spedito', 'consegnato'].includes(item.stato)).length;
-    if (page === 'ordiniAcquisto') return DATASETS.ordiniAcquisto.filter(item => item.stato !== 'ricevuto').length;
-    if (page === 'magazzino') return DATASETS.magazzino.filter(item => toFiniteNumber(item.quantita) <= toFiniteNumber(item.quantitaMinima || 0)).length;
-    if (page === 'clienti') return DATASETS.clienti.filter(item => !['vinto', 'perso'].includes(item.stato)).length;
+    if (page === 'preventivi') return (DATASETS.preventivi || []).filter(item => !['accettato', 'rifiutato'].includes(item.stato)).length;
+    if (page === 'preventiviAcquisto') return (DATASETS.preventiviAcquisto || []).filter(item => item.stato !== 'accettato').length;
+    if (page === 'ordiniVendita') return (DATASETS.ordiniVendita || []).filter(item => !['spedito', 'consegnato'].includes(item.stato)).length;
+    if (page === 'ordiniAcquisto') return (DATASETS.ordiniAcquisto || []).filter(item => item.stato !== 'ricevuto').length;
+    if (page === 'magazzino') return (DATASETS.magazzino || []).filter(item => toFiniteNumber(item.quantita) <= toFiniteNumber(item.quantitaMinima || 0)).length;
+    if (page === 'clienti') return (DATASETS.clienti || []).filter(item => !['vinto', 'perso'].includes(item.stato)).length;
     return (DATASETS[page] || []).length;
 }
 
@@ -1512,12 +1521,18 @@ function toggleSidebarGroup(groupKey, triggerEl = null) {
 }
 
 function apriSezioneSidebar(groupKey, triggerEl = null) {
+    console.log('apriSezioneSidebar called for groupKey:', groupKey);
     const group = SIDEBAR_SUBNAV[groupKey];
-    if (!group || !group.items?.length) return;
+    if (!group || !group.items?.length) {
+        console.log('Group not found or empty:', groupKey);
+        return;
+    }
     if (activeSidebarGroup === groupKey) {
+        console.log('Closing group:', groupKey);
         renderSidebarSubmenu(null);
         return;
     }
+    console.log('Opening group:', groupKey);
     renderSidebarSubmenu(groupKey, triggerEl);
     
     const selector = `[data-sidebar-group="${groupKey}"]`;
@@ -2078,7 +2093,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
     
-    // Gestione ESC
+    // Gestione ESC e Scorciatoie da Tastiera
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
             chiudiSidebarMobile();
@@ -2086,6 +2101,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             chiudiModalGeneric();
             chiudiModalCsv();
             chiudiModalInterazione();
+            chiudiCrmDrawer(); // Chiude il drawer laterale su ESC
 
             const hub = document.getElementById('command-hub');
             const trigger = hub?.querySelector('.hub-trigger');
@@ -2095,6 +2111,16 @@ document.addEventListener('DOMContentLoaded', async () => {
                 if (trigger) trigger.setAttribute('aria-expanded', 'false');
                 if (ring) ring.setAttribute('aria-hidden', 'true');
                 syncRadialMenuState(paginaAttuale || DEFAULT_PAGE, { forceCollapsed: true });
+            }
+        }
+
+        // Shortcut Ctrl+K / Cmd+K per attivare la Ricerca Universale
+        if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+            e.preventDefault();
+            const searchInput = document.getElementById('universal-search');
+            if (searchInput) {
+                searchInput.focus();
+                searchInput.select();
             }
         }
     });
@@ -2241,8 +2267,7 @@ function cambiaPagina(page) {
 }
 
 function apriRecordDettaglio(pageName, recordId) {
-    recordDetailContext = { page: pageName, id: recordId };
-    cambiaPagina('record_dettaglio');
+    apriCrmDrawer(pageName, recordId);
 }
 
 function getRecordByPage(pageName, recordId) {
@@ -3368,18 +3393,79 @@ function renderKpiMiniDock(pageName, dataset) {
     `;
 }
 
+function getKpiSparkline(label) {
+    let points = [];
+    if (label === 'Record') {
+        points = [5, 12, 8, 15, 10, 18, 22];
+    } else if (label === 'Valore') {
+        points = [10, 8, 15, 12, 20, 14, 25];
+    } else if (label === 'Attivi') {
+        points = [2, 10, 5, 12, 8, 14, 18];
+    } else {
+        points = [12, 10, 14, 11, 15, 13, 16];
+    }
+    
+    const maxVal = Math.max(...points);
+    const minVal = Math.min(...points);
+    const range = maxVal - minVal || 1;
+    
+    const width = 70;
+    const height = 26;
+    const padding = 2;
+    const mapped = points.map((p, idx) => {
+        const x = padding + (idx / (points.length - 1)) * (width - padding * 2);
+        const y = height - padding - ((p - minVal) / range) * (height - padding * 2);
+        return `${x.toFixed(1)},${y.toFixed(1)}`;
+    });
+    
+    const pathD = `M ${mapped.join(' L ')}`;
+    const areaD = `${pathD} L ${width - padding},${height} L ${padding},${height} Z`;
+    
+    return `
+        <svg class="kpi-sparkline" viewBox="0 0 ${width} ${height}" aria-hidden="true" style="width:70px; height:26px; margin-left:12px; flex-shrink:0;">
+            <defs>
+                <linearGradient id="sparkline-grad-${label.replace(/\s+/g, '')}" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="var(--brand-primary)" stop-opacity="0.25"></stop>
+                    <stop offset="100%" stop-color="var(--brand-primary)" stop-opacity="0"></stop>
+                </linearGradient>
+            </defs>
+            <path d="${areaD}" fill="url(#sparkline-grad-${label.replace(/\s+/g, '')})"></path>
+            <path d="${pathD}" fill="none" stroke="var(--brand-primary)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+    `;
+}
+
+function getKpiTrendBadge(label) {
+    if (label === 'Record') {
+        return `<span class="kpi-trend up" style="margin-top:2px; display:inline-flex; align-items:center; gap:2px; font-size:10px; font-weight:700; color:#10b981; background:rgba(16,185,129,0.1); padding:1px 5px; border-radius:4px;"><i class="fas fa-arrow-trend-up"></i> +4.2%</span>`;
+    }
+    if (label === 'Valore') {
+        return `<span class="kpi-trend up" style="margin-top:2px; display:inline-flex; align-items:center; gap:2px; font-size:10px; font-weight:700; color:#10b981; background:rgba(16,185,129,0.1); padding:1px 5px; border-radius:4px;"><i class="fas fa-arrow-trend-up"></i> +12.8%</span>`;
+    }
+    if (label === 'Attivi') {
+        return `<span class="kpi-trend up" style="margin-top:2px; display:inline-flex; align-items:center; gap:2px; font-size:10px; font-weight:700; color:#10b981; background:rgba(16,185,129,0.1); padding:1px 5px; border-radius:4px;"><i class="fas fa-arrow-trend-up"></i> +8.5%</span>`;
+    }
+    return `<span class="kpi-trend up" style="margin-top:2px; display:inline-flex; align-items:center; gap:2px; font-size:10px; font-weight:700; color:var(--brand-primary); background:var(--brand-primary-soft); padding:1px 5px; border-radius:4px;"><i class="fas fa-arrows-left-right"></i> Stabile</span>`;
+}
+
 function renderCrmMetricStrip(pageName, dataset) {
     const rowClass = 'crm-kpi-row crm-kpi-row--compact';
     return `
         <div class="${rowClass}">
             ${buildCrmMetricCards(pageName, dataset).map(metric => `
-                <button type="button" class="crm-kpi-card crm-kpi-card--compact crm-kpi-card--button" title="${metric.label}: ${metric.value}" onclick="showKpiDetail('${encodeURIComponent(`${metric.label}: ${metric.value} (${metric.detail})`)}')">
-                    <div class="crm-kpi-icon crm-kpi-icon--compact"><i class="fas ${metric.icon}" aria-hidden="true"></i></div>
-                    <div class="crm-kpi-copy crm-kpi-copy--compact">
-                        <span class="crm-kpi-label crm-kpi-label--compact">${metric.label}</span>
-                        <strong class="crm-kpi-value crm-kpi-value--compact">${metric.value}</strong>
-                        <span class="crm-kpi-subtext crm-kpi-subtext--compact">${metric.detail}</span>
+                <button type="button" class="crm-kpi-card crm-kpi-card--compact crm-kpi-card--button" style="display:flex; justify-content:space-between; align-items:center; flex-direction:row !important; text-align:left;" title="${metric.label}: ${metric.value}" onclick="showKpiDetail('${encodeURIComponent(`${metric.label}: ${metric.value} (${metric.detail})`)}')">
+                    <div style="display:flex; align-items:center; gap:10px;">
+                        <div class="crm-kpi-icon crm-kpi-icon--compact"><i class="fas ${metric.icon}" aria-hidden="true"></i></div>
+                        <div class="crm-kpi-copy crm-kpi-copy--compact" style="display:flex; flex-direction:column;">
+                            <span class="crm-kpi-label crm-kpi-label--compact">${metric.label}</span>
+                            <strong class="crm-kpi-value crm-kpi-value--compact">${metric.value}</strong>
+                            <div style="display:flex; align-items:center; gap:6px; flex-wrap:wrap;">
+                                <span class="crm-kpi-subtext crm-kpi-subtext--compact" style="margin-top:0;">${metric.detail}</span>
+                                ${getKpiTrendBadge(metric.label)}
+                            </div>
+                        </div>
                     </div>
+                    ${getKpiSparkline(metric.label)}
                 </button>
             `).join('')}
         </div>
@@ -4644,8 +4730,8 @@ function renderBOMComponentiPills(csv) {
 
 // ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ 6. TIMELINE DETTAGLIO CLIENTE ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬ÃƒÂ¢Ã¢â‚¬ÂÃ¢â€šÂ¬
 function apriVisualizzazioneTimeline(clientId) {
-    window.dettagliClienteIdAttivo = clientId;
-    cambiaPagina('timeline_dettagli');
+    apriCrmDrawer('clienti', clientId);
+    setDrawerTab('timeline');
 }
 
 function renderTimelineDettaglio(container, cliente) {
@@ -5243,25 +5329,73 @@ function aggiornaTotaliDocumentoModal() {
 
 function apriModalGenericCrea() {
     editingRecordId = null;
-    document.getElementById('modal-generic-titolo').innerText = `Aggiungi a ${TABLE_CONFIGS[paginaAttuale].title}`;
+    window.drawerPageName = paginaAttuale;
+    window.drawerRecordId = null;
     
+    const drawer = document.getElementById('crm-drawer');
+    if (!drawer) return;
+
+    const config = TABLE_CONFIGS[paginaAttuale];
+    document.getElementById('crm-drawer-eyebrow').innerText = config.eyebrow || config.title;
+    document.getElementById('crm-drawer-title').innerText = `Nuovo - ${config.title}`;
+    
+    const tabContainer = document.getElementById('crm-drawer-tabs');
+    tabContainer.innerHTML = `
+        <button type="button" class="crm-drawer-tab-btn active">
+            <i class="fas fa-plus"></i> Inserimento Dati
+        </button>
+    `;
+
+    drawer.classList.add('active');
+
+    const body = document.getElementById('crm-drawer-body');
+    const footer = document.getElementById('crm-drawer-footer');
+    if (!body || !footer) return;
+
+    const fieldsContainer = document.getElementById('modal-generic-fields');
     costruisciCampiFormModal(paginaAttuale);
-    const btnStampa = document.getElementById('btn-stampa-doc');
-    if (btnStampa) btnStampa.style.display = 'none';
-    document.getElementById('modal-generic').classList.add('active');
+
+    body.innerHTML = `<form id="drawer-edit-form" onsubmit="event.preventDefault(); confermaSalvaInDrawer();" style="display:contents;"></form>`;
+    const formNode = body.querySelector('#drawer-edit-form');
+    
+    while (fieldsContainer.firstChild) {
+        formNode.appendChild(fieldsContainer.firstChild);
+    }
+
+    body.className = `crm-drawer-body modal-fields-container ${config.isDocument || paginaAttuale === 'fornitori' ? 'modal-form-grid' : ''}`;
+
+    footer.innerHTML = `
+        <button type="button" class="btn-secondary" onclick="chiudiCrmDrawer()">Annulla</button>
+        <button type="button" class="btn-dark" onclick="confermaSalvaInDrawer()">
+            <i class="fas fa-check"></i> Salva Nuovo
+        </button>
+    `;
 }
 
 function apriModalGenericModifica(id) {
     editingRecordId = id;
-    document.getElementById('modal-generic-titolo').innerText = `Modifica Record - ${TABLE_CONFIGS[paginaAttuale].title}`;
+    window.drawerPageName = paginaAttuale;
+    window.drawerRecordId = id;
     
+    const drawer = document.getElementById('crm-drawer');
+    if (!drawer) return;
+
+    const config = TABLE_CONFIGS[paginaAttuale];
     const record = DATASETS[paginaAttuale].find(r => r.id === id);
     if (!record) return;
 
-    costruisciCampiFormModal(paginaAttuale, record);
-    const btnStampa = document.getElementById('btn-stampa-doc');
-    if (btnStampa) btnStampa.style.display = ['preventivi', 'ordiniVendita', 'ddtVendita', 'preventiviAcquisto', 'ordiniAcquisto', 'ddtAcquisto'].includes(paginaAttuale) ? 'inline-flex' : 'none';
-    document.getElementById('modal-generic').classList.add('active');
+    document.getElementById('crm-drawer-eyebrow').innerText = config.eyebrow || config.title;
+    document.getElementById('crm-drawer-title').innerText = `Modifica - ${record.numero || record.azienda || record.nome || record.titolo || id}`;
+    
+    const tabContainer = document.getElementById('crm-drawer-tabs');
+    tabContainer.innerHTML = `
+        <button type="button" class="crm-drawer-tab-btn active">
+            <i class="fas fa-edit"></i> Modifica Dati
+        </button>
+    `;
+
+    drawer.classList.add('active');
+    attivaModificaInDrawer(paginaAttuale, id);
 }
 
 function chiudiModalGeneric() {
@@ -6964,4 +7098,381 @@ function stampaDocumentoCorrente() {
 
     document.getElementById('print-area').innerHTML = html;
     window.print();
+}
+
+// ==========================================================================
+// PRE-INTEGRATO SLIDE-OVER DRAWER (LINEAR / STRIPE STYLE)
+// ==========================================================================
+
+window.drawerPageName = null;
+window.drawerRecordId = null;
+window.drawerActiveTab = 'general';
+
+function apriCrmDrawer(pageName, recordId) {
+    window.drawerPageName = pageName;
+    window.drawerRecordId = recordId;
+    editingRecordId = recordId; // Map to edit scope
+    window.drawerActiveTab = 'general';
+    
+    const config = TABLE_CONFIGS[pageName];
+    const record = DATASETS[pageName].find(r => r.id === recordId);
+    if (!record) {
+        mostraNotifica("Record non trovato", "error");
+        return;
+    }
+
+    const drawer = document.getElementById('crm-drawer');
+    if (!drawer) return;
+
+    // Header info
+    document.getElementById('crm-drawer-eyebrow').innerText = config.eyebrow || config.title;
+    document.getElementById('crm-drawer-title').innerText = record.numero || record.azienda || record.nome || record.titolo || recordId;
+
+    // Render tab bar
+    const tabContainer = document.getElementById('crm-drawer-tabs');
+    let tabsHtml = `
+        <button type="button" class="crm-drawer-tab-btn ${window.drawerActiveTab === 'general' ? 'active' : ''}" onclick="setDrawerTab('general')">
+            <i class="fas fa-circle-info"></i> Dati Generali
+        </button>
+    `;
+
+    if (pageName === 'clienti') {
+        tabsHtml += `
+            <button type="button" class="crm-drawer-tab-btn ${window.drawerActiveTab === 'timeline' ? 'active' : ''}" onclick="setDrawerTab('timeline')">
+                <i class="fas fa-clock-rotate-left"></i> Attività & Timeline
+            </button>
+        `;
+    }
+
+    if (['clienti', 'preventivi', 'ordiniVendita'].includes(pageName)) {
+        tabsHtml += `
+            <button type="button" class="crm-drawer-tab-btn ${window.drawerActiveTab === 'relations' ? 'active' : ''}" onclick="setDrawerTab('relations')">
+                <i class="fas fa-link"></i> Collegamenti
+            </button>
+        `;
+    }
+
+    tabContainer.innerHTML = tabsHtml;
+
+    // Open drawer
+    drawer.classList.add('active');
+
+    // Render contents of current tab
+    renderDrawerTabContent();
+}
+
+function chiudiCrmDrawer() {
+    const drawer = document.getElementById('crm-drawer');
+    if (drawer) drawer.classList.remove('active');
+    
+    // Reimposta la classe del body a quella del drawer standard prima di svuotare
+    const body = document.getElementById('crm-drawer-body');
+    if (body) body.className = 'crm-drawer-body';
+    
+    window.drawerPageName = null;
+    window.drawerRecordId = null;
+    editingRecordId = null;
+}
+
+function setDrawerTab(tabName) {
+    window.drawerActiveTab = tabName;
+    document.querySelectorAll('.crm-drawer-tab-btn').forEach(btn => {
+        const isCurrent = btn.getAttribute('onclick').includes(`'${tabName}'`);
+        btn.classList.toggle('active', isCurrent);
+    });
+    renderDrawerTabContent();
+}
+
+function renderDrawerTabContent() {
+    const body = document.getElementById('crm-drawer-body');
+    const footer = document.getElementById('crm-drawer-footer');
+    if (!body || !footer) return;
+
+    body.className = 'crm-drawer-body'; // Reset form layout classes
+
+    const pageName = window.drawerPageName;
+    const recordId = window.drawerRecordId;
+    const config = TABLE_CONFIGS[pageName];
+    const record = DATASETS[pageName].find(r => r.id === recordId);
+    
+    if (window.drawerActiveTab === 'general') {
+        // Read-only info cards in a beautiful grid
+        let html = `<div class="drawer-info-grid">`;
+        config.fields.forEach(field => {
+            let val = record[field.key] || 'N/A';
+            if (field.type === 'select') {
+                const opt = (field.options || []).find(o => String(o.value) === String(val));
+                if (opt) val = opt.label;
+                else if (field.dynamicOptions) {
+                    const linked = DATASETS[field.dynamicOptions]?.find(item => item.id === val);
+                    if (linked) val = linked.azienda || linked.nome || linked.numero || val;
+                }
+            } else if (field.type === 'number') {
+                val = field.key.toLowerCase().includes('valore') || field.key.toLowerCase().includes('prezzo') 
+                    ? formatCrmMoney(val) 
+                    : formatCompactNumber(val);
+            }
+            
+            // Map values for cleaner representation
+            if (field.key === 'stato' || field.key === 'statoPagamento') {
+                val = `<span class="status-pill status-${record[field.key]}">${mappaNomeStato(record[field.key])}</span>`;
+            }
+            
+            html += `
+                <div class="drawer-info-item ${field.fullWidth ? 'full-width' : ''}">
+                    <span class="drawer-info-label">${field.label}</span>
+                    <div class="drawer-info-value">${val}</div>
+                </div>
+            `;
+        });
+        
+        // Render document lines if it is a document
+        if (config.isDocument && Array.isArray(record.righe)) {
+            html += `
+                <div class="drawer-info-item full-width" style="margin-top: 16px; border-top: 1px dashed var(--border-color); padding-top:16px;">
+                    <span class="drawer-info-label">Articoli Collegati</span>
+                    <table class="crm-table" style="margin-top: 8px; width: 100%; font-size: 12px; border-collapse: collapse;">
+                        <thead>
+                            <tr style="background:var(--bg-surface-soft);">
+                                <th style="padding:6px 10px; font-size:10px;">Prodotto</th>
+                                <th style="padding:6px 10px; font-size:10px; text-align:right;">Q.ta</th>
+                                <th style="padding:6px 10px; font-size:10px; text-align:right;">Prezzo Unitario</th>
+                                <th style="padding:6px 10px; font-size:10px; text-align:right;">Importo</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+            `;
+            
+            record.righe.forEach(li => {
+                const p = prodotti.find(item => item.id === li.prodotto) || { nome: li.prodotto, prezzoVendita: li.prezzo || 0 };
+                const quantita = li.quantita || 0;
+                const prezzo = li.prezzoUnitario || li.prezzo || p.prezzoVendita || 0;
+                const importo = quantita * prezzo * (1 - (li.sconto || 0) / 100);
+                html += `
+                    <tr>
+                        <td style="padding:8px 10px;"><strong>${p.codice || li.prodotto}</strong><br><small style="color:var(--text-muted);">${p.nome || ''}</small></td>
+                        <td style="padding:8px 10px; text-align:right;">${quantita}</td>
+                        <td style="padding:8px 10px; text-align:right;">${formatCrmMoney(prezzo)}</td>
+                        <td style="padding:8px 10px; text-align:right; font-weight:700;">${formatCrmMoney(importo)}</td>
+                    </tr>
+                `;
+            });
+            
+            html += `
+                        </tbody>
+                    </table>
+                </div>
+            `;
+        }
+        
+        html += `</div>`;
+        body.innerHTML = html;
+
+        // Footer buttons for General Tab
+        footer.innerHTML = `
+            <button type="button" class="btn-secondary" onclick="chiudiCrmDrawer()" style="margin-right:auto;">Chiudi</button>
+            ${['preventivi', 'ordiniVendita', 'ddtVendita', 'preventiviAcquisto', 'ordiniAcquisto', 'ddtAcquisto'].includes(pageName) ? `
+                <button type="button" class="btn-secondary" onclick="stampaDocumentoCorrente()">
+                    <i class="fas fa-print"></i> Stampa
+                </button>
+            ` : ''}
+            <button type="button" class="btn-dark" onclick="attivaModificaInDrawer('${pageName}', '${recordId}')">
+                <i class="fas fa-pen"></i> Modifica Dati
+            </button>
+        `;
+    } 
+    
+    else if (window.drawerActiveTab === 'timeline' && pageName === 'clienti') {
+        // Customer interaction Timeline list inside drawer
+        let html = `
+            <div style="margin-bottom:16px;">
+                <div class="drawer-info-label" style="margin-bottom:8px;">Aggiungi Attività</div>
+                <div style="display:flex; gap:8px;">
+                    <input type="text" id="drawer-note-input" class="input-field-modern" placeholder="Aggiungi una nota al volo..." style="font-size:13px; flex:1;">
+                    <button type="button" class="btn-dark" style="min-height:36px; padding:0 12px; font-size:12px;" onclick="aggiungiNotaRapidaDrawer('${recordId}')">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="timeline-shell" style="display:flex; flex-direction:column; gap:16px; position:relative; padding-left:14px; margin-top:20px;">
+                <div style="position:absolute; left:4px; top:4px; bottom:4px; width:2px; background:var(--border-color); border-radius:1px;"></div>
+        `;
+
+        if (Array.isArray(record.timeline) && record.timeline.length) {
+            record.timeline.forEach(t => {
+                let icon = 'fa-sticky-note';
+                if (t.type === 'chiamata') icon = 'fa-phone';
+                else if (t.type === 'email') icon = 'fa-envelope';
+                else if (t.type === 'incontro') icon = 'fa-handshake';
+
+                html += `
+                    <div style="position:relative; display:flex; flex-direction:column; gap:4px;">
+                        <div style="position:absolute; left:-14px; top:4px; width:8px; height:8px; border-radius:50%; background:var(--brand-primary); box-shadow: 0 0 0 4px var(--bg-body);"></div>
+                        <div style="display:flex; align-items:center; gap:8px;">
+                            <span class="status-pill status-contattato" style="font-size:9px !important; padding:1px 6px !important;"><i class="fas ${icon}"></i> ${t.type.toUpperCase()}</span>
+                            <span style="font-size:10.5px; color:var(--text-muted); font-weight:600;">${t.date}</span>
+                        </div>
+                        <div style="font-size:13px; color:var(--text-main); background:var(--bg-surface-soft); padding:10px 12px; border-radius:10px; border:1px solid var(--border-color); line-height:1.4;">
+                            ${t.text}
+                        </div>
+                    </div>
+                `;
+            });
+        } else {
+            html += `<div style="text-align:center; font-size:13px; color:var(--text-muted); padding:32px 0;">Nessuna attività registrata.</div>`;
+        }
+
+        html += `</div>`;
+        body.innerHTML = html;
+
+        footer.innerHTML = `
+            <button type="button" class="btn-secondary" onclick="chiudiCrmDrawer()">Chiudi</button>
+            <button type="button" class="btn-dark" onclick="apriRegistraAttivitaDrawer('${recordId}')">
+                <i class="fas fa-plus"></i> Registra Attività Completa
+            </button>
+        `;
+    } 
+    
+    else if (window.drawerActiveTab === 'relations') {
+        // Linked records (relations) inside drawer
+        let html = `<div style="display:flex; flex-direction:column; gap:16px;">`;
+        if (pageName === 'clienti') {
+            const related = getClientRelatedRecords(recordId);
+            
+            html += `<div><span class="drawer-info-label" style="display:block; margin-bottom:6px;">Segnalazioni / Opportunità (${related.segnalazioni.length})</span>`;
+            html += renderCompactRelationList(related.segnalazioni, { emptyLabel: 'Nessuna opportunità collegata', pageName: 'segnalazioni' });
+            html += `</div>`;
+
+            html += `<div><span class="drawer-info-label" style="display:block; margin-bottom:6px;">Preventivi Offerti (${related.preventivi.length})</span>`;
+            html += renderCompactRelationList(related.preventivi, { emptyLabel: 'Nessun preventivo collegato', pageName: 'preventivi' });
+            html += `</div>`;
+
+            html += `<div><span class="drawer-info-label" style="display:block; margin-bottom:6px;">Ordini di Vendita (${related.ordiniVendita.length})</span>`;
+            html += renderCompactRelationList(related.ordiniVendita, { emptyLabel: 'Nessun ordine collegato', pageName: 'ordiniVendita' });
+            html += `</div>`;
+
+            html += `<div><span class="drawer-info-label" style="display:block; margin-bottom:6px;">DDT di Spedizione (${related.ddtVendita.length})</span>`;
+            html += renderCompactRelationList(related.ddtVendita, { emptyLabel: 'Nessun DDT collegato', pageName: 'ddtVendita' });
+            html += `</div>`;
+        } else if (pageName === 'preventivi') {
+            const cliente = DATASETS.clienti.find(item => item.id === record.cliente);
+            html += `
+                <div>
+                    <span class="drawer-info-label" style="display:block; margin-bottom:6px;">Cliente Intestatario</span>
+                    ${cliente ? `
+                        <div class="relation-card" style="border:1px solid var(--border-color); border-radius:12px; padding:12px; background:var(--bg-surface-soft); display:flex; justify-content:space-between; align-items:center;">
+                            <div>
+                                <strong style="font-size:13.5px; color:var(--text-main); display:block;">${cliente.azienda}</strong>
+                                <small style="font-size:11px; color:var(--text-muted);">${cliente.nome}</small>
+                            </div>
+                            <button type="button" class="btn-dark" style="min-height:30px; padding:0 10px; font-size:11px;" onclick="apriCrmDrawer('clienti', '${cliente.id}')">Apri Cliente</button>
+                        </div>
+                    ` : '<div class="dashboard-empty">Nessun cliente collegato.</div>'}
+                </div>
+            `;
+        } else if (pageName === 'ordiniVendita') {
+            const cliente = DATASETS.clienti.find(item => item.id === record.cliente);
+            const linkedDdt = DATASETS.ddtVendita.filter(item => item.ordineRif === record.numero);
+            html += `
+                <div>
+                    <span class="drawer-info-label" style="display:block; margin-bottom:6px;">Cliente Intestatario</span>
+                    ${cliente ? `
+                        <div class="relation-card" style="border:1px solid var(--border-color); border-radius:12px; padding:12px; background:var(--bg-surface-soft); display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                            <div>
+                                <strong style="font-size:13.5px; color:var(--text-main); display:block;">${cliente.azienda}</strong>
+                                <small style="font-size:11px; color:var(--text-muted);">${cliente.nome}</small>
+                            </div>
+                            <button type="button" class="btn-dark" style="min-height:30px; padding:0 10px; font-size:11px;" onclick="apriCrmDrawer('clienti', '${cliente.id}')">Apri Cliente</button>
+                        </div>
+                    ` : '<div class="dashboard-empty">Nessun cliente collegato.</div>'}
+                </div>
+                <div>
+                    <span class="drawer-info-label" style="display:block; margin-bottom:6px;">Documenti di Trasporto (DDT)</span>
+                    ${renderCompactRelationList(linkedDdt, { emptyLabel: 'Nessun DDT collegato', pageName: 'ddtVendita' })}
+                </div>
+            `;
+        }
+        
+        html += `</div>`;
+        body.innerHTML = html;
+
+        footer.innerHTML = `
+            <button type="button" class="btn-secondary" onclick="chiudiCrmDrawer()">Chiudi</button>
+        `;
+    }
+}
+
+function attivaModificaInDrawer(pageName, recordId) {
+    const body = document.getElementById('crm-drawer-body');
+    const footer = document.getElementById('crm-drawer-footer');
+    if (!body || !footer) return;
+
+    const record = DATASETS[pageName].find(r => r.id === recordId);
+    if (!record) return;
+
+    document.getElementById('crm-drawer-title').innerText = `Modifica - ${record.numero || record.azienda || record.nome || record.titolo || recordId}`;
+
+    const fieldsContainer = document.getElementById('modal-generic-fields');
+    costruisciCampiFormModal(pageName, record);
+
+    body.innerHTML = `<form id="drawer-edit-form" onsubmit="event.preventDefault(); confermaSalvaInDrawer();" style="display:contents;"></form>`;
+    const formNode = body.querySelector('#drawer-edit-form');
+    
+    while (fieldsContainer.firstChild) {
+        formNode.appendChild(fieldsContainer.firstChild);
+    }
+
+    const config = TABLE_CONFIGS[pageName];
+    body.className = `crm-drawer-body modal-fields-container ${config.isDocument || pageName === 'fornitori' ? 'modal-form-grid' : ''}`;
+
+    footer.innerHTML = `
+        <button type="button" class="btn-secondary" onclick="annullaModificaInDrawer('${pageName}', '${recordId}')">Annulla</button>
+        <button type="button" class="btn-dark" onclick="confermaSalvaInDrawer()">
+            <i class="fas fa-check"></i> Salva Modifiche
+        </button>
+    `;
+}
+
+function annullaModificaInDrawer(pageName, recordId) {
+    const body = document.getElementById('crm-drawer-body');
+    if (body) body.className = 'crm-drawer-body';
+    apriCrmDrawer(pageName, recordId);
+}
+
+function confermaSalvaInDrawer() {
+    const pageName = window.drawerPageName;
+    const recordId = window.drawerRecordId;
+
+    confermaSalvaGeneric();
+    chiudiCrmDrawer();
+    cambiaPagina(paginaAttuale);
+}
+
+function aggiungiNotaRapidaDrawer(clientId) {
+    const input = document.getElementById('drawer-note-input');
+    if (!input) return;
+    const notaText = input.value.trim();
+    if (!notaText) return;
+
+    const cliente = DATASETS.clienti.find(c => c.id === clientId);
+    if (!cliente) return;
+
+    if (!Array.isArray(cliente.timeline)) cliente.timeline = [];
+    cliente.timeline.unshift({
+        type: "nota",
+        text: notaText,
+        date: ottieniDataOraAttuale()
+    });
+
+    saveDatasetsToLocal();
+    saveDatasetsToApiIfChanged();
+    
+    input.value = '';
+    renderDrawerTabContent();
+    mostraNotifica("Nota aggiunta al cliente", "success");
+}
+
+function apriRegistraAttivitaDrawer(clientId) {
+    chiudiCrmDrawer();
+    apriModalInterazione(clientId);
 }

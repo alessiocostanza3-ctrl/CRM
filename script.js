@@ -7234,6 +7234,44 @@ function renderDrawerTabContent() {
         
         // Render document lines if it is a document
         if (config.isDocument && Array.isArray(record.righe)) {
+            const isDelivery = !!config.isDeliveryOnly;
+            let imponibile = 0;
+            let totalTax = 0;
+            let rowsHtml = '';
+            
+            record.righe.forEach(li => {
+                const p = prodotti.find(item => item.id === li.prodotto) || { nome: li.prodotto, prezzoVendita: li.prezzo || 0 };
+                const quantita = li.quantita || 0;
+                const prezzo = li.prezzoUnitario || li.prezzo || p.prezzoVendita || 0;
+                const discount = (li.sconto || 0) + (li.sconto1 || 0) + (li.sconto2 || 0) + (li.sconto3 || 0);
+                const importo = quantita * prezzo * (1 - discount / 100);
+                
+                imponibile += importo;
+                const taxPerc = parseFloat(li.iva ?? p.iva ?? 22);
+                totalTax += importo * (taxPerc / 100);
+                
+                if (isDelivery) {
+                    rowsHtml += `
+                        <tr>
+                            <td style="padding:8px 10px;"><strong>${p.codice || li.prodotto}</strong><br><small style="color:var(--text-muted);">${p.nome || ''}</small></td>
+                            <td style="padding:8px 10px; text-align:right;">${quantita}</td>
+                            <td style="padding:8px 10px; text-align:right;">${li.unitaMisura || p.unitaMisura || 'pz'}</td>
+                        </tr>
+                    `;
+                } else {
+                    rowsHtml += `
+                        <tr>
+                            <td style="padding:8px 10px;"><strong>${p.codice || li.prodotto}</strong><br><small style="color:var(--text-muted);">${p.nome || ''}</small></td>
+                            <td style="padding:8px 10px; text-align:right;">${quantita} ${li.unitaMisura || p.unitaMisura || 'pz'}</td>
+                            <td style="padding:8px 10px; text-align:right;">${formatCrmMoney(prezzo)}</td>
+                            <td style="padding:8px 10px; text-align:right;">${discount > 0 ? `${discount}%` : '-'}</td>
+                            <td style="padding:8px 10px; text-align:right;">${taxPerc}%</td>
+                            <td style="padding:8px 10px; text-align:right; font-weight:700;">${formatCrmMoney(importo)}</td>
+                        </tr>
+                    `;
+                }
+            });
+
             html += `
                 <div class="drawer-info-item full-width" style="margin-top: 16px; border-top: 1px dashed var(--border-color); padding-top:16px;">
                     <span class="drawer-info-label">Articoli Collegati</span>
@@ -7242,31 +7280,30 @@ function renderDrawerTabContent() {
                             <tr style="background:var(--bg-surface-soft);">
                                 <th style="padding:6px 10px; font-size:10px;">Prodotto</th>
                                 <th style="padding:6px 10px; font-size:10px; text-align:right;">Q.ta</th>
-                                <th style="padding:6px 10px; font-size:10px; text-align:right;">Prezzo Unitario</th>
-                                <th style="padding:6px 10px; font-size:10px; text-align:right;">Importo</th>
+                                ${isDelivery ? `
+                                    <th style="padding:6px 10px; font-size:10px; text-align:right;">U.M.</th>
+                                ` : `
+                                    <th style="padding:6px 10px; font-size:10px; text-align:right;">Prezzo Unitario</th>
+                                    <th style="padding:6px 10px; font-size:10px; text-align:right;">Sconto</th>
+                                    <th style="padding:6px 10px; font-size:10px; text-align:right;">IVA</th>
+                                    <th style="padding:6px 10px; font-size:10px; text-align:right;">Importo</th>
+                                `}
                             </tr>
                         </thead>
                         <tbody>
-            `;
-            
-            record.righe.forEach(li => {
-                const p = prodotti.find(item => item.id === li.prodotto) || { nome: li.prodotto, prezzoVendita: li.prezzo || 0 };
-                const quantita = li.quantita || 0;
-                const prezzo = li.prezzoUnitario || li.prezzo || p.prezzoVendita || 0;
-                const importo = quantita * prezzo * (1 - (li.sconto || 0) / 100);
-                html += `
-                    <tr>
-                        <td style="padding:8px 10px;"><strong>${p.codice || li.prodotto}</strong><br><small style="color:var(--text-muted);">${p.nome || ''}</small></td>
-                        <td style="padding:8px 10px; text-align:right;">${quantita}</td>
-                        <td style="padding:8px 10px; text-align:right;">${formatCrmMoney(prezzo)}</td>
-                        <td style="padding:8px 10px; text-align:right; font-weight:700;">${formatCrmMoney(importo)}</td>
-                    </tr>
-                `;
-            });
-            
-            html += `
+                            ${rowsHtml}
                         </tbody>
                     </table>
+                    
+                    ${!isDelivery ? `
+                        <div class="document-totals-panel" style="margin-top: 16px;">
+                            <div class="document-totals-card" style="margin-left: auto;">
+                                <div class="totals-row"><span>Imponibile</span><span>${formatCrmMoney(imponibile)}</span></div>
+                                <div class="totals-row"><span>IVA stimata</span><span>${formatCrmMoney(totalTax)}</span></div>
+                                <div class="totals-row totals-final"><span>Totale documento</span><span>${formatCrmMoney(imponibile + totalTax)}</span></div>
+                            </div>
+                        </div>
+                    ` : ''}
                 </div>
             `;
         }

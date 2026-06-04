@@ -1513,6 +1513,9 @@ function apriSezioneSidebar(groupKey, triggerEl = null) {
         return;
     }
     renderSidebarSubmenu(groupKey, triggerEl);
+    
+    const selector = `[data-sidebar-group="${groupKey}"]`;
+    dismissSidebarBadge(selector);
 }
 
 function selezionaSidebarSubtab(page) {
@@ -2163,6 +2166,9 @@ function cambiaPagina(page) {
     if (mobSearch) mobSearch.value = '';
     ricercaQuery = '';
     chiudiMobileSearch();
+    
+    const selector = `[data-sidebar-page="${page}"]`;
+    dismissSidebarBadge(selector);
 
     // Sincronizzazione active class sul menu radiale e rotazione ruota
     const radialCenterAction = document.querySelector('.radial-center-action');
@@ -6404,11 +6410,27 @@ function ensureSidebarBadge(button) {
     return badge;
 }
 
+window.dismissedBadgeCounts = window.dismissedBadgeCounts || {};
+
+function dismissSidebarBadge(selector) {
+    let currentVal = 0;
+    if (selector === '[data-sidebar-page="dashboard_operativa"]') currentVal = getDashboardAlerts().length;
+    else if (selector === '[data-sidebar-group="preventivi"]') currentVal = DATASETS.preventivi.filter(item => !['accettato', 'rifiutato'].includes(item.stato)).length;
+    else if (selector === '[data-sidebar-group="ordini"]') currentVal = DATASETS.ordiniVendita.filter(item => !['spedito', 'consegnato'].includes(item.stato)).length;
+    else if (selector === '[data-sidebar-group="catalogo"]') currentVal = DATASETS.magazzino.filter(item => toFiniteNumber(item.quantita) <= toFiniteNumber(item.quantitaMinima || 0)).length;
+    
+    window.dismissedBadgeCounts[selector] = currentVal;
+    aggiornaTuttiBadgeSidebar();
+}
+
 function setSidebarBadge(selector, value) {
     const button = document.querySelector(selector);
     const badge = ensureSidebarBadge(button);
     if (!badge) return;
-    const numericValue = Number(value || 0);
+    
+    const dismissed = window.dismissedBadgeCounts[selector] || 0;
+    const numericValue = Math.max(0, Number(value || 0) - dismissed);
+    
     badge.textContent = numericValue > 99 ? '99+' : String(numericValue);
     badge.style.display = numericValue > 0 ? 'inline-flex' : 'none';
 }

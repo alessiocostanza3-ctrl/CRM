@@ -6898,7 +6898,7 @@ function stampaDocumentoCorrente() {
         
         "<div class='print-doc-title'>" +
             "<h2>" + docTitle + " N. " + (record.numero || 'N/D') + "</h2>" +
-            "<p>Data: " + formatDate(record.data) + "</p>" +
+            "<p>Data: " + (record.data || '') + "</p>" +
         "</div>" +
 
         "<table class='print-table'>" +

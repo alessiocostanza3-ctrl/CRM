@@ -1484,12 +1484,13 @@ body {
 
 /* Inline action buttons */
 .actions-cell {
-    display: flex;
-    gap: 6px;
-    justify-content: flex-end;
-    align-items: center;
-    height: 100%;
-    min-height: 48px;
+    white-space: nowrap;
+    text-align: right;
+    vertical-align: middle;
+}
+.actions-cell .action-icon-btn {
+    margin-left: 6px;
+    vertical-align: middle;
 }
 
 .action-icon-btn {

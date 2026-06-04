@@ -6420,7 +6420,12 @@ function ensureSidebarBadge(button) {
     return badge;
 }
 
-window.dismissedBadgeCounts = window.dismissedBadgeCounts || {};
+let dismissedBadgeCounts = {};
+try {
+    dismissedBadgeCounts = JSON.parse(localStorage.getItem('dismissedBadgeCounts')) || {};
+} catch(e) {
+    dismissedBadgeCounts = {};
+}
 
 function dismissSidebarBadge(selector) {
     let currentVal = 0;
@@ -6429,7 +6434,8 @@ function dismissSidebarBadge(selector) {
     else if (selector === '[data-sidebar-group="ordini"]') currentVal = DATASETS.ordiniVendita.filter(item => !['spedito', 'consegnato'].includes(item.stato)).length;
     else if (selector === '[data-sidebar-group="catalogo"]') currentVal = DATASETS.magazzino.filter(item => toFiniteNumber(item.quantita) <= toFiniteNumber(item.quantitaMinima || 0)).length;
     
-    window.dismissedBadgeCounts[selector] = currentVal;
+    dismissedBadgeCounts[selector] = currentVal;
+    localStorage.setItem('dismissedBadgeCounts', JSON.stringify(dismissedBadgeCounts));
     aggiornaTuttiBadgeSidebar();
 }
 
@@ -6438,7 +6444,7 @@ function setSidebarBadge(selector, value) {
     const badge = ensureSidebarBadge(button);
     if (!badge) return;
     
-    const dismissed = window.dismissedBadgeCounts[selector] || 0;
+    const dismissed = dismissedBadgeCounts[selector] || 0;
     const numericValue = Math.max(0, Number(value || 0) - dismissed);
     
     badge.textContent = numericValue > 99 ? '99+' : String(numericValue);

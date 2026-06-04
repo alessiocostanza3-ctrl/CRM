@@ -4987,8 +4987,14 @@ body[data-theme="dark"] {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding: 12px 10px;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+.app-sidebar:hover {
+    width: 220px;
 }
 
 .app-sidebar-top,
@@ -4997,7 +5003,7 @@ body[data-theme="dark"] {
     flex-direction: column;
     gap: 10px;
     width: 100%;
-    align-items: center;
+    align-items: stretch;
 }
 
 .app-sidebar-submenu {
@@ -5151,6 +5157,38 @@ body[data-theme="dark"] {
     font-size: 14px;
     cursor: pointer;
     transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    overflow: hidden;
+}
+
+.app-sidebar:hover .app-sidebar-item {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 0 14px;
+}
+
+.app-sidebar:hover .app-sidebar-item i {
+    min-width: 18px;
+    text-align: center;
+}
+
+.sidebar-label {
+    white-space: nowrap;
+    margin-left: 14px;
+    opacity: 0;
+    font-weight: 600;
+    font-size: 13px;
+    transition: opacity 0.2s ease;
+    display: none;
+}
+
+.app-sidebar:hover .sidebar-label {
+    display: block;
+    opacity: 1;
+    transition-delay: 0.1s;
 }
 
 .app-sidebar-badge {
@@ -5827,25 +5865,11 @@ body[data-theme="dark"] #contenitore-dati .crm-th-sortable.is-sorted .crm-th-sor
         font-size: 14px;
     }
 
-    .app-sidebar-brand::after {
-        content: "Dashboard";
-        font-weight: 800;
-        letter-spacing: 0.01em;
+    .sidebar-label {
+        display: block !important;
+        opacity: 1 !important;
+        margin-left: 0 !important;
     }
-
-    .app-sidebar-item::after {
-        font-weight: 700;
-        letter-spacing: 0.01em;
-    }
-
-    .app-sidebar-item[data-sidebar-page="dashboard_operativa"]::after { content: "Dashboard"; }
-    .app-sidebar-item[data-sidebar-page="analisiDati"]::after { content: "Analisi"; }
-    .app-sidebar-item[data-sidebar-page="clienti"]::after { content: "Clienti e lead"; }
-    .app-sidebar-item[data-sidebar-group="preventivi"]::after { content: "Preventivi"; }
-    .app-sidebar-item[data-sidebar-group="ordini"]::after { content: "Ordini"; }
-    .app-sidebar-item[data-sidebar-group="ddt"]::after { content: "DDT"; }
-    .app-sidebar-item[data-sidebar-group="catalogo"]::after { content: "Catalogo"; }
-    .app-sidebar-item[data-sidebar-page="impostazioni"]::after { content: "Impostazioni"; }
 
     .app-sidebar-submenu {
         order: 2;

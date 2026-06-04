@@ -6347,6 +6347,8 @@ body[data-theme="dark"] #contenitore-dati .crm-th-sortable.is-sorted .crm-th-sor
 }
 
 
+#print-area { display: none; }
+
 /* --- STILI PER LA STAMPA --- */
 @media print {
     body * {
@@ -6361,6 +6363,7 @@ body[data-theme="dark"] #contenitore-dati .crm-th-sortable.is-sorted .crm-th-sor
         visibility: visible;
     }
     #print-area {
+        display: block !important;
         position: absolute;
         left: 0;
         top: 0;

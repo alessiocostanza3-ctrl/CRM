@@ -6675,7 +6675,7 @@ body[data-theme="dark"] .premium-glass {
 }
 
 /* ── 3. SIDEBAR USER PROFILE ED INTERAZIONE (GLIDE HOVER) ────────────────── */
-@media (min-width: 1281px) {
+@media (min-width: 981px) {
     .app-sidebar {
         position: fixed !important;
         top: 18px !important;

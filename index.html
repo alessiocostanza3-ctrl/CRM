@@ -9,8 +9,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="style.css?v=sideis-34">
+    <link rel="stylesheet" href="style.css?v=sideis-36">
     <script>
+        // Svuotamento forzato della cache se versione vecchia
+        if (localStorage.getItem('crm_version') !== '1.2') {
+            localStorage.setItem('crm_version', '1.2');
+            if ('caches' in window) {
+                caches.keys().then(names => {
+                    for (let name of names) caches.delete(name);
+                });
+            }
+            window.location.reload(true);
+        }
+
         window.CRM_REMOTE = {
             supabaseUrl: "https://wkvqpizkmsdqmyxbhnnu.supabase.co",
             supabaseAnonKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndrdnFwaXprbXNkcW15eGJobm51Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAzNDM0MzksImV4cCI6MjA5NTkxOTQzOX0.AE4m-MNhloG58uuZsdb0Ay2jaq4amiisPh80NxhHTZw",
@@ -43,6 +54,10 @@
                 + (e.error ? e.error.stack : '') + '\n\n';
         });
     </script>
+    
+    <!-- AREA DI STAMPA NASCOSTA -->
+    <div id="print-area"></div>
+
     <script src="seed-data.js?v=sideis-seed-3"></script>
     <script src="script.js?v=crm-redesign-31" defer></script>
 </head>
@@ -170,6 +185,9 @@
                     <!-- Campi iniettati dinamicamente via JS -->
                 </div>
                 <div class="modal-footer">
+                    <button type="button" onclick="stampaDocumentoCorrente()" class="btn-secondary" id="btn-stampa-doc" style="display: none; margin-right: auto; border-color: #e5e7eb; background: #f9fafb; color: #374151;">
+                        <i class="fas fa-print"></i> Stampa Documento
+                    </button>
                     <button type="button" onclick="chiudiModalGeneric()" class="btn-modal-cancel">Annulla</button>
                     <button type="submit" class="btn-modal-send">
                         <i class="fas fa-check"></i> Salva record

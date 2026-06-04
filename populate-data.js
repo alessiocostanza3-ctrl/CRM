@@ -19,27 +19,24 @@ function randomElement(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 
-const companyNames = ["Tech Solutions SRL", "Luce & Design SPA", "Edilizia Moderna Snc", "Impianti Sicuri SRL", "Arredo Ufficio SPA", "Global Services Snc", "Innovazione Digitale SRL", "Green Energy SPA", "Studio Architetti Associati", "Costruzioni Generali SRL", "Retail Group SPA", "Food & Beverage Snc", "Logistica Veloce SRL", "Hospitality Management SPA", "Industrie Meccaniche Snc", "Automotive Parts SRL", "Fashion Milano SPA", "Pharma Distribuzione Snc", "Medical Devices SRL", "AgriTech SPA", "Smart Home Solutions SRL", "Security Systems SPA", "Eventi & Fiere Snc", "Consulenza Aziendale SRL", "Marketing Digitale SPA", "Software House Snc", "Cloud Services SRL", "Cyber Security SPA", "Data Analytics Snc", "E-commerce Solutions SRL", "Ristorante La Bella Vita", "Hotel Plaza SPA", "Palestra Fitness SRL", "Supermercati Uniti SPA", "Centro Commerciale Snc"];
-const firstNames = ["Marco", "Giuseppe", "Giovanni", "Antonio", "Mario", "Luigi", "Francesco", "Angelo", "Vincenzo", "Pietro", "Salvatore", "Carlo", "Franco", "Domenico", "Giovanni", "Bruno", "Paolo", "Michele", "Giorgio", "Aldo", "Maria", "Anna", "Giuseppina", "Rosa", "Angela", "Giovanna", "Teresa", "Lucia", "Carmela", "Caterina", "Francesca", "Antonietta", "Carla", "Elena", "Concetta", "Rita", "Margherita", "Franca", "Paola"];
-const lastNames = ["Rossi", "Russo", "Ferrari", "Esposito", "Bianchi", "Romano", "Colombo", "Ricci", "Marino", "Greco", "Bruno", "Gallo", "Conti", "De Luca", "Mancini", "Costa", "Giordano", "Rizzo", "Lombardi", "Moretti", "Barbieri", "Fontana", "Santoro", "Mariani", "Rinaldi", "Caruso", "Ferrara", "Galli", "Martini", "Leone", "Longo", "Gentile", "Martinelli", "Vitale", "Lombardo", "Serra", "Coppola", "De Santis", "D'Angelo", "Marchetti"];
-const cities = ["Roma", "Milano", "Napoli", "Torino", "Palermo", "Genova", "Bologna", "Firenze", "Bari", "Catania", "Venezia", "Verona", "Messina", "Padova", "Trieste", "Taranto", "Brescia", "Parma", "Prato", "Modena"];
+const companyNames = ["Tech Solutions SRL", "Luce & Design SPA", "Edilizia Moderna Snc", "Impianti Sicuri SRL", "Arredo Ufficio SPA", "Global Services Snc"];
+const firstNames = ["Marco", "Giuseppe", "Giovanni", "Antonio", "Mario", "Luigi"];
+const lastNames = ["Rossi", "Russo", "Ferrari", "Esposito", "Bianchi", "Romano"];
+const cities = ["Roma", "Milano", "Napoli", "Torino", "Palermo", "Genova"];
 
 const startDate = new Date('2026-01-01');
 const endDate = new Date('2026-06-30');
 
-const numClients = 40;
-const numPreventivi = 80;
-const numOrdiniVendita = 60;
-const numDdtVendita = 55;
-
-const numOrdiniAcquisto = 45;
-const numDdtAcquisto = 40;
+// Req: 10 prev vend, 4 prev acq
+// 8 ord vend from prev, 3 ord acq from prev
+// 5 ddt vend from ord, 3 ddt acq from ord
 
 const fornitoriIds = data.fornitori.map(f => f.id);
 const prodottiFiniti = data.prodotti.filter(p => String(p.categoria).toLowerCase() === 'prodotti finiti');
 const prodottiComponenti = data.prodotti.filter(p => String(p.categoria).toLowerCase() !== 'prodotti finiti');
+
 const clienti = [];
-for (let i = 1; i <= numClients; i++) {
+for (let i = 1; i <= 20; i++) {
     const isCompany = Math.random() > 0.3;
     const nome = randomElement(firstNames) + ' ' + randomElement(lastNames);
     const azienda = isCompany ? randomElement(companyNames) : '';
@@ -49,7 +46,7 @@ for (let i = 1; i <= numClients; i++) {
         codice: `CLI-${2000 + i}`,
         azienda: azienda,
         tipo: isCompany ? 'azienda' : 'privato',
-        stato: randomElement(['lead', 'contattato', 'offerta', 'attivo', 'perso']),
+        stato: 'attivo',
         categoria: 'Cliente',
         agente: 'Marco Ferri',
         dataNascita: formatDate(randomDate(new Date('1970-01-01'), new Date('1995-12-31'))),
@@ -67,7 +64,7 @@ for (let i = 1; i <= numClients; i++) {
 function generateRighe(min, max, maxPezzi = 10, isVendita = true) {
     const numRighe = randomInt(min, max);
     const righe = [];
-    const list = isVendita ? prodottiFiniti : data.prodotti;
+    const list = isVendita ? prodottiFiniti : prodottiComponenti;
     for (let i = 0; i < numRighe; i++) {
         const prod = randomElement(list);
         const qta = randomInt(1, maxPezzi);
@@ -87,12 +84,13 @@ function calculateTotale(righe) {
     return righe.reduce((sum, r) => sum + (r.quantita * r.prezzoUnitario * (1 - (r.sconto||0)/100)), 0);
 }
 
+// 1. Preventivi Vendita (10)
 const preventivi = [];
-for (let i = 1; i <= numPreventivi; i++) {
+for (let i = 1; i <= 10; i++) {
     const cliente = randomElement(clienti);
     const date = randomDate(startDate, endDate);
     const scadenza = new Date(date.getTime() + 30 * 24 * 60 * 60 * 1000);
-    const righe = generateRighe(1, 5);
+    const righe = generateRighe(1, 2, 10, true);
     const imponibile = calculateTotale(righe);
     preventivi.push({
         id: `prev_sim_${i}`,
@@ -100,27 +98,28 @@ for (let i = 1; i <= numPreventivi; i++) {
         cliente: cliente.id,
         data: formatDate(date),
         dataScadenza: formatDate(scadenza),
-        stato: randomElement(['bozza', 'inviato', 'accettato', 'rifiutato', 'scaduto']),
+        stato: i <= 8 ? 'accettato' : randomElement(['bozza', 'inviato', 'rifiutato', 'scaduto']),
         righe: righe,
         imponibile: imponibile,
         tasse: imponibile * 0.22,
         totale: imponibile * 1.22,
-        note: "Preventivo generato per simulazione."
+        note: "Preventivo di vendita."
     });
 }
 
+// 2. Ordini Vendita (8 from Preventivi)
 const ordiniVendita = [];
-const preventiviAccettati = preventivi.filter(p => p.stato === 'accettato' || Math.random() > 0.5);
-for (let i = 1; i <= numOrdiniVendita; i++) {
-    const prev = i <= preventiviAccettati.length ? preventiviAccettati[i-1] : randomElement(preventivi);
+const preventiviDaOrdinare = preventivi.filter(p => p.stato === 'accettato').slice(0, 8);
+for (let i = 0; i < 8; i++) {
+    const prev = preventiviDaOrdinare[i];
+    if (!prev) continue;
     const date = new Date(new Date(prev.data).getTime() + randomInt(1, 15) * 24 * 60 * 60 * 1000);
-    if(date > endDate) continue;
     ordiniVendita.push({
-        id: `ordv_sim_${i}`,
-        numero: `ORD-${2026000 + i}`,
+        id: `ordv_sim_${i+1}`,
+        numero: `ORD-${2026000 + i + 1}`,
         cliente: prev.cliente,
         data: formatDate(date),
-        stato: randomElement(['confermato', 'inlavorazione', 'spedito', 'fatturato', 'annullato']),
+        stato: i < 5 ? 'spedito' : randomElement(['confermato', 'inlavorazione']),
         righe: prev.righe,
         imponibile: prev.imponibile,
         tasse: prev.tasse,
@@ -130,69 +129,93 @@ for (let i = 1; i <= numOrdiniVendita; i++) {
     });
 }
 
+// 3. DDT Vendita (5 from Ordini)
 const ddtVendita = [];
-const ordiniSpediti = ordiniVendita.filter(o => ['spedito', 'fatturato'].includes(o.stato) || Math.random() > 0.5);
-for (let i = 1; i <= numDdtVendita; i++) {
-    if(i > ordiniSpediti.length) break;
-    const ord = ordiniSpediti[i-1];
+const ordiniDaSpedire = ordiniVendita.filter(o => o.stato === 'spedito').slice(0, 5);
+for (let i = 0; i < 5; i++) {
+    const ord = ordiniDaSpedire[i];
+    if (!ord) continue;
     const date = new Date(new Date(ord.data).getTime() + randomInt(1, 10) * 24 * 60 * 60 * 1000);
-    if(date > endDate) continue;
     ddtVendita.push({
-        id: `ddtv_sim_${i}`,
-        numero: `DDT-${2026000 + i}`,
+        id: `ddtv_sim_${i+1}`,
+        numero: `DDT-${2026000 + i + 1}`,
         cliente: ord.cliente,
         data: formatDate(date),
-        stato: randomElement(['da_fatturare', 'fatturato']),
+        stato: 'fatturato',
         righe: ord.righe,
         imponibile: ord.imponibile,
         tasse: ord.tasse,
         totale: ord.totale,
         ordineOrigine: ord.id,
-        vettore: randomElement(["BRT", "SDA", "DHL", "FedEx", "Nostro mezzo"]),
-        note: "DDT di vendita per spedizione merci."
+        vettore: randomElement(["BRT", "SDA", "DHL"]),
+        note: "DDT per spedizione merci."
     });
 }
 
-const ordiniAcquisto = [];
-for (let i = 1; i <= numOrdiniAcquisto; i++) {
-    const fornitoreId = randomElement(fornitoriIds);
+// 4. Preventivi Acquisto (4)
+const preventiviAcquisto = [];
+for (let i = 1; i <= 4; i++) {
+    const fornitore = randomElement(fornitoriIds);
     const date = randomDate(startDate, endDate);
-    const righe = generateRighe(1, 8, 50, false);
+    const scadenza = new Date(date.getTime() + 30 * 24 * 60 * 60 * 1000);
+    const righe = generateRighe(1, 4, 50, false); // false = acquisto
     const imponibile = calculateTotale(righe);
-    ordiniAcquisto.push({
-        id: `orda_sim_${i}`,
-        numero: `OAC-${2026000 + i}`,
-        fornitore: fornitoreId,
+    preventiviAcquisto.push({
+        id: `preva_sim_${i}`,
+        numero: `PRA-${2026000 + i}`,
+        fornitore: fornitore,
         data: formatDate(date),
-        stato: randomElement(['inviato', 'confermato', 'ricevuto', 'fatturato']),
+        dataScadenza: formatDate(scadenza),
+        stato: i <= 3 ? 'accettato' : 'bozza',
         righe: righe,
         imponibile: imponibile,
         tasse: imponibile * 0.22,
         totale: imponibile * 1.22,
-        note: "Ordine di fornitura merci."
+        note: "Preventivo fornitore."
     });
 }
 
+// 5. Ordini Acquisto (3 from Preventivi Acquisto)
+const ordiniAcquisto = [];
+const prevAcqAccettati = preventiviAcquisto.filter(p => p.stato === 'accettato').slice(0, 3);
+for (let i = 0; i < 3; i++) {
+    const prev = prevAcqAccettati[i];
+    if (!prev) continue;
+    const date = new Date(new Date(prev.data).getTime() + randomInt(1, 15) * 24 * 60 * 60 * 1000);
+    ordiniAcquisto.push({
+        id: `orda_sim_${i+1}`,
+        numero: `OAC-${2026000 + i + 1}`,
+        fornitore: prev.fornitore,
+        data: formatDate(date),
+        stato: 'ricevuto',
+        righe: prev.righe,
+        imponibile: prev.imponibile,
+        tasse: prev.tasse,
+        totale: prev.totale,
+        preventivoOrigine: prev.id,
+        note: "Ordine inviato a fornitore."
+    });
+}
+
+// 6. DDT Acquisto (3 from Ordini Acquisto)
 const ddtAcquisto = [];
-const ordiniRicevuti = ordiniAcquisto.filter(o => ['ricevuto', 'fatturato'].includes(o.stato) || Math.random() > 0.5);
-for (let i = 1; i <= numDdtAcquisto; i++) {
-    if(i > ordiniRicevuti.length) break;
-    const ord = ordiniRicevuti[i-1];
+for (let i = 0; i < 3; i++) {
+    const ord = ordiniAcquisto[i];
+    if (!ord) continue;
     const date = new Date(new Date(ord.data).getTime() + randomInt(2, 20) * 24 * 60 * 60 * 1000);
-    if(date > endDate) continue;
     ddtAcquisto.push({
-        id: `ddta_sim_${i}`,
-        numero: `DDA-${2026000 + i}`,
+        id: `ddta_sim_${i+1}`,
+        numero: `DDA-${2026000 + i + 1}`,
         fornitore: ord.fornitore,
         data: formatDate(date),
-        stato: randomElement(['registrato', 'fatturato']),
+        stato: 'registrato',
         righe: ord.righe,
         imponibile: ord.imponibile,
         tasse: ord.tasse,
         totale: ord.totale,
         ordineOrigine: ord.id,
         vettore: "Mittente",
-        note: "Ricezione merce da fornitore."
+        note: "Ricezione merce."
     });
 }
 
@@ -200,6 +223,7 @@ data.clienti = clienti;
 data.preventivi = preventivi;
 data.ordiniVendita = ordiniVendita;
 data.ddtVendita = ddtVendita;
+data.preventiviAcquisto = preventiviAcquisto;
 data.ordiniAcquisto = ordiniAcquisto;
 data.ddtAcquisto = ddtAcquisto;
 

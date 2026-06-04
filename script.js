@@ -6885,54 +6885,69 @@ function stampaDocumentoCorrente() {
     const html = "<div class='print-document'>" +
         "<div class='print-header'>" +
             "<div class='print-company-info'>" +
-                "<h1>SIDEIS SRL</h1>" +
-                "<p>Via dell'Innovazione, 123<br>00100 Roma (RM)<br>P.IVA: 01234567890<br>Email: info@sideis.it</p>" +
+                "<div class='print-logo'>SIDEIS<span>SRL</span></div>" +
+                "<p>Via dell'Innovazione, 123<br>00100 Roma (RM)<br>P.IVA: 01234567890<br>info@sideis.it</p>" +
             "</div>" +
             "<div class='print-entity-info'>" +
-                "<strong>Spett.le " + entityName + ":</strong>" +
-                "<p>" + (entityData ? (entityData.azienda || entityData.nome) : 'N/D') + "</p>" +
+                "<div class='print-entity-label'>Intestatario Documento</div>" +
+                "<strong>" + (entityData ? (entityData.azienda || entityData.nome) : 'N/D') + "</strong>" +
                 (entityData && entityData.indirizzo ? "<p>" + entityData.indirizzo + "</p>" : "") +
                 (entityData && entityData.piva ? "<p>P.IVA: " + entityData.piva + "</p>" : "") +
             "</div>" +
         "</div>" +
         
-        "<div class='print-doc-title'>" +
-            "<h2>" + docTitle + " N. " + (record.numero || 'N/D') + "</h2>" +
-            "<p>Data: " + (record.data || '') + "</p>" +
+        "<div class='print-doc-meta'>" +
+            "<div class='print-doc-title'>" +
+                "<h2>" + docTitle + "</h2>" +
+                "<h1>N. " + (record.numero || 'N/D') + "</h1>" +
+            "</div>" +
+            "<div class='print-doc-details'>" +
+                "<div class='print-detail-box'><span>Data emissione</span><strong>" + (record.data || '') + "</strong></div>" +
+                (record.dataConsegna ? "<div class='print-detail-box'><span>Consegna Prevista</span><strong>" + record.dataConsegna + "</strong></div>" : "") +
+            "</div>" +
         "</div>" +
 
         "<table class='print-table'>" +
             "<thead>" +
                 "<tr>" +
-                    "<th style='text-align: left;'>Articolo</th>" +
-                    "<th style='text-align: left;'>Descrizione</th>" +
-                    "<th style='text-align: right;'>Q.tà</th>" +
-                    "<th style='text-align: right;'>Prezzo Unit.</th>" +
-                    "<th style='text-align: right;'>Sconto</th>" +
-                    "<th style='text-align: right;'>Importo</th>" +
+                    "<th style='text-align: left; width: 15%;'>Codice</th>" +
+                    "<th style='text-align: left; width: 45%;'>Descrizione</th>" +
+                    "<th style='text-align: right; width: 10%;'>Q.tà</th>" +
+                    "<th style='text-align: right; width: 15%;'>Prezzo Unit.</th>" +
+                    "<th style='text-align: right; width: 15%;'>Importo</th>" +
                 "</tr>" +
             "</thead>" +
             "<tbody>" +
-                righeHTML +
+                (record.righe || []).map(r => {
+                    const importo = r.quantita * r.prezzoUnitario * (1 - (r.sconto || 0)/100);
+                    return "<tr>" +
+                        "<td><strong>" + r.prodotto + "</strong></td>" +
+                        "<td>" + (r.descrizione || '') + (r.sconto ? "<br><small style='color: #6b7280;'>Sconto applicato: " + r.sconto + "%</small>" : "") + "</td>" +
+                        "<td style='text-align: right; font-weight: 600;'>" + r.quantita + "</td>" +
+                        "<td style='text-align: right;'>&euro; " + formatCrmMoney(r.prezzoUnitario).replace('&euro;','') + "</td>" +
+                        "<td style='text-align: right; font-weight: 600;'>&euro; " + formatCrmMoney(importo).replace('&euro;','') + "</td>" +
+                    "</tr>";
+                }).join('') +
             "</tbody>" +
         "</table>" +
 
         "<div class='print-totals'>" +
             "<div class='print-totals-row'>" +
-                "<span>Imponibile:</span>" +
+                "<span>Imponibile</span>" +
                 "<span>" + formatCrmMoney(record.imponibile) + "</span>" +
             "</div>" +
             "<div class='print-totals-row'>" +
-                "<span>Tasse (IVA):</span>" +
+                "<span>Tasse (IVA)</span>" +
                 "<span>" + formatCrmMoney(record.tasse) + "</span>" +
             "</div>" +
             "<div class='print-totals-row print-totals-grand'>" +
-                "<span>TOTALE DOCUMENTO:</span>" +
+                "<span>TOTALE</span>" +
                 "<span>" + formatCrmMoney(record.totale) + "</span>" +
             "</div>" +
         "</div>" +
 
-        (record.note ? "<div class='print-notes'><strong>Note:</strong><br>" + record.note + "</div>" : "") +
+        (record.note ? "<div class='print-notes'><strong>Note Operative:</strong><br>" + record.note + "</div>" : "") +
+        "<div class='print-footer'>Documento generato da SIDEIS CRM - " + new Date().toLocaleDateString('it-IT') + "</div>" +
     "</div>";
 
     document.getElementById('print-area').innerHTML = html;

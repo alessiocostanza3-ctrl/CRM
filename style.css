@@ -6553,10 +6553,10 @@ body[data-theme="dark"] #contenitore-dati .crm-th-sortable.is-sorted .crm-th-sor
 
 /* ── 1. PALETTE CROMATICA PREMIUM (SLATE / INDIGO / NEON) ────────────────── */
 :root {
-    --brand-primary: #6366f1; /* Modern Indigo Accent */
-    --brand-primary-rgb: 99, 102, 241;
-    --brand-primary-soft: rgba(99, 102, 241, 0.08);
-    --brand-primary-glow: rgba(99, 102, 241, 0.15);
+    --brand-primary: #1f6f5c; /* Modern Green Accent */
+    --brand-primary-rgb: 31, 111, 92;
+    --brand-primary-soft: rgba(31, 111, 92, 0.08);
+    --brand-primary-glow: rgba(31, 111, 92, 0.15);
     --radius-premium: 14px;
     --radius-drawer: 20px;
     --shadow-premium-sm: 0 2px 8px rgba(15, 23, 42, 0.04);
@@ -6565,18 +6565,18 @@ body[data-theme="dark"] #contenitore-dati .crm-th-sortable.is-sorted .crm-th-sor
 }
 
 body[data-theme="dark"] {
-    --primary: #6366f1 !important;
-    --sidebar-bg: #090d16 !important;
-    --sidebar-text: #94a3b8 !important;
-    --bg-body: #050811 !important;
-    --bg-surface: rgba(13, 20, 35, 0.85) !important;
-    --bg-surface-strong: #0d1323 !important;
-    --bg-surface-soft: #080d19 !important;
-    --text-main: #f1f5f9 !important;
-    --text-muted: #94a3b8 !important;
-    --border-color: rgba(255, 255, 255, 0.08) !important;
-    --accent-color: #6366f1 !important;
-    --accent-soft: rgba(99, 102, 241, 0.15) !important;
+    --primary: #3aa183 !important;
+    --sidebar-bg: #0d1513 !important;
+    --sidebar-text: #98b8ae !important;
+    --bg-body: #0a0f0e !important;
+    --bg-surface: #111917 !important;
+    --bg-surface-strong: #151f1c !important;
+    --bg-surface-soft: #0f1715 !important;
+    --text-main: #e7f3ee !important;
+    --text-muted: #99b1a9 !important;
+    --border-color: #243430 !important;
+    --accent-color: #3aa183 !important;
+    --accent-soft: rgba(58, 161, 131, 0.18) !important;
     --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.35) !important;
     --shadow-md: 0 12px 30px rgba(0, 0, 0, 0.45) !important;
     --shadow-lg: 0 24px 60px rgba(0, 0, 0, 0.55) !important;
@@ -6752,7 +6752,7 @@ body[data-theme="dark"] .premium-glass {
         width: 36px !important;
         height: 36px !important;
         border-radius: 50% !important;
-        background: linear-gradient(135deg, var(--brand-primary), #818cf8) !important;
+        background: linear-gradient(135deg, var(--brand-primary), #3aa183) !important;
         color: #ffffff !important;
         display: flex !important;
         align-items: center !important;
@@ -6808,21 +6808,21 @@ body[data-theme="dark"] .premium-glass {
         font-weight: 500 !important;
     }
 
-    /* Light theme active and hover overrides to replace green with indigo */
+    /* Light theme active and hover overrides to replace indigo with green */
     body[data-theme="light"] .app-sidebar-item:hover {
-        background: rgba(99, 102, 241, 0.04) !important;
-        border-color: rgba(99, 102, 241, 0.15) !important;
+        background: rgba(var(--brand-primary-rgb), 0.04) !important;
+        border-color: rgba(var(--brand-primary-rgb), 0.15) !important;
         color: var(--brand-primary) !important;
     }
 
     body[data-theme="light"] .app-sidebar-item.active {
         background: var(--brand-primary-soft) !important;
-        border-color: rgba(99, 102, 241, 0.25) !important;
+        border-color: rgba(var(--brand-primary-rgb), 0.25) !important;
         color: var(--brand-primary) !important;
     }
 
     body[data-theme="light"] .app-subtab-btn:hover {
-        background: rgba(99, 102, 241, 0.04) !important;
+        background: rgba(var(--brand-primary-rgb), 0.04) !important;
         border-color: var(--brand-primary) !important;
         color: var(--brand-primary) !important;
     }
@@ -6834,23 +6834,23 @@ body[data-theme="dark"] .premium-glass {
     }
 
     body[data-theme="light"] .app-subtab-action {
-        border-color: rgba(99, 102, 241, 0.18) !important;
-        background: rgba(99, 102, 241, 0.08) !important;
+        border-color: rgba(var(--brand-primary-rgb), 0.18) !important;
+        background: rgba(var(--brand-primary-rgb), 0.08) !important;
         color: var(--brand-primary) !important;
     }
 
     body[data-theme="light"] .app-subtab-action:hover {
-        background: rgba(99, 102, 241, 0.15) !important;
+        background: rgba(var(--brand-primary-rgb), 0.15) !important;
     }
 
     body[data-theme="dark"] .app-subtab-action {
-        border-color: rgba(99, 102, 241, 0.25) !important;
-        background: rgba(99, 102, 241, 0.1) !important;
+        border-color: rgba(58, 161, 131, 0.25) !important;
+        background: rgba(58, 161, 131, 0.1) !important;
         color: #ffffff !important;
     }
 
     body[data-theme="dark"] .app-subtab-action:hover {
-        background: rgba(99, 102, 241, 0.2) !important;
+        background: rgba(58, 161, 131, 0.2) !important;
     }
 
     .app-sidebar-badge {
@@ -7006,10 +7006,10 @@ body[data-theme="dark"] .premium-glass {
 }
 
 .crm-table tr:hover td {
-    background-color: rgba(99, 102, 241, 0.02) !important;
+    background-color: rgba(var(--brand-primary-rgb), 0.02) !important;
 }
 body[data-theme="dark"] .crm-table tr:hover td {
-    background-color: rgba(99, 102, 241, 0.04) !important;
+    background-color: rgba(58, 161, 131, 0.04) !important;
 }
 
 /* Azioni a comparsa su hover riga (Linear style) */

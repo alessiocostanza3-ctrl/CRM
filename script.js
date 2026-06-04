@@ -3837,7 +3837,7 @@ function getSelectableProducts(context = {}) {
     }
     if (pageName === 'segnalazioni') return allProducts.filter(isFinishedProduct);
     if (['preventivi', 'ordiniVendita', 'ddtVendita'].includes(pageName) || documentType === 'vendita') {
-        return allProducts.filter(isFinishedProduct);
+        return allProducts; // Show all products, not just finished ones, so components/packaging can be quoted.
     }
     if (['preventiviAcquisto', 'ordiniAcquisto', 'ddtAcquisto'].includes(pageName) || documentType === 'acquisto') {
         const componenti = allProducts.filter(isComponentProduct);
@@ -4785,7 +4785,7 @@ function convertiSegnalazioneInPreventivo(segId) {
         apriModalGenericCrea();
         
         // Popola i campi pre-compilandoli
-        document.getElementById('field-numero').value = `PRV-${Date.now().toString().slice(-6)}`;
+        document.getElementById('field-numero').value = getSezionali()['preventivi'] || 1;
         document.getElementById('field-cliente').value = seg.cliente;
         document.getElementById('field-data').value = new Date().toISOString().slice(0, 10);
         document.getElementById('field-totale').value = prod.prezzoVendita;
@@ -4814,9 +4814,14 @@ function convertiPreventivoInOrdine(prevId) {
 
     // Crea in automatico l'ordine di vendita
     const nuovoId = "ov_" + (DATASETS.ordiniVendita.length + 1) + "_" + Date.now().toString().slice(-4);
+    const sezOrdini = getSezionali();
+    const numeroOrdine = sezOrdini['ordiniVendita'] || 1;
+    sezOrdini['ordiniVendita'] = Number(numeroOrdine) + 1;
+    saveSezionali(sezOrdini);
+
     const nuovoOrdine = {
         id: nuovoId,
-        numero: `ORDV-FROM-PRV-${prev.numero.slice(-4)}`,
+        numero: numeroOrdine,
         cliente: prev.cliente,
         data: new Date().toISOString().slice(0, 10),
         righe: righeClonate,
@@ -4848,7 +4853,7 @@ function convertiOrdineInDDT(ordId) {
     setTimeout(() => {
         apriModalGenericCrea();
         
-        document.getElementById('field-numero').value = `DDTV-${Date.now().toString().slice(-6)}`;
+        document.getElementById('field-numero').value = getSezionali()['ddtVendita'] || 1;
         document.getElementById('field-cliente').value = ord.cliente;
         document.getElementById('field-data').value = new Date().toISOString().slice(0, 10);
         document.getElementById('field-ordineRif').value = ord.numero;
@@ -4876,7 +4881,7 @@ function convertiOrdineAcquistoInDDT(ordId) {
     setTimeout(() => {
         apriModalGenericCrea();
 
-        document.getElementById('field-numero').value = `DDTA-${Date.now().toString().slice(-6)}`;
+        document.getElementById('field-numero').value = getSezionali()['ddtAcquisto'] || 1;
         document.getElementById('field-fornitore').value = ord.fornitore;
         document.getElementById('field-data').value = new Date().toISOString().slice(0, 10);
         document.getElementById('field-ordineRif').value = ord.numero;
@@ -4938,9 +4943,13 @@ function costruisciCampiFormModal(pageName, record = null) {
                 <label class="modal-label">${field.label}${reqStar}</label>
         `;
 
-        if (pageName === 'ordiniVendita' && field.key === 'numero') {
-            const valoreNumero = record?.numero || generaNumeroOrdineVendita();
-            fieldHtml += `<input type="${field.type}" id="field-${field.key}" class="input-field-modern input-readonly" value="${valoreNumero}" readonly>`;
+        if (!record && field.key === 'numero' && ['preventivi', 'ordiniVendita', 'ddtVendita', 'preventiviAcquisto', 'ordiniAcquisto', 'ddtAcquisto'].includes(pageName)) {
+            val = getSezionali()[pageName] || 1;
+        }
+
+        if (field.key === 'numero' && ['preventivi', 'ordiniVendita', 'ddtVendita', 'preventiviAcquisto', 'ordiniAcquisto', 'ddtAcquisto'].includes(pageName)) {
+            const valoreNumero = record?.numero || val;
+            fieldHtml += `<input type="${field.type}" id="field-${field.key}" class="input-field-modern" value="${valoreNumero}">`;
             fieldHtml += `</div>`;
             fieldsContainer.innerHTML += fieldHtml;
             return;
@@ -5334,6 +5343,14 @@ function confermaSalvaGeneric() {
     } else {
         const nuovoId = pageName.substring(0, 3) + "_" + (dataset.length + 1) + "_" + Date.now().toString().slice(-4);
         recordSalvato.id = nuovoId;
+        
+        if (['preventivi', 'ordiniVendita', 'ddtVendita', 'preventiviAcquisto', 'ordiniAcquisto', 'ddtAcquisto'].includes(pageName)) {
+            const sez = getSezionali();
+            if (sez[pageName] !== undefined && recordSalvato.numero == sez[pageName]) {
+                sez[pageName] = Number(sez[pageName]) + 1;
+                saveSezionali(sez);
+            }
+        }
         
         if (pageName === 'clienti') {
             recordSalvato.creato = new Date().toISOString().slice(0, 10);
@@ -6205,10 +6222,75 @@ function renderImpostazioni(container) {
                 ${renderOrdiniVenditaOptionsMarkup(orderOptions)}
             </div>
         </div>
+
+        <div style="margin-top: 20px; background: var(--bg-surface-strong); border: 1px solid var(--border-color); border-radius: 24px; padding: 24px; box-shadow: var(--shadow-sm); max-width: 980px;">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:16px; margin-bottom: 18px;">
+                <div>
+                    <h3 style="font-family: var(--font-display); font-size: 16px; margin-bottom: 6px;">Sezionali Documenti (Progressivi)</h3>
+                    <p style="font-size: 13px; color: var(--text-muted); line-height: 1.5; margin: 0;">
+                        Imposta il prossimo numero progressivo per ciascun tipo di documento. I nuovi documenti generati partiranno da questo numero.
+                    </p>
+                </div>
+                <button class="btn-primary" onclick="salvaSezionaliForm()" style="min-height: 42px;">
+                    <i class="fas fa-save"></i> Salva Sezionali
+                </button>
+            </div>
+            <div class="settings-switch-grid" id="sezionali-grid" style="grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));">
+                ${renderSezionaliMarkup()}
+            </div>
+        </div>
     `;
 
     container.innerHTML = html;
 }
+
+function getSezionali() {
+    try {
+        const stored = localStorage.getItem('crm_sezionali');
+        if (stored) return JSON.parse(stored);
+    } catch(e){}
+    return {
+        preventivi: 1,
+        ordiniVendita: 1,
+        ddtVendita: 1,
+        preventiviAcquisto: 1,
+        ordiniAcquisto: 1,
+        ddtAcquisto: 1
+    };
+}
+
+function saveSezionali(sez) {
+    localStorage.setItem('crm_sezionali', JSON.stringify(sez));
+}
+
+function renderSezionaliMarkup() {
+    const sez = getSezionali();
+    const config = [
+        { key: 'preventivi', label: 'Preventivi' },
+        { key: 'ordiniVendita', label: 'Ordini di Vendita' },
+        { key: 'ddtVendita', label: 'DDT di Vendita' },
+        { key: 'preventiviAcquisto', label: 'Preventivi Acquisto' },
+        { key: 'ordiniAcquisto', label: 'Ordini di Acquisto' },
+        { key: 'ddtAcquisto', label: 'DDT di Acquisto' }
+    ];
+    
+    return config.map(c => `
+        <div class="line-advanced-field" style="background: var(--bg-surface); padding: 12px; border-radius: 12px; border: 1px solid var(--border-color);">
+            <label style="font-weight: 600; color: var(--text-color); margin-bottom: 6px; display: block;">${c.label}</label>
+            <input type="number" min="1" step="1" class="input-field-modern" data-sezionale="${c.key}" value="${sez[c.key] || 1}">
+        </div>
+    `).join('');
+}
+
+function salvaSezionaliForm() {
+    const sez = getSezionali();
+    document.querySelectorAll('input[data-sezionale]').forEach(input => {
+        sez[input.getAttribute('data-sezionale')] = Number(input.value) || 1;
+    });
+    saveSezionali(sez);
+    mostraNotifica('Numerazione sezionali salvata', 'success');
+}
+
 
 function renderOrdiniVenditaOptionsMarkup(options) {
     const cfg = TABLE_CONFIGS.ordiniVendita.optionalFields || [];

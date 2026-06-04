@@ -3837,7 +3837,7 @@ function getSelectableProducts(context = {}) {
     }
     if (pageName === 'segnalazioni') return allProducts.filter(isFinishedProduct);
     if (['preventivi', 'ordiniVendita', 'ddtVendita'].includes(pageName) || documentType === 'vendita') {
-        return allProducts; // Show all products, not just finished ones, so components/packaging can be quoted.
+        return allProducts.filter(isFinishedProduct);
     }
     if (['preventiviAcquisto', 'ordiniAcquisto', 'ddtAcquisto'].includes(pageName) || documentType === 'acquisto') {
         const componenti = allProducts.filter(isComponentProduct);

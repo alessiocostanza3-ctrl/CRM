@@ -4,308 +4,308 @@ window.CRM_SEED_DATA = {
     {
       "id": "cli_sim_1",
       "codice": "CLI-2001",
-      "azienda": "Software House Snc",
+      "azienda": "Cloud Services SRL",
       "tipo": "azienda",
-      "stato": "lead",
+      "stato": "offerta",
       "categoria": "Cliente",
       "agente": "Marco Ferri",
-      "dataNascita": "1981-12-23",
-      "piva": "02681023367",
-      "cf": "CF38809618252870",
-      "nome": "Rita D'Angelo",
-      "email": "info@softwarehousesnc.it",
-      "telefono": "+39 3337525028",
-      "indirizzo": "Via Roma 79, Roma",
+      "dataNascita": "1989-09-13",
+      "piva": "03253995438",
+      "cf": "CF83681615515532",
+      "nome": "Rita Barbieri",
+      "email": "info@cloudservicessrl.it",
+      "telefono": "+39 3587967518",
+      "indirizzo": "Via Roma 5, Genova",
       "paese": "Italia",
-      "provincia": "RO"
+      "provincia": "GE"
     },
     {
       "id": "cli_sim_2",
       "codice": "CLI-2002",
-      "azienda": "",
-      "tipo": "privato",
-      "stato": "lead",
+      "azienda": "Pharma Distribuzione Snc",
+      "tipo": "azienda",
+      "stato": "contattato",
       "categoria": "Cliente",
       "agente": "Marco Ferri",
-      "dataNascita": "1994-11-14",
-      "piva": "01532486035",
-      "cf": "CF29096789632391",
-      "nome": "Aldo De Santis",
-      "email": "info@aldodesantis.it",
-      "telefono": "+39 3932457189",
-      "indirizzo": "Via Roma 39, Verona",
+      "dataNascita": "1979-08-05",
+      "piva": "09093595624",
+      "cf": "CF78264123563075",
+      "nome": "Aldo Mancini",
+      "email": "info@pharmadistribuzionesnc.it",
+      "telefono": "+39 3969017012",
+      "indirizzo": "Via Roma 65, Milano",
       "paese": "Italia",
-      "provincia": "VE"
+      "provincia": "MI"
     },
     {
       "id": "cli_sim_3",
       "codice": "CLI-2003",
-      "azienda": "Supermercati Uniti SPA",
+      "azienda": "Green Energy SPA",
       "tipo": "azienda",
-      "stato": "attivo",
+      "stato": "contattato",
       "categoria": "Cliente",
       "agente": "Marco Ferri",
-      "dataNascita": "1993-05-08",
-      "piva": "01591908002",
-      "cf": "CF14260989140645",
-      "nome": "Mario Moretti",
-      "email": "info@supermercatiunitispa.it",
-      "telefono": "+39 3049852378",
-      "indirizzo": "Via Roma 60, Modena",
+      "dataNascita": "1975-08-07",
+      "piva": "05527633184",
+      "cf": "CF30174198170990",
+      "nome": "Paola Martinelli",
+      "email": "info@greenenergyspa.it",
+      "telefono": "+39 3022036759",
+      "indirizzo": "Via Roma 53, Napoli",
       "paese": "Italia",
-      "provincia": "MO"
+      "provincia": "NA"
     },
     {
       "id": "cli_sim_4",
       "codice": "CLI-2004",
       "azienda": "",
       "tipo": "privato",
-      "stato": "offerta",
+      "stato": "attivo",
       "categoria": "Cliente",
       "agente": "Marco Ferri",
-      "dataNascita": "1987-10-29",
-      "piva": "01534887054",
-      "cf": "CF29421881828579",
-      "nome": "Caterina Gallo",
-      "email": "info@caterinagallo.it",
-      "telefono": "+39 3215997583",
-      "indirizzo": "Via Roma 86, Verona",
+      "dataNascita": "1977-11-30",
+      "piva": "01498754567",
+      "cf": "CF98611299686126",
+      "nome": "Giovanni Gentile",
+      "email": "info@giovannigentile.it",
+      "telefono": "+39 3989372260",
+      "indirizzo": "Via Roma 18, Torino",
       "paese": "Italia",
-      "provincia": "VE"
+      "provincia": "TO"
     },
     {
       "id": "cli_sim_5",
       "codice": "CLI-2005",
-      "azienda": "",
-      "tipo": "privato",
-      "stato": "attivo",
+      "azienda": "Automotive Parts SRL",
+      "tipo": "azienda",
+      "stato": "contattato",
       "categoria": "Cliente",
       "agente": "Marco Ferri",
-      "dataNascita": "1976-06-22",
-      "piva": "09627964096",
-      "cf": "CF46180828876714",
-      "nome": "Angela Marino",
-      "email": "info@angelamarino.it",
-      "telefono": "+39 3833160552",
-      "indirizzo": "Via Roma 66, Messina",
+      "dataNascita": "1973-04-25",
+      "piva": "04939394799",
+      "cf": "CF17041284339835",
+      "nome": "Luigi Galli",
+      "email": "info@automotivepartssrl.it",
+      "telefono": "+39 3253905671",
+      "indirizzo": "Via Roma 47, Prato",
       "paese": "Italia",
-      "provincia": "ME"
+      "provincia": "PR"
     },
     {
       "id": "cli_sim_6",
       "codice": "CLI-2006",
-      "azienda": "Centro Commerciale Snc",
-      "tipo": "azienda",
-      "stato": "attivo",
+      "azienda": "",
+      "tipo": "privato",
+      "stato": "lead",
       "categoria": "Cliente",
       "agente": "Marco Ferri",
-      "dataNascita": "1979-06-09",
-      "piva": "06366044928",
-      "cf": "CF94169147631034",
-      "nome": "Antonio Martini",
-      "email": "info@centrocommercialesnc.it",
-      "telefono": "+39 3705063672",
-      "indirizzo": "Via Roma 12, Messina",
+      "dataNascita": "1994-08-20",
+      "piva": "04732745028",
+      "cf": "CF47150632710394",
+      "nome": "Elena Costa",
+      "email": "info@elenacosta.it",
+      "telefono": "+39 3735197990",
+      "indirizzo": "Via Roma 38, Palermo",
       "paese": "Italia",
-      "provincia": "ME"
+      "provincia": "PA"
     },
     {
       "id": "cli_sim_7",
       "codice": "CLI-2007",
-      "azienda": "Hospitality Management SPA",
-      "tipo": "azienda",
+      "azienda": "",
+      "tipo": "privato",
       "stato": "offerta",
       "categoria": "Cliente",
       "agente": "Marco Ferri",
-      "dataNascita": "1973-12-30",
-      "piva": "01660641637",
-      "cf": "CF37232215703401",
-      "nome": "Carmela Galli",
-      "email": "info@hospitalitymanagementspa.it",
-      "telefono": "+39 3323030597",
-      "indirizzo": "Via Roma 61, Venezia",
+      "dataNascita": "1973-08-30",
+      "piva": "06265814797",
+      "cf": "CF55869306105499",
+      "nome": "Bruno Colombo",
+      "email": "info@brunocolombo.it",
+      "telefono": "+39 3547252012",
+      "indirizzo": "Via Roma 59, Torino",
       "paese": "Italia",
-      "provincia": "VE"
+      "provincia": "TO"
     },
     {
       "id": "cli_sim_8",
       "codice": "CLI-2008",
-      "azienda": "Automotive Parts SRL",
+      "azienda": "Retail Group SPA",
       "tipo": "azienda",
       "stato": "attivo",
       "categoria": "Cliente",
       "agente": "Marco Ferri",
-      "dataNascita": "1983-06-08",
-      "piva": "06975523517",
-      "cf": "CF22663095404366",
-      "nome": "Antonietta D'Angelo",
-      "email": "info@automotivepartssrl.it",
-      "telefono": "+39 3261859751",
-      "indirizzo": "Via Roma 91, Trieste",
+      "dataNascita": "1974-06-19",
+      "piva": "01694707134",
+      "cf": "CF85468348726249",
+      "nome": "Antonietta Gallo",
+      "email": "info@retailgroupspa.it",
+      "telefono": "+39 3016809076",
+      "indirizzo": "Via Roma 38, Bari",
       "paese": "Italia",
-      "provincia": "TR"
+      "provincia": "BA"
     },
     {
       "id": "cli_sim_9",
       "codice": "CLI-2009",
-      "azienda": "Cyber Security SPA",
+      "azienda": "Innovazione Digitale SRL",
       "tipo": "azienda",
-      "stato": "offerta",
+      "stato": "contattato",
       "categoria": "Cliente",
       "agente": "Marco Ferri",
-      "dataNascita": "1973-06-18",
-      "piva": "04344959208",
-      "cf": "CF74434597632605",
-      "nome": "Michele Santoro",
-      "email": "info@cybersecurityspa.it",
-      "telefono": "+39 3851217650",
-      "indirizzo": "Via Roma 25, Catania",
+      "dataNascita": "1971-08-25",
+      "piva": "05531292569",
+      "cf": "CF87983299145801",
+      "nome": "Franca Santoro",
+      "email": "info@innovazionedigitalesrl.it",
+      "telefono": "+39 3322590477",
+      "indirizzo": "Via Roma 82, Napoli",
       "paese": "Italia",
-      "provincia": "CA"
+      "provincia": "NA"
     },
     {
       "id": "cli_sim_10",
       "codice": "CLI-2010",
-      "azienda": "Luce & Design SPA",
-      "tipo": "azienda",
-      "stato": "contattato",
+      "azienda": "",
+      "tipo": "privato",
+      "stato": "attivo",
       "categoria": "Cliente",
       "agente": "Marco Ferri",
-      "dataNascita": "1988-07-10",
-      "piva": "08109919430",
-      "cf": "CF55707287718974",
-      "nome": "Teresa Leone",
-      "email": "info@luce&designspa.it",
-      "telefono": "+39 3135590126",
-      "indirizzo": "Via Roma 98, Verona",
+      "dataNascita": "1973-08-30",
+      "piva": "01373874078",
+      "cf": "CF20373778104530",
+      "nome": "Rita Rossi",
+      "email": "info@ritarossi.it",
+      "telefono": "+39 3553050351",
+      "indirizzo": "Via Roma 7, Napoli",
       "paese": "Italia",
-      "provincia": "VE"
+      "provincia": "NA"
     },
     {
       "id": "cli_sim_11",
       "codice": "CLI-2011",
-      "azienda": "",
-      "tipo": "privato",
+      "azienda": "Hotel Plaza SPA",
+      "tipo": "azienda",
       "stato": "contattato",
       "categoria": "Cliente",
       "agente": "Marco Ferri",
-      "dataNascita": "1988-11-22",
-      "piva": "09376515239",
-      "cf": "CF46709251540579",
-      "nome": "Giovanni Martini",
-      "email": "info@giovannimartini.it",
-      "telefono": "+39 3491980908",
-      "indirizzo": "Via Roma 96, Roma",
+      "dataNascita": "1995-02-05",
+      "piva": "04562395000",
+      "cf": "CF26613567652929",
+      "nome": "Bruno Galli",
+      "email": "info@hotelplazaspa.it",
+      "telefono": "+39 3066573423",
+      "indirizzo": "Via Roma 37, Roma",
       "paese": "Italia",
       "provincia": "RO"
     },
     {
       "id": "cli_sim_12",
       "codice": "CLI-2012",
-      "azienda": "Palestra Fitness SRL",
-      "tipo": "azienda",
-      "stato": "attivo",
+      "azienda": "",
+      "tipo": "privato",
+      "stato": "lead",
       "categoria": "Cliente",
       "agente": "Marco Ferri",
-      "dataNascita": "1985-01-28",
-      "piva": "08585813846",
-      "cf": "CF16511194533461",
-      "nome": "Caterina Conti",
-      "email": "info@palestrafitnesssrl.it",
-      "telefono": "+39 3966424607",
-      "indirizzo": "Via Roma 50, Parma",
-      "paese": "Italia",
-      "provincia": "PA"
-    },
-    {
-      "id": "cli_sim_13",
-      "codice": "CLI-2013",
-      "azienda": "Hospitality Management SPA",
-      "tipo": "azienda",
-      "stato": "contattato",
-      "categoria": "Cliente",
-      "agente": "Marco Ferri",
-      "dataNascita": "1986-07-01",
-      "piva": "07729756973",
-      "cf": "CF35786063625803",
-      "nome": "Luigi De Luca",
-      "email": "info@hospitalitymanagementspa.it",
-      "telefono": "+39 3448337616",
-      "indirizzo": "Via Roma 13, Verona",
+      "dataNascita": "1995-02-08",
+      "piva": "04068515286",
+      "cf": "CF90558519885782",
+      "nome": "Vincenzo Esposito",
+      "email": "info@vincenzoesposito.it",
+      "telefono": "+39 3654085407",
+      "indirizzo": "Via Roma 29, Venezia",
       "paese": "Italia",
       "provincia": "VE"
     },
     {
-      "id": "cli_sim_14",
-      "codice": "CLI-2014",
-      "azienda": "Marketing Digitale SPA",
+      "id": "cli_sim_13",
+      "codice": "CLI-2013",
+      "azienda": "Impianti Sicuri SRL",
       "tipo": "azienda",
-      "stato": "lead",
+      "stato": "offerta",
       "categoria": "Cliente",
       "agente": "Marco Ferri",
-      "dataNascita": "1972-08-11",
-      "piva": "09039754108",
-      "cf": "CF58818462145530",
-      "nome": "Giuseppina Rossi",
-      "email": "info@marketingdigitalespa.it",
-      "telefono": "+39 3837043728",
-      "indirizzo": "Via Roma 97, Brescia",
+      "dataNascita": "1982-08-23",
+      "piva": "05546680585",
+      "cf": "CF93158232700973",
+      "nome": "Carlo Giordano",
+      "email": "info@impiantisicurisrl.it",
+      "telefono": "+39 3135173834",
+      "indirizzo": "Via Roma 79, Taranto",
       "paese": "Italia",
-      "provincia": "BR"
+      "provincia": "TA"
+    },
+    {
+      "id": "cli_sim_14",
+      "codice": "CLI-2014",
+      "azienda": "Supermercati Uniti SPA",
+      "tipo": "azienda",
+      "stato": "perso",
+      "categoria": "Cliente",
+      "agente": "Marco Ferri",
+      "dataNascita": "1972-07-11",
+      "piva": "02321337479",
+      "cf": "CF40990451057022",
+      "nome": "Concetta Colombo",
+      "email": "info@supermercatiunitispa.it",
+      "telefono": "+39 3384334340",
+      "indirizzo": "Via Roma 97, Taranto",
+      "paese": "Italia",
+      "provincia": "TA"
     },
     {
       "id": "cli_sim_15",
       "codice": "CLI-2015",
-      "azienda": "Fashion Milano SPA",
+      "azienda": "Cyber Security SPA",
       "tipo": "azienda",
-      "stato": "contattato",
+      "stato": "attivo",
       "categoria": "Cliente",
       "agente": "Marco Ferri",
-      "dataNascita": "1973-03-09",
-      "piva": "04407605134",
-      "cf": "CF22886086946397",
-      "nome": "Giorgio Conti",
-      "email": "info@fashionmilanospa.it",
-      "telefono": "+39 3716149324",
-      "indirizzo": "Via Roma 34, Trieste",
+      "dataNascita": "1986-02-17",
+      "piva": "09555580233",
+      "cf": "CF52798078906300",
+      "nome": "Margherita D'Angelo",
+      "email": "info@cybersecurityspa.it",
+      "telefono": "+39 3923613476",
+      "indirizzo": "Via Roma 37, Trieste",
       "paese": "Italia",
       "provincia": "TR"
     },
     {
       "id": "cli_sim_16",
       "codice": "CLI-2016",
-      "azienda": "Hotel Plaza SPA",
+      "azienda": "Medical Devices SRL",
       "tipo": "azienda",
       "stato": "lead",
       "categoria": "Cliente",
       "agente": "Marco Ferri",
-      "dataNascita": "1971-01-17",
-      "piva": "05357763909",
-      "cf": "CF12207248469930",
-      "nome": "Angela Ferrari",
-      "email": "info@hotelplazaspa.it",
-      "telefono": "+39 3727184388",
-      "indirizzo": "Via Roma 84, Milano",
+      "dataNascita": "1974-03-07",
+      "piva": "09079937700",
+      "cf": "CF98108669414416",
+      "nome": "Franca Rinaldi",
+      "email": "info@medicaldevicessrl.it",
+      "telefono": "+39 3695897779",
+      "indirizzo": "Via Roma 7, Modena",
       "paese": "Italia",
-      "provincia": "MI"
+      "provincia": "MO"
     },
     {
       "id": "cli_sim_17",
       "codice": "CLI-2017",
       "azienda": "",
       "tipo": "privato",
-      "stato": "offerta",
+      "stato": "lead",
       "categoria": "Cliente",
       "agente": "Marco Ferri",
-      "dataNascita": "1992-03-21",
-      "piva": "02848298954",
-      "cf": "CF66604172932520",
-      "nome": "Paolo Greco",
-      "email": "info@paologreco.it",
-      "telefono": "+39 3099286264",
-      "indirizzo": "Via Roma 91, Roma",
+      "dataNascita": "1980-12-09",
+      "piva": "05795922668",
+      "cf": "CF42109579428303",
+      "nome": "Franco Leone",
+      "email": "info@francoleone.it",
+      "telefono": "+39 3821111798",
+      "indirizzo": "Via Roma 18, Parma",
       "paese": "Italia",
-      "provincia": "RO"
+      "provincia": "PA"
     },
     {
       "id": "cli_sim_18",
@@ -315,15 +315,15 @@ window.CRM_SEED_DATA = {
       "stato": "contattato",
       "categoria": "Cliente",
       "agente": "Marco Ferri",
-      "dataNascita": "1992-02-28",
-      "piva": "02612569418",
-      "cf": "CF57496411765508",
-      "nome": "Salvatore Santoro",
-      "email": "info@salvatoresantoro.it",
-      "telefono": "+39 3831606446",
-      "indirizzo": "Via Roma 33, Roma",
+      "dataNascita": "1990-05-04",
+      "piva": "02186752721",
+      "cf": "CF92341252722096",
+      "nome": "Giovanni Fontana",
+      "email": "info@giovannifontana.it",
+      "telefono": "+39 3501900350",
+      "indirizzo": "Via Roma 84, Torino",
       "paese": "Italia",
-      "provincia": "RO"
+      "provincia": "TO"
     },
     {
       "id": "cli_sim_19",
@@ -333,51 +333,51 @@ window.CRM_SEED_DATA = {
       "stato": "lead",
       "categoria": "Cliente",
       "agente": "Marco Ferri",
-      "dataNascita": "1973-01-15",
-      "piva": "06907534865",
-      "cf": "CF84215107704238",
-      "nome": "Rosa De Luca",
-      "email": "info@rosadeluca.it",
-      "telefono": "+39 3917642542",
-      "indirizzo": "Via Roma 69, Bologna",
+      "dataNascita": "1980-05-12",
+      "piva": "06090930225",
+      "cf": "CF40568488398337",
+      "nome": "Bruno Ricci",
+      "email": "info@brunoricci.it",
+      "telefono": "+39 3870543253",
+      "indirizzo": "Via Roma 93, Roma",
       "paese": "Italia",
-      "provincia": "BO"
+      "provincia": "RO"
     },
     {
       "id": "cli_sim_20",
       "codice": "CLI-2020",
-      "azienda": "",
-      "tipo": "privato",
-      "stato": "lead",
+      "azienda": "Medical Devices SRL",
+      "tipo": "azienda",
+      "stato": "offerta",
       "categoria": "Cliente",
       "agente": "Marco Ferri",
-      "dataNascita": "1985-03-04",
-      "piva": "08582449689",
-      "cf": "CF97897134419430",
-      "nome": "Maria Serra",
-      "email": "info@mariaserra.it",
-      "telefono": "+39 3826309322",
-      "indirizzo": "Via Roma 52, Parma",
+      "dataNascita": "1974-11-11",
+      "piva": "06385890455",
+      "cf": "CF43176038480645",
+      "nome": "Giovanni Mariani",
+      "email": "info@medicaldevicessrl.it",
+      "telefono": "+39 3168768396",
+      "indirizzo": "Via Roma 45, Torino",
       "paese": "Italia",
-      "provincia": "PA"
+      "provincia": "TO"
     },
     {
       "id": "cli_sim_21",
       "codice": "CLI-2021",
-      "azienda": "Cloud Services SRL",
+      "azienda": "Pharma Distribuzione Snc",
       "tipo": "azienda",
       "stato": "lead",
       "categoria": "Cliente",
       "agente": "Marco Ferri",
-      "dataNascita": "1993-08-20",
-      "piva": "02470795617",
-      "cf": "CF27190867057009",
-      "nome": "Caterina Russo",
-      "email": "info@cloudservicessrl.it",
-      "telefono": "+39 3197499891",
-      "indirizzo": "Via Roma 21, Padova",
+      "dataNascita": "1977-10-28",
+      "piva": "03467822307",
+      "cf": "CF30319591511853",
+      "nome": "Concetta D'Angelo",
+      "email": "info@pharmadistribuzionesnc.it",
+      "telefono": "+39 3880934550",
+      "indirizzo": "Via Roma 33, Messina",
       "paese": "Italia",
-      "provincia": "PA"
+      "provincia": "ME"
     },
     {
       "id": "cli_sim_22",
@@ -387,535 +387,1158 @@ window.CRM_SEED_DATA = {
       "stato": "contattato",
       "categoria": "Cliente",
       "agente": "Marco Ferri",
-      "dataNascita": "1975-07-28",
-      "piva": "09750701130",
-      "cf": "CF31079448032617",
-      "nome": "Antonio Lombardo",
-      "email": "info@antoniolombardo.it",
-      "telefono": "+39 3238623618",
-      "indirizzo": "Via Roma 3, Messina",
+      "dataNascita": "1972-09-20",
+      "piva": "06381594684",
+      "cf": "CF47014301116883",
+      "nome": "Elena Rossi",
+      "email": "info@elenarossi.it",
+      "telefono": "+39 3768647218",
+      "indirizzo": "Via Roma 34, Venezia",
       "paese": "Italia",
-      "provincia": "ME"
+      "provincia": "VE"
     },
     {
       "id": "cli_sim_23",
       "codice": "CLI-2023",
+      "azienda": "",
+      "tipo": "privato",
+      "stato": "offerta",
+      "categoria": "Cliente",
+      "agente": "Marco Ferri",
+      "dataNascita": "1985-03-18",
+      "piva": "04962853795",
+      "cf": "CF76717420958815",
+      "nome": "Carla Greco",
+      "email": "info@carlagreco.it",
+      "telefono": "+39 3087305051",
+      "indirizzo": "Via Roma 11, Genova",
+      "paese": "Italia",
+      "provincia": "GE"
+    },
+    {
+      "id": "cli_sim_24",
+      "codice": "CLI-2024",
+      "azienda": "Logistica Veloce SRL",
+      "tipo": "azienda",
+      "stato": "attivo",
+      "categoria": "Cliente",
+      "agente": "Marco Ferri",
+      "dataNascita": "1984-05-01",
+      "piva": "06965142197",
+      "cf": "CF34736612408523",
+      "nome": "Pietro Gentile",
+      "email": "info@logisticavelocesrl.it",
+      "telefono": "+39 3772283454",
+      "indirizzo": "Via Roma 54, Roma",
+      "paese": "Italia",
+      "provincia": "RO"
+    },
+    {
+      "id": "cli_sim_25",
+      "codice": "CLI-2025",
+      "azienda": "Retail Group SPA",
+      "tipo": "azienda",
+      "stato": "contattato",
+      "categoria": "Cliente",
+      "agente": "Marco Ferri",
+      "dataNascita": "1984-09-05",
+      "piva": "08174604669",
+      "cf": "CF67267619304364",
+      "nome": "Giovanna Esposito",
+      "email": "info@retailgroupspa.it",
+      "telefono": "+39 3912150207",
+      "indirizzo": "Via Roma 37, Prato",
+      "paese": "Italia",
+      "provincia": "PR"
+    },
+    {
+      "id": "cli_sim_26",
+      "codice": "CLI-2026",
+      "azienda": "Retail Group SPA",
+      "tipo": "azienda",
+      "stato": "attivo",
+      "categoria": "Cliente",
+      "agente": "Marco Ferri",
+      "dataNascita": "1971-12-20",
+      "piva": "06289583580",
+      "cf": "CF36676572883280",
+      "nome": "Paolo Bianchi",
+      "email": "info@retailgroupspa.it",
+      "telefono": "+39 3070099568",
+      "indirizzo": "Via Roma 70, Verona",
+      "paese": "Italia",
+      "provincia": "VE"
+    },
+    {
+      "id": "cli_sim_27",
+      "codice": "CLI-2027",
+      "azienda": "Impianti Sicuri SRL",
+      "tipo": "azienda",
+      "stato": "contattato",
+      "categoria": "Cliente",
+      "agente": "Marco Ferri",
+      "dataNascita": "1982-11-05",
+      "piva": "06854194462",
+      "cf": "CF60303685773760",
+      "nome": "Domenico Gentile",
+      "email": "info@impiantisicurisrl.it",
+      "telefono": "+39 3810002315",
+      "indirizzo": "Via Roma 15, Milano",
+      "paese": "Italia",
+      "provincia": "MI"
+    },
+    {
+      "id": "cli_sim_28",
+      "codice": "CLI-2028",
+      "azienda": "Pharma Distribuzione Snc",
+      "tipo": "azienda",
+      "stato": "attivo",
+      "categoria": "Cliente",
+      "agente": "Marco Ferri",
+      "dataNascita": "1977-10-31",
+      "piva": "05062398243",
+      "cf": "CF23426602919134",
+      "nome": "Giorgio Rinaldi",
+      "email": "info@pharmadistribuzionesnc.it",
+      "telefono": "+39 3293731346",
+      "indirizzo": "Via Roma 52, Modena",
+      "paese": "Italia",
+      "provincia": "MO"
+    },
+    {
+      "id": "cli_sim_29",
+      "codice": "CLI-2029",
+      "azienda": "Cloud Services SRL",
+      "tipo": "azienda",
+      "stato": "perso",
+      "categoria": "Cliente",
+      "agente": "Marco Ferri",
+      "dataNascita": "1977-01-10",
+      "piva": "04317196138",
+      "cf": "CF20523422037944",
+      "nome": "Aldo Conti",
+      "email": "info@cloudservicessrl.it",
+      "telefono": "+39 3485513478",
+      "indirizzo": "Via Roma 19, Verona",
+      "paese": "Italia",
+      "provincia": "VE"
+    },
+    {
+      "id": "cli_sim_30",
+      "codice": "CLI-2030",
+      "azienda": "Supermercati Uniti SPA",
+      "tipo": "azienda",
+      "stato": "attivo",
+      "categoria": "Cliente",
+      "agente": "Marco Ferri",
+      "dataNascita": "1983-06-15",
+      "piva": "01699801449",
+      "cf": "CF88064602122252",
+      "nome": "Anna Gentile",
+      "email": "info@supermercatiunitispa.it",
+      "telefono": "+39 3344155142",
+      "indirizzo": "Via Roma 72, Torino",
+      "paese": "Italia",
+      "provincia": "TO"
+    },
+    {
+      "id": "cli_sim_31",
+      "codice": "CLI-2031",
+      "azienda": "",
+      "tipo": "privato",
+      "stato": "offerta",
+      "categoria": "Cliente",
+      "agente": "Marco Ferri",
+      "dataNascita": "1975-05-07",
+      "piva": "07072745309",
+      "cf": "CF10116811221406",
+      "nome": "Teresa Leone",
+      "email": "info@teresaleone.it",
+      "telefono": "+39 3383911109",
+      "indirizzo": "Via Roma 96, Messina",
+      "paese": "Italia",
+      "provincia": "ME"
+    },
+    {
+      "id": "cli_sim_32",
+      "codice": "CLI-2032",
       "azienda": "Consulenza Aziendale SRL",
       "tipo": "azienda",
       "stato": "perso",
       "categoria": "Cliente",
       "agente": "Marco Ferri",
-      "dataNascita": "1991-03-13",
-      "piva": "02994367271",
-      "cf": "CF81335174115595",
-      "nome": "Giovanna Esposito",
+      "dataNascita": "1989-08-02",
+      "piva": "09324858868",
+      "cf": "CF55845117721312",
+      "nome": "Francesco Martini",
       "email": "info@consulenzaaziendalesrl.it",
-      "telefono": "+39 3251619541",
-      "indirizzo": "Via Roma 11, Venezia",
-      "paese": "Italia",
-      "provincia": "VE"
-    },
-    {
-      "id": "cli_sim_24",
-      "codice": "CLI-2024",
-      "azienda": "Innovazione Digitale SRL",
-      "tipo": "azienda",
-      "stato": "perso",
-      "categoria": "Cliente",
-      "agente": "Marco Ferri",
-      "dataNascita": "1995-03-16",
-      "piva": "07703024517",
-      "cf": "CF57898629030829",
-      "nome": "Mario Santoro",
-      "email": "info@innovazionedigitalesrl.it",
-      "telefono": "+39 3790693758",
-      "indirizzo": "Via Roma 22, Parma",
-      "paese": "Italia",
-      "provincia": "PA"
-    },
-    {
-      "id": "cli_sim_25",
-      "codice": "CLI-2025",
-      "azienda": "Palestra Fitness SRL",
-      "tipo": "azienda",
-      "stato": "attivo",
-      "categoria": "Cliente",
-      "agente": "Marco Ferri",
-      "dataNascita": "1984-03-24",
-      "piva": "01456795536",
-      "cf": "CF67041961214520",
-      "nome": "Angela Marino",
-      "email": "info@palestrafitnesssrl.it",
-      "telefono": "+39 3336923953",
-      "indirizzo": "Via Roma 4, Bari",
+      "telefono": "+39 3107008273",
+      "indirizzo": "Via Roma 81, Bari",
       "paese": "Italia",
       "provincia": "BA"
-    },
-    {
-      "id": "cli_sim_26",
-      "codice": "CLI-2026",
-      "azienda": "Cloud Services SRL",
-      "tipo": "azienda",
-      "stato": "attivo",
-      "categoria": "Cliente",
-      "agente": "Marco Ferri",
-      "dataNascita": "1973-09-29",
-      "piva": "06388156091",
-      "cf": "CF90025877124091",
-      "nome": "Giorgio Mancini",
-      "email": "info@cloudservicessrl.it",
-      "telefono": "+39 3887178969",
-      "indirizzo": "Via Roma 47, Messina",
-      "paese": "Italia",
-      "provincia": "ME"
-    },
-    {
-      "id": "cli_sim_27",
-      "codice": "CLI-2027",
-      "azienda": "",
-      "tipo": "privato",
-      "stato": "contattato",
-      "categoria": "Cliente",
-      "agente": "Marco Ferri",
-      "dataNascita": "1981-02-20",
-      "piva": "03536331660",
-      "cf": "CF18177424413568",
-      "nome": "Carlo Galli",
-      "email": "info@carlogalli.it",
-      "telefono": "+39 3230668472",
-      "indirizzo": "Via Roma 71, Brescia",
-      "paese": "Italia",
-      "provincia": "BR"
-    },
-    {
-      "id": "cli_sim_28",
-      "codice": "CLI-2028",
-      "azienda": "",
-      "tipo": "privato",
-      "stato": "perso",
-      "categoria": "Cliente",
-      "agente": "Marco Ferri",
-      "dataNascita": "1981-11-20",
-      "piva": "06297346722",
-      "cf": "CF66592660388647",
-      "nome": "Carmela Lombardi",
-      "email": "info@carmelalombardi.it",
-      "telefono": "+39 3353403380",
-      "indirizzo": "Via Roma 44, Taranto",
-      "paese": "Italia",
-      "provincia": "TA"
-    },
-    {
-      "id": "cli_sim_29",
-      "codice": "CLI-2029",
-      "azienda": "Studio Architetti Associati",
-      "tipo": "azienda",
-      "stato": "perso",
-      "categoria": "Cliente",
-      "agente": "Marco Ferri",
-      "dataNascita": "1976-04-06",
-      "piva": "05232211174",
-      "cf": "CF77472233526632",
-      "nome": "Giuseppina Rossi",
-      "email": "info@studioarchitettiassociati.it",
-      "telefono": "+39 3060002301",
-      "indirizzo": "Via Roma 86, Trieste",
-      "paese": "Italia",
-      "provincia": "TR"
-    },
-    {
-      "id": "cli_sim_30",
-      "codice": "CLI-2030",
-      "azienda": "Security Systems SPA",
-      "tipo": "azienda",
-      "stato": "lead",
-      "categoria": "Cliente",
-      "agente": "Marco Ferri",
-      "dataNascita": "1970-11-22",
-      "piva": "09323447969",
-      "cf": "CF92060168352406",
-      "nome": "Salvatore Lombardi",
-      "email": "info@securitysystemsspa.it",
-      "telefono": "+39 3554638926",
-      "indirizzo": "Via Roma 3, Genova",
-      "paese": "Italia",
-      "provincia": "GE"
-    },
-    {
-      "id": "cli_sim_31",
-      "codice": "CLI-2031",
-      "azienda": "Costruzioni Generali SRL",
-      "tipo": "azienda",
-      "stato": "lead",
-      "categoria": "Cliente",
-      "agente": "Marco Ferri",
-      "dataNascita": "1985-10-21",
-      "piva": "08871690510",
-      "cf": "CF92579965757873",
-      "nome": "Rosa Barbieri",
-      "email": "info@costruzionigeneralisrl.it",
-      "telefono": "+39 3797672506",
-      "indirizzo": "Via Roma 58, Parma",
-      "paese": "Italia",
-      "provincia": "PA"
-    },
-    {
-      "id": "cli_sim_32",
-      "codice": "CLI-2032",
-      "azienda": "",
-      "tipo": "privato",
-      "stato": "offerta",
-      "categoria": "Cliente",
-      "agente": "Marco Ferri",
-      "dataNascita": "1988-08-09",
-      "piva": "04062617524",
-      "cf": "CF85663133783389",
-      "nome": "Franco Martini",
-      "email": "info@francomartini.it",
-      "telefono": "+39 3062731333",
-      "indirizzo": "Via Roma 100, Genova",
-      "paese": "Italia",
-      "provincia": "GE"
     },
     {
       "id": "cli_sim_33",
       "codice": "CLI-2033",
-      "azienda": "Studio Architetti Associati",
+      "azienda": "Luce & Design SPA",
       "tipo": "azienda",
       "stato": "perso",
       "categoria": "Cliente",
       "agente": "Marco Ferri",
-      "dataNascita": "1982-10-11",
-      "piva": "06688393700",
-      "cf": "CF37508967086875",
-      "nome": "Paola Esposito",
-      "email": "info@studioarchitettiassociati.it",
-      "telefono": "+39 3515735557",
-      "indirizzo": "Via Roma 99, Bari",
+      "dataNascita": "1989-06-13",
+      "piva": "05027735061",
+      "cf": "CF83842030874783",
+      "nome": "Luigi Vitale",
+      "email": "info@luce&designspa.it",
+      "telefono": "+39 3922563826",
+      "indirizzo": "Via Roma 52, Padova",
       "paese": "Italia",
-      "provincia": "BA"
+      "provincia": "PA"
     },
     {
       "id": "cli_sim_34",
       "codice": "CLI-2034",
-      "azienda": "",
-      "tipo": "privato",
-      "stato": "contattato",
+      "azienda": "Ristorante La Bella Vita",
+      "tipo": "azienda",
+      "stato": "perso",
       "categoria": "Cliente",
       "agente": "Marco Ferri",
-      "dataNascita": "1993-04-03",
-      "piva": "06502055163",
-      "cf": "CF19331945755345",
-      "nome": "Carla Romano",
-      "email": "info@carlaromano.it",
-      "telefono": "+39 3780794412",
-      "indirizzo": "Via Roma 64, Catania",
+      "dataNascita": "1987-11-24",
+      "piva": "04939445395",
+      "cf": "CF26389379966958",
+      "nome": "Lucia Romano",
+      "email": "info@ristorantelabellavita.it",
+      "telefono": "+39 3341875914",
+      "indirizzo": "Via Roma 42, Firenze",
       "paese": "Italia",
-      "provincia": "CA"
+      "provincia": "FI"
     },
     {
       "id": "cli_sim_35",
       "codice": "CLI-2035",
-      "azienda": "Food & Beverage Snc",
-      "tipo": "azienda",
+      "azienda": "",
+      "tipo": "privato",
       "stato": "perso",
       "categoria": "Cliente",
       "agente": "Marco Ferri",
-      "dataNascita": "1973-12-14",
-      "piva": "04397437977",
-      "cf": "CF21366937863742",
-      "nome": "Carmela Bruno",
-      "email": "info@food&beveragesnc.it",
-      "telefono": "+39 3471006777",
-      "indirizzo": "Via Roma 5, Torino",
+      "dataNascita": "1981-01-17",
+      "piva": "08486271161",
+      "cf": "CF67762262821870",
+      "nome": "Angelo Giordano",
+      "email": "info@angelogiordano.it",
+      "telefono": "+39 3862884959",
+      "indirizzo": "Via Roma 28, Trieste",
       "paese": "Italia",
-      "provincia": "TO"
+      "provincia": "TR"
     },
     {
       "id": "cli_sim_36",
       "codice": "CLI-2036",
-      "azienda": "",
-      "tipo": "privato",
-      "stato": "attivo",
-      "categoria": "Cliente",
-      "agente": "Marco Ferri",
-      "dataNascita": "1970-03-04",
-      "piva": "06315713554",
-      "cf": "CF55095916751822",
-      "nome": "Margherita Galli",
-      "email": "info@margheritagalli.it",
-      "telefono": "+39 3023513206",
-      "indirizzo": "Via Roma 72, Brescia",
-      "paese": "Italia",
-      "provincia": "BR"
-    },
-    {
-      "id": "cli_sim_37",
-      "codice": "CLI-2037",
-      "azienda": "",
-      "tipo": "privato",
-      "stato": "contattato",
-      "categoria": "Cliente",
-      "agente": "Marco Ferri",
-      "dataNascita": "1987-09-05",
-      "piva": "01386010544",
-      "cf": "CF47836600891258",
-      "nome": "Marco Russo",
-      "email": "info@marcorusso.it",
-      "telefono": "+39 3010107563",
-      "indirizzo": "Via Roma 77, Venezia",
-      "paese": "Italia",
-      "provincia": "VE"
-    },
-    {
-      "id": "cli_sim_38",
-      "codice": "CLI-2038",
-      "azienda": "",
-      "tipo": "privato",
-      "stato": "perso",
-      "categoria": "Cliente",
-      "agente": "Marco Ferri",
-      "dataNascita": "1979-03-06",
-      "piva": "03218241074",
-      "cf": "CF12304976592419",
-      "nome": "Aldo Romano",
-      "email": "info@aldoromano.it",
-      "telefono": "+39 3007146980",
-      "indirizzo": "Via Roma 61, Taranto",
-      "paese": "Italia",
-      "provincia": "TA"
-    },
-    {
-      "id": "cli_sim_39",
-      "codice": "CLI-2039",
-      "azienda": "AgriTech SPA",
+      "azienda": "Green Energy SPA",
       "tipo": "azienda",
       "stato": "offerta",
       "categoria": "Cliente",
       "agente": "Marco Ferri",
-      "dataNascita": "1981-12-28",
-      "piva": "04549061964",
-      "cf": "CF22671916402605",
-      "nome": "Giovanni Caruso",
-      "email": "info@agritechspa.it",
-      "telefono": "+39 3583009104",
-      "indirizzo": "Via Roma 30, Catania",
+      "dataNascita": "1983-06-25",
+      "piva": "02964244720",
+      "cf": "CF66351656524761",
+      "nome": "Giovanni Mancini",
+      "email": "info@greenenergyspa.it",
+      "telefono": "+39 3629959012",
+      "indirizzo": "Via Roma 44, Venezia",
       "paese": "Italia",
-      "provincia": "CA"
+      "provincia": "VE"
+    },
+    {
+      "id": "cli_sim_37",
+      "codice": "CLI-2037",
+      "azienda": "Eventi & Fiere Snc",
+      "tipo": "azienda",
+      "stato": "perso",
+      "categoria": "Cliente",
+      "agente": "Marco Ferri",
+      "dataNascita": "1988-06-27",
+      "piva": "03913639910",
+      "cf": "CF74757681208814",
+      "nome": "Marco Moretti",
+      "email": "info@eventi&fieresnc.it",
+      "telefono": "+39 3197176199",
+      "indirizzo": "Via Roma 35, Brescia",
+      "paese": "Italia",
+      "provincia": "BR"
+    },
+    {
+      "id": "cli_sim_38",
+      "codice": "CLI-2038",
+      "azienda": "Marketing Digitale SPA",
+      "tipo": "azienda",
+      "stato": "contattato",
+      "categoria": "Cliente",
+      "agente": "Marco Ferri",
+      "dataNascita": "1970-02-04",
+      "piva": "06946467997",
+      "cf": "CF54652062119762",
+      "nome": "Bruno De Luca",
+      "email": "info@marketingdigitalespa.it",
+      "telefono": "+39 3588564664",
+      "indirizzo": "Via Roma 5, Parma",
+      "paese": "Italia",
+      "provincia": "PA"
+    },
+    {
+      "id": "cli_sim_39",
+      "codice": "CLI-2039",
+      "azienda": "Arredo Ufficio SPA",
+      "tipo": "azienda",
+      "stato": "contattato",
+      "categoria": "Cliente",
+      "agente": "Marco Ferri",
+      "dataNascita": "1970-11-27",
+      "piva": "09576373728",
+      "cf": "CF18491582855617",
+      "nome": "Giovanni Leone",
+      "email": "info@arredoufficiospa.it",
+      "telefono": "+39 3606300168",
+      "indirizzo": "Via Roma 3, Torino",
+      "paese": "Italia",
+      "provincia": "TO"
     },
     {
       "id": "cli_sim_40",
       "codice": "CLI-2040",
-      "azienda": "",
-      "tipo": "privato",
-      "stato": "perso",
+      "azienda": "Edilizia Moderna Snc",
+      "tipo": "azienda",
+      "stato": "offerta",
       "categoria": "Cliente",
       "agente": "Marco Ferri",
-      "dataNascita": "1980-03-27",
-      "piva": "03542698543",
-      "cf": "CF90811210961570",
-      "nome": "Margherita Rinaldi",
-      "email": "info@margheritarinaldi.it",
-      "telefono": "+39 3097801769",
-      "indirizzo": "Via Roma 66, Milano",
+      "dataNascita": "1970-07-27",
+      "piva": "01813826763",
+      "cf": "CF55316002541448",
+      "nome": "Angela Rossi",
+      "email": "info@ediliziamodernasnc.it",
+      "telefono": "+39 3770001688",
+      "indirizzo": "Via Roma 34, Modena",
       "paese": "Italia",
-      "provincia": "MI"
+      "provincia": "MO"
     }
   ],
   "preventivi": [
     {
       "id": "prev_sim_1",
-      "codice": "PRE-2026001",
-      "cliente": "cli_sim_25",
-      "data": "2026-01-09",
-      "dataScadenza": "2026-02-08",
+      "numero": "PRE-2026001",
+      "cliente": "cli_sim_20",
+      "data": "2026-01-12",
+      "dataScadenza": "2026-02-11",
       "stato": "inviato",
       "righe": [
         {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 10,
-          "prezzoUnitario": 0.4,
-          "sconto": 15
-        },
-        {
-          "prodotto": "prod_10017",
-          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
           "quantita": 5,
-          "prezzoUnitario": 0.2,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         },
         {
-          "prodotto": "prod_10014",
-          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
-          "quantita": 9,
-          "prezzoUnitario": 0.18,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 10,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 8,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 6.0200000000000005,
-      "tasse": 1.3244,
-      "totale": 7.3444,
+      "imponibile": 2372.31,
+      "tasse": 521.9082,
+      "totale": 2894.2182,
       "note": "Preventivo generato per simulazione."
     },
     {
       "id": "prev_sim_2",
-      "codice": "PRE-2026002",
-      "cliente": "cli_sim_36",
-      "data": "2026-03-13",
-      "dataScadenza": "2026-04-12",
+      "numero": "PRE-2026002",
+      "cliente": "cli_sim_6",
+      "data": "2026-04-06",
+      "dataScadenza": "2026-05-06",
       "stato": "scaduto",
       "righe": [
         {
-          "prodotto": "prod_10036",
-          "descrizione": "passacavo M12x1,5",
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
           "quantita": 7,
-          "prezzoUnitario": 0.32,
-          "sconto": 15
+          "prezzoUnitario": 62.37,
+          "sconto": 0
         },
         {
           "prodotto": "prod_sideis_one_cc",
           "descrizione": "Faretto SIDEis ONE CC",
           "quantita": 9,
           "prezzoUnitario": 62.37,
+          "sconto": 15
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 7,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         },
         {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
-          "quantita": 5,
-          "prezzoUnitario": 3.78,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 7,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 582.1339999999999,
-      "tasse": 128.06947999999997,
-      "totale": 710.2034799999999,
+      "imponibile": 1909.0504999999998,
+      "tasse": 419.99111,
+      "totale": 2329.0416099999998,
       "note": "Preventivo generato per simulazione."
     },
     {
       "id": "prev_sim_3",
-      "codice": "PRE-2026003",
-      "cliente": "cli_sim_16",
-      "data": "2026-01-19",
-      "dataScadenza": "2026-02-18",
-      "stato": "accettato",
+      "numero": "PRE-2026003",
+      "cliente": "cli_sim_21",
+      "data": "2026-05-30",
+      "dataScadenza": "2026-06-29",
+      "stato": "bozza",
       "righe": [
         {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
-          "quantita": 8,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10277",
-          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
-          "quantita": 7,
-          "prezzoUnitario": 0.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10250",
-          "descrizione": "PASTA TERMOCONDUTTIVA",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 10,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_012-01-20",
-          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
-          "quantita": 7,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10014",
-          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
-          "quantita": 8,
-          "prezzoUnitario": 0.18,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 8.21,
-      "tasse": 1.8062000000000002,
-      "totale": 10.016200000000001,
+      "imponibile": 798.1999999999999,
+      "tasse": 175.60399999999998,
+      "totale": 973.8039999999999,
       "note": "Preventivo generato per simulazione."
     },
     {
       "id": "prev_sim_4",
-      "codice": "PRE-2026004",
-      "cliente": "cli_sim_5",
-      "data": "2026-01-22",
-      "dataScadenza": "2026-02-21",
+      "numero": "PRE-2026004",
+      "cliente": "cli_sim_22",
+      "data": "2026-06-16",
+      "dataScadenza": "2026-07-16",
       "stato": "rifiutato",
       "righe": [
         {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 9,
-          "prezzoUnitario": 7.9,
-          "sconto": 10
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 4,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
         },
         {
-          "prodotto": "prod_032-01-20",
-          "descrizione": "CAVO H05RN-F 2x0,75",
-          "quantita": 7,
-          "prezzoUnitario": 1.83,
-          "sconto": 5
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 8,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 5,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 6,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
         }
       ],
-      "imponibile": 76.15950000000001,
-      "tasse": 16.755090000000003,
-      "totale": 92.91459,
+      "imponibile": 1434.51,
+      "tasse": 315.5922,
+      "totale": 1750.1022,
       "note": "Preventivo generato per simulazione."
     },
     {
       "id": "prev_sim_5",
-      "codice": "PRE-2026005",
-      "cliente": "cli_sim_29",
-      "data": "2026-01-29",
-      "dataScadenza": "2026-02-28",
-      "stato": "accettato",
+      "numero": "PRE-2026005",
+      "cliente": "cli_sim_4",
+      "data": "2026-05-24",
+      "dataScadenza": "2026-06-23",
+      "stato": "rifiutato",
       "righe": [
         {
-          "prodotto": "prod_auto-etichetta-marchi-dx",
-          "descrizione": "ETICHETTA MARCHI DX",
-          "quantita": 9,
-          "prezzoUnitario": 0.22,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         },
         {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 3,
-          "prezzoUnitario": 0.21,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 9,
-          "prezzoUnitario": 0.29,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-prodotto-sx",
-          "descrizione": "ETICHETTA PRODOTTO SX",
-          "quantita": 9,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 6,
+          "prezzoUnitario": 62.37,
+          "sconto": 5
         }
       ],
-      "imponibile": 7.199999999999999,
-      "tasse": 1.5839999999999999,
-      "totale": 8.783999999999999,
+      "imponibile": 1153.7089999999998,
+      "tasse": 253.81597999999997,
+      "totale": 1407.5249799999997,
       "note": "Preventivo generato per simulazione."
     },
     {
       "id": "prev_sim_6",
-      "codice": "PRE-2026006",
-      "cliente": "cli_sim_9",
+      "numero": "PRE-2026006",
+      "cliente": "cli_sim_31",
+      "data": "2026-06-01",
+      "dataScadenza": "2026-07-01",
+      "stato": "rifiutato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 9,
+          "prezzoUnitario": 62.37,
+          "sconto": 5
+        }
+      ],
+      "imponibile": 533.2634999999999,
+      "tasse": 117.31796999999997,
+      "totale": 650.5814699999999,
+      "note": "Preventivo generato per simulazione."
+    },
+    {
+      "id": "prev_sim_7",
+      "numero": "PRE-2026007",
+      "cliente": "cli_sim_27",
+      "data": "2026-03-19",
+      "dataScadenza": "2026-04-18",
+      "stato": "scaduto",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 4,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 9,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 7,
+          "prezzoUnitario": 79.82,
+          "sconto": 5
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 6,
+          "prezzoUnitario": 62.37,
+          "sconto": 5
+        }
+      ],
+      "imponibile": 1854.172,
+      "tasse": 407.91784,
+      "totale": 2262.08984,
+      "note": "Preventivo generato per simulazione."
+    },
+    {
+      "id": "prev_sim_8",
+      "numero": "PRE-2026008",
+      "cliente": "cli_sim_2",
+      "data": "2026-05-03",
+      "dataScadenza": "2026-06-02",
+      "stato": "inviato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 2,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 9,
+          "prezzoUnitario": 79.82,
+          "sconto": 15
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 8,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 2067.423,
+      "tasse": 454.83305999999993,
+      "totale": 2522.2560599999997,
+      "note": "Preventivo generato per simulazione."
+    },
+    {
+      "id": "prev_sim_9",
+      "numero": "PRE-2026009",
+      "cliente": "cli_sim_19",
+      "data": "2026-01-01",
+      "dataScadenza": "2026-01-31",
+      "stato": "inviato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 4,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 5,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 7,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 10,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 1831.02,
+      "tasse": 402.8244,
+      "totale": 2233.8444,
+      "note": "Preventivo generato per simulazione."
+    },
+    {
+      "id": "prev_sim_10",
+      "numero": "PRE-2026010",
+      "cliente": "cli_sim_37",
+      "data": "2026-05-10",
+      "dataScadenza": "2026-06-09",
+      "stato": "inviato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 6,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 2,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 8,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 9,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 1733.7499999999998,
+      "tasse": 381.42499999999995,
+      "totale": 2115.1749999999997,
+      "note": "Preventivo generato per simulazione."
+    },
+    {
+      "id": "prev_sim_11",
+      "numero": "PRE-2026011",
+      "cliente": "cli_sim_30",
+      "data": "2026-05-25",
+      "dataScadenza": "2026-06-24",
+      "stato": "inviato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 3,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 239.45999999999998,
+      "tasse": 52.6812,
+      "totale": 292.14119999999997,
+      "note": "Preventivo generato per simulazione."
+    },
+    {
+      "id": "prev_sim_12",
+      "numero": "PRE-2026012",
+      "cliente": "cli_sim_18",
+      "data": "2026-05-04",
+      "dataScadenza": "2026-06-03",
+      "stato": "bozza",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 7,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 1234.79,
+      "tasse": 271.6538,
+      "totale": 1506.4438,
+      "note": "Preventivo generato per simulazione."
+    },
+    {
+      "id": "prev_sim_13",
+      "numero": "PRE-2026013",
+      "cliente": "cli_sim_16",
+      "data": "2026-03-30",
+      "dataScadenza": "2026-04-29",
+      "stato": "rifiutato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 3,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 239.45999999999998,
+      "tasse": 52.6812,
+      "totale": 292.14119999999997,
+      "note": "Preventivo generato per simulazione."
+    },
+    {
+      "id": "prev_sim_14",
+      "numero": "PRE-2026014",
+      "cliente": "cli_sim_14",
+      "data": "2026-01-14",
+      "dataScadenza": "2026-02-13",
+      "stato": "accettato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 2,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 1,
+          "prezzoUnitario": 62.37,
+          "sconto": 15
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 8,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 5,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 8,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 1714.3745,
+      "tasse": 377.16238999999996,
+      "totale": 2091.53689,
+      "note": "Preventivo generato per simulazione."
+    },
+    {
+      "id": "prev_sim_15",
+      "numero": "PRE-2026015",
+      "cliente": "cli_sim_39",
+      "data": "2026-05-26",
+      "dataScadenza": "2026-06-25",
+      "stato": "bozza",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 7,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 4,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 10,
+          "prezzoUnitario": 62.37,
+          "sconto": 10
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 5,
+          "prezzoUnitario": 79.82,
+          "sconto": 5
+        }
+      ],
+      "imponibile": 1696.3449999999998,
+      "tasse": 373.19589999999994,
+      "totale": 2069.5408999999995,
+      "note": "Preventivo generato per simulazione."
+    },
+    {
+      "id": "prev_sim_16",
+      "numero": "PRE-2026016",
+      "cliente": "cli_sim_36",
+      "data": "2026-06-19",
+      "dataScadenza": "2026-07-19",
+      "stato": "rifiutato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 2,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 3,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 311.84999999999997,
+      "tasse": 68.607,
+      "totale": 380.45699999999994,
+      "note": "Preventivo generato per simulazione."
+    },
+    {
+      "id": "prev_sim_17",
+      "numero": "PRE-2026017",
+      "cliente": "cli_sim_19",
+      "data": "2026-03-10",
+      "dataScadenza": "2026-04-09",
+      "stato": "rifiutato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 8,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 3,
+          "prezzoUnitario": 79.82,
+          "sconto": 15
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 4,
+          "prezzoUnitario": 79.82,
+          "sconto": 15
+        }
+      ],
+      "imponibile": 1113.4889999999998,
+      "tasse": 244.96757999999997,
+      "totale": 1358.4565799999998,
+      "note": "Preventivo generato per simulazione."
+    },
+    {
+      "id": "prev_sim_18",
+      "numero": "PRE-2026018",
+      "cliente": "cli_sim_18",
+      "data": "2026-05-13",
+      "dataScadenza": "2026-06-12",
+      "stato": "accettato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 9,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 9,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 6,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 4,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 2130.2599999999998,
+      "tasse": 468.65719999999993,
+      "totale": 2598.9172,
+      "note": "Preventivo generato per simulazione."
+    },
+    {
+      "id": "prev_sim_19",
+      "numero": "PRE-2026019",
+      "cliente": "cli_sim_4",
+      "data": "2026-06-29",
+      "dataScadenza": "2026-07-29",
+      "stato": "bozza",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 3,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 9,
+          "prezzoUnitario": 79.82,
+          "sconto": 10
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 5,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 9,
+          "prezzoUnitario": 62.37,
+          "sconto": 15
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 4,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 2011.7124999999999,
+      "tasse": 442.57674999999995,
+      "totale": 2454.28925,
+      "note": "Preventivo generato per simulazione."
+    },
+    {
+      "id": "prev_sim_20",
+      "numero": "PRE-2026020",
+      "cliente": "cli_sim_5",
+      "data": "2026-06-02",
+      "dataScadenza": "2026-07-02",
+      "stato": "bozza",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 7,
+          "prezzoUnitario": 79.82,
+          "sconto": 10
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 1,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 7,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 3,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 1380.886,
+      "tasse": 303.79492,
+      "totale": 1684.68092,
+      "note": "Preventivo generato per simulazione."
+    },
+    {
+      "id": "prev_sim_21",
+      "numero": "PRE-2026021",
+      "cliente": "cli_sim_27",
+      "data": "2026-05-11",
+      "dataScadenza": "2026-06-10",
+      "stato": "accettato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 1,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 1,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 6,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 4,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 1633.8899999999999,
+      "tasse": 359.45579999999995,
+      "totale": 1993.3457999999998,
+      "note": "Preventivo generato per simulazione."
+    },
+    {
+      "id": "prev_sim_22",
+      "numero": "PRE-2026022",
+      "cliente": "cli_sim_40",
+      "data": "2026-03-03",
+      "dataScadenza": "2026-04-02",
+      "stato": "accettato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 2,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 159.64,
+      "tasse": 35.120799999999996,
+      "totale": 194.7608,
+      "note": "Preventivo generato per simulazione."
+    },
+    {
+      "id": "prev_sim_23",
+      "numero": "PRE-2026023",
+      "cliente": "cli_sim_7",
+      "data": "2026-02-12",
+      "dataScadenza": "2026-03-14",
+      "stato": "accettato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 10,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 623.6999999999999,
+      "tasse": 137.214,
+      "totale": 760.9139999999999,
+      "note": "Preventivo generato per simulazione."
+    },
+    {
+      "id": "prev_sim_24",
+      "numero": "PRE-2026024",
+      "cliente": "cli_sim_1",
       "data": "2026-01-22",
       "dataScadenza": "2026-02-21",
       "stato": "inviato",
@@ -923,281 +1546,92 @@ window.CRM_SEED_DATA = {
         {
           "prodotto": "prod_sideis_one_cc",
           "descrizione": "Faretto SIDEis ONE CC",
-          "quantita": 5,
+          "quantita": 3,
           "prezzoUnitario": 62.37,
-          "sconto": 5
-        },
+          "sconto": 0
+        }
+      ],
+      "imponibile": 187.10999999999999,
+      "tasse": 41.164199999999994,
+      "totale": 228.27419999999998,
+      "note": "Preventivo generato per simulazione."
+    },
+    {
+      "id": "prev_sim_25",
+      "numero": "PRE-2026025",
+      "cliente": "cli_sim_5",
+      "data": "2026-01-05",
+      "dataScadenza": "2026-02-04",
+      "stato": "bozza",
+      "righe": [
         {
-          "prodotto": "prod_auto-etichetta-prodotto-sx",
-          "descrizione": "ETICHETTA PRODOTTO SX",
-          "quantita": 7,
-          "prezzoUnitario": 0.22,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 6,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         },
         {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
-          "quantita": 8,
-          "prezzoUnitario": 3.78,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-marchi-dx",
-          "descrizione": "ETICHETTA MARCHI DX",
-          "quantita": 10,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-prodotto-sx",
-          "descrizione": "ETICHETTA PRODOTTO SX",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 2,
-          "prezzoUnitario": 0.22,
-          "sconto": 10
-        }
-      ],
-      "imponibile": 330.63349999999997,
-      "tasse": 72.73937,
-      "totale": 403.37287,
-      "note": "Preventivo generato per simulazione."
-    },
-    {
-      "id": "prev_sim_7",
-      "codice": "PRE-2026007",
-      "cliente": "cli_sim_39",
-      "data": "2026-01-23",
-      "dataScadenza": "2026-02-22",
-      "stato": "bozza",
-      "righe": [
-        {
-          "prodotto": "prod_025-01-20",
-          "descrizione": "dado pressacavo",
-          "quantita": 10,
-          "prezzoUnitario": 0.4,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         },
         {
-          "prodotto": "prod_025-01-20",
-          "descrizione": "dado pressacavo",
-          "quantita": 3,
-          "prezzoUnitario": 0.4,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
-          "quantita": 5,
-          "prezzoUnitario": 3.78,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 5,
-          "prezzoUnitario": 0.21,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 25.15,
-      "tasse": 5.5329999999999995,
-      "totale": 30.682999999999996,
-      "note": "Preventivo generato per simulazione."
-    },
-    {
-      "id": "prev_sim_8",
-      "codice": "PRE-2026008",
-      "cliente": "cli_sim_21",
-      "data": "2026-01-23",
-      "dataScadenza": "2026-02-22",
-      "stato": "rifiutato",
-      "righe": [
-        {
-          "prodotto": "prod_auto-etichetta-prodotto-sx",
-          "descrizione": "ETICHETTA PRODOTTO SX",
-          "quantita": 7,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 3,
-          "prezzoUnitario": 0.29,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 2.41,
-      "tasse": 0.5302,
-      "totale": 2.9402,
-      "note": "Preventivo generato per simulazione."
-    },
-    {
-      "id": "prev_sim_9",
-      "codice": "PRE-2026009",
-      "cliente": "cli_sim_39",
-      "data": "2026-01-08",
-      "dataScadenza": "2026-02-07",
-      "stato": "bozza",
-      "righe": [
-        {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 3,
-          "prezzoUnitario": 0.21,
-          "sconto": 15
-        },
-        {
-          "prodotto": "prod_032-01-20",
-          "descrizione": "CAVO H05RN-F 2x0,75",
-          "quantita": 5,
-          "prezzoUnitario": 1.83,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-scheda-led-std-12-led",
-          "descrizione": "scheda led STD 12 LED",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 1,
-          "prezzoUnitario": 12.93,
+          "prezzoUnitario": 79.82,
           "sconto": 0
-        }
-      ],
-      "imponibile": 22.6155,
-      "tasse": 4.97541,
-      "totale": 27.59091,
-      "note": "Preventivo generato per simulazione."
-    },
-    {
-      "id": "prev_sim_10",
-      "codice": "PRE-2026010",
-      "cliente": "cli_sim_17",
-      "data": "2026-02-10",
-      "dataScadenza": "2026-03-12",
-      "stato": "bozza",
-      "righe": [
-        {
-          "prodotto": "prod_10014",
-          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
-          "quantita": 10,
-          "prezzoUnitario": 0.18,
-          "sconto": 10
         },
         {
-          "prodotto": "prod_10014",
-          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 1,
-          "prezzoUnitario": 0.18,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10277",
-          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
-          "quantita": 8,
-          "prezzoUnitario": 0.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 7,
-          "prezzoUnitario": 9.49,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10250",
-          "descrizione": "PASTA TERMOCONDUTTIVA",
-          "quantita": 9,
-          "prezzoUnitario": 0.2,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 71.87,
-      "tasse": 15.8114,
-      "totale": 87.68140000000001,
+      "imponibile": 693.4999999999998,
+      "tasse": 152.56999999999996,
+      "totale": 846.0699999999997,
       "note": "Preventivo generato per simulazione."
     },
     {
-      "id": "prev_sim_11",
-      "codice": "PRE-2026011",
-      "cliente": "cli_sim_29",
-      "data": "2026-03-23",
-      "dataScadenza": "2026-04-22",
+      "id": "prev_sim_26",
+      "numero": "PRE-2026026",
+      "cliente": "cli_sim_30",
+      "data": "2026-04-01",
+      "dataScadenza": "2026-05-01",
       "stato": "inviato",
       "righe": [
         {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 3,
-          "prezzoUnitario": 0.29,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 4,
-          "prezzoUnitario": 7.9,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10250",
-          "descrizione": "PASTA TERMOCONDUTTIVA",
-          "quantita": 2,
-          "prezzoUnitario": 0.2,
-          "sconto": 15
-        },
-        {
           "prodotto": "prod_sideis_one_cc",
           "descrizione": "Faretto SIDEis ONE CC",
           "quantita": 3,
-          "prezzoUnitario": 62.37,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_sideis_one_cc",
-          "descrizione": "Faretto SIDEis ONE CC",
-          "quantita": 5,
           "prezzoUnitario": 62.37,
           "sconto": 0
         }
       ],
-      "imponibile": 531.77,
-      "tasse": 116.9894,
-      "totale": 648.7593999999999,
+      "imponibile": 187.10999999999999,
+      "tasse": 41.164199999999994,
+      "totale": 228.27419999999998,
       "note": "Preventivo generato per simulazione."
     },
     {
-      "id": "prev_sim_12",
-      "codice": "PRE-2026012",
-      "cliente": "cli_sim_24",
-      "data": "2026-01-19",
-      "dataScadenza": "2026-02-18",
-      "stato": "rifiutato",
+      "id": "prev_sim_27",
+      "numero": "PRE-2026027",
+      "cliente": "cli_sim_23",
+      "data": "2026-02-03",
+      "dataScadenza": "2026-03-05",
+      "stato": "scaduto",
       "righe": [
         {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
-          "quantita": 3,
-          "prezzoUnitario": 3.78,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 4,
-          "prezzoUnitario": 7.9,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10277",
-          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
-          "quantita": 7,
-          "prezzoUnitario": 0.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 6,
-          "prezzoUnitario": 9.49,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 9,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         },
         {
@@ -1206,33 +1640,264 @@ window.CRM_SEED_DATA = {
           "quantita": 4,
           "prezzoUnitario": 62.37,
           "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 1,
+          "prezzoUnitario": 79.82,
+          "sconto": 10
         }
       ],
-      "imponibile": 350.96999999999997,
-      "tasse": 77.2134,
-      "totale": 428.18339999999995,
+      "imponibile": 1039.6979999999999,
+      "tasse": 228.73355999999998,
+      "totale": 1268.4315599999998,
       "note": "Preventivo generato per simulazione."
     },
     {
-      "id": "prev_sim_13",
-      "codice": "PRE-2026013",
-      "cliente": "cli_sim_23",
-      "data": "2026-01-19",
-      "dataScadenza": "2026-02-18",
+      "id": "prev_sim_28",
+      "numero": "PRE-2026028",
+      "cliente": "cli_sim_34",
+      "data": "2026-01-25",
+      "dataScadenza": "2026-02-24",
+      "stato": "scaduto",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 8,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 1,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 9,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 1920.8599999999997,
+      "tasse": 422.58919999999995,
+      "totale": 2343.4491999999996,
+      "note": "Preventivo generato per simulazione."
+    },
+    {
+      "id": "prev_sim_29",
+      "numero": "PRE-2026029",
+      "cliente": "cli_sim_27",
+      "data": "2026-03-17",
+      "dataScadenza": "2026-04-16",
+      "stato": "inviato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
+          "sconto": 5
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 5,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 6,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 6,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 5,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 2514.33,
+      "tasse": 553.1526,
+      "totale": 3067.4826,
+      "note": "Preventivo generato per simulazione."
+    },
+    {
+      "id": "prev_sim_30",
+      "numero": "PRE-2026030",
+      "cliente": "cli_sim_9",
+      "data": "2026-04-12",
+      "dataScadenza": "2026-05-12",
+      "stato": "accettato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 3,
+          "prezzoUnitario": 79.82,
+          "sconto": 10
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 1,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 8,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 5,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 1175.944,
+      "tasse": 258.70768,
+      "totale": 1434.65168,
+      "note": "Preventivo generato per simulazione."
+    },
+    {
+      "id": "prev_sim_31",
+      "numero": "PRE-2026031",
+      "cliente": "cli_sim_39",
+      "data": "2026-03-19",
+      "dataScadenza": "2026-04-18",
       "stato": "bozza",
       "righe": [
         {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 3,
-          "prezzoUnitario": 0.4,
-          "sconto": 15
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 2,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 159.64,
+      "tasse": 35.120799999999996,
+      "totale": 194.7608,
+      "note": "Preventivo generato per simulazione."
+    },
+    {
+      "id": "prev_sim_32",
+      "numero": "PRE-2026032",
+      "cliente": "cli_sim_28",
+      "data": "2026-01-15",
+      "dataScadenza": "2026-02-14",
+      "stato": "accettato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 2,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 124.74,
+      "tasse": 27.4428,
+      "totale": 152.1828,
+      "note": "Preventivo generato per simulazione."
+    },
+    {
+      "id": "prev_sim_33",
+      "numero": "PRE-2026033",
+      "cliente": "cli_sim_10",
+      "data": "2026-06-06",
+      "dataScadenza": "2026-07-06",
+      "stato": "rifiutato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 8,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
         },
         {
-          "prodotto": "prod_10250",
-          "descrizione": "PASTA TERMOCONDUTTIVA",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 2,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 9,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 1,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 2185.2,
+      "tasse": 480.74399999999997,
+      "totale": 2665.9439999999995,
+      "note": "Preventivo generato per simulazione."
+    },
+    {
+      "id": "prev_sim_34",
+      "numero": "PRE-2026034",
+      "cliente": "cli_sim_23",
+      "data": "2026-03-06",
+      "dataScadenza": "2026-04-05",
+      "stato": "inviato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 9,
+          "prezzoUnitario": 62.37,
+          "sconto": 10
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
           "quantita": 4,
-          "prezzoUnitario": 0.2,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         },
         {
@@ -1243,528 +1908,94 @@ window.CRM_SEED_DATA = {
           "sconto": 0
         }
       ],
-      "imponibile": 480.73999999999995,
-      "tasse": 105.76279999999998,
-      "totale": 586.5028,
+      "imponibile": 1233.5969999999998,
+      "tasse": 271.39133999999996,
+      "totale": 1504.9883399999997,
       "note": "Preventivo generato per simulazione."
     },
     {
-      "id": "prev_sim_14",
-      "codice": "PRE-2026014",
-      "cliente": "cli_sim_4",
-      "data": "2026-02-03",
-      "dataScadenza": "2026-03-05",
-      "stato": "rifiutato",
-      "righe": [
-        {
-          "prodotto": "prod_auto-etichetta-prodotto-sx",
-          "descrizione": "ETICHETTA PRODOTTO SX",
-          "quantita": 10,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 2.2,
-      "tasse": 0.48400000000000004,
-      "totale": 2.684,
-      "note": "Preventivo generato per simulazione."
-    },
-    {
-      "id": "prev_sim_15",
-      "codice": "PRE-2026015",
-      "cliente": "cli_sim_15",
-      "data": "2026-06-16",
-      "dataScadenza": "2026-07-16",
-      "stato": "accettato",
-      "righe": [
-        {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 1,
-          "prezzoUnitario": 9.49,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 6,
-          "prezzoUnitario": 9.49,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 9,
-          "prezzoUnitario": 9.49,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10014",
-          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
-          "quantita": 6,
-          "prezzoUnitario": 0.18,
-          "sconto": 15
-        },
-        {
-          "prodotto": "prod_003-01-22",
-          "descrizione": "DISSIPATORE SIDEIS",
-          "quantita": 1,
-          "prezzoUnitario": 4.87,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 157.628,
-      "tasse": 34.67816,
-      "totale": 192.30615999999998,
-      "note": "Preventivo generato per simulazione."
-    },
-    {
-      "id": "prev_sim_16",
-      "codice": "PRE-2026016",
-      "cliente": "cli_sim_15",
-      "data": "2026-01-24",
-      "dataScadenza": "2026-02-23",
-      "stato": "rifiutato",
-      "righe": [
-        {
-          "prodotto": "prod_sideis_one_cc",
-          "descrizione": "Faretto SIDEis ONE CC",
-          "quantita": 1,
-          "prezzoUnitario": 62.37,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-scheda-led-std-12-led",
-          "descrizione": "scheda led STD 12 LED",
-          "quantita": 5,
-          "prezzoUnitario": 12.93,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 8,
-          "prezzoUnitario": 0.29,
-          "sconto": 10
-        }
-      ],
-      "imponibile": 129.108,
-      "tasse": 28.403760000000002,
-      "totale": 157.51176,
-      "note": "Preventivo generato per simulazione."
-    },
-    {
-      "id": "prev_sim_17",
-      "codice": "PRE-2026017",
-      "cliente": "cli_sim_11",
-      "data": "2026-05-10",
-      "dataScadenza": "2026-06-09",
-      "stato": "bozza",
-      "righe": [
-        {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 10,
-          "prezzoUnitario": 7.9,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 9,
-          "prezzoUnitario": 7.9,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 4,
-          "prezzoUnitario": 0.29,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 5,
-          "prezzoUnitario": 0.29,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 6,
-          "prezzoUnitario": 7.9,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 193,
-      "tasse": 42.46,
-      "totale": 235.46,
-      "note": "Preventivo generato per simulazione."
-    },
-    {
-      "id": "prev_sim_18",
-      "codice": "PRE-2026018",
-      "cliente": "cli_sim_25",
-      "data": "2026-04-15",
-      "dataScadenza": "2026-05-15",
-      "stato": "rifiutato",
-      "righe": [
-        {
-          "prodotto": "prod_012-01-20",
-          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
-          "quantita": 2,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 0.4,
-      "tasse": 0.08800000000000001,
-      "totale": 0.488,
-      "note": "Preventivo generato per simulazione."
-    },
-    {
-      "id": "prev_sim_19",
-      "codice": "PRE-2026019",
-      "cliente": "cli_sim_13",
-      "data": "2026-04-10",
-      "dataScadenza": "2026-05-10",
-      "stato": "scaduto",
-      "righe": [
-        {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
-          "quantita": 6,
-          "prezzoUnitario": 3.78,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 7,
-          "prezzoUnitario": 0.4,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 1,
-          "prezzoUnitario": 0.21,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 23.422,
-      "tasse": 5.15284,
-      "totale": 28.574840000000002,
-      "note": "Preventivo generato per simulazione."
-    },
-    {
-      "id": "prev_sim_20",
-      "codice": "PRE-2026020",
+      "id": "prev_sim_35",
+      "numero": "PRE-2026035",
       "cliente": "cli_sim_8",
-      "data": "2026-03-26",
-      "dataScadenza": "2026-04-25",
-      "stato": "bozza",
-      "righe": [
-        {
-          "prodotto": "prod_025-01-20",
-          "descrizione": "dado pressacavo",
-          "quantita": 8,
-          "prezzoUnitario": 0.4,
-          "sconto": 10
-        }
-      ],
-      "imponibile": 2.8800000000000003,
-      "tasse": 0.6336,
-      "totale": 3.5136000000000003,
-      "note": "Preventivo generato per simulazione."
-    },
-    {
-      "id": "prev_sim_21",
-      "codice": "PRE-2026021",
-      "cliente": "cli_sim_18",
-      "data": "2026-05-22",
-      "dataScadenza": "2026-06-21",
-      "stato": "scaduto",
-      "righe": [
-        {
-          "prodotto": "prod_033-01-20",
-          "descrizione": "O-RING X VITI CHIUSURA",
-          "quantita": 6,
-          "prezzoUnitario": 0.17,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10031",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 1,
-          "prezzoUnitario": 5.25,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
-          "quantita": 1,
-          "prezzoUnitario": 3.78,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 10.049999999999999,
-      "tasse": 2.211,
-      "totale": 12.261,
-      "note": "Preventivo generato per simulazione."
-    },
-    {
-      "id": "prev_sim_22",
-      "codice": "PRE-2026022",
-      "cliente": "cli_sim_38",
-      "data": "2026-03-25",
-      "dataScadenza": "2026-04-24",
-      "stato": "accettato",
-      "righe": [
-        {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 6,
-          "prezzoUnitario": 3.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 7,
-          "prezzoUnitario": 0.21,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 4,
-          "prezzoUnitario": 7.9,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 52.45,
-      "tasse": 11.539000000000001,
-      "totale": 63.989000000000004,
-      "note": "Preventivo generato per simulazione."
-    },
-    {
-      "id": "prev_sim_23",
-      "codice": "PRE-2026023",
-      "cliente": "cli_sim_38",
-      "data": "2026-04-26",
-      "dataScadenza": "2026-05-26",
+      "data": "2026-02-23",
+      "dataScadenza": "2026-03-25",
       "stato": "inviato",
       "righe": [
         {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 1,
-          "prezzoUnitario": 7.9,
-          "sconto": 5
-        },
-        {
-          "prodotto": "prod_032-01-20",
-          "descrizione": "CAVO H05RN-F 2x0,75",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 10,
-          "prezzoUnitario": 1.83,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 7,
-          "prezzoUnitario": 0.29,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 26.005000000000003,
-      "tasse": 5.721100000000001,
-      "totale": 31.726100000000002,
-      "note": "Preventivo generato per simulazione."
-    },
-    {
-      "id": "prev_sim_24",
-      "codice": "PRE-2026024",
-      "cliente": "cli_sim_13",
-      "data": "2026-05-13",
-      "dataScadenza": "2026-06-12",
-      "stato": "bozza",
-      "righe": [
-        {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
-          "quantita": 3,
-          "prezzoUnitario": 0.22,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_auto-etichetta-prodotto-sx",
-          "descrizione": "ETICHETTA PRODOTTO SX",
-          "quantita": 4,
-          "prezzoUnitario": 0.22,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         },
         {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 6,
-          "prezzoUnitario": 0.29,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10250",
-          "descrizione": "PASTA TERMOCONDUTTIVA",
-          "quantita": 4,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 4.014,
-      "tasse": 0.8830800000000001,
-      "totale": 4.89708,
-      "note": "Preventivo generato per simulazione."
-    },
-    {
-      "id": "prev_sim_25",
-      "codice": "PRE-2026025",
-      "cliente": "cli_sim_10",
-      "data": "2026-05-16",
-      "dataScadenza": "2026-06-15",
-      "stato": "inviato",
-      "righe": [
-        {
-          "prodotto": "prod_auto-etichetta-prodotto-sx",
-          "descrizione": "ETICHETTA PRODOTTO SX",
-          "quantita": 3,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10277",
-          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
-          "quantita": 10,
-          "prezzoUnitario": 0.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10217",
-          "descrizione": "scheda driver interna std",
-          "quantita": 5,
-          "prezzoUnitario": 16.07,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
-          "quantita": 10,
-          "prezzoUnitario": 3.78,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10017",
-          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
-          "quantita": 1,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 121.30999999999999,
-      "tasse": 26.6882,
-      "totale": 147.99819999999997,
-      "note": "Preventivo generato per simulazione."
-    },
-    {
-      "id": "prev_sim_26",
-      "codice": "PRE-2026026",
-      "cliente": "cli_sim_38",
-      "data": "2026-04-15",
-      "dataScadenza": "2026-05-15",
-      "stato": "scaduto",
-      "righe": [
-        {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 2,
-          "prezzoUnitario": 7.9,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_033-01-20",
-          "descrizione": "O-RING X VITI CHIUSURA",
-          "quantita": 4,
-          "prezzoUnitario": 0.17,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_012-01-20",
-          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
-          "quantita": 8,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 18.080000000000002,
-      "tasse": 3.9776000000000002,
-      "totale": 22.0576,
-      "note": "Preventivo generato per simulazione."
-    },
-    {
-      "id": "prev_sim_27",
-      "codice": "PRE-2026027",
-      "cliente": "cli_sim_13",
-      "data": "2026-05-04",
-      "dataScadenza": "2026-06-03",
-      "stato": "bozza",
-      "righe": [
-        {
-          "prodotto": "prod_10248",
-          "descrizione": "SILICONE",
-          "quantita": 2,
-          "prezzoUnitario": 0.48,
-          "sconto": 5
-        }
-      ],
-      "imponibile": 0.9119999999999999,
-      "tasse": 0.20063999999999999,
-      "totale": 1.1126399999999999,
-      "note": "Preventivo generato per simulazione."
-    },
-    {
-      "id": "prev_sim_28",
-      "codice": "PRE-2026028",
-      "cliente": "cli_sim_12",
-      "data": "2026-05-13",
-      "dataScadenza": "2026-06-12",
-      "stato": "scaduto",
-      "righe": [
-        {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 10,
-          "prezzoUnitario": 0.29,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 2.9,
-      "tasse": 0.638,
-      "totale": 3.538,
-      "note": "Preventivo generato per simulazione."
-    },
-    {
-      "id": "prev_sim_29",
-      "codice": "PRE-2026029",
-      "cliente": "cli_sim_2",
-      "data": "2026-03-17",
-      "dataScadenza": "2026-04-16",
-      "stato": "scaduto",
-      "righe": [
-        {
-          "prodotto": "prod_10017",
-          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 9,
-          "prezzoUnitario": 0.2,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 4,
+          "prezzoUnitario": 62.37,
+          "sconto": 5
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 4,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 6,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 2551.786,
+      "tasse": 561.39292,
+      "totale": 3113.17892,
+      "note": "Preventivo generato per simulazione."
+    },
+    {
+      "id": "prev_sim_36",
+      "numero": "PRE-2026036",
+      "cliente": "cli_sim_2",
+      "data": "2026-06-27",
+      "dataScadenza": "2026-07-27",
+      "stato": "bozza",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 1,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 2,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 5,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 5,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         },
         {
@@ -1772,895 +2003,615 @@ window.CRM_SEED_DATA = {
           "descrizione": "Faretto SIDEis ONE CC",
           "quantita": 6,
           "prezzoUnitario": 62.37,
-          "sconto": 5
+          "sconto": 0
         }
       ],
-      "imponibile": 357.30899999999997,
-      "tasse": 78.60798,
-      "totale": 435.91697999999997,
+      "imponibile": 1289.73,
+      "tasse": 283.74060000000003,
+      "totale": 1573.4705999999999,
       "note": "Preventivo generato per simulazione."
     },
     {
-      "id": "prev_sim_30",
-      "codice": "PRE-2026030",
+      "id": "prev_sim_37",
+      "numero": "PRE-2026037",
+      "cliente": "cli_sim_5",
+      "data": "2026-03-01",
+      "dataScadenza": "2026-03-31",
+      "stato": "rifiutato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 3,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 9,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 957.8399999999999,
+      "tasse": 210.7248,
+      "totale": 1168.5647999999999,
+      "note": "Preventivo generato per simulazione."
+    },
+    {
+      "id": "prev_sim_38",
+      "numero": "PRE-2026038",
       "cliente": "cli_sim_15",
-      "data": "2026-04-25",
-      "dataScadenza": "2026-05-25",
+      "data": "2026-03-23",
+      "dataScadenza": "2026-04-22",
+      "stato": "inviato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 4,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 9,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 5,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 1192.4599999999998,
+      "tasse": 262.34119999999996,
+      "totale": 1454.8011999999997,
+      "note": "Preventivo generato per simulazione."
+    },
+    {
+      "id": "prev_sim_39",
+      "numero": "PRE-2026039",
+      "cliente": "cli_sim_40",
+      "data": "2026-01-28",
+      "dataScadenza": "2026-02-27",
+      "stato": "inviato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 9,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 718.3799999999999,
+      "tasse": 158.04359999999997,
+      "totale": 876.4235999999999,
+      "note": "Preventivo generato per simulazione."
+    },
+    {
+      "id": "prev_sim_40",
+      "numero": "PRE-2026040",
+      "cliente": "cli_sim_15",
+      "data": "2026-04-23",
+      "dataScadenza": "2026-05-23",
+      "stato": "bozza",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 9,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 718.3799999999999,
+      "tasse": 158.04359999999997,
+      "totale": 876.4235999999999,
+      "note": "Preventivo generato per simulazione."
+    },
+    {
+      "id": "prev_sim_41",
+      "numero": "PRE-2026041",
+      "cliente": "cli_sim_32",
+      "data": "2026-03-29",
+      "dataScadenza": "2026-04-28",
+      "stato": "rifiutato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 1,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 79.82,
+      "tasse": 17.560399999999998,
+      "totale": 97.3804,
+      "note": "Preventivo generato per simulazione."
+    },
+    {
+      "id": "prev_sim_42",
+      "numero": "PRE-2026042",
+      "cliente": "cli_sim_17",
+      "data": "2026-03-27",
+      "dataScadenza": "2026-04-26",
       "stato": "accettato",
       "righe": [
         {
-          "prodotto": "prod_10017",
-          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
-          "quantita": 8,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-scheda-led-std-12-led",
-          "descrizione": "scheda led STD 12 LED",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 1,
-          "prezzoUnitario": 12.93,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         },
         {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 6,
-          "prezzoUnitario": 3.78,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         },
         {
-          "prodotto": "prod_10036",
-          "descrizione": "passacavo M12x1,5",
-          "quantita": 6,
-          "prezzoUnitario": 0.32,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 39.13,
-      "tasse": 8.608600000000001,
-      "totale": 47.738600000000005,
+      "imponibile": 1356.94,
+      "tasse": 298.52680000000004,
+      "totale": 1655.4668,
       "note": "Preventivo generato per simulazione."
     },
     {
-      "id": "prev_sim_31",
-      "codice": "PRE-2026031",
-      "cliente": "cli_sim_32",
+      "id": "prev_sim_43",
+      "numero": "PRE-2026043",
+      "cliente": "cli_sim_12",
       "data": "2026-06-12",
       "dataScadenza": "2026-07-12",
       "stato": "accettato",
       "righe": [
         {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
-          "quantita": 10,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 2.2,
-      "tasse": 0.48400000000000004,
-      "totale": 2.684,
-      "note": "Preventivo generato per simulazione."
-    },
-    {
-      "id": "prev_sim_32",
-      "codice": "PRE-2026032",
-      "cliente": "cli_sim_40",
-      "data": "2026-01-16",
-      "dataScadenza": "2026-02-15",
-      "stato": "accettato",
-      "righe": [
-        {
-          "prodotto": "prod_012-01-20",
-          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
-          "quantita": 6,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10017",
-          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
-          "quantita": 2,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10017",
-          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
-          "quantita": 6,
-          "prezzoUnitario": 0.2,
-          "sconto": 15
-        }
-      ],
-      "imponibile": 2.62,
-      "tasse": 0.5764,
-      "totale": 3.1964,
-      "note": "Preventivo generato per simulazione."
-    },
-    {
-      "id": "prev_sim_33",
-      "codice": "PRE-2026033",
-      "cliente": "cli_sim_31",
-      "data": "2026-05-28",
-      "dataScadenza": "2026-06-27",
-      "stato": "rifiutato",
-      "righe": [
-        {
-          "prodotto": "prod_10248",
-          "descrizione": "SILICONE",
-          "quantita": 8,
-          "prezzoUnitario": 0.48,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
-          "quantita": 3,
-          "prezzoUnitario": 0.22,
-          "sconto": 5
-        }
-      ],
-      "imponibile": 4.467,
-      "tasse": 0.98274,
-      "totale": 5.449739999999999,
-      "note": "Preventivo generato per simulazione."
-    },
-    {
-      "id": "prev_sim_34",
-      "codice": "PRE-2026034",
-      "cliente": "cli_sim_13",
-      "data": "2026-03-26",
-      "dataScadenza": "2026-04-25",
-      "stato": "rifiutato",
-      "righe": [
-        {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 3,
-          "prezzoUnitario": 0.21,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 0.63,
-      "tasse": 0.1386,
-      "totale": 0.7686,
-      "note": "Preventivo generato per simulazione."
-    },
-    {
-      "id": "prev_sim_35",
-      "codice": "PRE-2026035",
-      "cliente": "cli_sim_37",
-      "data": "2026-02-03",
-      "dataScadenza": "2026-03-05",
-      "stato": "inviato",
-      "righe": [
-        {
-          "prodotto": "prod_025-01-20",
-          "descrizione": "dado pressacavo",
-          "quantita": 1,
-          "prezzoUnitario": 0.4,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 5,
-          "prezzoUnitario": 7.9,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-scheda-led-std-12-led",
-          "descrizione": "scheda led STD 12 LED",
-          "quantita": 1,
-          "prezzoUnitario": 12.93,
-          "sconto": 5
-        },
-        {
           "prodotto": "prod_sideis_one_cv",
           "descrizione": "Faretto SIDEis ONE CV",
-          "quantita": 9,
+          "quantita": 1,
           "prezzoUnitario": 79.82,
           "sconto": 0
-        },
-        {
-          "prodotto": "prod_003-01-22",
-          "descrizione": "DISSIPATORE SIDEIS",
-          "quantita": 9,
-          "prezzoUnitario": 4.87,
-          "sconto": 0
         }
       ],
-      "imponibile": 814.3934999999999,
-      "tasse": 179.16656999999998,
-      "totale": 993.5600699999999,
-      "note": "Preventivo generato per simulazione."
-    },
-    {
-      "id": "prev_sim_36",
-      "codice": "PRE-2026036",
-      "cliente": "cli_sim_9",
-      "data": "2026-05-28",
-      "dataScadenza": "2026-06-27",
-      "stato": "bozza",
-      "righe": [
-        {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
-          "quantita": 8,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
-          "quantita": 2,
-          "prezzoUnitario": 3.78,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-marchi-dx",
-          "descrizione": "ETICHETTA MARCHI DX",
-          "quantita": 7,
-          "prezzoUnitario": 0.22,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_sideis_one_cc",
-          "descrizione": "Faretto SIDEis ONE CC",
-          "quantita": 10,
-          "prezzoUnitario": 62.37,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_033-01-20",
-          "descrizione": "O-RING X VITI CHIUSURA",
-          "quantita": 3,
-          "prezzoUnitario": 0.17,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 634.9159999999999,
-      "tasse": 139.68151999999998,
-      "totale": 774.5975199999999,
-      "note": "Preventivo generato per simulazione."
-    },
-    {
-      "id": "prev_sim_37",
-      "codice": "PRE-2026037",
-      "cliente": "cli_sim_11",
-      "data": "2026-01-26",
-      "dataScadenza": "2026-02-25",
-      "stato": "accettato",
-      "righe": [
-        {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 4,
-          "prezzoUnitario": 3.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-scheda-led-std-12-led",
-          "descrizione": "scheda led STD 12 LED",
-          "quantita": 3,
-          "prezzoUnitario": 12.93,
-          "sconto": 15
-        },
-        {
-          "prodotto": "prod_auto-scheda-led-std-12-led",
-          "descrizione": "scheda led STD 12 LED",
-          "quantita": 4,
-          "prezzoUnitario": 12.93,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 4,
-          "prezzoUnitario": 0.29,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 98.7715,
-      "tasse": 21.72973,
-      "totale": 120.50123,
-      "note": "Preventivo generato per simulazione."
-    },
-    {
-      "id": "prev_sim_38",
-      "codice": "PRE-2026038",
-      "cliente": "cli_sim_7",
-      "data": "2026-02-17",
-      "dataScadenza": "2026-03-19",
-      "stato": "inviato",
-      "righe": [
-        {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 10,
-          "prezzoUnitario": 9.49,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 94.9,
-      "tasse": 20.878,
-      "totale": 115.778,
-      "note": "Preventivo generato per simulazione."
-    },
-    {
-      "id": "prev_sim_39",
-      "codice": "PRE-2026039",
-      "cliente": "cli_sim_30",
-      "data": "2026-03-12",
-      "dataScadenza": "2026-04-11",
-      "stato": "rifiutato",
-      "righe": [
-        {
-          "prodotto": "prod_sideis_one_cc",
-          "descrizione": "Faretto SIDEis ONE CC",
-          "quantita": 6,
-          "prezzoUnitario": 62.37,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_032-01-20",
-          "descrizione": "CAVO H05RN-F 2x0,75",
-          "quantita": 2,
-          "prezzoUnitario": 1.83,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 9,
-          "prezzoUnitario": 9.49,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-prodotto-sx",
-          "descrizione": "ETICHETTA PRODOTTO SX",
-          "quantita": 6,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 464.60999999999996,
-      "tasse": 102.21419999999999,
-      "totale": 566.8241999999999,
-      "note": "Preventivo generato per simulazione."
-    },
-    {
-      "id": "prev_sim_40",
-      "codice": "PRE-2026040",
-      "cliente": "cli_sim_28",
-      "data": "2026-04-12",
-      "dataScadenza": "2026-05-12",
-      "stato": "scaduto",
-      "righe": [
-        {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 7,
-          "prezzoUnitario": 0.4,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 9,
-          "prezzoUnitario": 7.9,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 73.9,
-      "tasse": 16.258000000000003,
-      "totale": 90.158,
-      "note": "Preventivo generato per simulazione."
-    },
-    {
-      "id": "prev_sim_41",
-      "codice": "PRE-2026041",
-      "cliente": "cli_sim_17",
-      "data": "2026-05-28",
-      "dataScadenza": "2026-06-27",
-      "stato": "accettato",
-      "righe": [
-        {
-          "prodotto": "prod_10014",
-          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
-          "quantita": 8,
-          "prezzoUnitario": 0.18,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 10,
-          "prezzoUnitario": 3.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10250",
-          "descrizione": "PASTA TERMOCONDUTTIVA",
-          "quantita": 4,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_003-01-22",
-          "descrizione": "DISSIPATORE SIDEIS",
-          "quantita": 2,
-          "prezzoUnitario": 4.87,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 44.279999999999994,
-      "tasse": 9.741599999999998,
-      "totale": 54.02159999999999,
-      "note": "Preventivo generato per simulazione."
-    },
-    {
-      "id": "prev_sim_42",
-      "codice": "PRE-2026042",
-      "cliente": "cli_sim_37",
-      "data": "2026-06-28",
-      "dataScadenza": "2026-07-28",
-      "stato": "accettato",
-      "righe": [
-        {
-          "prodotto": "prod_10014",
-          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
-          "quantita": 1,
-          "prezzoUnitario": 0.18,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 7,
-          "prezzoUnitario": 0.4,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 9,
-          "prezzoUnitario": 9.49,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 4,
-          "prezzoUnitario": 0.4,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 89.99,
-      "tasse": 19.7978,
-      "totale": 109.78779999999999,
-      "note": "Preventivo generato per simulazione."
-    },
-    {
-      "id": "prev_sim_43",
-      "codice": "PRE-2026043",
-      "cliente": "cli_sim_2",
-      "data": "2026-03-22",
-      "dataScadenza": "2026-04-21",
-      "stato": "inviato",
-      "righe": [
-        {
-          "prodotto": "prod_033-01-20",
-          "descrizione": "O-RING X VITI CHIUSURA",
-          "quantita": 9,
-          "prezzoUnitario": 0.17,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10031",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 10,
-          "prezzoUnitario": 5.25,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_012-01-20",
-          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
-          "quantita": 4,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-marchi-dx",
-          "descrizione": "ETICHETTA MARCHI DX",
-          "quantita": 8,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 56.589999999999996,
-      "tasse": 12.4498,
-      "totale": 69.0398,
+      "imponibile": 79.82,
+      "tasse": 17.560399999999998,
+      "totale": 97.3804,
       "note": "Preventivo generato per simulazione."
     },
     {
       "id": "prev_sim_44",
-      "codice": "PRE-2026044",
-      "cliente": "cli_sim_15",
-      "data": "2026-05-10",
-      "dataScadenza": "2026-06-09",
+      "numero": "PRE-2026044",
+      "cliente": "cli_sim_4",
+      "data": "2026-04-10",
+      "dataScadenza": "2026-05-10",
       "stato": "rifiutato",
       "righe": [
         {
-          "prodotto": "prod_sideis_one_cv",
-          "descrizione": "Faretto SIDEis ONE CV",
-          "quantita": 4,
-          "prezzoUnitario": 79.82,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 7,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         }
       ],
-      "imponibile": 319.28,
-      "tasse": 70.24159999999999,
-      "totale": 389.5216,
+      "imponibile": 436.59,
+      "tasse": 96.04979999999999,
+      "totale": 532.6397999999999,
       "note": "Preventivo generato per simulazione."
     },
     {
       "id": "prev_sim_45",
-      "codice": "PRE-2026045",
-      "cliente": "cli_sim_7",
-      "data": "2026-05-12",
-      "dataScadenza": "2026-06-11",
-      "stato": "rifiutato",
+      "numero": "PRE-2026045",
+      "cliente": "cli_sim_25",
+      "data": "2026-05-15",
+      "dataScadenza": "2026-06-14",
+      "stato": "bozza",
       "righe": [
         {
-          "prodotto": "prod_10248",
-          "descrizione": "SILICONE",
-          "quantita": 4,
-          "prezzoUnitario": 0.48,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 2,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 5,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         }
       ],
-      "imponibile": 1.92,
-      "tasse": 0.4224,
-      "totale": 2.3424,
+      "imponibile": 471.48999999999995,
+      "tasse": 103.72779999999999,
+      "totale": 575.2177999999999,
       "note": "Preventivo generato per simulazione."
     },
     {
       "id": "prev_sim_46",
-      "codice": "PRE-2026046",
-      "cliente": "cli_sim_25",
-      "data": "2026-05-04",
-      "dataScadenza": "2026-06-03",
-      "stato": "rifiutato",
+      "numero": "PRE-2026046",
+      "cliente": "cli_sim_35",
+      "data": "2026-06-25",
+      "dataScadenza": "2026-07-25",
+      "stato": "bozza",
       "righe": [
         {
-          "prodotto": "prod_012-01-20",
-          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
-          "quantita": 9,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10277",
-          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
-          "quantita": 5,
-          "prezzoUnitario": 0.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 1,
-          "prezzoUnitario": 0.21,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 7,
-          "prezzoUnitario": 7.9,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 2,
-          "prezzoUnitario": 7.9,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 7,
+          "prezzoUnitario": 79.82,
+          "sconto": 15
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 10,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 1,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         }
       ],
-      "imponibile": 74.26,
-      "tasse": 16.337200000000003,
-      "totale": 90.5972,
+      "imponibile": 1320.6389999999997,
+      "tasse": 290.5405799999999,
+      "totale": 1611.1795799999995,
       "note": "Preventivo generato per simulazione."
     },
     {
       "id": "prev_sim_47",
-      "codice": "PRE-2026047",
-      "cliente": "cli_sim_18",
-      "data": "2026-05-09",
-      "dataScadenza": "2026-06-08",
-      "stato": "bozza",
+      "numero": "PRE-2026047",
+      "cliente": "cli_sim_27",
+      "data": "2026-02-17",
+      "dataScadenza": "2026-03-19",
+      "stato": "rifiutato",
       "righe": [
         {
-          "prodotto": "prod_032-01-20",
-          "descrizione": "CAVO H05RN-F 2x0,75",
-          "quantita": 8,
-          "prezzoUnitario": 1.83,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 3,
+          "prezzoUnitario": 79.82,
           "sconto": 5
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 9,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 8,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 6,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
         }
       ],
-      "imponibile": 13.908,
-      "tasse": 3.05976,
-      "totale": 16.96776,
+      "imponibile": 1661.9969999999998,
+      "tasse": 365.63933999999995,
+      "totale": 2027.6363399999998,
       "note": "Preventivo generato per simulazione."
     },
     {
       "id": "prev_sim_48",
-      "codice": "PRE-2026048",
-      "cliente": "cli_sim_7",
-      "data": "2026-05-28",
-      "dataScadenza": "2026-06-27",
-      "stato": "rifiutato",
+      "numero": "PRE-2026048",
+      "cliente": "cli_sim_13",
+      "data": "2026-04-26",
+      "dataScadenza": "2026-05-26",
+      "stato": "scaduto",
       "righe": [
         {
-          "prodotto": "prod_auto-etichetta-prodotto-sx",
-          "descrizione": "ETICHETTA PRODOTTO SX",
-          "quantita": 3,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 1,
-          "prezzoUnitario": 0.21,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 2,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         }
       ],
-      "imponibile": 0.87,
-      "tasse": 0.1914,
-      "totale": 1.0614,
+      "imponibile": 124.74,
+      "tasse": 27.4428,
+      "totale": 152.1828,
       "note": "Preventivo generato per simulazione."
     },
     {
       "id": "prev_sim_49",
-      "codice": "PRE-2026049",
-      "cliente": "cli_sim_17",
-      "data": "2026-01-07",
-      "dataScadenza": "2026-02-06",
+      "numero": "PRE-2026049",
+      "cliente": "cli_sim_39",
+      "data": "2026-05-23",
+      "dataScadenza": "2026-06-22",
       "stato": "inviato",
       "righe": [
         {
-          "prodotto": "prod_032-01-20",
-          "descrizione": "CAVO H05RN-F 2x0,75",
-          "quantita": 6,
-          "prezzoUnitario": 1.83,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 10,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         },
         {
-          "prodotto": "prod_10277",
-          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
-          "quantita": 9,
-          "prezzoUnitario": 0.23,
-          "sconto": 0
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 5,
+          "prezzoUnitario": 79.82,
+          "sconto": 5
         },
         {
-          "prodotto": "prod_auto-etichetta-marchi-dx",
-          "descrizione": "ETICHETTA MARCHI DX",
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
           "quantita": 6,
-          "prezzoUnitario": 0.22,
-          "sconto": 10
+          "prezzoUnitario": 62.37,
+          "sconto": 0
         }
       ],
-      "imponibile": 14.238000000000001,
-      "tasse": 3.1323600000000003,
-      "totale": 17.37036,
+      "imponibile": 1377.0649999999998,
+      "tasse": 302.9543,
+      "totale": 1680.0192999999997,
       "note": "Preventivo generato per simulazione."
     },
     {
       "id": "prev_sim_50",
-      "codice": "PRE-2026050",
-      "cliente": "cli_sim_24",
-      "data": "2026-05-29",
-      "dataScadenza": "2026-06-28",
-      "stato": "inviato",
+      "numero": "PRE-2026050",
+      "cliente": "cli_sim_7",
+      "data": "2026-02-02",
+      "dataScadenza": "2026-03-04",
+      "stato": "bozza",
       "righe": [
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 7,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
         {
           "prodotto": "prod_sideis_one_cv",
           "descrizione": "Faretto SIDEis ONE CV",
-          "quantita": 1,
+          "quantita": 4,
           "prezzoUnitario": 79.82,
           "sconto": 0
         },
         {
-          "prodotto": "prod_10017",
-          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
           "quantita": 2,
-          "prezzoUnitario": 0.2,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         },
         {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
           "quantita": 3,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
+          "prezzoUnitario": 62.37,
+          "sconto": 15
         },
         {
-          "prodotto": "prod_10217",
-          "descrizione": "scheda driver interna std",
-          "quantita": 4,
-          "prezzoUnitario": 16.07,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10248",
-          "descrizione": "SILICONE",
-          "quantita": 1,
-          "prezzoUnitario": 0.48,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 145.64,
-      "tasse": 32.0408,
-      "totale": 177.68079999999998,
+      "imponibile": 1837.8534999999997,
+      "tasse": 404.32776999999993,
+      "totale": 2242.1812699999996,
       "note": "Preventivo generato per simulazione."
     },
     {
       "id": "prev_sim_51",
-      "codice": "PRE-2026051",
-      "cliente": "cli_sim_3",
-      "data": "2026-04-02",
-      "dataScadenza": "2026-05-02",
-      "stato": "rifiutato",
+      "numero": "PRE-2026051",
+      "cliente": "cli_sim_32",
+      "data": "2026-05-27",
+      "dataScadenza": "2026-06-26",
+      "stato": "bozza",
       "righe": [
         {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 1,
-          "prezzoUnitario": 9.49,
-          "sconto": 0
+          "prezzoUnitario": 79.82,
+          "sconto": 15
         },
         {
-          "prodotto": "prod_10031",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 10,
-          "prezzoUnitario": 5.25,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_025-01-20",
-          "descrizione": "dado pressacavo",
-          "quantita": 3,
-          "prezzoUnitario": 0.4,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10248",
-          "descrizione": "SILICONE",
-          "quantita": 9,
-          "prezzoUnitario": 0.48,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 8,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 67.51,
-      "tasse": 14.852200000000002,
-      "totale": 82.3622,
+      "imponibile": 706.4069999999999,
+      "tasse": 155.40954,
+      "totale": 861.8165399999999,
       "note": "Preventivo generato per simulazione."
     },
     {
       "id": "prev_sim_52",
-      "codice": "PRE-2026052",
-      "cliente": "cli_sim_34",
-      "data": "2026-04-10",
-      "dataScadenza": "2026-05-10",
-      "stato": "scaduto",
+      "numero": "PRE-2026052",
+      "cliente": "cli_sim_21",
+      "data": "2026-06-12",
+      "dataScadenza": "2026-07-12",
+      "stato": "inviato",
       "righe": [
         {
-          "prodotto": "prod_032-01-20",
-          "descrizione": "CAVO H05RN-F 2x0,75",
-          "quantita": 10,
-          "prezzoUnitario": 1.83,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 5,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         },
         {
-          "prodotto": "prod_10031",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 5,
-          "prezzoUnitario": 5.25,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 6,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 8,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 44.55,
-      "tasse": 9.801,
-      "totale": 54.35099999999999,
+      "imponibile": 3008.2799999999997,
+      "tasse": 661.8216,
+      "totale": 3670.1015999999995,
       "note": "Preventivo generato per simulazione."
     },
     {
       "id": "prev_sim_53",
-      "codice": "PRE-2026053",
-      "cliente": "cli_sim_10",
-      "data": "2026-01-20",
-      "dataScadenza": "2026-02-19",
-      "stato": "bozza",
+      "numero": "PRE-2026053",
+      "cliente": "cli_sim_1",
+      "data": "2026-01-11",
+      "dataScadenza": "2026-02-10",
+      "stato": "scaduto",
       "righe": [
         {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 5,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 9,
-          "prezzoUnitario": 0.22,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         },
         {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 10,
-          "prezzoUnitario": 0.29,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10031",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 9,
-          "prezzoUnitario": 5.25,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 2,
-          "prezzoUnitario": 0.4,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 6,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         }
       ],
-      "imponibile": 52.93,
-      "tasse": 11.6446,
-      "totale": 64.5746,
+      "imponibile": 1491.6999999999998,
+      "tasse": 328.174,
+      "totale": 1819.8739999999998,
       "note": "Preventivo generato per simulazione."
     },
     {
       "id": "prev_sim_54",
-      "codice": "PRE-2026054",
-      "cliente": "cli_sim_33",
-      "data": "2026-06-02",
-      "dataScadenza": "2026-07-02",
+      "numero": "PRE-2026054",
+      "cliente": "cli_sim_29",
+      "data": "2026-03-04",
+      "dataScadenza": "2026-04-03",
       "stato": "accettato",
       "righe": [
         {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
-          "quantita": 1,
-          "prezzoUnitario": 0.22,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 7,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 2,
+          "prezzoUnitario": 79.82,
+          "sconto": 5
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 3,
+          "prezzoUnitario": 62.37,
+          "sconto": 15
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 8,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 0.22,
-      "tasse": 0.0484,
-      "totale": 0.26839999999999997,
+      "imponibile": 2306.2015,
+      "tasse": 507.36433000000005,
+      "totale": 2813.56583,
       "note": "Preventivo generato per simulazione."
     },
     {
       "id": "prev_sim_55",
-      "codice": "PRE-2026055",
-      "cliente": "cli_sim_16",
-      "data": "2026-01-11",
-      "dataScadenza": "2026-02-10",
-      "stato": "accettato",
+      "numero": "PRE-2026055",
+      "cliente": "cli_sim_1",
+      "data": "2026-05-31",
+      "dataScadenza": "2026-06-30",
+      "stato": "scaduto",
       "righe": [
         {
-          "prodotto": "prod_10277",
-          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
-          "quantita": 10,
-          "prezzoUnitario": 0.23,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 7,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         },
         {
-          "prodotto": "prod_025-01-20",
-          "descrizione": "dado pressacavo",
-          "quantita": 9,
-          "prezzoUnitario": 0.4,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 6,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         },
         {
@@ -2669,313 +2620,82 @@ window.CRM_SEED_DATA = {
           "quantita": 3,
           "prezzoUnitario": 79.82,
           "sconto": 0
-        },
-        {
-          "prodotto": "prod_10248",
-          "descrizione": "SILICONE",
-          "quantita": 9,
-          "prezzoUnitario": 0.48,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10036",
-          "descrizione": "passacavo M12x1,5",
-          "quantita": 6,
-          "prezzoUnitario": 0.32,
-          "sconto": 0
         }
       ],
-      "imponibile": 251.59999999999997,
-      "tasse": 55.35199999999999,
-      "totale": 306.95199999999994,
+      "imponibile": 1277.12,
+      "tasse": 280.96639999999996,
+      "totale": 1558.0864,
       "note": "Preventivo generato per simulazione."
     },
     {
       "id": "prev_sim_56",
-      "codice": "PRE-2026056",
-      "cliente": "cli_sim_31",
-      "data": "2026-05-20",
-      "dataScadenza": "2026-06-19",
-      "stato": "rifiutato",
+      "numero": "PRE-2026056",
+      "cliente": "cli_sim_13",
+      "data": "2026-03-11",
+      "dataScadenza": "2026-04-10",
+      "stato": "accettato",
       "righe": [
         {
-          "prodotto": "prod_auto-scheda-led-std-12-led",
-          "descrizione": "scheda led STD 12 LED",
-          "quantita": 8,
-          "prezzoUnitario": 12.93,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 2,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         },
         {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 5,
-          "prezzoUnitario": 9.49,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         },
         {
-          "prodotto": "prod_012-01-20",
-          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
-          "quantita": 8,
-          "prezzoUnitario": 0.2,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 7,
+          "prezzoUnitario": 62.37,
           "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 3,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 4,
+          "prezzoUnitario": 79.82,
+          "sconto": 15
         }
       ],
-      "imponibile": 152.48999999999998,
-      "tasse": 33.547799999999995,
-      "totale": 186.03779999999998,
+      "imponibile": 1418.9279999999997,
+      "tasse": 312.1641599999999,
+      "totale": 1731.0921599999995,
       "note": "Preventivo generato per simulazione."
     },
     {
       "id": "prev_sim_57",
-      "codice": "PRE-2026057",
-      "cliente": "cli_sim_16",
-      "data": "2026-04-27",
-      "dataScadenza": "2026-05-27",
-      "stato": "scaduto",
-      "righe": [
-        {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 7,
-          "prezzoUnitario": 9.49,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 66.43,
-      "tasse": 14.614600000000001,
-      "totale": 81.0446,
-      "note": "Preventivo generato per simulazione."
-    },
-    {
-      "id": "prev_sim_58",
-      "codice": "PRE-2026058",
-      "cliente": "cli_sim_12",
-      "data": "2026-06-21",
-      "dataScadenza": "2026-07-21",
-      "stato": "inviato",
-      "righe": [
-        {
-          "prodotto": "prod_012-01-20",
-          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
-          "quantita": 4,
-          "prezzoUnitario": 0.2,
-          "sconto": 5
-        },
-        {
-          "prodotto": "prod_10248",
-          "descrizione": "SILICONE",
-          "quantita": 9,
-          "prezzoUnitario": 0.48,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 5.08,
-      "tasse": 1.1176,
-      "totale": 6.1975999999999996,
-      "note": "Preventivo generato per simulazione."
-    },
-    {
-      "id": "prev_sim_59",
-      "codice": "PRE-2026059",
-      "cliente": "cli_sim_4",
-      "data": "2026-01-09",
-      "dataScadenza": "2026-02-08",
+      "numero": "PRE-2026057",
+      "cliente": "cli_sim_40",
+      "data": "2026-04-25",
+      "dataScadenza": "2026-05-25",
       "stato": "rifiutato",
       "righe": [
         {
-          "prodotto": "prod_auto-scheda-led-std-12-led",
-          "descrizione": "scheda led STD 12 LED",
-          "quantita": 7,
-          "prezzoUnitario": 12.93,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 5,
-          "prezzoUnitario": 0.21,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 8,
-          "prezzoUnitario": 0.4,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
-          "quantita": 8,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10014",
-          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 6,
-          "prezzoUnitario": 0.18,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 97.6,
-      "tasse": 21.471999999999998,
-      "totale": 119.07199999999999,
-      "note": "Preventivo generato per simulazione."
-    },
-    {
-      "id": "prev_sim_60",
-      "codice": "PRE-2026060",
-      "cliente": "cli_sim_37",
-      "data": "2026-04-07",
-      "dataScadenza": "2026-05-07",
-      "stato": "scaduto",
-      "righe": [
-        {
-          "prodotto": "prod_10250",
-          "descrizione": "PASTA TERMOCONDUTTIVA",
-          "quantita": 5,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
+          "prezzoUnitario": 79.82,
+          "sconto": 10
         },
         {
-          "prodotto": "prod_auto-etichetta-prodotto-sx",
-          "descrizione": "ETICHETTA PRODOTTO SX",
-          "quantita": 2,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_012-01-20",
-          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
-          "quantita": 7,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 8,
-          "prezzoUnitario": 0.4,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_032-01-20",
-          "descrizione": "CAVO H05RN-F 2x0,75",
-          "quantita": 8,
-          "prezzoUnitario": 1.83,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 20.68,
-      "tasse": 4.5496,
-      "totale": 25.229599999999998,
-      "note": "Preventivo generato per simulazione."
-    },
-    {
-      "id": "prev_sim_61",
-      "codice": "PRE-2026061",
-      "cliente": "cli_sim_27",
-      "data": "2026-05-17",
-      "dataScadenza": "2026-06-16",
-      "stato": "rifiutato",
-      "righe": [
-        {
-          "prodotto": "prod_10036",
-          "descrizione": "passacavo M12x1,5",
-          "quantita": 5,
-          "prezzoUnitario": 0.32,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 1.6,
-      "tasse": 0.35200000000000004,
-      "totale": 1.952,
-      "note": "Preventivo generato per simulazione."
-    },
-    {
-      "id": "prev_sim_62",
-      "codice": "PRE-2026062",
-      "cliente": "cli_sim_21",
-      "data": "2026-05-30",
-      "dataScadenza": "2026-06-29",
-      "stato": "accettato",
-      "righe": [
-        {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 7,
-          "prezzoUnitario": 7.9,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 55.300000000000004,
-      "tasse": 12.166,
-      "totale": 67.46600000000001,
-      "note": "Preventivo generato per simulazione."
-    },
-    {
-      "id": "prev_sim_63",
-      "codice": "PRE-2026063",
-      "cliente": "cli_sim_20",
-      "data": "2026-05-05",
-      "dataScadenza": "2026-06-04",
-      "stato": "inviato",
-      "righe": [
-        {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 2,
-          "prezzoUnitario": 0.4,
-          "sconto": 15
-        },
-        {
-          "prodotto": "prod_10031",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 10,
-          "prezzoUnitario": 5.25,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 53.18,
-      "tasse": 11.6996,
-      "totale": 64.8796,
-      "note": "Preventivo generato per simulazione."
-    },
-    {
-      "id": "prev_sim_64",
-      "codice": "PRE-2026064",
-      "cliente": "cli_sim_10",
-      "data": "2026-03-24",
-      "dataScadenza": "2026-04-23",
-      "stato": "inviato",
-      "righe": [
-        {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 1,
-          "prezzoUnitario": 0.21,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 0.21,
-      "tasse": 0.0462,
-      "totale": 0.2562,
-      "note": "Preventivo generato per simulazione."
-    },
-    {
-      "id": "prev_sim_65",
-      "codice": "PRE-2026065",
-      "cliente": "cli_sim_36",
-      "data": "2026-05-31",
-      "dataScadenza": "2026-06-30",
-      "stato": "bozza",
-      "righe": [
-        {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 4,
-          "prezzoUnitario": 9.49,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         },
         {
@@ -2986,536 +2706,739 @@ window.CRM_SEED_DATA = {
           "sconto": 0
         },
         {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
-          "quantita": 4,
-          "prezzoUnitario": 3.78,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         },
         {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 7,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 2304.378,
+      "tasse": 506.96316,
+      "totale": 2811.34116,
+      "note": "Preventivo generato per simulazione."
+    },
+    {
+      "id": "prev_sim_58",
+      "numero": "PRE-2026058",
+      "cliente": "cli_sim_11",
+      "data": "2026-04-21",
+      "dataScadenza": "2026-05-21",
+      "stato": "rifiutato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 1,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 7,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 8,
+          "prezzoUnitario": 79.82,
+          "sconto": 15
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 1,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 3,
-          "prezzoUnitario": 0.4,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 1343.5659999999998,
+      "tasse": 295.58451999999994,
+      "totale": 1639.1505199999997,
+      "note": "Preventivo generato per simulazione."
+    },
+    {
+      "id": "prev_sim_59",
+      "numero": "PRE-2026059",
+      "cliente": "cli_sim_3",
+      "data": "2026-05-19",
+      "dataScadenza": "2026-06-18",
+      "stato": "bozza",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 5,
+          "prezzoUnitario": 79.82,
+          "sconto": 5
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 10,
+          "prezzoUnitario": 62.37,
+          "sconto": 5
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 8,
+          "prezzoUnitario": 79.82,
+          "sconto": 5
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 9,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 9,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 2858.0019999999995,
+      "tasse": 628.7604399999999,
+      "totale": 3486.7624399999995,
+      "note": "Preventivo generato per simulazione."
+    },
+    {
+      "id": "prev_sim_60",
+      "numero": "PRE-2026060",
+      "cliente": "cli_sim_31",
+      "data": "2026-01-30",
+      "dataScadenza": "2026-03-01",
+      "stato": "bozza",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 1,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 9,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 8,
+          "prezzoUnitario": 79.82,
           "sconto": 10
         }
       ],
-      "imponibile": 612.9000000000001,
-      "tasse": 134.83800000000002,
-      "totale": 747.738,
+      "imponibile": 1996.6039999999998,
+      "tasse": 439.25287999999995,
+      "totale": 2435.85688,
+      "note": "Preventivo generato per simulazione."
+    },
+    {
+      "id": "prev_sim_61",
+      "numero": "PRE-2026061",
+      "cliente": "cli_sim_33",
+      "data": "2026-05-27",
+      "dataScadenza": "2026-06-26",
+      "stato": "rifiutato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 5,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 6,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 773.3199999999999,
+      "tasse": 170.13039999999998,
+      "totale": 943.4504,
+      "note": "Preventivo generato per simulazione."
+    },
+    {
+      "id": "prev_sim_62",
+      "numero": "PRE-2026062",
+      "cliente": "cli_sim_36",
+      "data": "2026-04-24",
+      "dataScadenza": "2026-05-24",
+      "stato": "accettato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 7,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 558.74,
+      "tasse": 122.92280000000001,
+      "totale": 681.6628,
+      "note": "Preventivo generato per simulazione."
+    },
+    {
+      "id": "prev_sim_63",
+      "numero": "PRE-2026063",
+      "cliente": "cli_sim_9",
+      "data": "2026-06-18",
+      "dataScadenza": "2026-07-18",
+      "stato": "scaduto",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 7,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 10,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 1980.6399999999999,
+      "tasse": 435.7408,
+      "totale": 2416.3808,
+      "note": "Preventivo generato per simulazione."
+    },
+    {
+      "id": "prev_sim_64",
+      "numero": "PRE-2026064",
+      "cliente": "cli_sim_16",
+      "data": "2026-06-05",
+      "dataScadenza": "2026-07-05",
+      "stato": "bozza",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 5,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 6,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 1,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 957.8399999999999,
+      "tasse": 210.7248,
+      "totale": 1168.5647999999999,
+      "note": "Preventivo generato per simulazione."
+    },
+    {
+      "id": "prev_sim_65",
+      "numero": "PRE-2026065",
+      "cliente": "cli_sim_1",
+      "data": "2026-03-26",
+      "dataScadenza": "2026-04-25",
+      "stato": "inviato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 9,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 9,
+          "prezzoUnitario": 79.82,
+          "sconto": 5
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 5,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 1712.6909999999998,
+      "tasse": 376.79202,
+      "totale": 2089.4830199999997,
       "note": "Preventivo generato per simulazione."
     },
     {
       "id": "prev_sim_66",
-      "codice": "PRE-2026066",
-      "cliente": "cli_sim_3",
-      "data": "2026-04-21",
-      "dataScadenza": "2026-05-21",
-      "stato": "bozza",
+      "numero": "PRE-2026066",
+      "cliente": "cli_sim_1",
+      "data": "2026-05-21",
+      "dataScadenza": "2026-06-20",
+      "stato": "scaduto",
       "righe": [
         {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 8,
-          "prezzoUnitario": 7.9,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-marchi-dx",
-          "descrizione": "ETICHETTA MARCHI DX",
-          "quantita": 2,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
-          "quantita": 4,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 8,
-          "prezzoUnitario": 3.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-prodotto-sx",
-          "descrizione": "ETICHETTA PRODOTTO SX",
-          "quantita": 4,
-          "prezzoUnitario": 0.22,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 5,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 91.24,
-      "tasse": 20.072799999999997,
-      "totale": 111.3128,
+      "imponibile": 399.09999999999997,
+      "tasse": 87.80199999999999,
+      "totale": 486.90199999999993,
       "note": "Preventivo generato per simulazione."
     },
     {
       "id": "prev_sim_67",
-      "codice": "PRE-2026067",
-      "cliente": "cli_sim_6",
-      "data": "2026-01-20",
-      "dataScadenza": "2026-02-19",
-      "stato": "bozza",
+      "numero": "PRE-2026067",
+      "cliente": "cli_sim_31",
+      "data": "2026-02-13",
+      "dataScadenza": "2026-03-15",
+      "stato": "scaduto",
       "righe": [
         {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 9,
-          "prezzoUnitario": 3.78,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 34.019999999999996,
-      "tasse": 7.484399999999999,
-      "totale": 41.5044,
+      "imponibile": 1516.58,
+      "tasse": 333.6476,
+      "totale": 1850.2276,
       "note": "Preventivo generato per simulazione."
     },
     {
       "id": "prev_sim_68",
-      "codice": "PRE-2026068",
-      "cliente": "cli_sim_14",
-      "data": "2026-03-10",
-      "dataScadenza": "2026-04-09",
+      "numero": "PRE-2026068",
+      "cliente": "cli_sim_8",
+      "data": "2026-04-12",
+      "dataScadenza": "2026-05-12",
       "stato": "bozza",
       "righe": [
         {
-          "prodotto": "prod_10248",
-          "descrizione": "SILICONE",
-          "quantita": 4,
-          "prezzoUnitario": 0.48,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 7,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         },
         {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 10,
-          "prezzoUnitario": 9.49,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 6,
+          "prezzoUnitario": 79.82,
+          "sconto": 10
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 1,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 7,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 8,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 96.82000000000001,
-      "tasse": 21.300400000000003,
-      "totale": 118.1204,
+      "imponibile": 2144.738,
+      "tasse": 471.84236,
+      "totale": 2616.58036,
       "note": "Preventivo generato per simulazione."
     },
     {
       "id": "prev_sim_69",
-      "codice": "PRE-2026069",
-      "cliente": "cli_sim_3",
-      "data": "2026-01-27",
-      "dataScadenza": "2026-02-26",
-      "stato": "scaduto",
+      "numero": "PRE-2026069",
+      "cliente": "cli_sim_13",
+      "data": "2026-02-25",
+      "dataScadenza": "2026-03-27",
+      "stato": "accettato",
       "righe": [
         {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
-          "quantita": 4,
-          "prezzoUnitario": 3.78,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 7,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         },
         {
-          "prodotto": "prod_10277",
-          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
-          "quantita": 2,
-          "prezzoUnitario": 0.23,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 8,
+          "prezzoUnitario": 79.82,
           "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 3,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 7,
+          "prezzoUnitario": 79.82,
+          "sconto": 10
         }
       ],
-      "imponibile": 15.58,
-      "tasse": 3.4276,
-      "totale": 19.0076,
+      "imponibile": 1939.626,
+      "tasse": 426.71772,
+      "totale": 2366.34372,
       "note": "Preventivo generato per simulazione."
     },
     {
       "id": "prev_sim_70",
-      "codice": "PRE-2026070",
-      "cliente": "cli_sim_32",
-      "data": "2026-05-07",
-      "dataScadenza": "2026-06-06",
-      "stato": "rifiutato",
+      "numero": "PRE-2026070",
+      "cliente": "cli_sim_22",
+      "data": "2026-03-22",
+      "dataScadenza": "2026-04-21",
+      "stato": "accettato",
       "righe": [
         {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 5,
-          "prezzoUnitario": 9.49,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 10,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         },
         {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 10,
-          "prezzoUnitario": 9.49,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 1,
+          "prezzoUnitario": 62.37,
           "sconto": 10
         },
         {
-          "prodotto": "prod_10277",
-          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
-          "quantita": 1,
-          "prezzoUnitario": 0.23,
-          "sconto": 10
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 7,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
         },
         {
-          "prodotto": "prod_auto-etichetta-marchi-dx",
-          "descrizione": "ETICHETTA MARCHI DX",
-          "quantita": 1,
-          "prezzoUnitario": 0.22,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 6,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         }
       ],
-      "imponibile": 133.287,
-      "tasse": 29.323140000000002,
-      "totale": 162.61014,
+      "imponibile": 1490.643,
+      "tasse": 327.94146,
+      "totale": 1818.58446,
       "note": "Preventivo generato per simulazione."
     },
     {
       "id": "prev_sim_71",
-      "codice": "PRE-2026071",
+      "numero": "PRE-2026071",
       "cliente": "cli_sim_1",
-      "data": "2026-03-05",
-      "dataScadenza": "2026-04-04",
-      "stato": "rifiutato",
+      "data": "2026-03-02",
+      "dataScadenza": "2026-04-01",
+      "stato": "accettato",
       "righe": [
         {
-          "prodotto": "prod_012-01-20",
-          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
-          "quantita": 3,
-          "prezzoUnitario": 0.2,
-          "sconto": 5
-        },
-        {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
-          "quantita": 8,
-          "prezzoUnitario": 0.22,
-          "sconto": 5
-        },
-        {
-          "prodotto": "prod_003-01-22",
-          "descrizione": "DISSIPATORE SIDEIS",
-          "quantita": 4,
-          "prezzoUnitario": 4.87,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
           "quantita": 1,
-          "prezzoUnitario": 0.4,
-          "sconto": 0
+          "prezzoUnitario": 62.37,
+          "sconto": 15
         }
       ],
-      "imponibile": 22.122,
-      "tasse": 4.86684,
-      "totale": 26.98884,
+      "imponibile": 53.0145,
+      "tasse": 11.66319,
+      "totale": 64.67769,
       "note": "Preventivo generato per simulazione."
     },
     {
       "id": "prev_sim_72",
-      "codice": "PRE-2026072",
-      "cliente": "cli_sim_13",
-      "data": "2026-05-01",
-      "dataScadenza": "2026-05-31",
-      "stato": "bozza",
-      "righe": [
-        {
-          "prodotto": "prod_10017",
-          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
-          "quantita": 7,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 9,
-          "prezzoUnitario": 0.21,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
-          "quantita": 9,
-          "prezzoUnitario": 3.78,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
-          "quantita": 3,
-          "prezzoUnitario": 3.78,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
-          "quantita": 3,
-          "prezzoUnitario": 3.78,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 58.855999999999995,
-      "tasse": 12.948319999999999,
-      "totale": 71.80431999999999,
-      "note": "Preventivo generato per simulazione."
-    },
-    {
-      "id": "prev_sim_73",
-      "codice": "PRE-2026073",
-      "cliente": "cli_sim_12",
+      "numero": "PRE-2026072",
+      "cliente": "cli_sim_9",
       "data": "2026-01-30",
       "dataScadenza": "2026-03-01",
       "stato": "scaduto",
       "righe": [
         {
-          "prodotto": "prod_003-01-22",
-          "descrizione": "DISSIPATORE SIDEIS",
-          "quantita": 1,
-          "prezzoUnitario": 4.87,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_10250",
-          "descrizione": "PASTA TERMOCONDUTTIVA",
-          "quantita": 5,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 2,
-          "prezzoUnitario": 0.21,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_025-01-20",
-          "descrizione": "dado pressacavo",
-          "quantita": 2,
-          "prezzoUnitario": 0.4,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 6,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         },
         {
           "prodotto": "prod_sideis_one_cc",
           "descrizione": "Faretto SIDEis ONE CC",
-          "quantita": 1,
+          "quantita": 4,
           "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 9,
+          "prezzoUnitario": 79.82,
+          "sconto": 5
+        }
+      ],
+      "imponibile": 1306.1609999999998,
+      "tasse": 287.35542,
+      "totale": 1593.5164199999997,
+      "note": "Preventivo generato per simulazione."
+    },
+    {
+      "id": "prev_sim_73",
+      "numero": "PRE-2026073",
+      "cliente": "cli_sim_15",
+      "data": "2026-04-24",
+      "dataScadenza": "2026-05-24",
+      "stato": "inviato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 1,
+          "prezzoUnitario": 79.82,
           "sconto": 10
         }
       ],
-      "imponibile": 62.736,
-      "tasse": 13.801919999999999,
-      "totale": 76.53792,
+      "imponibile": 71.838,
+      "tasse": 15.804359999999999,
+      "totale": 87.64236,
       "note": "Preventivo generato per simulazione."
     },
     {
       "id": "prev_sim_74",
-      "codice": "PRE-2026074",
-      "cliente": "cli_sim_28",
-      "data": "2026-05-29",
-      "dataScadenza": "2026-06-28",
-      "stato": "inviato",
+      "numero": "PRE-2026074",
+      "cliente": "cli_sim_37",
+      "data": "2026-04-08",
+      "dataScadenza": "2026-05-08",
+      "stato": "rifiutato",
       "righe": [
         {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 1,
-          "prezzoUnitario": 9.49,
-          "sconto": 5
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 6,
+          "prezzoUnitario": 79.82,
+          "sconto": 15
         },
         {
-          "prodotto": "prod_032-01-20",
-          "descrizione": "CAVO H05RN-F 2x0,75",
-          "quantita": 9,
-          "prezzoUnitario": 1.83,
-          "sconto": 5
-        },
-        {
-          "prodotto": "prod_10250",
-          "descrizione": "PASTA TERMOCONDUTTIVA",
-          "quantita": 3,
-          "prezzoUnitario": 0.2,
-          "sconto": 5
-        },
-        {
-          "prodotto": "prod_sideis_one_cc",
-          "descrizione": "Faretto SIDEis ONE CC",
-          "quantita": 3,
-          "prezzoUnitario": 62.37,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_032-01-20",
-          "descrizione": "CAVO H05RN-F 2x0,75",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 5,
-          "prezzoUnitario": 1.83,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 221.492,
-      "tasse": 48.72824,
-      "totale": 270.22024,
+      "imponibile": 806.1819999999999,
+      "tasse": 177.36003999999997,
+      "totale": 983.5420399999998,
       "note": "Preventivo generato per simulazione."
     },
     {
       "id": "prev_sim_75",
-      "codice": "PRE-2026075",
-      "cliente": "cli_sim_7",
-      "data": "2026-03-13",
-      "dataScadenza": "2026-04-12",
+      "numero": "PRE-2026075",
+      "cliente": "cli_sim_8",
+      "data": "2026-04-03",
+      "dataScadenza": "2026-05-03",
       "stato": "bozza",
       "righe": [
         {
-          "prodotto": "prod_10036",
-          "descrizione": "passacavo M12x1,5",
-          "quantita": 10,
-          "prezzoUnitario": 0.32,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 4,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         },
         {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 5,
-          "prezzoUnitario": 0.29,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 2,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         },
         {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 8,
-          "prezzoUnitario": 7.9,
-          "sconto": 5
-        },
-        {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 5,
-          "prezzoUnitario": 9.49,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_10248",
-          "descrizione": "SILICONE",
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
           "quantita": 3,
-          "prezzoUnitario": 0.48,
-          "sconto": 10
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 10,
+          "prezzoUnitario": 62.37,
+          "sconto": 15
         }
       ],
-      "imponibile": 108.69100000000002,
-      "tasse": 23.912020000000005,
-      "totale": 132.60302000000001,
+      "imponibile": 1091.475,
+      "tasse": 240.12449999999998,
+      "totale": 1331.5994999999998,
       "note": "Preventivo generato per simulazione."
     },
     {
       "id": "prev_sim_76",
-      "codice": "PRE-2026076",
-      "cliente": "cli_sim_8",
-      "data": "2026-02-07",
-      "dataScadenza": "2026-03-09",
-      "stato": "accettato",
+      "numero": "PRE-2026076",
+      "cliente": "cli_sim_25",
+      "data": "2026-04-06",
+      "dataScadenza": "2026-05-06",
+      "stato": "scaduto",
       "righe": [
         {
-          "prodotto": "prod_10217",
-          "descrizione": "scheda driver interna std",
-          "quantita": 1,
-          "prezzoUnitario": 16.07,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 9,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         },
         {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
           "quantita": 5,
-          "prezzoUnitario": 9.49,
-          "sconto": 5
+          "prezzoUnitario": 62.37,
+          "sconto": 0
         },
         {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 9,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
           "quantita": 10,
-          "prezzoUnitario": 0.4,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         },
         {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 7,
-          "prezzoUnitario": 3.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_032-01-20",
-          "descrizione": "CAVO H05RN-F 2x0,75",
-          "quantita": 8,
-          "prezzoUnitario": 1.83,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 102.39750000000001,
-      "tasse": 22.52745,
-      "totale": 124.92495000000001,
+      "imponibile": 2856.4099999999994,
+      "tasse": 628.4101999999999,
+      "totale": 3484.820199999999,
       "note": "Preventivo generato per simulazione."
     },
     {
       "id": "prev_sim_77",
-      "codice": "PRE-2026077",
-      "cliente": "cli_sim_30",
-      "data": "2026-06-23",
-      "dataScadenza": "2026-07-23",
+      "numero": "PRE-2026077",
+      "cliente": "cli_sim_16",
+      "data": "2026-01-29",
+      "dataScadenza": "2026-02-28",
       "stato": "rifiutato",
       "righe": [
         {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 1,
-          "prezzoUnitario": 0.21,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10248",
-          "descrizione": "SILICONE",
-          "quantita": 7,
-          "prezzoUnitario": 0.48,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_012-01-20",
-          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
-          "quantita": 6,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_012-01-20",
-          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
-          "quantita": 9,
-          "prezzoUnitario": 0.2,
-          "sconto": 5
+          "prezzoUnitario": 79.82,
+          "sconto": 15
         }
       ],
-      "imponibile": 6.4799999999999995,
-      "tasse": 1.4256,
-      "totale": 7.905599999999999,
+      "imponibile": 67.847,
+      "tasse": 14.926339999999998,
+      "totale": 82.77333999999999,
       "note": "Preventivo generato per simulazione."
     },
     {
       "id": "prev_sim_78",
-      "codice": "PRE-2026078",
-      "cliente": "cli_sim_40",
-      "data": "2026-03-23",
-      "dataScadenza": "2026-04-22",
-      "stato": "accettato",
+      "numero": "PRE-2026078",
+      "cliente": "cli_sim_17",
+      "data": "2026-03-27",
+      "dataScadenza": "2026-04-26",
+      "stato": "scaduto",
       "righe": [
         {
-          "prodotto": "prod_auto-scheda-led-std-12-led",
-          "descrizione": "scheda led STD 12 LED",
-          "quantita": 8,
-          "prezzoUnitario": 12.93,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 6,
+          "prezzoUnitario": 62.37,
           "sconto": 15
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 2,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
         },
         {
           "prodotto": "prod_sideis_one_cc",
@@ -3525,86 +3448,93 @@ window.CRM_SEED_DATA = {
           "sconto": 0
         },
         {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 1,
-          "prezzoUnitario": 9.49,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 7,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 5,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 596.374,
-      "tasse": 131.20228,
-      "totale": 727.57628,
+      "imponibile": 1812.3769999999997,
+      "tasse": 398.72293999999994,
+      "totale": 2211.0999399999996,
       "note": "Preventivo generato per simulazione."
     },
     {
       "id": "prev_sim_79",
-      "codice": "PRE-2026079",
-      "cliente": "cli_sim_1",
-      "data": "2026-06-27",
-      "dataScadenza": "2026-07-27",
+      "numero": "PRE-2026079",
+      "cliente": "cli_sim_25",
+      "data": "2026-03-25",
+      "dataScadenza": "2026-04-24",
       "stato": "scaduto",
       "righe": [
         {
-          "prodotto": "prod_10250",
-          "descrizione": "PASTA TERMOCONDUTTIVA",
-          "quantita": 9,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 7,
-          "prezzoUnitario": 0.21,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 6,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 3.27,
-      "tasse": 0.7194,
-      "totale": 3.9894,
+      "imponibile": 478.91999999999996,
+      "tasse": 105.3624,
+      "totale": 584.2823999999999,
       "note": "Preventivo generato per simulazione."
     },
     {
       "id": "prev_sim_80",
-      "codice": "PRE-2026080",
-      "cliente": "cli_sim_6",
-      "data": "2026-01-02",
-      "dataScadenza": "2026-02-01",
-      "stato": "inviato",
+      "numero": "PRE-2026080",
+      "cliente": "cli_sim_8",
+      "data": "2026-06-13",
+      "dataScadenza": "2026-07-13",
+      "stato": "accettato",
       "righe": [
         {
-          "prodotto": "prod_032-01-20",
-          "descrizione": "CAVO H05RN-F 2x0,75",
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
           "quantita": 6,
-          "prezzoUnitario": 1.83,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         },
         {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 7,
-          "prezzoUnitario": 9.49,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 9,
-          "prezzoUnitario": 3.23,
+          "prezzoUnitario": 79.82,
+          "sconto": 10
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 1,
+          "prezzoUnitario": 62.37,
+          "sconto": 15
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 6,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         },
         {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 6,
-          "prezzoUnitario": 0.21,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 8,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 107.74000000000002,
-      "tasse": 23.702800000000007,
-      "totale": 131.44280000000003,
+      "imponibile": 2191.2565,
+      "tasse": 482.07643,
+      "totale": 2673.33293,
       "note": "Preventivo generato per simulazione."
     }
   ],
@@ -3612,1332 +3542,1192 @@ window.CRM_SEED_DATA = {
   "ordiniVendita": [
     {
       "id": "ordv_sim_1",
-      "codice": "ORD-2026001",
-      "cliente": "cli_sim_25",
-      "data": "2026-01-17",
-      "stato": "in_lavorazione",
+      "numero": "ORD-2026001",
+      "cliente": "cli_sim_20",
+      "data": "2026-01-26",
+      "stato": "annullato",
       "righe": [
         {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 10,
-          "prezzoUnitario": 0.4,
-          "sconto": 15
-        },
-        {
-          "prodotto": "prod_10017",
-          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
           "quantita": 5,
-          "prezzoUnitario": 0.2,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         },
         {
-          "prodotto": "prod_10014",
-          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
-          "quantita": 9,
-          "prezzoUnitario": 0.18,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 10,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 8,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 6.0200000000000005,
-      "tasse": 1.3244,
-      "totale": 7.3444,
+      "imponibile": 2372.31,
+      "tasse": 521.9082,
+      "totale": 2894.2182,
       "preventivoOrigine": "prev_sim_1",
       "note": "Ordine da preventivo confermato."
     },
     {
       "id": "ordv_sim_2",
-      "codice": "ORD-2026002",
-      "cliente": "cli_sim_36",
-      "data": "2026-03-20",
+      "numero": "ORD-2026002",
+      "cliente": "cli_sim_21",
+      "data": "2026-06-11",
       "stato": "annullato",
       "righe": [
         {
-          "prodotto": "prod_10036",
-          "descrizione": "passacavo M12x1,5",
-          "quantita": 7,
-          "prezzoUnitario": 0.32,
-          "sconto": 15
-        },
-        {
-          "prodotto": "prod_sideis_one_cc",
-          "descrizione": "Faretto SIDEis ONE CC",
-          "quantita": 9,
-          "prezzoUnitario": 62.37,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
-          "quantita": 5,
-          "prezzoUnitario": 3.78,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 582.1339999999999,
-      "tasse": 128.06947999999997,
-      "totale": 710.2034799999999,
-      "preventivoOrigine": "prev_sim_2",
-      "note": "Ordine da preventivo confermato."
-    },
-    {
-      "id": "ordv_sim_3",
-      "codice": "ORD-2026003",
-      "cliente": "cli_sim_16",
-      "data": "2026-01-28",
-      "stato": "annullato",
-      "righe": [
-        {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
-          "quantita": 8,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10277",
-          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
-          "quantita": 7,
-          "prezzoUnitario": 0.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10250",
-          "descrizione": "PASTA TERMOCONDUTTIVA",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 10,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_012-01-20",
-          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
-          "quantita": 7,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10014",
-          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
-          "quantita": 8,
-          "prezzoUnitario": 0.18,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 8.21,
-      "tasse": 1.8062000000000002,
-      "totale": 10.016200000000001,
+      "imponibile": 798.1999999999999,
+      "tasse": 175.60399999999998,
+      "totale": 973.8039999999999,
       "preventivoOrigine": "prev_sim_3",
       "note": "Ordine da preventivo confermato."
     },
     {
-      "id": "ordv_sim_4",
-      "codice": "ORD-2026004",
-      "cliente": "cli_sim_5",
-      "data": "2026-01-30",
-      "stato": "in_lavorazione",
+      "id": "ordv_sim_3",
+      "numero": "ORD-2026003",
+      "cliente": "cli_sim_22",
+      "data": "2026-06-23",
+      "stato": "fatturato",
       "righe": [
         {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 9,
-          "prezzoUnitario": 7.9,
-          "sconto": 10
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 4,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
         },
         {
-          "prodotto": "prod_032-01-20",
-          "descrizione": "CAVO H05RN-F 2x0,75",
-          "quantita": 7,
-          "prezzoUnitario": 1.83,
-          "sconto": 5
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 8,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 5,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 6,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
         }
       ],
-      "imponibile": 76.15950000000001,
-      "tasse": 16.755090000000003,
-      "totale": 92.91459,
+      "imponibile": 1434.51,
+      "tasse": 315.5922,
+      "totale": 1750.1022,
       "preventivoOrigine": "prev_sim_4",
       "note": "Ordine da preventivo confermato."
     },
     {
-      "id": "ordv_sim_5",
-      "codice": "ORD-2026005",
-      "cliente": "cli_sim_29",
-      "data": "2026-02-12",
+      "id": "ordv_sim_4",
+      "numero": "ORD-2026004",
+      "cliente": "cli_sim_31",
+      "data": "2026-06-10",
       "stato": "confermato",
       "righe": [
         {
-          "prodotto": "prod_auto-etichetta-marchi-dx",
-          "descrizione": "ETICHETTA MARCHI DX",
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
           "quantita": 9,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 3,
-          "prezzoUnitario": 0.21,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 9,
-          "prezzoUnitario": 0.29,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-prodotto-sx",
-          "descrizione": "ETICHETTA PRODOTTO SX",
-          "quantita": 9,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
+          "prezzoUnitario": 62.37,
+          "sconto": 5
         }
       ],
-      "imponibile": 7.199999999999999,
-      "tasse": 1.5839999999999999,
-      "totale": 8.783999999999999,
-      "preventivoOrigine": "prev_sim_5",
+      "imponibile": 533.2634999999999,
+      "tasse": 117.31796999999997,
+      "totale": 650.5814699999999,
+      "preventivoOrigine": "prev_sim_6",
       "note": "Ordine da preventivo confermato."
     },
     {
-      "id": "ordv_sim_6",
-      "codice": "ORD-2026006",
-      "cliente": "cli_sim_39",
-      "data": "2026-01-31",
-      "stato": "fatturato",
+      "id": "ordv_sim_5",
+      "numero": "ORD-2026005",
+      "cliente": "cli_sim_27",
+      "data": "2026-03-30",
+      "stato": "confermato",
       "righe": [
         {
-          "prodotto": "prod_025-01-20",
-          "descrizione": "dado pressacavo",
-          "quantita": 10,
-          "prezzoUnitario": 0.4,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 4,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         },
         {
-          "prodotto": "prod_025-01-20",
-          "descrizione": "dado pressacavo",
-          "quantita": 3,
-          "prezzoUnitario": 0.4,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 9,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         },
         {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
-          "quantita": 5,
-          "prezzoUnitario": 3.78,
-          "sconto": 0
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 7,
+          "prezzoUnitario": 79.82,
+          "sconto": 5
         },
         {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 5,
-          "prezzoUnitario": 0.21,
-          "sconto": 0
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 6,
+          "prezzoUnitario": 62.37,
+          "sconto": 5
         }
       ],
-      "imponibile": 25.15,
-      "tasse": 5.5329999999999995,
-      "totale": 30.682999999999996,
+      "imponibile": 1854.172,
+      "tasse": 407.91784,
+      "totale": 2262.08984,
       "preventivoOrigine": "prev_sim_7",
       "note": "Ordine da preventivo confermato."
     },
     {
-      "id": "ordv_sim_7",
-      "codice": "ORD-2026007",
-      "cliente": "cli_sim_21",
-      "data": "2026-02-01",
+      "id": "ordv_sim_6",
+      "numero": "ORD-2026006",
+      "cliente": "cli_sim_19",
+      "data": "2026-01-07",
       "stato": "annullato",
       "righe": [
         {
-          "prodotto": "prod_auto-etichetta-prodotto-sx",
-          "descrizione": "ETICHETTA PRODOTTO SX",
-          "quantita": 7,
-          "prezzoUnitario": 0.22,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 4,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         },
         {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 3,
-          "prezzoUnitario": 0.29,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 5,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 7,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 10,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         }
       ],
-      "imponibile": 2.41,
-      "tasse": 0.5302,
-      "totale": 2.9402,
-      "preventivoOrigine": "prev_sim_8",
+      "imponibile": 1831.02,
+      "tasse": 402.8244,
+      "totale": 2233.8444,
+      "preventivoOrigine": "prev_sim_9",
+      "note": "Ordine da preventivo confermato."
+    },
+    {
+      "id": "ordv_sim_7",
+      "numero": "ORD-2026007",
+      "cliente": "cli_sim_18",
+      "data": "2026-05-18",
+      "stato": "spedito",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 7,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 1234.79,
+      "tasse": 271.6538,
+      "totale": 1506.4438,
+      "preventivoOrigine": "prev_sim_12",
       "note": "Ordine da preventivo confermato."
     },
     {
       "id": "ordv_sim_8",
-      "codice": "ORD-2026008",
-      "cliente": "cli_sim_29",
-      "data": "2026-04-02",
-      "stato": "confermato",
+      "numero": "ORD-2026008",
+      "cliente": "cli_sim_16",
+      "data": "2026-04-06",
+      "stato": "spedito",
       "righe": [
         {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 3,
-          "prezzoUnitario": 0.29,
+          "prezzoUnitario": 79.82,
           "sconto": 0
-        },
+        }
+      ],
+      "imponibile": 239.45999999999998,
+      "tasse": 52.6812,
+      "totale": 292.14119999999997,
+      "preventivoOrigine": "prev_sim_13",
+      "note": "Ordine da preventivo confermato."
+    },
+    {
+      "id": "ordv_sim_9",
+      "numero": "ORD-2026009",
+      "cliente": "cli_sim_14",
+      "data": "2026-01-29",
+      "stato": "fatturato",
+      "righe": [
         {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 4,
-          "prezzoUnitario": 7.9,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10250",
-          "descrizione": "PASTA TERMOCONDUTTIVA",
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
           "quantita": 2,
-          "prezzoUnitario": 0.2,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 1,
+          "prezzoUnitario": 62.37,
           "sconto": 15
         },
         {
           "prodotto": "prod_sideis_one_cc",
           "descrizione": "Faretto SIDEis ONE CC",
-          "quantita": 3,
+          "quantita": 8,
           "prezzoUnitario": 62.37,
           "sconto": 0
         },
         {
-          "prodotto": "prod_sideis_one_cc",
-          "descrizione": "Faretto SIDEis ONE CC",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 5,
-          "prezzoUnitario": 62.37,
+          "prezzoUnitario": 79.82,
           "sconto": 0
-        }
-      ],
-      "imponibile": 531.77,
-      "tasse": 116.9894,
-      "totale": 648.7593999999999,
-      "preventivoOrigine": "prev_sim_11",
-      "note": "Ordine da preventivo confermato."
-    },
-    {
-      "id": "ordv_sim_9",
-      "codice": "ORD-2026009",
-      "cliente": "cli_sim_4",
-      "data": "2026-02-18",
-      "stato": "confermato",
-      "righe": [
+        },
         {
-          "prodotto": "prod_auto-etichetta-prodotto-sx",
-          "descrizione": "ETICHETTA PRODOTTO SX",
-          "quantita": 10,
-          "prezzoUnitario": 0.22,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 8,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 2.2,
-      "tasse": 0.48400000000000004,
-      "totale": 2.684,
+      "imponibile": 1714.3745,
+      "tasse": 377.16238999999996,
+      "totale": 2091.53689,
       "preventivoOrigine": "prev_sim_14",
       "note": "Ordine da preventivo confermato."
     },
     {
       "id": "ordv_sim_10",
-      "codice": "ORD-2026010",
-      "cliente": "cli_sim_15",
-      "data": "2026-06-21",
-      "stato": "confermato",
-      "righe": [
-        {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 1,
-          "prezzoUnitario": 9.49,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 6,
-          "prezzoUnitario": 9.49,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 9,
-          "prezzoUnitario": 9.49,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10014",
-          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
-          "quantita": 6,
-          "prezzoUnitario": 0.18,
-          "sconto": 15
-        },
-        {
-          "prodotto": "prod_003-01-22",
-          "descrizione": "DISSIPATORE SIDEIS",
-          "quantita": 1,
-          "prezzoUnitario": 4.87,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 157.628,
-      "tasse": 34.67816,
-      "totale": 192.30615999999998,
-      "preventivoOrigine": "prev_sim_15",
-      "note": "Ordine da preventivo confermato."
-    },
-    {
-      "id": "ordv_sim_11",
-      "codice": "ORD-2026011",
-      "cliente": "cli_sim_15",
-      "data": "2026-02-02",
-      "stato": "in_lavorazione",
+      "numero": "ORD-2026010",
+      "cliente": "cli_sim_36",
+      "data": "2026-06-25",
+      "stato": "fatturato",
       "righe": [
         {
           "prodotto": "prod_sideis_one_cc",
           "descrizione": "Faretto SIDEis ONE CC",
-          "quantita": 1,
+          "quantita": 2,
           "prezzoUnitario": 62.37,
           "sconto": 0
         },
         {
-          "prodotto": "prod_auto-scheda-led-std-12-led",
-          "descrizione": "scheda led STD 12 LED",
-          "quantita": 5,
-          "prezzoUnitario": 12.93,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 3,
+          "prezzoUnitario": 62.37,
           "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 8,
-          "prezzoUnitario": 0.29,
-          "sconto": 10
         }
       ],
-      "imponibile": 129.108,
-      "tasse": 28.403760000000002,
-      "totale": 157.51176,
+      "imponibile": 311.84999999999997,
+      "tasse": 68.607,
+      "totale": 380.45699999999994,
       "preventivoOrigine": "prev_sim_16",
       "note": "Ordine da preventivo confermato."
     },
     {
-      "id": "ordv_sim_12",
-      "codice": "ORD-2026012",
-      "cliente": "cli_sim_11",
-      "data": "2026-05-12",
-      "stato": "fatturato",
+      "id": "ordv_sim_11",
+      "numero": "ORD-2026011",
+      "cliente": "cli_sim_18",
+      "data": "2026-05-21",
+      "stato": "inlavorazione",
       "righe": [
         {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 10,
-          "prezzoUnitario": 7.9,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 9,
-          "prezzoUnitario": 7.9,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 4,
-          "prezzoUnitario": 0.29,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         },
         {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 5,
-          "prezzoUnitario": 0.29,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 9,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         },
         {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
           "quantita": 6,
-          "prezzoUnitario": 7.9,
+          "prezzoUnitario": 62.37,
           "sconto": 0
-        }
-      ],
-      "imponibile": 193,
-      "tasse": 42.46,
-      "totale": 235.46,
-      "preventivoOrigine": "prev_sim_17",
-      "note": "Ordine da preventivo confermato."
-    },
-    {
-      "id": "ordv_sim_13",
-      "codice": "ORD-2026013",
-      "cliente": "cli_sim_25",
-      "data": "2026-04-17",
-      "stato": "in_lavorazione",
-      "righe": [
+        },
         {
-          "prodotto": "prod_012-01-20",
-          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
-          "quantita": 2,
-          "prezzoUnitario": 0.2,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 4,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 0.4,
-      "tasse": 0.08800000000000001,
-      "totale": 0.488,
+      "imponibile": 2130.2599999999998,
+      "tasse": 468.65719999999993,
+      "totale": 2598.9172,
       "preventivoOrigine": "prev_sim_18",
       "note": "Ordine da preventivo confermato."
     },
     {
-      "id": "ordv_sim_14",
-      "codice": "ORD-2026014",
-      "cliente": "cli_sim_13",
-      "data": "2026-04-17",
+      "id": "ordv_sim_12",
+      "numero": "ORD-2026012",
+      "cliente": "cli_sim_27",
+      "data": "2026-05-12",
       "stato": "fatturato",
       "righe": [
         {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
-          "quantita": 6,
-          "prezzoUnitario": 3.78,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 7,
-          "prezzoUnitario": 0.4,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 1,
-          "prezzoUnitario": 0.21,
+          "prezzoUnitario": 79.82,
           "sconto": 0
-        }
-      ],
-      "imponibile": 23.422,
-      "tasse": 5.15284,
-      "totale": 28.574840000000002,
-      "preventivoOrigine": "prev_sim_19",
-      "note": "Ordine da preventivo confermato."
-    },
-    {
-      "id": "ordv_sim_15",
-      "codice": "ORD-2026015",
-      "cliente": "cli_sim_8",
-      "data": "2026-03-31",
-      "stato": "annullato",
-      "righe": [
+        },
         {
-          "prodotto": "prod_025-01-20",
-          "descrizione": "dado pressacavo",
-          "quantita": 8,
-          "prezzoUnitario": 0.4,
-          "sconto": 10
-        }
-      ],
-      "imponibile": 2.8800000000000003,
-      "tasse": 0.6336,
-      "totale": 3.5136000000000003,
-      "preventivoOrigine": "prev_sim_20",
-      "note": "Ordine da preventivo confermato."
-    },
-    {
-      "id": "ordv_sim_16",
-      "codice": "ORD-2026016",
-      "cliente": "cli_sim_38",
-      "data": "2026-04-08",
-      "stato": "spedito",
-      "righe": [
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 1,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
         {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
           "quantita": 6,
-          "prezzoUnitario": 3.23,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         },
         {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 7,
-          "prezzoUnitario": 0.21,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 4,
-          "prezzoUnitario": 7.9,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 52.45,
-      "tasse": 11.539000000000001,
-      "totale": 63.989000000000004,
+      "imponibile": 1633.8899999999999,
+      "tasse": 359.45579999999995,
+      "totale": 1993.3457999999998,
+      "preventivoOrigine": "prev_sim_21",
+      "note": "Ordine da preventivo confermato."
+    },
+    {
+      "id": "ordv_sim_13",
+      "numero": "ORD-2026013",
+      "cliente": "cli_sim_40",
+      "data": "2026-03-13",
+      "stato": "fatturato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 2,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 159.64,
+      "tasse": 35.120799999999996,
+      "totale": 194.7608,
       "preventivoOrigine": "prev_sim_22",
       "note": "Ordine da preventivo confermato."
     },
     {
-      "id": "ordv_sim_17",
-      "codice": "ORD-2026017",
-      "cliente": "cli_sim_38",
-      "data": "2026-05-06",
+      "id": "ordv_sim_14",
+      "numero": "ORD-2026014",
+      "cliente": "cli_sim_7",
+      "data": "2026-02-17",
       "stato": "spedito",
       "righe": [
         {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 1,
-          "prezzoUnitario": 7.9,
-          "sconto": 5
-        },
-        {
-          "prodotto": "prod_032-01-20",
-          "descrizione": "CAVO H05RN-F 2x0,75",
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
           "quantita": 10,
-          "prezzoUnitario": 1.83,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 7,
-          "prezzoUnitario": 0.29,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         }
       ],
-      "imponibile": 26.005000000000003,
-      "tasse": 5.721100000000001,
-      "totale": 31.726100000000002,
+      "imponibile": 623.6999999999999,
+      "tasse": 137.214,
+      "totale": 760.9139999999999,
       "preventivoOrigine": "prev_sim_23",
       "note": "Ordine da preventivo confermato."
     },
     {
-      "id": "ordv_sim_18",
-      "codice": "ORD-2026018",
-      "cliente": "cli_sim_13",
-      "data": "2026-05-14",
-      "stato": "confermato",
+      "id": "ordv_sim_15",
+      "numero": "ORD-2026015",
+      "cliente": "cli_sim_5",
+      "data": "2026-01-07",
+      "stato": "fatturato",
       "righe": [
         {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
-          "quantita": 3,
-          "prezzoUnitario": 0.22,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_auto-etichetta-prodotto-sx",
-          "descrizione": "ETICHETTA PRODOTTO SX",
-          "quantita": 4,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
           "quantita": 6,
-          "prezzoUnitario": 0.29,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         },
         {
-          "prodotto": "prod_10250",
-          "descrizione": "PASTA TERMOCONDUTTIVA",
-          "quantita": 4,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 4.014,
-      "tasse": 0.8830800000000001,
-      "totale": 4.89708,
-      "preventivoOrigine": "prev_sim_24",
-      "note": "Ordine da preventivo confermato."
-    },
-    {
-      "id": "ordv_sim_19",
-      "codice": "ORD-2026019",
-      "cliente": "cli_sim_10",
-      "data": "2026-05-19",
-      "stato": "in_lavorazione",
-      "righe": [
-        {
-          "prodotto": "prod_auto-etichetta-prodotto-sx",
-          "descrizione": "ETICHETTA PRODOTTO SX",
-          "quantita": 3,
-          "prezzoUnitario": 0.22,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 2,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         },
         {
-          "prodotto": "prod_10277",
-          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
-          "quantita": 10,
-          "prezzoUnitario": 0.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10217",
-          "descrizione": "scheda driver interna std",
-          "quantita": 5,
-          "prezzoUnitario": 16.07,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
-          "quantita": 10,
-          "prezzoUnitario": 3.78,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10017",
-          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 1,
-          "prezzoUnitario": 0.2,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 1,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 121.30999999999999,
-      "tasse": 26.6882,
-      "totale": 147.99819999999997,
+      "imponibile": 693.4999999999998,
+      "tasse": 152.56999999999996,
+      "totale": 846.0699999999997,
       "preventivoOrigine": "prev_sim_25",
       "note": "Ordine da preventivo confermato."
     },
     {
-      "id": "ordv_sim_20",
-      "codice": "ORD-2026020",
-      "cliente": "cli_sim_13",
-      "data": "2026-05-07",
-      "stato": "confermato",
+      "id": "ordv_sim_16",
+      "numero": "ORD-2026016",
+      "cliente": "cli_sim_30",
+      "data": "2026-04-13",
+      "stato": "inlavorazione",
       "righe": [
         {
-          "prodotto": "prod_10248",
-          "descrizione": "SILICONE",
-          "quantita": 2,
-          "prezzoUnitario": 0.48,
-          "sconto": 5
-        }
-      ],
-      "imponibile": 0.9119999999999999,
-      "tasse": 0.20063999999999999,
-      "totale": 1.1126399999999999,
-      "preventivoOrigine": "prev_sim_27",
-      "note": "Ordine da preventivo confermato."
-    },
-    {
-      "id": "ordv_sim_21",
-      "codice": "ORD-2026021",
-      "cliente": "cli_sim_12",
-      "data": "2026-05-14",
-      "stato": "fatturato",
-      "righe": [
-        {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 10,
-          "prezzoUnitario": 0.29,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 3,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         }
       ],
-      "imponibile": 2.9,
-      "tasse": 0.638,
-      "totale": 3.538,
+      "imponibile": 187.10999999999999,
+      "tasse": 41.164199999999994,
+      "totale": 228.27419999999998,
+      "preventivoOrigine": "prev_sim_26",
+      "note": "Ordine da preventivo confermato."
+    },
+    {
+      "id": "ordv_sim_17",
+      "numero": "ORD-2026017",
+      "cliente": "cli_sim_34",
+      "data": "2026-01-29",
+      "stato": "spedito",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 8,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 1,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 9,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 1920.8599999999997,
+      "tasse": 422.58919999999995,
+      "totale": 2343.4491999999996,
       "preventivoOrigine": "prev_sim_28",
       "note": "Ordine da preventivo confermato."
     },
     {
-      "id": "ordv_sim_22",
-      "codice": "ORD-2026022",
-      "cliente": "cli_sim_2",
-      "data": "2026-03-27",
-      "stato": "fatturato",
+      "id": "ordv_sim_18",
+      "numero": "ORD-2026018",
+      "cliente": "cli_sim_27",
+      "data": "2026-03-21",
+      "stato": "spedito",
       "righe": [
         {
-          "prodotto": "prod_10017",
-          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
-          "quantita": 9,
-          "prezzoUnitario": 0.2,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
+          "sconto": 5
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 5,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         },
         {
-          "prodotto": "prod_sideis_one_cc",
-          "descrizione": "Faretto SIDEis ONE CC",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 6,
-          "prezzoUnitario": 62.37,
-          "sconto": 5
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 6,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 5,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
         }
       ],
-      "imponibile": 357.30899999999997,
-      "tasse": 78.60798,
-      "totale": 435.91697999999997,
+      "imponibile": 2514.33,
+      "tasse": 553.1526,
+      "totale": 3067.4826,
       "preventivoOrigine": "prev_sim_29",
       "note": "Ordine da preventivo confermato."
     },
     {
-      "id": "ordv_sim_23",
-      "codice": "ORD-2026023",
-      "cliente": "cli_sim_15",
-      "data": "2026-05-09",
-      "stato": "confermato",
+      "id": "ordv_sim_19",
+      "numero": "ORD-2026019",
+      "cliente": "cli_sim_9",
+      "data": "2026-04-22",
+      "stato": "fatturato",
       "righe": [
         {
-          "prodotto": "prod_10017",
-          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
-          "quantita": 8,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 3,
+          "prezzoUnitario": 79.82,
+          "sconto": 10
         },
         {
-          "prodotto": "prod_auto-scheda-led-std-12-led",
-          "descrizione": "scheda led STD 12 LED",
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
           "quantita": 1,
-          "prezzoUnitario": 12.93,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         },
         {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
-          "quantita": 6,
-          "prezzoUnitario": 3.78,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 8,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         },
         {
-          "prodotto": "prod_10036",
-          "descrizione": "passacavo M12x1,5",
-          "quantita": 6,
-          "prezzoUnitario": 0.32,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 5,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 39.13,
-      "tasse": 8.608600000000001,
-      "totale": 47.738600000000005,
+      "imponibile": 1175.944,
+      "tasse": 258.70768,
+      "totale": 1434.65168,
       "preventivoOrigine": "prev_sim_30",
       "note": "Ordine da preventivo confermato."
     },
     {
-      "id": "ordv_sim_24",
-      "codice": "ORD-2026024",
-      "cliente": "cli_sim_32",
-      "data": "2026-06-22",
-      "stato": "confermato",
+      "id": "ordv_sim_20",
+      "numero": "ORD-2026020",
+      "cliente": "cli_sim_39",
+      "data": "2026-03-29",
+      "stato": "inlavorazione",
       "righe": [
         {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
-          "quantita": 10,
-          "prezzoUnitario": 0.22,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 2,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 2.2,
-      "tasse": 0.48400000000000004,
-      "totale": 2.684,
+      "imponibile": 159.64,
+      "tasse": 35.120799999999996,
+      "totale": 194.7608,
       "preventivoOrigine": "prev_sim_31",
       "note": "Ordine da preventivo confermato."
     },
     {
-      "id": "ordv_sim_25",
-      "codice": "ORD-2026025",
-      "cliente": "cli_sim_40",
+      "id": "ordv_sim_21",
+      "numero": "ORD-2026021",
+      "cliente": "cli_sim_28",
       "data": "2026-01-30",
-      "stato": "confermato",
+      "stato": "spedito",
       "righe": [
         {
-          "prodotto": "prod_012-01-20",
-          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
-          "quantita": 6,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10017",
-          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
           "quantita": 2,
-          "prezzoUnitario": 0.2,
+          "prezzoUnitario": 62.37,
           "sconto": 0
-        },
-        {
-          "prodotto": "prod_10017",
-          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
-          "quantita": 6,
-          "prezzoUnitario": 0.2,
-          "sconto": 15
         }
       ],
-      "imponibile": 2.62,
-      "tasse": 0.5764,
-      "totale": 3.1964,
+      "imponibile": 124.74,
+      "tasse": 27.4428,
+      "totale": 152.1828,
       "preventivoOrigine": "prev_sim_32",
       "note": "Ordine da preventivo confermato."
     },
     {
-      "id": "ordv_sim_26",
-      "codice": "ORD-2026026",
-      "cliente": "cli_sim_13",
-      "data": "2026-04-02",
-      "stato": "spedito",
+      "id": "ordv_sim_22",
+      "numero": "ORD-2026022",
+      "cliente": "cli_sim_10",
+      "data": "2026-06-10",
+      "stato": "fatturato",
       "righe": [
         {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 3,
-          "prezzoUnitario": 0.21,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 8,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 2,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 9,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 1,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         }
       ],
-      "imponibile": 0.63,
-      "tasse": 0.1386,
-      "totale": 0.7686,
+      "imponibile": 2185.2,
+      "tasse": 480.74399999999997,
+      "totale": 2665.9439999999995,
+      "preventivoOrigine": "prev_sim_33",
+      "note": "Ordine da preventivo confermato."
+    },
+    {
+      "id": "ordv_sim_23",
+      "numero": "ORD-2026023",
+      "cliente": "cli_sim_23",
+      "data": "2026-03-09",
+      "stato": "confermato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 9,
+          "prezzoUnitario": 62.37,
+          "sconto": 10
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 4,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 6,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 1233.5969999999998,
+      "tasse": 271.39133999999996,
+      "totale": 1504.9883399999997,
       "preventivoOrigine": "prev_sim_34",
       "note": "Ordine da preventivo confermato."
     },
     {
-      "id": "ordv_sim_27",
-      "codice": "ORD-2026027",
-      "cliente": "cli_sim_37",
-      "data": "2026-02-08",
-      "stato": "in_lavorazione",
+      "id": "ordv_sim_24",
+      "numero": "ORD-2026024",
+      "cliente": "cli_sim_40",
+      "data": "2026-02-06",
+      "stato": "fatturato",
       "righe": [
-        {
-          "prodotto": "prod_025-01-20",
-          "descrizione": "dado pressacavo",
-          "quantita": 1,
-          "prezzoUnitario": 0.4,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 5,
-          "prezzoUnitario": 7.9,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-scheda-led-std-12-led",
-          "descrizione": "scheda led STD 12 LED",
-          "quantita": 1,
-          "prezzoUnitario": 12.93,
-          "sconto": 5
-        },
         {
           "prodotto": "prod_sideis_one_cv",
           "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 9,
           "prezzoUnitario": 79.82,
           "sconto": 0
-        },
-        {
-          "prodotto": "prod_003-01-22",
-          "descrizione": "DISSIPATORE SIDEIS",
-          "quantita": 9,
-          "prezzoUnitario": 4.87,
-          "sconto": 0
         }
       ],
-      "imponibile": 814.3934999999999,
-      "tasse": 179.16656999999998,
-      "totale": 993.5600699999999,
-      "preventivoOrigine": "prev_sim_35",
+      "imponibile": 718.3799999999999,
+      "tasse": 158.04359999999997,
+      "totale": 876.4235999999999,
+      "preventivoOrigine": "prev_sim_39",
       "note": "Ordine da preventivo confermato."
     },
     {
-      "id": "ordv_sim_28",
-      "codice": "ORD-2026028",
-      "cliente": "cli_sim_9",
-      "data": "2026-06-07",
-      "stato": "in_lavorazione",
+      "id": "ordv_sim_25",
+      "numero": "ORD-2026025",
+      "cliente": "cli_sim_32",
+      "data": "2026-04-11",
+      "stato": "inlavorazione",
       "righe": [
         {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
-          "quantita": 8,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
-          "quantita": 2,
-          "prezzoUnitario": 3.78,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-marchi-dx",
-          "descrizione": "ETICHETTA MARCHI DX",
-          "quantita": 7,
-          "prezzoUnitario": 0.22,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_sideis_one_cc",
-          "descrizione": "Faretto SIDEis ONE CC",
-          "quantita": 10,
-          "prezzoUnitario": 62.37,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_033-01-20",
-          "descrizione": "O-RING X VITI CHIUSURA",
-          "quantita": 3,
-          "prezzoUnitario": 0.17,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 1,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 634.9159999999999,
-      "tasse": 139.68151999999998,
-      "totale": 774.5975199999999,
-      "preventivoOrigine": "prev_sim_36",
-      "note": "Ordine da preventivo confermato."
-    },
-    {
-      "id": "ordv_sim_29",
-      "codice": "ORD-2026029",
-      "cliente": "cli_sim_11",
-      "data": "2026-01-30",
-      "stato": "annullato",
-      "righe": [
-        {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 4,
-          "prezzoUnitario": 3.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-scheda-led-std-12-led",
-          "descrizione": "scheda led STD 12 LED",
-          "quantita": 3,
-          "prezzoUnitario": 12.93,
-          "sconto": 15
-        },
-        {
-          "prodotto": "prod_auto-scheda-led-std-12-led",
-          "descrizione": "scheda led STD 12 LED",
-          "quantita": 4,
-          "prezzoUnitario": 12.93,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 4,
-          "prezzoUnitario": 0.29,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 98.7715,
-      "tasse": 21.72973,
-      "totale": 120.50123,
-      "preventivoOrigine": "prev_sim_37",
-      "note": "Ordine da preventivo confermato."
-    },
-    {
-      "id": "ordv_sim_30",
-      "codice": "ORD-2026030",
-      "cliente": "cli_sim_7",
-      "data": "2026-02-26",
-      "stato": "confermato",
-      "righe": [
-        {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 10,
-          "prezzoUnitario": 9.49,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 94.9,
-      "tasse": 20.878,
-      "totale": 115.778,
-      "preventivoOrigine": "prev_sim_38",
-      "note": "Ordine da preventivo confermato."
-    },
-    {
-      "id": "ordv_sim_31",
-      "codice": "ORD-2026031",
-      "cliente": "cli_sim_28",
-      "data": "2026-04-25",
-      "stato": "annullato",
-      "righe": [
-        {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 7,
-          "prezzoUnitario": 0.4,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 9,
-          "prezzoUnitario": 7.9,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 73.9,
-      "tasse": 16.258000000000003,
-      "totale": 90.158,
-      "preventivoOrigine": "prev_sim_40",
-      "note": "Ordine da preventivo confermato."
-    },
-    {
-      "id": "ordv_sim_32",
-      "codice": "ORD-2026032",
-      "cliente": "cli_sim_17",
-      "data": "2026-06-11",
-      "stato": "confermato",
-      "righe": [
-        {
-          "prodotto": "prod_10014",
-          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
-          "quantita": 8,
-          "prezzoUnitario": 0.18,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 10,
-          "prezzoUnitario": 3.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10250",
-          "descrizione": "PASTA TERMOCONDUTTIVA",
-          "quantita": 4,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_003-01-22",
-          "descrizione": "DISSIPATORE SIDEIS",
-          "quantita": 2,
-          "prezzoUnitario": 4.87,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 44.279999999999994,
-      "tasse": 9.741599999999998,
-      "totale": 54.02159999999999,
+      "imponibile": 79.82,
+      "tasse": 17.560399999999998,
+      "totale": 97.3804,
       "preventivoOrigine": "prev_sim_41",
       "note": "Ordine da preventivo confermato."
     },
     {
-      "id": "ordv_sim_34",
-      "codice": "ORD-2026034",
-      "cliente": "cli_sim_7",
-      "data": "2026-05-15",
-      "stato": "spedito",
+      "id": "ordv_sim_26",
+      "numero": "ORD-2026026",
+      "cliente": "cli_sim_17",
+      "data": "2026-03-29",
+      "stato": "confermato",
       "righe": [
         {
-          "prodotto": "prod_10248",
-          "descrizione": "SILICONE",
-          "quantita": 4,
-          "prezzoUnitario": 0.48,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 1,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 6,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 1.92,
-      "tasse": 0.4224,
-      "totale": 2.3424,
+      "imponibile": 1356.94,
+      "tasse": 298.52680000000004,
+      "totale": 1655.4668,
+      "preventivoOrigine": "prev_sim_42",
+      "note": "Ordine da preventivo confermato."
+    },
+    {
+      "id": "ordv_sim_27",
+      "numero": "ORD-2026027",
+      "cliente": "cli_sim_12",
+      "data": "2026-06-19",
+      "stato": "fatturato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 1,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 79.82,
+      "tasse": 17.560399999999998,
+      "totale": 97.3804,
+      "preventivoOrigine": "prev_sim_43",
+      "note": "Ordine da preventivo confermato."
+    },
+    {
+      "id": "ordv_sim_28",
+      "numero": "ORD-2026028",
+      "cliente": "cli_sim_25",
+      "data": "2026-05-28",
+      "stato": "fatturato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 2,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 5,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 471.48999999999995,
+      "tasse": 103.72779999999999,
+      "totale": 575.2177999999999,
       "preventivoOrigine": "prev_sim_45",
       "note": "Ordine da preventivo confermato."
     },
     {
-      "id": "ordv_sim_35",
-      "codice": "ORD-2026035",
-      "cliente": "cli_sim_7",
-      "data": "2026-05-30",
-      "stato": "annullato",
-      "righe": [
-        {
-          "prodotto": "prod_auto-etichetta-prodotto-sx",
-          "descrizione": "ETICHETTA PRODOTTO SX",
-          "quantita": 3,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 1,
-          "prezzoUnitario": 0.21,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 0.87,
-      "tasse": 0.1914,
-      "totale": 1.0614,
-      "preventivoOrigine": "prev_sim_48",
-      "note": "Ordine da preventivo confermato."
-    },
-    {
-      "id": "ordv_sim_36",
-      "codice": "ORD-2026036",
-      "cliente": "cli_sim_24",
-      "data": "2026-06-08",
-      "stato": "in_lavorazione",
+      "id": "ordv_sim_29",
+      "numero": "ORD-2026029",
+      "cliente": "cli_sim_27",
+      "data": "2026-02-23",
+      "stato": "spedito",
       "righe": [
         {
           "prodotto": "prod_sideis_one_cv",
           "descrizione": "Faretto SIDEis ONE CV",
-          "quantita": 1,
+          "quantita": 3,
+          "prezzoUnitario": 79.82,
+          "sconto": 5
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 9,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 8,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 6,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 1661.9969999999998,
+      "tasse": 365.63933999999995,
+      "totale": 2027.6363399999998,
+      "preventivoOrigine": "prev_sim_47",
+      "note": "Ordine da preventivo confermato."
+    },
+    {
+      "id": "ordv_sim_30",
+      "numero": "ORD-2026030",
+      "cliente": "cli_sim_7",
+      "data": "2026-02-15",
+      "stato": "inlavorazione",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 7,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 4,
           "prezzoUnitario": 79.82,
           "sconto": 0
         },
         {
-          "prodotto": "prod_10017",
-          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
           "quantita": 2,
-          "prezzoUnitario": 0.2,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         },
         {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
           "quantita": 3,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
+          "prezzoUnitario": 62.37,
+          "sconto": 15
         },
         {
-          "prodotto": "prod_10217",
-          "descrizione": "scheda driver interna std",
-          "quantita": 4,
-          "prezzoUnitario": 16.07,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10248",
-          "descrizione": "SILICONE",
-          "quantita": 1,
-          "prezzoUnitario": 0.48,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 145.64,
-      "tasse": 32.0408,
-      "totale": 177.68079999999998,
+      "imponibile": 1837.8534999999997,
+      "tasse": 404.32776999999993,
+      "totale": 2242.1812699999996,
       "preventivoOrigine": "prev_sim_50",
       "note": "Ordine da preventivo confermato."
     },
     {
-      "id": "ordv_sim_37",
-      "codice": "ORD-2026037",
-      "cliente": "cli_sim_34",
-      "data": "2026-04-23",
-      "stato": "confermato",
+      "id": "ordv_sim_31",
+      "numero": "ORD-2026031",
+      "cliente": "cli_sim_32",
+      "data": "2026-05-29",
+      "stato": "annullato",
       "righe": [
         {
-          "prodotto": "prod_032-01-20",
-          "descrizione": "CAVO H05RN-F 2x0,75",
-          "quantita": 10,
-          "prezzoUnitario": 1.83,
-          "sconto": 0
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 1,
+          "prezzoUnitario": 79.82,
+          "sconto": 15
         },
         {
-          "prodotto": "prod_10031",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 5,
-          "prezzoUnitario": 5.25,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 8,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 44.55,
-      "tasse": 9.801,
-      "totale": 54.35099999999999,
+      "imponibile": 706.4069999999999,
+      "tasse": 155.40954,
+      "totale": 861.8165399999999,
+      "preventivoOrigine": "prev_sim_51",
+      "note": "Ordine da preventivo confermato."
+    },
+    {
+      "id": "ordv_sim_32",
+      "numero": "ORD-2026032",
+      "cliente": "cli_sim_21",
+      "data": "2026-06-26",
+      "stato": "confermato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 5,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 6,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 8,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 3008.2799999999997,
+      "tasse": 661.8216,
+      "totale": 3670.1015999999995,
       "preventivoOrigine": "prev_sim_52",
       "note": "Ordine da preventivo confermato."
     },
     {
-      "id": "ordv_sim_38",
-      "codice": "ORD-2026038",
-      "cliente": "cli_sim_10",
-      "data": "2026-01-26",
-      "stato": "in_lavorazione",
+      "id": "ordv_sim_33",
+      "numero": "ORD-2026033",
+      "cliente": "cli_sim_1",
+      "data": "2026-01-19",
+      "stato": "annullato",
       "righe": [
         {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 5,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 9,
-          "prezzoUnitario": 0.22,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         },
         {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 10,
-          "prezzoUnitario": 0.29,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10031",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 9,
-          "prezzoUnitario": 5.25,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 2,
-          "prezzoUnitario": 0.4,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 6,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         }
       ],
-      "imponibile": 52.93,
-      "tasse": 11.6446,
-      "totale": 64.5746,
+      "imponibile": 1491.6999999999998,
+      "tasse": 328.174,
+      "totale": 1819.8739999999998,
       "preventivoOrigine": "prev_sim_53",
       "note": "Ordine da preventivo confermato."
     },
     {
-      "id": "ordv_sim_39",
-      "codice": "ORD-2026039",
-      "cliente": "cli_sim_33",
-      "data": "2026-06-07",
-      "stato": "in_lavorazione",
+      "id": "ordv_sim_34",
+      "numero": "ORD-2026034",
+      "cliente": "cli_sim_29",
+      "data": "2026-03-11",
+      "stato": "inlavorazione",
       "righe": [
         {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
-          "quantita": 1,
-          "prezzoUnitario": 0.22,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 7,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 2,
+          "prezzoUnitario": 79.82,
+          "sconto": 5
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 3,
+          "prezzoUnitario": 62.37,
+          "sconto": 15
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 8,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 0.22,
-      "tasse": 0.0484,
-      "totale": 0.26839999999999997,
+      "imponibile": 2306.2015,
+      "tasse": 507.36433000000005,
+      "totale": 2813.56583,
       "preventivoOrigine": "prev_sim_54",
       "note": "Ordine da preventivo confermato."
     },
     {
-      "id": "ordv_sim_40",
-      "codice": "ORD-2026040",
-      "cliente": "cli_sim_16",
-      "data": "2026-01-15",
-      "stato": "annullato",
+      "id": "ordv_sim_35",
+      "numero": "ORD-2026035",
+      "cliente": "cli_sim_1",
+      "data": "2026-06-12",
+      "stato": "inlavorazione",
       "righe": [
         {
-          "prodotto": "prod_10277",
-          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
-          "quantita": 10,
-          "prezzoUnitario": 0.23,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 7,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         },
         {
-          "prodotto": "prod_025-01-20",
-          "descrizione": "dado pressacavo",
-          "quantita": 9,
-          "prezzoUnitario": 0.4,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 6,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         },
         {
@@ -4946,131 +4736,82 @@ window.CRM_SEED_DATA = {
           "quantita": 3,
           "prezzoUnitario": 79.82,
           "sconto": 0
-        },
-        {
-          "prodotto": "prod_10248",
-          "descrizione": "SILICONE",
-          "quantita": 9,
-          "prezzoUnitario": 0.48,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10036",
-          "descrizione": "passacavo M12x1,5",
-          "quantita": 6,
-          "prezzoUnitario": 0.32,
-          "sconto": 0
         }
       ],
-      "imponibile": 251.59999999999997,
-      "tasse": 55.35199999999999,
-      "totale": 306.95199999999994,
+      "imponibile": 1277.12,
+      "tasse": 280.96639999999996,
+      "totale": 1558.0864,
       "preventivoOrigine": "prev_sim_55",
       "note": "Ordine da preventivo confermato."
     },
     {
-      "id": "ordv_sim_41",
-      "codice": "ORD-2026041",
-      "cliente": "cli_sim_16",
-      "data": "2026-05-03",
-      "stato": "spedito",
+      "id": "ordv_sim_36",
+      "numero": "ORD-2026036",
+      "cliente": "cli_sim_13",
+      "data": "2026-03-13",
+      "stato": "confermato",
       "righe": [
         {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 7,
-          "prezzoUnitario": 9.49,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 66.43,
-      "tasse": 14.614600000000001,
-      "totale": 81.0446,
-      "preventivoOrigine": "prev_sim_57",
-      "note": "Ordine da preventivo confermato."
-    },
-    {
-      "id": "ordv_sim_42",
-      "codice": "ORD-2026042",
-      "cliente": "cli_sim_21",
-      "data": "2026-06-08",
-      "stato": "fatturato",
-      "righe": [
-        {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 7,
-          "prezzoUnitario": 7.9,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 55.300000000000004,
-      "tasse": 12.166,
-      "totale": 67.46600000000001,
-      "preventivoOrigine": "prev_sim_62",
-      "note": "Ordine da preventivo confermato."
-    },
-    {
-      "id": "ordv_sim_43",
-      "codice": "ORD-2026043",
-      "cliente": "cli_sim_20",
-      "data": "2026-05-11",
-      "stato": "fatturato",
-      "righe": [
-        {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
           "quantita": 2,
-          "prezzoUnitario": 0.4,
-          "sconto": 15
+          "prezzoUnitario": 62.37,
+          "sconto": 0
         },
         {
-          "prodotto": "prod_10031",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 10,
-          "prezzoUnitario": 5.25,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 5,
+          "prezzoUnitario": 79.82,
           "sconto": 0
-        }
-      ],
-      "imponibile": 53.18,
-      "tasse": 11.6996,
-      "totale": 64.8796,
-      "preventivoOrigine": "prev_sim_63",
-      "note": "Ordine da preventivo confermato."
-    },
-    {
-      "id": "ordv_sim_44",
-      "codice": "ORD-2026044",
-      "cliente": "cli_sim_10",
-      "data": "2026-04-06",
-      "stato": "fatturato",
-      "righe": [
+        },
         {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 1,
-          "prezzoUnitario": 0.21,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 7,
+          "prezzoUnitario": 62.37,
           "sconto": 0
-        }
-      ],
-      "imponibile": 0.21,
-      "tasse": 0.0462,
-      "totale": 0.2562,
-      "preventivoOrigine": "prev_sim_64",
-      "note": "Ordine da preventivo confermato."
-    },
-    {
-      "id": "ordv_sim_45",
-      "codice": "ORD-2026045",
-      "cliente": "cli_sim_36",
-      "data": "2026-06-09",
-      "stato": "fatturato",
-      "righe": [
+        },
         {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 3,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 4,
-          "prezzoUnitario": 9.49,
+          "prezzoUnitario": 79.82,
+          "sconto": 15
+        }
+      ],
+      "imponibile": 1418.9279999999997,
+      "tasse": 312.1641599999999,
+      "totale": 1731.0921599999995,
+      "preventivoOrigine": "prev_sim_56",
+      "note": "Ordine da preventivo confermato."
+    },
+    {
+      "id": "ordv_sim_37",
+      "numero": "ORD-2026037",
+      "cliente": "cli_sim_40",
+      "data": "2026-05-09",
+      "stato": "fatturato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 6,
+          "prezzoUnitario": 79.82,
+          "sconto": 10
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 1,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         },
         {
@@ -5081,1752 +4822,1467 @@ window.CRM_SEED_DATA = {
           "sconto": 0
         },
         {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
-          "quantita": 4,
-          "prezzoUnitario": 3.78,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         },
         {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 3,
-          "prezzoUnitario": 0.4,
-          "sconto": 10
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 7,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
         }
       ],
-      "imponibile": 612.9000000000001,
-      "tasse": 134.83800000000002,
-      "totale": 747.738,
-      "preventivoOrigine": "prev_sim_65",
+      "imponibile": 2304.378,
+      "tasse": 506.96316,
+      "totale": 2811.34116,
+      "preventivoOrigine": "prev_sim_57",
       "note": "Ordine da preventivo confermato."
     },
     {
-      "id": "ordv_sim_46",
-      "codice": "ORD-2026046",
-      "cliente": "cli_sim_3",
-      "data": "2026-04-22",
-      "stato": "annullato",
+      "id": "ordv_sim_38",
+      "numero": "ORD-2026038",
+      "cliente": "cli_sim_33",
+      "data": "2026-05-30",
+      "stato": "inlavorazione",
       "righe": [
         {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 8,
-          "prezzoUnitario": 7.9,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 5,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         },
         {
-          "prodotto": "prod_auto-etichetta-marchi-dx",
-          "descrizione": "ETICHETTA MARCHI DX",
-          "quantita": 2,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
-          "quantita": 4,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 8,
-          "prezzoUnitario": 3.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-prodotto-sx",
-          "descrizione": "ETICHETTA PRODOTTO SX",
-          "quantita": 4,
-          "prezzoUnitario": 0.22,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 6,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         }
       ],
-      "imponibile": 91.24,
-      "tasse": 20.072799999999997,
-      "totale": 111.3128,
+      "imponibile": 773.3199999999999,
+      "tasse": 170.13039999999998,
+      "totale": 943.4504,
+      "preventivoOrigine": "prev_sim_61",
+      "note": "Ordine da preventivo confermato."
+    },
+    {
+      "id": "ordv_sim_39",
+      "numero": "ORD-2026039",
+      "cliente": "cli_sim_36",
+      "data": "2026-04-26",
+      "stato": "spedito",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 7,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 558.74,
+      "tasse": 122.92280000000001,
+      "totale": 681.6628,
+      "preventivoOrigine": "prev_sim_62",
+      "note": "Ordine da preventivo confermato."
+    },
+    {
+      "id": "ordv_sim_40",
+      "numero": "ORD-2026040",
+      "cliente": "cli_sim_1",
+      "data": "2026-05-28",
+      "stato": "spedito",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 5,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 399.09999999999997,
+      "tasse": 87.80199999999999,
+      "totale": 486.90199999999993,
       "preventivoOrigine": "prev_sim_66",
       "note": "Ordine da preventivo confermato."
     },
     {
-      "id": "ordv_sim_47",
-      "codice": "ORD-2026047",
-      "cliente": "cli_sim_1",
-      "data": "2026-03-18",
-      "stato": "fatturato",
+      "id": "ordv_sim_41",
+      "numero": "ORD-2026041",
+      "cliente": "cli_sim_8",
+      "data": "2026-04-18",
+      "stato": "spedito",
       "righe": [
         {
-          "prodotto": "prod_012-01-20",
-          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
-          "quantita": 3,
-          "prezzoUnitario": 0.2,
-          "sconto": 5
-        },
-        {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
-          "quantita": 8,
-          "prezzoUnitario": 0.22,
-          "sconto": 5
-        },
-        {
-          "prodotto": "prod_003-01-22",
-          "descrizione": "DISSIPATORE SIDEIS",
-          "quantita": 4,
-          "prezzoUnitario": 4.87,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 7,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         },
         {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 6,
+          "prezzoUnitario": 79.82,
+          "sconto": 10
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 1,
-          "prezzoUnitario": 0.4,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 7,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 8,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 22.122,
-      "tasse": 4.86684,
-      "totale": 26.98884,
+      "imponibile": 2144.738,
+      "tasse": 471.84236,
+      "totale": 2616.58036,
+      "preventivoOrigine": "prev_sim_68",
+      "note": "Ordine da preventivo confermato."
+    },
+    {
+      "id": "ordv_sim_42",
+      "numero": "ORD-2026042",
+      "cliente": "cli_sim_13",
+      "data": "2026-03-10",
+      "stato": "inlavorazione",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 7,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 8,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 3,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 7,
+          "prezzoUnitario": 79.82,
+          "sconto": 10
+        }
+      ],
+      "imponibile": 1939.626,
+      "tasse": 426.71772,
+      "totale": 2366.34372,
+      "preventivoOrigine": "prev_sim_69",
+      "note": "Ordine da preventivo confermato."
+    },
+    {
+      "id": "ordv_sim_43",
+      "numero": "ORD-2026043",
+      "cliente": "cli_sim_22",
+      "data": "2026-04-01",
+      "stato": "confermato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 10,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 1,
+          "prezzoUnitario": 62.37,
+          "sconto": 10
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 7,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 6,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 1490.643,
+      "tasse": 327.94146,
+      "totale": 1818.58446,
+      "preventivoOrigine": "prev_sim_70",
+      "note": "Ordine da preventivo confermato."
+    },
+    {
+      "id": "ordv_sim_44",
+      "numero": "ORD-2026044",
+      "cliente": "cli_sim_1",
+      "data": "2026-03-16",
+      "stato": "confermato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 1,
+          "prezzoUnitario": 62.37,
+          "sconto": 15
+        }
+      ],
+      "imponibile": 53.0145,
+      "tasse": 11.66319,
+      "totale": 64.67769,
       "preventivoOrigine": "prev_sim_71",
       "note": "Ordine da preventivo confermato."
     },
     {
-      "id": "ordv_sim_48",
-      "codice": "ORD-2026048",
-      "cliente": "cli_sim_12",
-      "data": "2026-02-13",
-      "stato": "confermato",
+      "id": "ordv_sim_45",
+      "numero": "ORD-2026045",
+      "cliente": "cli_sim_9",
+      "data": "2026-02-10",
+      "stato": "annullato",
       "righe": [
         {
-          "prodotto": "prod_003-01-22",
-          "descrizione": "DISSIPATORE SIDEIS",
-          "quantita": 1,
-          "prezzoUnitario": 4.87,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_10250",
-          "descrizione": "PASTA TERMOCONDUTTIVA",
-          "quantita": 5,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 2,
-          "prezzoUnitario": 0.21,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_025-01-20",
-          "descrizione": "dado pressacavo",
-          "quantita": 2,
-          "prezzoUnitario": 0.4,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 6,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         },
         {
           "prodotto": "prod_sideis_one_cc",
           "descrizione": "Faretto SIDEis ONE CC",
-          "quantita": 1,
+          "quantita": 4,
           "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 9,
+          "prezzoUnitario": 79.82,
+          "sconto": 5
+        }
+      ],
+      "imponibile": 1306.1609999999998,
+      "tasse": 287.35542,
+      "totale": 1593.5164199999997,
+      "preventivoOrigine": "prev_sim_72",
+      "note": "Ordine da preventivo confermato."
+    },
+    {
+      "id": "ordv_sim_46",
+      "numero": "ORD-2026046",
+      "cliente": "cli_sim_15",
+      "data": "2026-04-30",
+      "stato": "spedito",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 1,
+          "prezzoUnitario": 79.82,
           "sconto": 10
         }
       ],
-      "imponibile": 62.736,
-      "tasse": 13.801919999999999,
-      "totale": 76.53792,
+      "imponibile": 71.838,
+      "tasse": 15.804359999999999,
+      "totale": 87.64236,
       "preventivoOrigine": "prev_sim_73",
       "note": "Ordine da preventivo confermato."
     },
     {
-      "id": "ordv_sim_49",
-      "codice": "ORD-2026049",
-      "cliente": "cli_sim_7",
-      "data": "2026-03-18",
-      "stato": "confermato",
+      "id": "ordv_sim_47",
+      "numero": "ORD-2026047",
+      "cliente": "cli_sim_8",
+      "data": "2026-04-11",
+      "stato": "fatturato",
       "righe": [
         {
-          "prodotto": "prod_10036",
-          "descrizione": "passacavo M12x1,5",
-          "quantita": 10,
-          "prezzoUnitario": 0.32,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 4,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         },
         {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 5,
-          "prezzoUnitario": 0.29,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 2,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         },
         {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 8,
-          "prezzoUnitario": 7.9,
-          "sconto": 5
-        },
-        {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 5,
-          "prezzoUnitario": 9.49,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_10248",
-          "descrizione": "SILICONE",
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
           "quantita": 3,
-          "prezzoUnitario": 0.48,
-          "sconto": 10
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 10,
+          "prezzoUnitario": 62.37,
+          "sconto": 15
         }
       ],
-      "imponibile": 108.69100000000002,
-      "tasse": 23.912020000000005,
-      "totale": 132.60302000000001,
+      "imponibile": 1091.475,
+      "tasse": 240.12449999999998,
+      "totale": 1331.5994999999998,
       "preventivoOrigine": "prev_sim_75",
       "note": "Ordine da preventivo confermato."
     },
     {
-      "id": "ordv_sim_50",
-      "codice": "ORD-2026050",
-      "cliente": "cli_sim_8",
-      "data": "2026-02-09",
-      "stato": "spedito",
+      "id": "ordv_sim_48",
+      "numero": "ORD-2026048",
+      "cliente": "cli_sim_16",
+      "data": "2026-01-31",
+      "stato": "inlavorazione",
       "righe": [
         {
-          "prodotto": "prod_10217",
-          "descrizione": "scheda driver interna std",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 1,
-          "prezzoUnitario": 16.07,
+          "prezzoUnitario": 79.82,
+          "sconto": 15
+        }
+      ],
+      "imponibile": 67.847,
+      "tasse": 14.926339999999998,
+      "totale": 82.77333999999999,
+      "preventivoOrigine": "prev_sim_77",
+      "note": "Ordine da preventivo confermato."
+    },
+    {
+      "id": "ordv_sim_49",
+      "numero": "ORD-2026049",
+      "cliente": "cli_sim_17",
+      "data": "2026-03-28",
+      "stato": "confermato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 6,
+          "prezzoUnitario": 62.37,
+          "sconto": 15
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 2,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         },
         {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 5,
-          "prezzoUnitario": 9.49,
-          "sconto": 5
-        },
-        {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 10,
-          "prezzoUnitario": 0.4,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 7,
-          "prezzoUnitario": 3.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_032-01-20",
-          "descrizione": "CAVO H05RN-F 2x0,75",
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
           "quantita": 8,
-          "prezzoUnitario": 1.83,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 7,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 5,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 102.39750000000001,
-      "tasse": 22.52745,
-      "totale": 124.92495000000001,
-      "preventivoOrigine": "prev_sim_76",
+      "imponibile": 1812.3769999999997,
+      "tasse": 398.72293999999994,
+      "totale": 2211.0999399999996,
+      "preventivoOrigine": "prev_sim_78",
+      "note": "Ordine da preventivo confermato."
+    },
+    {
+      "id": "ordv_sim_50",
+      "numero": "ORD-2026050",
+      "cliente": "cli_sim_8",
+      "data": "2026-06-20",
+      "stato": "confermato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 6,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 9,
+          "prezzoUnitario": 79.82,
+          "sconto": 10
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 1,
+          "prezzoUnitario": 62.37,
+          "sconto": 15
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 6,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 8,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 2191.2565,
+      "tasse": 482.07643,
+      "totale": 2673.33293,
+      "preventivoOrigine": "prev_sim_80",
       "note": "Ordine da preventivo confermato."
     },
     {
       "id": "ordv_sim_51",
-      "codice": "ORD-2026051",
-      "cliente": "cli_sim_40",
-      "data": "2026-03-26",
-      "stato": "annullato",
+      "numero": "ORD-2026051",
+      "cliente": "cli_sim_21",
+      "data": "2026-06-20",
+      "stato": "inlavorazione",
       "righe": [
         {
-          "prodotto": "prod_auto-scheda-led-std-12-led",
-          "descrizione": "scheda led STD 12 LED",
-          "quantita": 8,
-          "prezzoUnitario": 12.93,
-          "sconto": 15
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 5,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
         },
         {
           "prodotto": "prod_sideis_one_cc",
           "descrizione": "Faretto SIDEis ONE CC",
-          "quantita": 8,
+          "quantita": 6,
           "prezzoUnitario": 62.37,
           "sconto": 0
         },
         {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 1,
-          "prezzoUnitario": 9.49,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 8,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 596.374,
-      "tasse": 131.20228,
-      "totale": 727.57628,
-      "preventivoOrigine": "prev_sim_78",
+      "imponibile": 3008.2799999999997,
+      "tasse": 661.8216,
+      "totale": 3670.1015999999995,
+      "preventivoOrigine": "prev_sim_52",
       "note": "Ordine da preventivo confermato."
     },
     {
       "id": "ordv_sim_52",
-      "codice": "ORD-2026052",
-      "cliente": "cli_sim_1",
-      "data": "2026-06-28",
+      "numero": "ORD-2026052",
+      "cliente": "cli_sim_19",
+      "data": "2026-01-11",
       "stato": "confermato",
       "righe": [
-        {
-          "prodotto": "prod_10250",
-          "descrizione": "PASTA TERMOCONDUTTIVA",
-          "quantita": 9,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 7,
-          "prezzoUnitario": 0.21,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 3.27,
-      "tasse": 0.7194,
-      "totale": 3.9894,
-      "preventivoOrigine": "prev_sim_79",
-      "note": "Ordine da preventivo confermato."
-    },
-    {
-      "id": "ordv_sim_53",
-      "codice": "ORD-2026053",
-      "cliente": "cli_sim_21",
-      "data": "2026-02-06",
-      "stato": "in_lavorazione",
-      "righe": [
-        {
-          "prodotto": "prod_auto-etichetta-prodotto-sx",
-          "descrizione": "ETICHETTA PRODOTTO SX",
-          "quantita": 7,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 3,
-          "prezzoUnitario": 0.29,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 2.41,
-      "tasse": 0.5302,
-      "totale": 2.9402,
-      "preventivoOrigine": "prev_sim_8",
-      "note": "Ordine da preventivo confermato."
-    },
-    {
-      "id": "ordv_sim_54",
-      "codice": "ORD-2026054",
-      "cliente": "cli_sim_27",
-      "data": "2026-05-27",
-      "stato": "fatturato",
-      "righe": [
-        {
-          "prodotto": "prod_10036",
-          "descrizione": "passacavo M12x1,5",
-          "quantita": 5,
-          "prezzoUnitario": 0.32,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 1.6,
-      "tasse": 0.35200000000000004,
-      "totale": 1.952,
-      "preventivoOrigine": "prev_sim_61",
-      "note": "Ordine da preventivo confermato."
-    },
-    {
-      "id": "ordv_sim_55",
-      "codice": "ORD-2026055",
-      "cliente": "cli_sim_11",
-      "data": "2026-05-11",
-      "stato": "annullato",
-      "righe": [
-        {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 10,
-          "prezzoUnitario": 7.9,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 9,
-          "prezzoUnitario": 7.9,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 4,
-          "prezzoUnitario": 0.29,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 5,
-          "prezzoUnitario": 0.29,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 6,
-          "prezzoUnitario": 7.9,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 193,
-      "tasse": 42.46,
-      "totale": 235.46,
-      "preventivoOrigine": "prev_sim_17",
-      "note": "Ordine da preventivo confermato."
-    },
-    {
-      "id": "ordv_sim_56",
-      "codice": "ORD-2026056",
-      "cliente": "cli_sim_11",
-      "data": "2026-02-01",
-      "stato": "spedito",
-      "righe": [
-        {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 4,
-          "prezzoUnitario": 3.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-scheda-led-std-12-led",
-          "descrizione": "scheda led STD 12 LED",
-          "quantita": 3,
-          "prezzoUnitario": 12.93,
-          "sconto": 15
-        },
-        {
-          "prodotto": "prod_auto-scheda-led-std-12-led",
-          "descrizione": "scheda led STD 12 LED",
-          "quantita": 4,
-          "prezzoUnitario": 12.93,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 4,
-          "prezzoUnitario": 0.29,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 98.7715,
-      "tasse": 21.72973,
-      "totale": 120.50123,
-      "preventivoOrigine": "prev_sim_37",
-      "note": "Ordine da preventivo confermato."
-    },
-    {
-      "id": "ordv_sim_57",
-      "codice": "ORD-2026057",
-      "cliente": "cli_sim_40",
-      "data": "2026-03-25",
-      "stato": "confermato",
-      "righe": [
-        {
-          "prodotto": "prod_auto-scheda-led-std-12-led",
-          "descrizione": "scheda led STD 12 LED",
-          "quantita": 8,
-          "prezzoUnitario": 12.93,
-          "sconto": 15
-        },
         {
           "prodotto": "prod_sideis_one_cc",
           "descrizione": "Faretto SIDEis ONE CC",
-          "quantita": 8,
+          "quantita": 4,
           "prezzoUnitario": 62.37,
           "sconto": 0
         },
         {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 1,
-          "prezzoUnitario": 9.49,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 5,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 7,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 10,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         }
       ],
-      "imponibile": 596.374,
-      "tasse": 131.20228,
-      "totale": 727.57628,
-      "preventivoOrigine": "prev_sim_78",
+      "imponibile": 1831.02,
+      "tasse": 402.8244,
+      "totale": 2233.8444,
+      "preventivoOrigine": "prev_sim_9",
+      "note": "Ordine da preventivo confermato."
+    },
+    {
+      "id": "ordv_sim_53",
+      "numero": "ORD-2026053",
+      "cliente": "cli_sim_1",
+      "data": "2026-06-02",
+      "stato": "inlavorazione",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 5,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 399.09999999999997,
+      "tasse": 87.80199999999999,
+      "totale": 486.90199999999993,
+      "preventivoOrigine": "prev_sim_66",
+      "note": "Ordine da preventivo confermato."
+    },
+    {
+      "id": "ordv_sim_54",
+      "numero": "ORD-2026054",
+      "cliente": "cli_sim_31",
+      "data": "2026-02-23",
+      "stato": "confermato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 9,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 1516.58,
+      "tasse": 333.6476,
+      "totale": 1850.2276,
+      "preventivoOrigine": "prev_sim_67",
+      "note": "Ordine da preventivo confermato."
+    },
+    {
+      "id": "ordv_sim_55",
+      "numero": "ORD-2026055",
+      "cliente": "cli_sim_31",
+      "data": "2026-06-03",
+      "stato": "confermato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 9,
+          "prezzoUnitario": 62.37,
+          "sconto": 5
+        }
+      ],
+      "imponibile": 533.2634999999999,
+      "tasse": 117.31796999999997,
+      "totale": 650.5814699999999,
+      "preventivoOrigine": "prev_sim_6",
+      "note": "Ordine da preventivo confermato."
+    },
+    {
+      "id": "ordv_sim_56",
+      "numero": "ORD-2026056",
+      "cliente": "cli_sim_9",
+      "data": "2026-06-19",
+      "stato": "inlavorazione",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 7,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 10,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 1980.6399999999999,
+      "tasse": 435.7408,
+      "totale": 2416.3808,
+      "preventivoOrigine": "prev_sim_63",
+      "note": "Ordine da preventivo confermato."
+    },
+    {
+      "id": "ordv_sim_57",
+      "numero": "ORD-2026057",
+      "cliente": "cli_sim_23",
+      "data": "2026-02-10",
+      "stato": "confermato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 9,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 4,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 1,
+          "prezzoUnitario": 79.82,
+          "sconto": 10
+        }
+      ],
+      "imponibile": 1039.6979999999999,
+      "tasse": 228.73355999999998,
+      "totale": 1268.4315599999998,
+      "preventivoOrigine": "prev_sim_27",
       "note": "Ordine da preventivo confermato."
     },
     {
       "id": "ordv_sim_58",
-      "codice": "ORD-2026058",
-      "cliente": "cli_sim_10",
-      "data": "2026-01-24",
-      "stato": "fatturato",
+      "numero": "ORD-2026058",
+      "cliente": "cli_sim_25",
+      "data": "2026-03-29",
+      "stato": "inlavorazione",
       "righe": [
         {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
-          "quantita": 9,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 10,
-          "prezzoUnitario": 0.29,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10031",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 9,
-          "prezzoUnitario": 5.25,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 2,
-          "prezzoUnitario": 0.4,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 6,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 52.93,
-      "tasse": 11.6446,
-      "totale": 64.5746,
-      "preventivoOrigine": "prev_sim_53",
+      "imponibile": 478.91999999999996,
+      "tasse": 105.3624,
+      "totale": 584.2823999999999,
+      "preventivoOrigine": "prev_sim_79",
       "note": "Ordine da preventivo confermato."
     },
     {
       "id": "ordv_sim_59",
-      "codice": "ORD-2026059",
-      "cliente": "cli_sim_8",
-      "data": "2026-02-09",
-      "stato": "spedito",
+      "numero": "ORD-2026059",
+      "cliente": "cli_sim_30",
+      "data": "2026-04-05",
+      "stato": "annullato",
       "righe": [
         {
-          "prodotto": "prod_10217",
-          "descrizione": "scheda driver interna std",
-          "quantita": 1,
-          "prezzoUnitario": 16.07,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 5,
-          "prezzoUnitario": 9.49,
-          "sconto": 5
-        },
-        {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 10,
-          "prezzoUnitario": 0.4,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 7,
-          "prezzoUnitario": 3.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_032-01-20",
-          "descrizione": "CAVO H05RN-F 2x0,75",
-          "quantita": 8,
-          "prezzoUnitario": 1.83,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 3,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         }
       ],
-      "imponibile": 102.39750000000001,
-      "tasse": 22.52745,
-      "totale": 124.92495000000001,
-      "preventivoOrigine": "prev_sim_76",
+      "imponibile": 187.10999999999999,
+      "tasse": 41.164199999999994,
+      "totale": 228.27419999999998,
+      "preventivoOrigine": "prev_sim_26",
       "note": "Ordine da preventivo confermato."
     },
     {
       "id": "ordv_sim_60",
-      "codice": "ORD-2026060",
-      "cliente": "cli_sim_27",
-      "data": "2026-05-31",
-      "stato": "in_lavorazione",
+      "numero": "ORD-2026060",
+      "cliente": "cli_sim_31",
+      "data": "2026-02-27",
+      "stato": "confermato",
       "righe": [
         {
-          "prodotto": "prod_10036",
-          "descrizione": "passacavo M12x1,5",
-          "quantita": 5,
-          "prezzoUnitario": 0.32,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 9,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 1.6,
-      "tasse": 0.35200000000000004,
-      "totale": 1.952,
-      "preventivoOrigine": "prev_sim_61",
+      "imponibile": 1516.58,
+      "tasse": 333.6476,
+      "totale": 1850.2276,
+      "preventivoOrigine": "prev_sim_67",
       "note": "Ordine da preventivo confermato."
     }
   ],
   "ddtVendita": [
     {
       "id": "ddtv_sim_1",
-      "codice": "DDT-2026001",
-      "cliente": "cli_sim_36",
-      "data": "2026-03-28",
+      "numero": "DDT-2026001",
+      "cliente": "cli_sim_20",
+      "data": "2026-01-31",
       "stato": "fatturato",
       "righe": [
         {
-          "prodotto": "prod_10036",
-          "descrizione": "passacavo M12x1,5",
-          "quantita": 7,
-          "prezzoUnitario": 0.32,
-          "sconto": 15
-        },
-        {
           "prodotto": "prod_sideis_one_cc",
           "descrizione": "Faretto SIDEis ONE CC",
-          "quantita": 9,
+          "quantita": 5,
           "prezzoUnitario": 62.37,
           "sconto": 0
         },
         {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
-          "quantita": 5,
-          "prezzoUnitario": 3.78,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 582.1339999999999,
-      "tasse": 128.06947999999997,
-      "totale": 710.2034799999999,
-      "ordineOrigine": "ordv_sim_2",
-      "vettore": "DHL",
-      "note": "DDT di vendita per spedizione merci."
-    },
-    {
-      "id": "ddtv_sim_2",
-      "codice": "DDT-2026002",
-      "cliente": "cli_sim_16",
-      "data": "2026-02-06",
-      "stato": "da_fatturare",
-      "righe": [
-        {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
-          "quantita": 8,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10277",
-          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
-          "quantita": 7,
-          "prezzoUnitario": 0.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10250",
-          "descrizione": "PASTA TERMOCONDUTTIVA",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 10,
-          "prezzoUnitario": 0.2,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         },
         {
-          "prodotto": "prod_012-01-20",
-          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
-          "quantita": 7,
-          "prezzoUnitario": 0.2,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 10,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         },
         {
-          "prodotto": "prod_10014",
-          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 8,
-          "prezzoUnitario": 0.18,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 8.21,
-      "tasse": 1.8062000000000002,
-      "totale": 10.016200000000001,
-      "ordineOrigine": "ordv_sim_3",
+      "imponibile": 2372.31,
+      "tasse": 521.9082,
+      "totale": 2894.2182,
+      "ordineOrigine": "ordv_sim_1",
       "vettore": "Nostro mezzo",
       "note": "DDT di vendita per spedizione merci."
     },
     {
       "id": "ddtv_sim_3",
-      "codice": "DDT-2026003",
-      "cliente": "cli_sim_5",
-      "data": "2026-02-02",
-      "stato": "da_fatturare",
+      "numero": "DDT-2026003",
+      "cliente": "cli_sim_19",
+      "data": "2026-01-13",
+      "stato": "fatturato",
       "righe": [
         {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 9,
-          "prezzoUnitario": 7.9,
-          "sconto": 10
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 4,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
         },
         {
-          "prodotto": "prod_032-01-20",
-          "descrizione": "CAVO H05RN-F 2x0,75",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 5,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 7,
-          "prezzoUnitario": 1.83,
-          "sconto": 5
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 10,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
         }
       ],
-      "imponibile": 76.15950000000001,
-      "tasse": 16.755090000000003,
-      "totale": 92.91459,
-      "ordineOrigine": "ordv_sim_4",
-      "vettore": "Nostro mezzo",
+      "imponibile": 1831.02,
+      "tasse": 402.8244,
+      "totale": 2233.8444,
+      "ordineOrigine": "ordv_sim_6",
+      "vettore": "DHL",
       "note": "DDT di vendita per spedizione merci."
     },
     {
       "id": "ddtv_sim_4",
-      "codice": "DDT-2026004",
-      "cliente": "cli_sim_39",
-      "data": "2026-02-04",
-      "stato": "da_fatturare",
+      "numero": "DDT-2026004",
+      "cliente": "cli_sim_18",
+      "data": "2026-05-26",
+      "stato": "fatturato",
       "righe": [
         {
-          "prodotto": "prod_025-01-20",
-          "descrizione": "dado pressacavo",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 10,
-          "prezzoUnitario": 0.4,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         },
         {
-          "prodotto": "prod_025-01-20",
-          "descrizione": "dado pressacavo",
-          "quantita": 3,
-          "prezzoUnitario": 0.4,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
-          "quantita": 5,
-          "prezzoUnitario": 3.78,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 5,
-          "prezzoUnitario": 0.21,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 7,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         }
       ],
-      "imponibile": 25.15,
-      "tasse": 5.5329999999999995,
-      "totale": 30.682999999999996,
-      "ordineOrigine": "ordv_sim_6",
-      "vettore": "BRT",
+      "imponibile": 1234.79,
+      "tasse": 271.6538,
+      "totale": 1506.4438,
+      "ordineOrigine": "ordv_sim_7",
+      "vettore": "FedEx",
       "note": "DDT di vendita per spedizione merci."
     },
     {
       "id": "ddtv_sim_5",
-      "codice": "DDT-2026005",
-      "cliente": "cli_sim_15",
-      "data": "2026-06-30",
-      "stato": "da_fatturare",
+      "numero": "DDT-2026005",
+      "cliente": "cli_sim_16",
+      "data": "2026-04-12",
+      "stato": "fatturato",
       "righe": [
         {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 1,
-          "prezzoUnitario": 9.49,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 6,
-          "prezzoUnitario": 9.49,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 9,
-          "prezzoUnitario": 9.49,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10014",
-          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
-          "quantita": 6,
-          "prezzoUnitario": 0.18,
-          "sconto": 15
-        },
-        {
-          "prodotto": "prod_003-01-22",
-          "descrizione": "DISSIPATORE SIDEIS",
-          "quantita": 1,
-          "prezzoUnitario": 4.87,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 3,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 157.628,
-      "tasse": 34.67816,
-      "totale": 192.30615999999998,
-      "ordineOrigine": "ordv_sim_10",
-      "vettore": "Nostro mezzo",
+      "imponibile": 239.45999999999998,
+      "tasse": 52.6812,
+      "totale": 292.14119999999997,
+      "ordineOrigine": "ordv_sim_8",
+      "vettore": "DHL",
       "note": "DDT di vendita per spedizione merci."
     },
     {
       "id": "ddtv_sim_6",
-      "codice": "DDT-2026006",
-      "cliente": "cli_sim_11",
-      "data": "2026-05-22",
-      "stato": "da_fatturare",
+      "numero": "DDT-2026006",
+      "cliente": "cli_sim_14",
+      "data": "2026-02-07",
+      "stato": "fatturato",
       "righe": [
         {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 10,
-          "prezzoUnitario": 7.9,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 2,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         },
         {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 9,
-          "prezzoUnitario": 7.9,
-          "sconto": 10
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 1,
+          "prezzoUnitario": 62.37,
+          "sconto": 15
         },
         {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 4,
-          "prezzoUnitario": 0.29,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 8,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         },
         {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 5,
-          "prezzoUnitario": 0.29,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         },
         {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 6,
-          "prezzoUnitario": 7.9,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 8,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 193,
-      "tasse": 42.46,
-      "totale": 235.46,
-      "ordineOrigine": "ordv_sim_12",
-      "vettore": "SDA",
+      "imponibile": 1714.3745,
+      "tasse": 377.16238999999996,
+      "totale": 2091.53689,
+      "ordineOrigine": "ordv_sim_9",
+      "vettore": "FedEx",
       "note": "DDT di vendita per spedizione merci."
     },
     {
       "id": "ddtv_sim_7",
-      "codice": "DDT-2026007",
-      "cliente": "cli_sim_25",
-      "data": "2026-04-22",
-      "stato": "da_fatturare",
+      "numero": "DDT-2026007",
+      "cliente": "cli_sim_36",
+      "data": "2026-06-26",
+      "stato": "fatturato",
       "righe": [
         {
-          "prodotto": "prod_012-01-20",
-          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
           "quantita": 2,
-          "prezzoUnitario": 0.2,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 3,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         }
       ],
-      "imponibile": 0.4,
-      "tasse": 0.08800000000000001,
-      "totale": 0.488,
-      "ordineOrigine": "ordv_sim_13",
+      "imponibile": 311.84999999999997,
+      "tasse": 68.607,
+      "totale": 380.45699999999994,
+      "ordineOrigine": "ordv_sim_10",
       "vettore": "DHL",
       "note": "DDT di vendita per spedizione merci."
     },
     {
       "id": "ddtv_sim_8",
-      "codice": "DDT-2026008",
-      "cliente": "cli_sim_13",
-      "data": "2026-04-27",
+      "numero": "DDT-2026008",
+      "cliente": "cli_sim_18",
+      "data": "2026-05-25",
       "stato": "fatturato",
       "righe": [
         {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
-          "quantita": 6,
-          "prezzoUnitario": 3.78,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 7,
-          "prezzoUnitario": 0.4,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 9,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         },
         {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 1,
-          "prezzoUnitario": 0.21,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 9,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 6,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 4,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 23.422,
-      "tasse": 5.15284,
-      "totale": 28.574840000000002,
-      "ordineOrigine": "ordv_sim_14",
-      "vettore": "DHL",
+      "imponibile": 2130.2599999999998,
+      "tasse": 468.65719999999993,
+      "totale": 2598.9172,
+      "ordineOrigine": "ordv_sim_11",
+      "vettore": "BRT",
       "note": "DDT di vendita per spedizione merci."
     },
     {
       "id": "ddtv_sim_9",
-      "codice": "DDT-2026009",
-      "cliente": "cli_sim_38",
-      "data": "2026-04-18",
-      "stato": "da_fatturare",
+      "numero": "DDT-2026009",
+      "cliente": "cli_sim_27",
+      "data": "2026-05-17",
+      "stato": "fatturato",
       "righe": [
         {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 1,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 1,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
           "quantita": 6,
-          "prezzoUnitario": 3.23,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         },
         {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 7,
-          "prezzoUnitario": 0.21,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 4,
-          "prezzoUnitario": 7.9,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 52.45,
-      "tasse": 11.539000000000001,
-      "totale": 63.989000000000004,
-      "ordineOrigine": "ordv_sim_16",
-      "vettore": "DHL",
+      "imponibile": 1633.8899999999999,
+      "tasse": 359.45579999999995,
+      "totale": 1993.3457999999998,
+      "ordineOrigine": "ordv_sim_12",
+      "vettore": "BRT",
       "note": "DDT di vendita per spedizione merci."
     },
     {
       "id": "ddtv_sim_10",
-      "codice": "DDT-2026010",
-      "cliente": "cli_sim_38",
-      "data": "2026-05-15",
+      "numero": "DDT-2026010",
+      "cliente": "cli_sim_40",
+      "data": "2026-03-14",
       "stato": "da_fatturare",
       "righe": [
         {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 1,
-          "prezzoUnitario": 7.9,
-          "sconto": 5
-        },
-        {
-          "prodotto": "prod_032-01-20",
-          "descrizione": "CAVO H05RN-F 2x0,75",
-          "quantita": 10,
-          "prezzoUnitario": 1.83,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 7,
-          "prezzoUnitario": 0.29,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 2,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 26.005000000000003,
-      "tasse": 5.721100000000001,
-      "totale": 31.726100000000002,
-      "ordineOrigine": "ordv_sim_17",
-      "vettore": "Nostro mezzo",
+      "imponibile": 159.64,
+      "tasse": 35.120799999999996,
+      "totale": 194.7608,
+      "ordineOrigine": "ordv_sim_13",
+      "vettore": "FedEx",
       "note": "DDT di vendita per spedizione merci."
     },
     {
       "id": "ddtv_sim_11",
-      "codice": "DDT-2026011",
-      "cliente": "cli_sim_12",
-      "data": "2026-05-23",
+      "numero": "DDT-2026011",
+      "cliente": "cli_sim_7",
+      "data": "2026-02-25",
       "stato": "da_fatturare",
       "righe": [
         {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
           "quantita": 10,
-          "prezzoUnitario": 0.29,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         }
       ],
-      "imponibile": 2.9,
-      "tasse": 0.638,
-      "totale": 3.538,
-      "ordineOrigine": "ordv_sim_21",
+      "imponibile": 623.6999999999999,
+      "tasse": 137.214,
+      "totale": 760.9139999999999,
+      "ordineOrigine": "ordv_sim_14",
       "vettore": "BRT",
       "note": "DDT di vendita per spedizione merci."
     },
     {
       "id": "ddtv_sim_12",
-      "codice": "DDT-2026012",
-      "cliente": "cli_sim_2",
-      "data": "2026-04-04",
+      "numero": "DDT-2026012",
+      "cliente": "cli_sim_5",
+      "data": "2026-01-09",
       "stato": "fatturato",
       "righe": [
-        {
-          "prodotto": "prod_10017",
-          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
-          "quantita": 9,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
         {
           "prodotto": "prod_sideis_one_cc",
           "descrizione": "Faretto SIDEis ONE CC",
           "quantita": 6,
           "prezzoUnitario": 62.37,
-          "sconto": 5
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 2,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 1,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 1,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
         }
       ],
-      "imponibile": 357.30899999999997,
-      "tasse": 78.60798,
-      "totale": 435.91697999999997,
-      "ordineOrigine": "ordv_sim_22",
-      "vettore": "FedEx",
+      "imponibile": 693.4999999999998,
+      "tasse": 152.56999999999996,
+      "totale": 846.0699999999997,
+      "ordineOrigine": "ordv_sim_15",
+      "vettore": "Nostro mezzo",
       "note": "DDT di vendita per spedizione merci."
     },
     {
       "id": "ddtv_sim_13",
-      "codice": "DDT-2026013",
-      "cliente": "cli_sim_15",
-      "data": "2026-05-17",
-      "stato": "fatturato",
+      "numero": "DDT-2026013",
+      "cliente": "cli_sim_34",
+      "data": "2026-02-03",
+      "stato": "da_fatturare",
       "righe": [
         {
-          "prodotto": "prod_10017",
-          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
           "quantita": 8,
-          "prezzoUnitario": 0.2,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         },
         {
-          "prodotto": "prod_auto-scheda-led-std-12-led",
-          "descrizione": "scheda led STD 12 LED",
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
           "quantita": 1,
-          "prezzoUnitario": 12.93,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         },
         {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
-          "quantita": 6,
-          "prezzoUnitario": 3.78,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 9,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         },
         {
-          "prodotto": "prod_10036",
-          "descrizione": "passacavo M12x1,5",
-          "quantita": 6,
-          "prezzoUnitario": 0.32,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 39.13,
-      "tasse": 8.608600000000001,
-      "totale": 47.738600000000005,
-      "ordineOrigine": "ordv_sim_23",
-      "vettore": "SDA",
-      "note": "DDT di vendita per spedizione merci."
-    },
-    {
-      "id": "ddtv_sim_14",
-      "codice": "DDT-2026014",
-      "cliente": "cli_sim_13",
-      "data": "2026-04-11",
-      "stato": "fatturato",
-      "righe": [
-        {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 3,
-          "prezzoUnitario": 0.21,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 0.63,
-      "tasse": 0.1386,
-      "totale": 0.7686,
-      "ordineOrigine": "ordv_sim_26",
+      "imponibile": 1920.8599999999997,
+      "tasse": 422.58919999999995,
+      "totale": 2343.4491999999996,
+      "ordineOrigine": "ordv_sim_17",
       "vettore": "DHL",
       "note": "DDT di vendita per spedizione merci."
     },
     {
-      "id": "ddtv_sim_15",
-      "codice": "DDT-2026015",
-      "cliente": "cli_sim_9",
-      "data": "2026-06-08",
-      "stato": "da_fatturare",
+      "id": "ddtv_sim_14",
+      "numero": "DDT-2026014",
+      "cliente": "cli_sim_27",
+      "data": "2026-03-30",
+      "stato": "fatturato",
       "righe": [
         {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
-          "quantita": 8,
-          "prezzoUnitario": 0.22,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
+          "sconto": 5
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 5,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         },
         {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
-          "quantita": 2,
-          "prezzoUnitario": 3.78,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 6,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         },
         {
-          "prodotto": "prod_auto-etichetta-marchi-dx",
-          "descrizione": "ETICHETTA MARCHI DX",
-          "quantita": 7,
-          "prezzoUnitario": 0.22,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 6,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 5,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 2514.33,
+      "tasse": 553.1526,
+      "totale": 3067.4826,
+      "ordineOrigine": "ordv_sim_18",
+      "vettore": "FedEx",
+      "note": "DDT di vendita per spedizione merci."
+    },
+    {
+      "id": "ddtv_sim_15",
+      "numero": "DDT-2026015",
+      "cliente": "cli_sim_9",
+      "data": "2026-04-25",
+      "stato": "fatturato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 3,
+          "prezzoUnitario": 79.82,
           "sconto": 10
         },
         {
           "prodotto": "prod_sideis_one_cc",
           "descrizione": "Faretto SIDEis ONE CC",
-          "quantita": 10,
+          "quantita": 1,
           "prezzoUnitario": 62.37,
           "sconto": 0
         },
         {
-          "prodotto": "prod_033-01-20",
-          "descrizione": "O-RING X VITI CHIUSURA",
-          "quantita": 3,
-          "prezzoUnitario": 0.17,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 8,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 5,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 634.9159999999999,
-      "tasse": 139.68151999999998,
-      "totale": 774.5975199999999,
-      "ordineOrigine": "ordv_sim_28",
-      "vettore": "BRT",
+      "imponibile": 1175.944,
+      "tasse": 258.70768,
+      "totale": 1434.65168,
+      "ordineOrigine": "ordv_sim_19",
+      "vettore": "DHL",
       "note": "DDT di vendita per spedizione merci."
     },
     {
       "id": "ddtv_sim_16",
-      "codice": "DDT-2026016",
-      "cliente": "cli_sim_11",
-      "data": "2026-02-04",
-      "stato": "fatturato",
+      "numero": "DDT-2026016",
+      "cliente": "cli_sim_28",
+      "data": "2026-02-06",
+      "stato": "da_fatturare",
       "righe": [
         {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 4,
-          "prezzoUnitario": 3.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-scheda-led-std-12-led",
-          "descrizione": "scheda led STD 12 LED",
-          "quantita": 3,
-          "prezzoUnitario": 12.93,
-          "sconto": 15
-        },
-        {
-          "prodotto": "prod_auto-scheda-led-std-12-led",
-          "descrizione": "scheda led STD 12 LED",
-          "quantita": 4,
-          "prezzoUnitario": 12.93,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 4,
-          "prezzoUnitario": 0.29,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 2,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         }
       ],
-      "imponibile": 98.7715,
-      "tasse": 21.72973,
-      "totale": 120.50123,
-      "ordineOrigine": "ordv_sim_29",
+      "imponibile": 124.74,
+      "tasse": 27.4428,
+      "totale": 152.1828,
+      "ordineOrigine": "ordv_sim_21",
       "vettore": "Nostro mezzo",
       "note": "DDT di vendita per spedizione merci."
     },
     {
       "id": "ddtv_sim_17",
-      "codice": "DDT-2026017",
-      "cliente": "cli_sim_7",
-      "data": "2026-03-08",
+      "numero": "DDT-2026017",
+      "cliente": "cli_sim_10",
+      "data": "2026-06-15",
       "stato": "da_fatturare",
       "righe": [
         {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 8,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 10,
-          "prezzoUnitario": 9.49,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 2,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 9,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 1,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         }
       ],
-      "imponibile": 94.9,
-      "tasse": 20.878,
-      "totale": 115.778,
-      "ordineOrigine": "ordv_sim_30",
-      "vettore": "DHL",
+      "imponibile": 2185.2,
+      "tasse": 480.74399999999997,
+      "totale": 2665.9439999999995,
+      "ordineOrigine": "ordv_sim_22",
+      "vettore": "FedEx",
       "note": "DDT di vendita per spedizione merci."
     },
     {
       "id": "ddtv_sim_18",
-      "codice": "DDT-2026018",
-      "cliente": "cli_sim_28",
-      "data": "2026-05-01",
+      "numero": "DDT-2026018",
+      "cliente": "cli_sim_40",
+      "data": "2026-02-09",
       "stato": "fatturato",
       "righe": [
         {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 7,
-          "prezzoUnitario": 0.4,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 9,
-          "prezzoUnitario": 7.9,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 73.9,
-      "tasse": 16.258000000000003,
-      "totale": 90.158,
-      "ordineOrigine": "ordv_sim_31",
-      "vettore": "Nostro mezzo",
+      "imponibile": 718.3799999999999,
+      "tasse": 158.04359999999997,
+      "totale": 876.4235999999999,
+      "ordineOrigine": "ordv_sim_24",
+      "vettore": "BRT",
       "note": "DDT di vendita per spedizione merci."
     },
     {
       "id": "ddtv_sim_19",
-      "codice": "DDT-2026019",
-      "cliente": "cli_sim_17",
-      "data": "2026-06-15",
-      "stato": "fatturato",
+      "numero": "DDT-2026019",
+      "cliente": "cli_sim_12",
+      "data": "2026-06-26",
+      "stato": "da_fatturare",
       "righe": [
         {
-          "prodotto": "prod_10014",
-          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
-          "quantita": 8,
-          "prezzoUnitario": 0.18,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 10,
-          "prezzoUnitario": 3.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10250",
-          "descrizione": "PASTA TERMOCONDUTTIVA",
-          "quantita": 4,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_003-01-22",
-          "descrizione": "DISSIPATORE SIDEIS",
-          "quantita": 2,
-          "prezzoUnitario": 4.87,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 1,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 44.279999999999994,
-      "tasse": 9.741599999999998,
-      "totale": 54.02159999999999,
-      "ordineOrigine": "ordv_sim_32",
+      "imponibile": 79.82,
+      "tasse": 17.560399999999998,
+      "totale": 97.3804,
+      "ordineOrigine": "ordv_sim_27",
       "vettore": "BRT",
       "note": "DDT di vendita per spedizione merci."
     },
     {
       "id": "ddtv_sim_20",
-      "codice": "DDT-2026020",
-      "cliente": "cli_sim_7",
-      "data": "2026-05-16",
+      "numero": "DDT-2026020",
+      "cliente": "cli_sim_25",
+      "data": "2026-06-03",
       "stato": "da_fatturare",
       "righe": [
         {
-          "prodotto": "prod_10248",
-          "descrizione": "SILICONE",
-          "quantita": 4,
-          "prezzoUnitario": 0.48,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 2,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 5,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         }
       ],
-      "imponibile": 1.92,
-      "tasse": 0.4224,
-      "totale": 2.3424,
-      "ordineOrigine": "ordv_sim_34",
-      "vettore": "Nostro mezzo",
+      "imponibile": 471.48999999999995,
+      "tasse": 103.72779999999999,
+      "totale": 575.2177999999999,
+      "ordineOrigine": "ordv_sim_28",
+      "vettore": "SDA",
       "note": "DDT di vendita per spedizione merci."
     },
     {
       "id": "ddtv_sim_21",
-      "codice": "DDT-2026021",
-      "cliente": "cli_sim_34",
-      "data": "2026-05-03",
+      "numero": "DDT-2026021",
+      "cliente": "cli_sim_27",
+      "data": "2026-02-27",
       "stato": "da_fatturare",
       "righe": [
-        {
-          "prodotto": "prod_032-01-20",
-          "descrizione": "CAVO H05RN-F 2x0,75",
-          "quantita": 10,
-          "prezzoUnitario": 1.83,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10031",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 5,
-          "prezzoUnitario": 5.25,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 44.55,
-      "tasse": 9.801,
-      "totale": 54.35099999999999,
-      "ordineOrigine": "ordv_sim_37",
-      "vettore": "Nostro mezzo",
-      "note": "DDT di vendita per spedizione merci."
-    },
-    {
-      "id": "ddtv_sim_22",
-      "codice": "DDT-2026022",
-      "cliente": "cli_sim_16",
-      "data": "2026-01-23",
-      "stato": "fatturato",
-      "righe": [
-        {
-          "prodotto": "prod_10277",
-          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
-          "quantita": 10,
-          "prezzoUnitario": 0.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_025-01-20",
-          "descrizione": "dado pressacavo",
-          "quantita": 9,
-          "prezzoUnitario": 0.4,
-          "sconto": 0
-        },
         {
           "prodotto": "prod_sideis_one_cv",
           "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 3,
           "prezzoUnitario": 79.82,
-          "sconto": 0
+          "sconto": 5
         },
         {
-          "prodotto": "prod_10248",
-          "descrizione": "SILICONE",
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
           "quantita": 9,
-          "prezzoUnitario": 0.48,
+          "prezzoUnitario": 62.37,
           "sconto": 0
-        },
-        {
-          "prodotto": "prod_10036",
-          "descrizione": "passacavo M12x1,5",
-          "quantita": 6,
-          "prezzoUnitario": 0.32,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 251.59999999999997,
-      "tasse": 55.35199999999999,
-      "totale": 306.95199999999994,
-      "ordineOrigine": "ordv_sim_40",
-      "vettore": "DHL",
-      "note": "DDT di vendita per spedizione merci."
-    },
-    {
-      "id": "ddtv_sim_23",
-      "codice": "DDT-2026023",
-      "cliente": "cli_sim_16",
-      "data": "2026-05-10",
-      "stato": "fatturato",
-      "righe": [
-        {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 7,
-          "prezzoUnitario": 9.49,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 66.43,
-      "tasse": 14.614600000000001,
-      "totale": 81.0446,
-      "ordineOrigine": "ordv_sim_41",
-      "vettore": "Nostro mezzo",
-      "note": "DDT di vendita per spedizione merci."
-    },
-    {
-      "id": "ddtv_sim_24",
-      "codice": "DDT-2026024",
-      "cliente": "cli_sim_21",
-      "data": "2026-06-15",
-      "stato": "fatturato",
-      "righe": [
-        {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 7,
-          "prezzoUnitario": 7.9,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 55.300000000000004,
-      "tasse": 12.166,
-      "totale": 67.46600000000001,
-      "ordineOrigine": "ordv_sim_42",
-      "vettore": "SDA",
-      "note": "DDT di vendita per spedizione merci."
-    },
-    {
-      "id": "ddtv_sim_25",
-      "codice": "DDT-2026025",
-      "cliente": "cli_sim_20",
-      "data": "2026-05-21",
-      "stato": "da_fatturare",
-      "righe": [
-        {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 2,
-          "prezzoUnitario": 0.4,
-          "sconto": 15
-        },
-        {
-          "prodotto": "prod_10031",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 10,
-          "prezzoUnitario": 5.25,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 53.18,
-      "tasse": 11.6996,
-      "totale": 64.8796,
-      "ordineOrigine": "ordv_sim_43",
-      "vettore": "Nostro mezzo",
-      "note": "DDT di vendita per spedizione merci."
-    },
-    {
-      "id": "ddtv_sim_26",
-      "codice": "DDT-2026026",
-      "cliente": "cli_sim_10",
-      "data": "2026-04-07",
-      "stato": "da_fatturare",
-      "righe": [
-        {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 1,
-          "prezzoUnitario": 0.21,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 0.21,
-      "tasse": 0.0462,
-      "totale": 0.2562,
-      "ordineOrigine": "ordv_sim_44",
-      "vettore": "Nostro mezzo",
-      "note": "DDT di vendita per spedizione merci."
-    },
-    {
-      "id": "ddtv_sim_27",
-      "codice": "DDT-2026027",
-      "cliente": "cli_sim_36",
-      "data": "2026-06-10",
-      "stato": "da_fatturare",
-      "righe": [
-        {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 4,
-          "prezzoUnitario": 9.49,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_sideis_one_cv",
-          "descrizione": "Faretto SIDEis ONE CV",
-          "quantita": 7,
-          "prezzoUnitario": 79.82,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
-          "quantita": 4,
-          "prezzoUnitario": 3.78,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 3,
-          "prezzoUnitario": 0.4,
-          "sconto": 10
-        }
-      ],
-      "imponibile": 612.9000000000001,
-      "tasse": 134.83800000000002,
-      "totale": 747.738,
-      "ordineOrigine": "ordv_sim_45",
-      "vettore": "Nostro mezzo",
-      "note": "DDT di vendita per spedizione merci."
-    },
-    {
-      "id": "ddtv_sim_28",
-      "codice": "DDT-2026028",
-      "cliente": "cli_sim_3",
-      "data": "2026-04-24",
-      "stato": "fatturato",
-      "righe": [
-        {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 8,
-          "prezzoUnitario": 7.9,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-marchi-dx",
-          "descrizione": "ETICHETTA MARCHI DX",
-          "quantita": 2,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
-          "quantita": 4,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 8,
-          "prezzoUnitario": 3.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-prodotto-sx",
-          "descrizione": "ETICHETTA PRODOTTO SX",
-          "quantita": 4,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 91.24,
-      "tasse": 20.072799999999997,
-      "totale": 111.3128,
-      "ordineOrigine": "ordv_sim_46",
-      "vettore": "BRT",
-      "note": "DDT di vendita per spedizione merci."
-    },
-    {
-      "id": "ddtv_sim_29",
-      "codice": "DDT-2026029",
-      "cliente": "cli_sim_1",
-      "data": "2026-03-26",
-      "stato": "fatturato",
-      "righe": [
-        {
-          "prodotto": "prod_012-01-20",
-          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
-          "quantita": 3,
-          "prezzoUnitario": 0.2,
-          "sconto": 5
-        },
-        {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
-          "quantita": 8,
-          "prezzoUnitario": 0.22,
-          "sconto": 5
-        },
-        {
-          "prodotto": "prod_003-01-22",
-          "descrizione": "DISSIPATORE SIDEIS",
-          "quantita": 4,
-          "prezzoUnitario": 4.87,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 1,
-          "prezzoUnitario": 0.4,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 22.122,
-      "tasse": 4.86684,
-      "totale": 26.98884,
-      "ordineOrigine": "ordv_sim_47",
-      "vettore": "SDA",
-      "note": "DDT di vendita per spedizione merci."
-    },
-    {
-      "id": "ddtv_sim_30",
-      "codice": "DDT-2026030",
-      "cliente": "cli_sim_7",
-      "data": "2026-03-20",
-      "stato": "da_fatturare",
-      "righe": [
-        {
-          "prodotto": "prod_10036",
-          "descrizione": "passacavo M12x1,5",
-          "quantita": 10,
-          "prezzoUnitario": 0.32,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 5,
-          "prezzoUnitario": 0.29,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 8,
-          "prezzoUnitario": 7.9,
-          "sconto": 5
-        },
-        {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 5,
-          "prezzoUnitario": 9.49,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_10248",
-          "descrizione": "SILICONE",
-          "quantita": 3,
-          "prezzoUnitario": 0.48,
-          "sconto": 10
-        }
-      ],
-      "imponibile": 108.69100000000002,
-      "tasse": 23.912020000000005,
-      "totale": 132.60302000000001,
-      "ordineOrigine": "ordv_sim_49",
-      "vettore": "SDA",
-      "note": "DDT di vendita per spedizione merci."
-    },
-    {
-      "id": "ddtv_sim_31",
-      "codice": "DDT-2026031",
-      "cliente": "cli_sim_8",
-      "data": "2026-02-15",
-      "stato": "da_fatturare",
-      "righe": [
-        {
-          "prodotto": "prod_10217",
-          "descrizione": "scheda driver interna std",
-          "quantita": 1,
-          "prezzoUnitario": 16.07,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 5,
-          "prezzoUnitario": 9.49,
-          "sconto": 5
-        },
-        {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 10,
-          "prezzoUnitario": 0.4,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 7,
-          "prezzoUnitario": 3.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_032-01-20",
-          "descrizione": "CAVO H05RN-F 2x0,75",
-          "quantita": 8,
-          "prezzoUnitario": 1.83,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 102.39750000000001,
-      "tasse": 22.52745,
-      "totale": 124.92495000000001,
-      "ordineOrigine": "ordv_sim_50",
-      "vettore": "FedEx",
-      "note": "DDT di vendita per spedizione merci."
-    },
-    {
-      "id": "ddtv_sim_32",
-      "codice": "DDT-2026032",
-      "cliente": "cli_sim_40",
-      "data": "2026-03-27",
-      "stato": "fatturato",
-      "righe": [
-        {
-          "prodotto": "prod_auto-scheda-led-std-12-led",
-          "descrizione": "scheda led STD 12 LED",
-          "quantita": 8,
-          "prezzoUnitario": 12.93,
-          "sconto": 15
         },
         {
           "prodotto": "prod_sideis_one_cc",
@@ -6836,227 +6292,572 @@ window.CRM_SEED_DATA = {
           "sconto": 0
         },
         {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 1,
-          "prezzoUnitario": 9.49,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 6,
+          "prezzoUnitario": 62.37,
           "sconto": 0
         }
       ],
-      "imponibile": 596.374,
-      "tasse": 131.20228,
-      "totale": 727.57628,
-      "ordineOrigine": "ordv_sim_51",
-      "vettore": "FedEx",
+      "imponibile": 1661.9969999999998,
+      "tasse": 365.63933999999995,
+      "totale": 2027.6363399999998,
+      "ordineOrigine": "ordv_sim_29",
+      "vettore": "Nostro mezzo",
       "note": "DDT di vendita per spedizione merci."
     },
     {
-      "id": "ddtv_sim_34",
-      "codice": "DDT-2026034",
-      "cliente": "cli_sim_21",
-      "data": "2026-02-11",
-      "stato": "da_fatturare",
-      "righe": [
-        {
-          "prodotto": "prod_auto-etichetta-prodotto-sx",
-          "descrizione": "ETICHETTA PRODOTTO SX",
-          "quantita": 7,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 3,
-          "prezzoUnitario": 0.29,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 2.41,
-      "tasse": 0.5302,
-      "totale": 2.9402,
-      "ordineOrigine": "ordv_sim_53",
-      "vettore": "BRT",
-      "note": "DDT di vendita per spedizione merci."
-    },
-    {
-      "id": "ddtv_sim_35",
-      "codice": "DDT-2026035",
-      "cliente": "cli_sim_27",
-      "data": "2026-06-03",
+      "id": "ddtv_sim_22",
+      "numero": "DDT-2026022",
+      "cliente": "cli_sim_32",
+      "data": "2026-06-05",
       "stato": "fatturato",
       "righe": [
         {
-          "prodotto": "prod_10036",
-          "descrizione": "passacavo M12x1,5",
-          "quantita": 5,
-          "prezzoUnitario": 0.32,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 1,
+          "prezzoUnitario": 79.82,
+          "sconto": 15
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 8,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 1.6,
-      "tasse": 0.35200000000000004,
-      "totale": 1.952,
-      "ordineOrigine": "ordv_sim_54",
+      "imponibile": 706.4069999999999,
+      "tasse": 155.40954,
+      "totale": 861.8165399999999,
+      "ordineOrigine": "ordv_sim_31",
+      "vettore": "Nostro mezzo",
+      "note": "DDT di vendita per spedizione merci."
+    },
+    {
+      "id": "ddtv_sim_24",
+      "numero": "DDT-2026024",
+      "cliente": "cli_sim_13",
+      "data": "2026-03-18",
+      "stato": "fatturato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 2,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 5,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 7,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 3,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 4,
+          "prezzoUnitario": 79.82,
+          "sconto": 15
+        }
+      ],
+      "imponibile": 1418.9279999999997,
+      "tasse": 312.1641599999999,
+      "totale": 1731.0921599999995,
+      "ordineOrigine": "ordv_sim_36",
+      "vettore": "Nostro mezzo",
+      "note": "DDT di vendita per spedizione merci."
+    },
+    {
+      "id": "ddtv_sim_25",
+      "numero": "DDT-2026025",
+      "cliente": "cli_sim_40",
+      "data": "2026-05-11",
+      "stato": "fatturato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 6,
+          "prezzoUnitario": 79.82,
+          "sconto": 10
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 1,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 7,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 7,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 2304.378,
+      "tasse": 506.96316,
+      "totale": 2811.34116,
+      "ordineOrigine": "ordv_sim_37",
+      "vettore": "Nostro mezzo",
+      "note": "DDT di vendita per spedizione merci."
+    },
+    {
+      "id": "ddtv_sim_26",
+      "numero": "DDT-2026026",
+      "cliente": "cli_sim_36",
+      "data": "2026-05-02",
+      "stato": "da_fatturare",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 7,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 558.74,
+      "tasse": 122.92280000000001,
+      "totale": 681.6628,
+      "ordineOrigine": "ordv_sim_39",
       "vettore": "DHL",
       "note": "DDT di vendita per spedizione merci."
     },
     {
-      "id": "ddtv_sim_36",
-      "codice": "DDT-2026036",
-      "cliente": "cli_sim_11",
-      "data": "2026-02-09",
-      "stato": "fatturato",
+      "id": "ddtv_sim_27",
+      "numero": "DDT-2026027",
+      "cliente": "cli_sim_1",
+      "data": "2026-05-29",
+      "stato": "da_fatturare",
       "righe": [
         {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 4,
-          "prezzoUnitario": 3.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-scheda-led-std-12-led",
-          "descrizione": "scheda led STD 12 LED",
-          "quantita": 3,
-          "prezzoUnitario": 12.93,
-          "sconto": 15
-        },
-        {
-          "prodotto": "prod_auto-scheda-led-std-12-led",
-          "descrizione": "scheda led STD 12 LED",
-          "quantita": 4,
-          "prezzoUnitario": 12.93,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 4,
-          "prezzoUnitario": 0.29,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 5,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 98.7715,
-      "tasse": 21.72973,
-      "totale": 120.50123,
-      "ordineOrigine": "ordv_sim_56",
+      "imponibile": 399.09999999999997,
+      "tasse": 87.80199999999999,
+      "totale": 486.90199999999993,
+      "ordineOrigine": "ordv_sim_40",
+      "vettore": "SDA",
+      "note": "DDT di vendita per spedizione merci."
+    },
+    {
+      "id": "ddtv_sim_28",
+      "numero": "DDT-2026028",
+      "cliente": "cli_sim_8",
+      "data": "2026-04-28",
+      "stato": "fatturato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 7,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 6,
+          "prezzoUnitario": 79.82,
+          "sconto": 10
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 1,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 7,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 8,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 2144.738,
+      "tasse": 471.84236,
+      "totale": 2616.58036,
+      "ordineOrigine": "ordv_sim_41",
+      "vettore": "SDA",
+      "note": "DDT di vendita per spedizione merci."
+    },
+    {
+      "id": "ddtv_sim_29",
+      "numero": "DDT-2026029",
+      "cliente": "cli_sim_13",
+      "data": "2026-03-11",
+      "stato": "da_fatturare",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 7,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 8,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 3,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 7,
+          "prezzoUnitario": 79.82,
+          "sconto": 10
+        }
+      ],
+      "imponibile": 1939.626,
+      "tasse": 426.71772,
+      "totale": 2366.34372,
+      "ordineOrigine": "ordv_sim_42",
+      "vettore": "FedEx",
+      "note": "DDT di vendita per spedizione merci."
+    },
+    {
+      "id": "ddtv_sim_30",
+      "numero": "DDT-2026030",
+      "cliente": "cli_sim_15",
+      "data": "2026-05-04",
+      "stato": "da_fatturare",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 1,
+          "prezzoUnitario": 79.82,
+          "sconto": 10
+        }
+      ],
+      "imponibile": 71.838,
+      "tasse": 15.804359999999999,
+      "totale": 87.64236,
+      "ordineOrigine": "ordv_sim_46",
+      "vettore": "DHL",
+      "note": "DDT di vendita per spedizione merci."
+    },
+    {
+      "id": "ddtv_sim_31",
+      "numero": "DDT-2026031",
+      "cliente": "cli_sim_8",
+      "data": "2026-04-14",
+      "stato": "fatturato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 4,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 2,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 3,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 10,
+          "prezzoUnitario": 62.37,
+          "sconto": 15
+        }
+      ],
+      "imponibile": 1091.475,
+      "tasse": 240.12449999999998,
+      "totale": 1331.5994999999998,
+      "ordineOrigine": "ordv_sim_47",
       "vettore": "Nostro mezzo",
+      "note": "DDT di vendita per spedizione merci."
+    },
+    {
+      "id": "ddtv_sim_32",
+      "numero": "DDT-2026032",
+      "cliente": "cli_sim_8",
+      "data": "2026-06-28",
+      "stato": "fatturato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 6,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 9,
+          "prezzoUnitario": 79.82,
+          "sconto": 10
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 1,
+          "prezzoUnitario": 62.37,
+          "sconto": 15
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 6,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 8,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 2191.2565,
+      "tasse": 482.07643,
+      "totale": 2673.33293,
+      "ordineOrigine": "ordv_sim_50",
+      "vettore": "SDA",
+      "note": "DDT di vendita per spedizione merci."
+    },
+    {
+      "id": "ddtv_sim_33",
+      "numero": "DDT-2026033",
+      "cliente": "cli_sim_21",
+      "data": "2026-06-25",
+      "stato": "da_fatturare",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 5,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 6,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 8,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 3008.2799999999997,
+      "tasse": 661.8216,
+      "totale": 3670.1015999999995,
+      "ordineOrigine": "ordv_sim_51",
+      "vettore": "SDA",
+      "note": "DDT di vendita per spedizione merci."
+    },
+    {
+      "id": "ddtv_sim_34",
+      "numero": "DDT-2026034",
+      "cliente": "cli_sim_19",
+      "data": "2026-01-19",
+      "stato": "da_fatturare",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 4,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 5,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 7,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 10,
+          "prezzoUnitario": 62.37,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 1831.02,
+      "tasse": 402.8244,
+      "totale": 2233.8444,
+      "ordineOrigine": "ordv_sim_52",
+      "vettore": "DHL",
+      "note": "DDT di vendita per spedizione merci."
+    },
+    {
+      "id": "ddtv_sim_35",
+      "numero": "DDT-2026035",
+      "cliente": "cli_sim_31",
+      "data": "2026-02-26",
+      "stato": "da_fatturare",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 9,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 1516.58,
+      "tasse": 333.6476,
+      "totale": 1850.2276,
+      "ordineOrigine": "ordv_sim_54",
+      "vettore": "Nostro mezzo",
+      "note": "DDT di vendita per spedizione merci."
+    },
+    {
+      "id": "ddtv_sim_36",
+      "numero": "DDT-2026036",
+      "cliente": "cli_sim_25",
+      "data": "2026-04-04",
+      "stato": "fatturato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 6,
+          "prezzoUnitario": 79.82,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 478.91999999999996,
+      "tasse": 105.3624,
+      "totale": 584.2823999999999,
+      "ordineOrigine": "ordv_sim_58",
+      "vettore": "SDA",
       "note": "DDT di vendita per spedizione merci."
     },
     {
       "id": "ddtv_sim_37",
-      "codice": "DDT-2026037",
-      "cliente": "cli_sim_10",
-      "data": "2026-01-31",
-      "stato": "da_fatturare",
-      "righe": [
-        {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
-          "quantita": 9,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 10,
-          "prezzoUnitario": 0.29,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10031",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 9,
-          "prezzoUnitario": 5.25,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 2,
-          "prezzoUnitario": 0.4,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 52.93,
-      "tasse": 11.6446,
-      "totale": 64.5746,
-      "ordineOrigine": "ordv_sim_58",
-      "vettore": "Nostro mezzo",
-      "note": "DDT di vendita per spedizione merci."
-    },
-    {
-      "id": "ddtv_sim_38",
-      "codice": "DDT-2026038",
-      "cliente": "cli_sim_8",
-      "data": "2026-02-15",
+      "numero": "DDT-2026037",
+      "cliente": "cli_sim_31",
+      "data": "2026-03-07",
       "stato": "fatturato",
       "righe": [
         {
-          "prodotto": "prod_10217",
-          "descrizione": "scheda driver interna std",
-          "quantita": 1,
-          "prezzoUnitario": 16.07,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 5,
-          "prezzoUnitario": 9.49,
-          "sconto": 5
-        },
-        {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 10,
-          "prezzoUnitario": 0.4,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         },
         {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 7,
-          "prezzoUnitario": 3.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_032-01-20",
-          "descrizione": "CAVO H05RN-F 2x0,75",
-          "quantita": 8,
-          "prezzoUnitario": 1.83,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 9,
+          "prezzoUnitario": 79.82,
           "sconto": 0
         }
       ],
-      "imponibile": 102.39750000000001,
-      "tasse": 22.52745,
-      "totale": 124.92495000000001,
-      "ordineOrigine": "ordv_sim_59",
-      "vettore": "FedEx",
-      "note": "DDT di vendita per spedizione merci."
-    },
-    {
-      "id": "ddtv_sim_39",
-      "codice": "DDT-2026039",
-      "cliente": "cli_sim_27",
-      "data": "2026-06-01",
-      "stato": "da_fatturare",
-      "righe": [
-        {
-          "prodotto": "prod_10036",
-          "descrizione": "passacavo M12x1,5",
-          "quantita": 5,
-          "prezzoUnitario": 0.32,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 1.6,
-      "tasse": 0.35200000000000004,
-      "totale": 1.952,
+      "imponibile": 1516.58,
+      "tasse": 333.6476,
+      "totale": 1850.2276,
       "ordineOrigine": "ordv_sim_60",
-      "vettore": "FedEx",
+      "vettore": "DHL",
       "note": "DDT di vendita per spedizione merci."
     }
   ],
@@ -7265,3638 +7066,3858 @@ window.CRM_SEED_DATA = {
   "ordiniAcquisto": [
     {
       "id": "orda_sim_1",
-      "codice": "OAC-2026001",
-      "fornitore": "forn_bossard",
-      "data": "2026-04-01",
-      "stato": "confermato",
+      "numero": "OAC-2026001",
+      "fornitore": "forn_casagrande",
+      "data": "2026-03-06",
+      "stato": "ricevuto",
       "righe": [
         {
-          "prodotto": "prod_auto-etichetta-marchi-dx",
-          "descrizione": "ETICHETTA MARCHI DX",
-          "quantita": 39,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 29,
+          "prezzoUnitario": 31.3,
+          "sconto": 10
         },
         {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 34,
-          "prezzoUnitario": 0.21,
-          "sconto": 0
+          "prodotto": "prod_10009",
+          "descrizione": "VASSOIO contenitore 8 PZ",
+          "quantita": 12,
+          "prezzoUnitario": 0.19,
+          "sconto": 15
         },
         {
           "prodotto": "prod_auto-scheda-led-std-12-led",
           "descrizione": "scheda led STD 12 LED",
-          "quantita": 38,
-          "prezzoUnitario": 12.93,
+          "quantita": 10,
+          "prezzoUnitario": 5.5,
+          "sconto": 5
+        },
+        {
+          "prodotto": "prod_032-01-20",
+          "descrizione": "CAVO H05RN-F 2x0,75",
+          "quantita": 46,
+          "prezzoUnitario": 0.78,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10009",
+          "descrizione": "VASSOIO contenitore 8 PZ",
+          "quantita": 27,
+          "prezzoUnitario": 0.19,
+          "sconto": 10
+        },
+        {
+          "prodotto": "prod_033-01-20",
+          "descrizione": "O-RING X VITI CHIUSURA",
+          "quantita": 50,
+          "prezzoUnitario": 0.02,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10277",
+          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
+          "quantita": 47,
+          "prezzoUnitario": 0.08,
           "sconto": 0
         }
       ],
-      "imponibile": 507.05999999999995,
-      "tasse": 111.55319999999999,
-      "totale": 618.6131999999999,
+      "imponibile": 916.375,
+      "tasse": 201.6025,
+      "totale": 1117.9775,
       "note": "Ordine di fornitura merci."
     },
     {
       "id": "orda_sim_2",
-      "codice": "OAC-2026002",
-      "fornitore": "forn_mascherpa-cecchi",
-      "data": "2026-04-09",
-      "stato": "fatturato",
+      "numero": "OAC-2026002",
+      "fornitore": "forn_elektrozubehor",
+      "data": "2026-03-05",
+      "stato": "confermato",
       "righe": [
         {
-          "prodotto": "prod_025-01-20",
-          "descrizione": "dado pressacavo",
-          "quantita": 2,
-          "prezzoUnitario": 0.4,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_10017",
-          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
-          "quantita": 28,
-          "prezzoUnitario": 0.2,
+          "prodotto": "prod_032-01-20",
+          "descrizione": "CAVO H05RN-F 2x0,75",
+          "quantita": 21,
+          "prezzoUnitario": 0.78,
           "sconto": 0
         },
         {
-          "prodotto": "prod_10277",
-          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
-          "quantita": 7,
+          "prodotto": "prod_027-01-20",
+          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
+          "quantita": 11,
+          "prezzoUnitario": 1.8,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_003-01-22",
+          "descrizione": "DISSIPATORE SIDEIS",
+          "quantita": 27,
+          "prezzoUnitario": 2.32,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10248",
+          "descrizione": "SILICONE",
+          "quantita": 43,
           "prezzoUnitario": 0.23,
-          "sconto": 10
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_033-01-20",
+          "descrizione": "O-RING X VITI CHIUSURA",
+          "quantita": 45,
+          "prezzoUnitario": 0.02,
+          "sconto": 0
         }
       ],
-      "imponibile": 7.769,
-      "tasse": 1.7091800000000001,
-      "totale": 9.47818,
+      "imponibile": 109.61,
+      "tasse": 24.1142,
+      "totale": 133.7242,
       "note": "Ordine di fornitura merci."
     },
     {
       "id": "orda_sim_3",
-      "codice": "OAC-2026003",
-      "fornitore": "forn_mef",
-      "data": "2026-03-18",
-      "stato": "confermato",
+      "numero": "OAC-2026003",
+      "fornitore": "forn_emc-colosio",
+      "data": "2026-03-09",
+      "stato": "fatturato",
       "righe": [
         {
-          "prodotto": "prod_sideis_one_cc",
-          "descrizione": "Faretto SIDEis ONE CC",
-          "quantita": 9,
-          "prezzoUnitario": 62.37,
-          "sconto": 15
-        },
-        {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
-          "quantita": 30,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
-          "quantita": 41,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_025-01-20",
-          "descrizione": "dado pressacavo",
-          "quantita": 27,
-          "prezzoUnitario": 0.4,
+          "prodotto": "prod_032-01-20",
+          "descrizione": "CAVO H05RN-F 2x0,75",
+          "quantita": 31,
+          "prezzoUnitario": 0.78,
           "sconto": 0
         }
       ],
-      "imponibile": 503.55049999999994,
-      "tasse": 110.78110999999998,
-      "totale": 614.33161,
+      "imponibile": 24.18,
+      "tasse": 5.3196,
+      "totale": 29.499599999999997,
       "note": "Ordine di fornitura merci."
     },
     {
       "id": "orda_sim_4",
-      "codice": "OAC-2026004",
-      "fornitore": "forn_emc-colosio",
-      "data": "2026-01-03",
-      "stato": "ricevuto",
+      "numero": "OAC-2026004",
+      "fornitore": "forn_elektrozubehor",
+      "data": "2026-05-25",
+      "stato": "fatturato",
       "righe": [
         {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 2,
-          "prezzoUnitario": 7.9,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
-          "quantita": 43,
-          "prezzoUnitario": 0.22,
+          "prodotto": "prod_10274",
+          "descrizione": "DADO FLANGIATO M6 A2",
+          "quantita": 4,
+          "prezzoUnitario": 0.06,
           "sconto": 0
         },
         {
-          "prodotto": "prod_10036",
-          "descrizione": "passacavo M12x1,5",
-          "quantita": 38,
-          "prezzoUnitario": 0.32,
+          "prodotto": "prod_10017",
+          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
+          "quantita": 45,
+          "prezzoUnitario": 0.05,
           "sconto": 0
         },
         {
-          "prodotto": "prod_auto-etichetta-prodotto-sx",
-          "descrizione": "ETICHETTA PRODOTTO SX",
-          "quantita": 20,
-          "prezzoUnitario": 0.22,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 12,
-          "prezzoUnitario": 3.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
-          "quantita": 39,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 8,
-          "prezzoUnitario": 9.49,
+          "prodotto": "prod_025-01-20",
+          "descrizione": "dado pressacavo",
+          "quantita": 17,
+          "prezzoUnitario": 0.19,
           "sconto": 0
         }
       ],
-      "imponibile": 163.06,
-      "tasse": 35.873200000000004,
-      "totale": 198.9332,
+      "imponibile": 5.720000000000001,
+      "tasse": 1.2584000000000002,
+      "totale": 6.978400000000001,
       "note": "Ordine di fornitura merci."
     },
     {
       "id": "orda_sim_5",
-      "codice": "OAC-2026005",
-      "fornitore": "forn_elektrozubehor",
-      "data": "2026-02-18",
-      "stato": "inviato",
+      "numero": "OAC-2026005",
+      "fornitore": "forn_entity",
+      "data": "2026-04-16",
+      "stato": "ricevuto",
       "righe": [
         {
-          "prodotto": "prod_10014",
-          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
-          "quantita": 30,
-          "prezzoUnitario": 0.18,
+          "prodotto": "prod_10274",
+          "descrizione": "DADO FLANGIATO M6 A2",
+          "quantita": 13,
+          "prezzoUnitario": 0.06,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 19,
+          "prezzoUnitario": 31.3,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-etichetta-prodotto-sx",
+          "descrizione": "ETICHETTA PRODOTTO SX",
+          "quantita": 37,
+          "prezzoUnitario": 0.07,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_012-01-20",
+          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
+          "quantita": 4,
+          "prezzoUnitario": 0.05,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_012-01-20",
+          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
+          "quantita": 3,
+          "prezzoUnitario": 0.05,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10017",
+          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
+          "quantita": 16,
+          "prezzoUnitario": 0.05,
+          "sconto": 10
+        },
+        {
+          "prodotto": "prod_024-01-20",
+          "descrizione": "pressacavo",
+          "quantita": 11,
+          "prezzoUnitario": 1.54,
           "sconto": 0
         }
       ],
-      "imponibile": 5.3999999999999995,
-      "tasse": 1.188,
-      "totale": 6.587999999999999,
+      "imponibile": 616.0800000000002,
+      "tasse": 135.53760000000003,
+      "totale": 751.6176000000002,
       "note": "Ordine di fornitura merci."
     },
     {
       "id": "orda_sim_6",
-      "codice": "OAC-2026006",
-      "fornitore": "forn_mascherpa-cecchi",
-      "data": "2026-02-15",
-      "stato": "fatturato",
+      "numero": "OAC-2026006",
+      "fornitore": "forn_bossard",
+      "data": "2026-02-23",
+      "stato": "confermato",
       "righe": [
         {
-          "prodotto": "prod_025-01-20",
-          "descrizione": "dado pressacavo",
-          "quantita": 21,
-          "prezzoUnitario": 0.4,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_025-01-20",
-          "descrizione": "dado pressacavo",
-          "quantita": 28,
-          "prezzoUnitario": 0.4,
+          "prodotto": "prod_10017",
+          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
+          "quantita": 8,
+          "prezzoUnitario": 0.05,
           "sconto": 0
         },
         {
           "prodotto": "prod_012-01-20",
           "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
-          "quantita": 23,
-          "prezzoUnitario": 0.2,
-          "sconto": 5
+          "quantita": 39,
+          "prezzoUnitario": 0.05,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_027-01-20",
+          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
+          "quantita": 32,
+          "prezzoUnitario": 1.8,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10031",
+          "descrizione": "LENTE ASIMMETRICA SIDEIS",
+          "quantita": 28,
+          "prezzoUnitario": 2.5,
+          "sconto": 0
         }
       ],
-      "imponibile": 23.970000000000002,
-      "tasse": 5.2734000000000005,
-      "totale": 29.2434,
+      "imponibile": 129.95,
+      "tasse": 28.589,
+      "totale": 158.539,
       "note": "Ordine di fornitura merci."
     },
     {
       "id": "orda_sim_7",
-      "codice": "OAC-2026007",
-      "fornitore": "forn_fornitore-da-definire",
-      "data": "2026-01-27",
-      "stato": "ricevuto",
+      "numero": "OAC-2026007",
+      "fornitore": "forn_bossard",
+      "data": "2026-04-01",
+      "stato": "inviato",
       "righe": [
         {
-          "prodotto": "prod_sideis_one_cv",
-          "descrizione": "Faretto SIDEis ONE CV",
-          "quantita": 40,
-          "prezzoUnitario": 79.82,
-          "sconto": 15
-        },
-        {
-          "prodotto": "prod_012-01-20",
-          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
-          "quantita": 3,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10014",
-          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
-          "quantita": 23,
-          "prezzoUnitario": 0.18,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-marchi-dx",
-          "descrizione": "ETICHETTA MARCHI DX",
-          "quantita": 33,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_012-01-20",
-          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
-          "quantita": 5,
-          "prezzoUnitario": 0.2,
+          "prodotto": "prod_032-01-20",
+          "descrizione": "CAVO H05RN-F 2x0,75",
+          "quantita": 11,
+          "prezzoUnitario": 0.78,
           "sconto": 5
         },
         {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 10,
-          "prezzoUnitario": 7.9,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10277",
-          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
-          "quantita": 35,
-          "prezzoUnitario": 0.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 23,
-          "prezzoUnitario": 0.29,
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 13,
+          "prezzoUnitario": 31.3,
           "sconto": 0
         }
       ],
-      "imponibile": 2820.5499999999997,
-      "tasse": 620.521,
-      "totale": 3441.0709999999995,
+      "imponibile": 415.05100000000004,
+      "tasse": 91.31122,
+      "totale": 506.36222000000004,
       "note": "Ordine di fornitura merci."
     },
     {
       "id": "orda_sim_8",
-      "codice": "OAC-2026008",
-      "fornitore": "forn_bossard",
-      "data": "2026-03-21",
-      "stato": "inviato",
+      "numero": "OAC-2026008",
+      "fornitore": "forn_entity",
+      "data": "2026-05-26",
+      "stato": "confermato",
       "righe": [
         {
-          "prodotto": "prod_sideis_one_cv",
-          "descrizione": "Faretto SIDEis ONE CV",
-          "quantita": 9,
-          "prezzoUnitario": 79.82,
-          "sconto": 5
+          "prodotto": "prod_10014",
+          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
+          "quantita": 41,
+          "prezzoUnitario": 0.03,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 33,
+          "prezzoUnitario": 24.46,
+          "sconto": 15
+        },
+        {
+          "prodotto": "prod_10277",
+          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
+          "quantita": 20,
+          "prezzoUnitario": 0.08,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_012-01-20",
+          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
+          "quantita": 13,
+          "prezzoUnitario": 0.05,
+          "sconto": 0
         },
         {
           "prodotto": "prod_sideis_one_cv",
           "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 19,
-          "prezzoUnitario": 79.82,
+          "prezzoUnitario": 31.3,
           "sconto": 0
         },
         {
-          "prodotto": "prod_10277",
-          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
-          "quantita": 38,
-          "prezzoUnitario": 0.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10248",
-          "descrizione": "SILICONE",
-          "quantita": 46,
-          "prezzoUnitario": 0.48,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 37,
+          "prezzoUnitario": 24.46,
           "sconto": 0
         }
       ],
-      "imponibile": 2229.8609999999994,
-      "tasse": 490.56941999999987,
-      "totale": 2720.4304199999992,
+      "imponibile": 2189.303,
+      "tasse": 481.64666,
+      "totale": 2670.9496599999998,
       "note": "Ordine di fornitura merci."
     },
     {
       "id": "orda_sim_9",
-      "codice": "OAC-2026009",
+      "numero": "OAC-2026009",
       "fornitore": "forn_casagrande",
-      "data": "2026-03-10",
-      "stato": "ricevuto",
+      "data": "2026-05-16",
+      "stato": "fatturato",
       "righe": [
         {
-          "prodotto": "prod_sideis_one_cv",
-          "descrizione": "Faretto SIDEis ONE CV",
-          "quantita": 48,
-          "prezzoUnitario": 79.82,
+          "prodotto": "prod_auto-etichetta-bandiera-cavo",
+          "descrizione": "ETICHETTA BANDIERA CAVO",
+          "quantita": 8,
+          "prezzoUnitario": 0.14,
           "sconto": 0
-        },
-        {
-          "prodotto": "prod_10017",
-          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
-          "quantita": 28,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10014",
-          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
-          "quantita": 30,
-          "prezzoUnitario": 0.18,
-          "sconto": 15
         }
       ],
-      "imponibile": 3841.5499999999997,
-      "tasse": 845.141,
-      "totale": 4686.691,
+      "imponibile": 1.12,
+      "tasse": 0.24640000000000004,
+      "totale": 1.3664,
       "note": "Ordine di fornitura merci."
     },
     {
       "id": "orda_sim_10",
-      "codice": "OAC-2026010",
-      "fornitore": "forn_mef",
+      "numero": "OAC-2026010",
+      "fornitore": "forn_casagrande",
       "data": "2026-01-07",
       "stato": "ricevuto",
       "righe": [
         {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 27,
-          "prezzoUnitario": 0.21,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_auto-scheda-led-std-12-led",
-          "descrizione": "scheda led STD 12 LED",
-          "quantita": 49,
-          "prezzoUnitario": 12.93,
+          "prodotto": "prod_033-01-20",
+          "descrizione": "O-RING X VITI CHIUSURA",
+          "quantita": 45,
+          "prezzoUnitario": 0.02,
           "sconto": 0
         },
         {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
-          "quantita": 28,
-          "prezzoUnitario": 3.78,
+          "prodotto": "prod_10014",
+          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
+          "quantita": 42,
+          "prezzoUnitario": 0.03,
           "sconto": 0
         },
         {
-          "prodotto": "prod_003-01-22",
-          "descrizione": "DISSIPATORE SIDEIS",
-          "quantita": 43,
-          "prezzoUnitario": 4.87,
+          "prodotto": "prod_auto-etichetta-bandiera-cavo",
+          "descrizione": "ETICHETTA BANDIERA CAVO",
+          "quantita": 7,
+          "prezzoUnitario": 0.14,
           "sconto": 0
         }
       ],
-      "imponibile": 953.9229999999999,
-      "tasse": 209.86306,
-      "totale": 1163.78606,
+      "imponibile": 3.14,
+      "tasse": 0.6908000000000001,
+      "totale": 3.8308,
       "note": "Ordine di fornitura merci."
     },
     {
       "id": "orda_sim_11",
-      "codice": "OAC-2026011",
-      "fornitore": "forn_casagrande",
-      "data": "2026-05-14",
-      "stato": "fatturato",
+      "numero": "OAC-2026011",
+      "fornitore": "forn_gore",
+      "data": "2026-03-10",
+      "stato": "inviato",
       "righe": [
         {
-          "prodotto": "prod_033-01-20",
-          "descrizione": "O-RING X VITI CHIUSURA",
-          "quantita": 22,
-          "prezzoUnitario": 0.17,
+          "prodotto": "prod_10009",
+          "descrizione": "VASSOIO contenitore 8 PZ",
+          "quantita": 47,
+          "prezzoUnitario": 0.19,
           "sconto": 0
         },
         {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
+          "prodotto": "prod_10217",
+          "descrizione": "scheda driver interna std",
+          "quantita": 24,
+          "prezzoUnitario": 6.84,
+          "sconto": 15
+        },
+        {
+          "prodotto": "prod_033-01-20",
+          "descrizione": "O-RING X VITI CHIUSURA",
           "quantita": 11,
-          "prezzoUnitario": 3.78,
-          "sconto": 10
+          "prezzoUnitario": 0.02,
+          "sconto": 0
         }
       ],
-      "imponibile": 41.162,
-      "tasse": 9.05564,
-      "totale": 50.217639999999996,
+      "imponibile": 148.686,
+      "tasse": 32.71092,
+      "totale": 181.39692,
       "note": "Ordine di fornitura merci."
     },
     {
       "id": "orda_sim_12",
-      "codice": "OAC-2026012",
-      "fornitore": "forn_ispa",
-      "data": "2026-06-25",
+      "numero": "OAC-2026012",
+      "fornitore": "forn_entity",
+      "data": "2026-05-24",
       "stato": "confermato",
       "righe": [
         {
-          "prodotto": "prod_003-01-22",
-          "descrizione": "DISSIPATORE SIDEIS",
-          "quantita": 2,
-          "prezzoUnitario": 4.87,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 49,
-          "prezzoUnitario": 7.9,
-          "sconto": 15
-        },
-        {
-          "prodotto": "prod_012-01-20",
-          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
           "quantita": 38,
-          "prezzoUnitario": 0.2,
+          "prezzoUnitario": 31.3,
           "sconto": 0
         },
         {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
-          "quantita": 46,
-          "prezzoUnitario": 3.78,
-          "sconto": 15
-        },
-        {
-          "prodotto": "prod_10036",
-          "descrizione": "passacavo M12x1,5",
-          "quantita": 42,
-          "prezzoUnitario": 0.32,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_033-01-20",
-          "descrizione": "O-RING X VITI CHIUSURA",
-          "quantita": 19,
-          "prezzoUnitario": 0.17,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10031",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 34,
-          "prezzoUnitario": 5.25,
+          "prodotto": "prod_024-01-20",
+          "descrizione": "pressacavo",
+          "quantita": 7,
+          "prezzoUnitario": 1.54,
           "sconto": 0
         }
       ],
-      "imponibile": 689.3430000000001,
-      "tasse": 151.65546,
-      "totale": 840.99846,
+      "imponibile": 1200.18,
+      "tasse": 264.0396,
+      "totale": 1464.2196000000001,
       "note": "Ordine di fornitura merci."
     },
     {
       "id": "orda_sim_13",
-      "codice": "OAC-2026013",
-      "fornitore": "forn_fornitore-da-definire",
-      "data": "2026-01-17",
-      "stato": "confermato",
+      "numero": "OAC-2026013",
+      "fornitore": "forn_casagrande",
+      "data": "2026-01-21",
+      "stato": "fatturato",
       "righe": [
+        {
+          "prodotto": "prod_033-01-20",
+          "descrizione": "O-RING X VITI CHIUSURA",
+          "quantita": 21,
+          "prezzoUnitario": 0.02,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-scheda-led-std-12-led",
+          "descrizione": "scheda led STD 12 LED",
+          "quantita": 3,
+          "prezzoUnitario": 5.5,
+          "sconto": 15
+        },
         {
           "prodotto": "prod_025-01-20",
           "descrizione": "dado pressacavo",
-          "quantita": 44,
-          "prezzoUnitario": 0.4,
+          "quantita": 46,
+          "prezzoUnitario": 0.19,
           "sconto": 0
         },
         {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
-          "quantita": 22,
-          "prezzoUnitario": 3.78,
-          "sconto": 5
-        },
-        {
-          "prodotto": "prod_032-01-20",
-          "descrizione": "CAVO H05RN-F 2x0,75",
-          "quantita": 15,
-          "prezzoUnitario": 1.83,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10277",
-          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
-          "quantita": 29,
-          "prezzoUnitario": 0.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10248",
-          "descrizione": "SILICONE",
-          "quantita": 16,
-          "prezzoUnitario": 0.48,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 22,
-          "prezzoUnitario": 0.4,
+          "prodotto": "prod_025-01-20",
+          "descrizione": "dado pressacavo",
+          "quantita": 6,
+          "prezzoUnitario": 0.19,
           "sconto": 0
         }
       ],
-      "imponibile": 147.20200000000003,
-      "tasse": 32.384440000000005,
-      "totale": 179.58644000000004,
+      "imponibile": 24.325000000000003,
+      "tasse": 5.351500000000001,
+      "totale": 29.676500000000004,
       "note": "Ordine di fornitura merci."
     },
     {
       "id": "orda_sim_14",
-      "codice": "OAC-2026014",
-      "fornitore": "forn_casagrande",
-      "data": "2026-04-15",
-      "stato": "inviato",
+      "numero": "OAC-2026014",
+      "fornitore": "forn_mef",
+      "data": "2026-03-14",
+      "stato": "fatturato",
       "righe": [
         {
-          "prodotto": "prod_10248",
-          "descrizione": "SILICONE",
-          "quantita": 36,
-          "prezzoUnitario": 0.48,
+          "prodotto": "prod_10031",
+          "descrizione": "LENTE ASIMMETRICA SIDEIS",
+          "quantita": 15,
+          "prezzoUnitario": 2.5,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-scheda-led-std-12-led",
+          "descrizione": "scheda led STD 12 LED",
+          "quantita": 4,
+          "prezzoUnitario": 5.5,
           "sconto": 5
+        },
+        {
+          "prodotto": "prod_003-01-22",
+          "descrizione": "DISSIPATORE SIDEIS",
+          "quantita": 45,
+          "prezzoUnitario": 2.32,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-etichetta-prodotto-sx",
+          "descrizione": "ETICHETTA PRODOTTO SX",
+          "quantita": 40,
+          "prezzoUnitario": 0.07,
+          "sconto": 10
+        },
+        {
+          "prodotto": "prod_032-01-20",
+          "descrizione": "CAVO H05RN-F 2x0,75",
+          "quantita": 14,
+          "prezzoUnitario": 0.78,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_003-01-22",
+          "descrizione": "DISSIPATORE SIDEIS",
+          "quantita": 9,
+          "prezzoUnitario": 2.32,
+          "sconto": 0
         }
       ],
-      "imponibile": 16.416,
-      "tasse": 3.61152,
-      "totale": 20.02752,
+      "imponibile": 197.11999999999998,
+      "tasse": 43.36639999999999,
+      "totale": 240.48639999999997,
       "note": "Ordine di fornitura merci."
     },
     {
       "id": "orda_sim_15",
-      "codice": "OAC-2026015",
-      "fornitore": "forn_mef",
-      "data": "2026-02-14",
-      "stato": "ricevuto",
+      "numero": "OAC-2026015",
+      "fornitore": "forn_casagrande",
+      "data": "2026-06-11",
+      "stato": "confermato",
       "righe": [
         {
-          "prodotto": "prod_sideis_one_cc",
-          "descrizione": "Faretto SIDEis ONE CC",
-          "quantita": 37,
-          "prezzoUnitario": 62.37,
-          "sconto": 0
+          "prodotto": "prod_10248",
+          "descrizione": "SILICONE",
+          "quantita": 47,
+          "prezzoUnitario": 0.23,
+          "sconto": 15
         },
         {
-          "prodotto": "prod_032-01-20",
-          "descrizione": "CAVO H05RN-F 2x0,75",
-          "quantita": 46,
-          "prezzoUnitario": 1.83,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 26,
-          "prezzoUnitario": 3.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
-          "quantita": 40,
-          "prezzoUnitario": 0.22,
+          "prodotto": "prod_auto-etichetta-bandiera-cavo",
+          "descrizione": "ETICHETTA BANDIERA CAVO",
+          "quantita": 5,
+          "prezzoUnitario": 0.14,
           "sconto": 5
-        },
-        {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 40,
-          "prezzoUnitario": 3.23,
-          "sconto": 0
         }
       ],
-      "imponibile": 2604.992,
-      "tasse": 573.09824,
-      "totale": 3178.09024,
+      "imponibile": 9.8535,
+      "tasse": 2.16777,
+      "totale": 12.02127,
       "note": "Ordine di fornitura merci."
     },
     {
       "id": "orda_sim_16",
-      "codice": "OAC-2026016",
-      "fornitore": "forn_mef",
-      "data": "2026-04-07",
-      "stato": "ricevuto",
+      "numero": "OAC-2026016",
+      "fornitore": "forn_fornitore-da-definire",
+      "data": "2026-02-23",
+      "stato": "confermato",
       "righe": [
         {
-          "prodotto": "prod_10036",
-          "descrizione": "passacavo M12x1,5",
-          "quantita": 44,
-          "prezzoUnitario": 0.32,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 29,
+          "prezzoUnitario": 24.46,
+          "sconto": 5
+        },
+        {
+          "prodotto": "prod_10278",
+          "descrizione": "IMBALLO",
+          "quantita": 30,
+          "prezzoUnitario": 0.07,
           "sconto": 0
         },
         {
-          "prodotto": "prod_sideis_one_cv",
-          "descrizione": "Faretto SIDEis ONE CV",
-          "quantita": 26,
-          "prezzoUnitario": 79.82,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 47,
-          "prezzoUnitario": 9.49,
+          "prodotto": "prod_10250",
+          "descrizione": "PASTA TERMOCONDUTTIVA",
+          "quantita": 16,
+          "prezzoUnitario": 0.05,
           "sconto": 0
         }
       ],
-      "imponibile": 2535.43,
-      "tasse": 557.7946,
-      "totale": 3093.2245999999996,
+      "imponibile": 676.773,
+      "tasse": 148.89006,
+      "totale": 825.66306,
       "note": "Ordine di fornitura merci."
     },
     {
       "id": "orda_sim_17",
-      "codice": "OAC-2026017",
-      "fornitore": "forn_mef",
-      "data": "2026-06-27",
-      "stato": "fatturato",
+      "numero": "OAC-2026017",
+      "fornitore": "forn_mascherpa-cecchi",
+      "data": "2026-05-12",
+      "stato": "confermato",
       "righe": [
         {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 38,
-          "prezzoUnitario": 0.21,
+          "prodotto": "prod_027-01-20",
+          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
+          "quantita": 36,
+          "prezzoUnitario": 1.8,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-etichetta-marchi-dx",
+          "descrizione": "ETICHETTA MARCHI DX",
+          "quantita": 26,
+          "prezzoUnitario": 0.07,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10277",
+          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
+          "quantita": 25,
+          "prezzoUnitario": 0.08,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_033-01-20",
+          "descrizione": "O-RING X VITI CHIUSURA",
+          "quantita": 40,
+          "prezzoUnitario": 0.02,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10250",
+          "descrizione": "PASTA TERMOCONDUTTIVA",
+          "quantita": 13,
+          "prezzoUnitario": 0.05,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10031",
+          "descrizione": "LENTE ASIMMETRICA SIDEIS",
+          "quantita": 2,
+          "prezzoUnitario": 2.5,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10031",
+          "descrizione": "LENTE ASIMMETRICA SIDEIS",
+          "quantita": 37,
+          "prezzoUnitario": 2.5,
           "sconto": 0
         }
       ],
-      "imponibile": 7.9799999999999995,
-      "tasse": 1.7555999999999998,
-      "totale": 9.7356,
+      "imponibile": 167.57,
+      "tasse": 36.8654,
+      "totale": 204.4354,
       "note": "Ordine di fornitura merci."
     },
     {
       "id": "orda_sim_18",
-      "codice": "OAC-2026018",
-      "fornitore": "forn_fornitore-da-definire",
-      "data": "2026-01-16",
-      "stato": "inviato",
+      "numero": "OAC-2026018",
+      "fornitore": "forn_elektrozubehor",
+      "data": "2026-06-05",
+      "stato": "ricevuto",
       "righe": [
         {
-          "prodotto": "prod_10014",
-          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
-          "quantita": 46,
-          "prezzoUnitario": 0.18,
+          "prodotto": "prod_auto-scheda-led-std-12-led",
+          "descrizione": "scheda led STD 12 LED",
+          "quantita": 3,
+          "prezzoUnitario": 5.5,
           "sconto": 0
         },
         {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
-          "quantita": 10,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10277",
-          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
-          "quantita": 1,
-          "prezzoUnitario": 0.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10031",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 38,
-          "prezzoUnitario": 5.25,
+          "prodotto": "prod_10009",
+          "descrizione": "VASSOIO contenitore 8 PZ",
+          "quantita": 13,
+          "prezzoUnitario": 0.19,
           "sconto": 0
         },
         {
           "prodotto": "prod_033-01-20",
           "descrizione": "O-RING X VITI CHIUSURA",
-          "quantita": 22,
-          "prezzoUnitario": 0.17,
+          "quantita": 5,
+          "prezzoUnitario": 0.02,
           "sconto": 0
         },
         {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 9,
-          "prezzoUnitario": 3.23,
-          "sconto": 10
+          "prodotto": "prod_10250",
+          "descrizione": "PASTA TERMOCONDUTTIVA",
+          "quantita": 28,
+          "prezzoUnitario": 0.05,
+          "sconto": 0
         },
         {
-          "prodotto": "prod_sideis_one_cc",
-          "descrizione": "Faretto SIDEis ONE CC",
-          "quantita": 6,
-          "prezzoUnitario": 62.37,
+          "prodotto": "prod_auto-scheda-led-std-12-led",
+          "descrizione": "scheda led STD 12 LED",
+          "quantita": 11,
+          "prezzoUnitario": 5.5,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10017",
+          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
+          "quantita": 21,
+          "prezzoUnitario": 0.05,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_001-05-23",
+          "descrizione": "LENTE ASIMMETRICA SIDEIS",
+          "quantita": 32,
+          "prezzoUnitario": 4.52,
           "sconto": 0
         }
       ],
-      "imponibile": 614.333,
-      "tasse": 135.15326,
-      "totale": 749.4862599999999,
+      "imponibile": 226.65999999999997,
+      "tasse": 49.865199999999994,
+      "totale": 276.5251999999999,
       "note": "Ordine di fornitura merci."
     },
     {
       "id": "orda_sim_19",
-      "codice": "OAC-2026019",
-      "fornitore": "forn_emc-colosio",
-      "data": "2026-02-07",
-      "stato": "ricevuto",
-      "righe": [
-        {
-          "prodotto": "prod_032-01-20",
-          "descrizione": "CAVO H05RN-F 2x0,75",
-          "quantita": 27,
-          "prezzoUnitario": 1.83,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10248",
-          "descrizione": "SILICONE",
-          "quantita": 1,
-          "prezzoUnitario": 0.48,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-prodotto-sx",
-          "descrizione": "ETICHETTA PRODOTTO SX",
-          "quantita": 40,
-          "prezzoUnitario": 0.22,
-          "sconto": 15
-        },
-        {
-          "prodotto": "prod_sideis_one_cv",
-          "descrizione": "Faretto SIDEis ONE CV",
-          "quantita": 12,
-          "prezzoUnitario": 79.82,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_sideis_one_cc",
-          "descrizione": "Faretto SIDEis ONE CC",
-          "quantita": 24,
-          "prezzoUnitario": 62.37,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10248",
-          "descrizione": "SILICONE",
-          "quantita": 6,
-          "prezzoUnitario": 0.48,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_025-01-20",
-          "descrizione": "dado pressacavo",
-          "quantita": 14,
-          "prezzoUnitario": 0.4,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_sideis_one_cc",
-          "descrizione": "Faretto SIDEis ONE CC",
-          "quantita": 18,
-          "prezzoUnitario": 62.37,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 3642.9419999999996,
-      "tasse": 801.4472399999999,
-      "totale": 4444.3892399999995,
-      "note": "Ordine di fornitura merci."
-    },
-    {
-      "id": "orda_sim_20",
-      "codice": "OAC-2026020",
-      "fornitore": "forn_entity",
-      "data": "2026-05-14",
-      "stato": "fatturato",
-      "righe": [
-        {
-          "prodotto": "prod_003-01-22",
-          "descrizione": "DISSIPATORE SIDEIS",
-          "quantita": 10,
-          "prezzoUnitario": 4.87,
-          "sconto": 15
-        },
-        {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 2,
-          "prezzoUnitario": 7.9,
-          "sconto": 5
-        },
-        {
-          "prodotto": "prod_10017",
-          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
-          "quantita": 2,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10248",
-          "descrizione": "SILICONE",
-          "quantita": 28,
-          "prezzoUnitario": 0.48,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 32,
-          "prezzoUnitario": 0.21,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10036",
-          "descrizione": "passacavo M12x1,5",
-          "quantita": 31,
-          "prezzoUnitario": 0.32,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 8,
-          "prezzoUnitario": 3.23,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 112.72500000000001,
-      "tasse": 24.799500000000002,
-      "totale": 137.52450000000002,
-      "note": "Ordine di fornitura merci."
-    },
-    {
-      "id": "orda_sim_21",
-      "codice": "OAC-2026021",
-      "fornitore": "forn_bossard",
-      "data": "2026-03-30",
-      "stato": "confermato",
-      "righe": [
-        {
-          "prodotto": "prod_033-01-20",
-          "descrizione": "O-RING X VITI CHIUSURA",
-          "quantita": 3,
-          "prezzoUnitario": 0.17,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
-          "quantita": 12,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 4,
-          "prezzoUnitario": 3.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_003-01-22",
-          "descrizione": "DISSIPATORE SIDEIS",
-          "quantita": 50,
-          "prezzoUnitario": 4.87,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 31,
-          "prezzoUnitario": 7.9,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 504.47,
-      "tasse": 110.9834,
-      "totale": 615.4534,
-      "note": "Ordine di fornitura merci."
-    },
-    {
-      "id": "orda_sim_22",
-      "codice": "OAC-2026022",
-      "fornitore": "forn_bossard",
-      "data": "2026-02-27",
-      "stato": "ricevuto",
-      "righe": [
-        {
-          "prodotto": "prod_10031",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 4,
-          "prezzoUnitario": 5.25,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10248",
-          "descrizione": "SILICONE",
-          "quantita": 23,
-          "prezzoUnitario": 0.48,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 49,
-          "prezzoUnitario": 0.4,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 16,
-          "prezzoUnitario": 3.23,
-          "sconto": 15
-        },
-        {
-          "prodotto": "prod_10036",
-          "descrizione": "passacavo M12x1,5",
-          "quantita": 23,
-          "prezzoUnitario": 0.32,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_012-01-20",
-          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
-          "quantita": 8,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_sideis_one_cc",
-          "descrizione": "Faretto SIDEis ONE CC",
-          "quantita": 29,
-          "prezzoUnitario": 62.37,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 1913.258,
-      "tasse": 420.91676,
-      "totale": 2334.17476,
-      "note": "Ordine di fornitura merci."
-    },
-    {
-      "id": "orda_sim_23",
-      "codice": "OAC-2026023",
-      "fornitore": "forn_ispa",
-      "data": "2026-02-17",
-      "stato": "inviato",
-      "righe": [
-        {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 35,
-          "prezzoUnitario": 0.21,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
-          "quantita": 47,
-          "prezzoUnitario": 3.78,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 12,
-          "prezzoUnitario": 7.9,
-          "sconto": 5
-        },
-        {
-          "prodotto": "prod_10017",
-          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
-          "quantita": 38,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10014",
-          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
-          "quantita": 43,
-          "prezzoUnitario": 0.18,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 289.67500000000007,
-      "tasse": 63.72850000000002,
-      "totale": 353.40350000000007,
-      "note": "Ordine di fornitura merci."
-    },
-    {
-      "id": "orda_sim_24",
-      "codice": "OAC-2026024",
-      "fornitore": "forn_emc-colosio",
-      "data": "2026-04-01",
-      "stato": "ricevuto",
-      "righe": [
-        {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 11,
-          "prezzoUnitario": 9.49,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_012-01-20",
-          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
-          "quantita": 27,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
-          "quantita": 33,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 117.05000000000001,
-      "tasse": 25.751,
-      "totale": 142.80100000000002,
-      "note": "Ordine di fornitura merci."
-    },
-    {
-      "id": "orda_sim_25",
-      "codice": "OAC-2026025",
-      "fornitore": "forn_bossard",
-      "data": "2026-02-17",
-      "stato": "inviato",
-      "righe": [
-        {
-          "prodotto": "prod_auto-etichetta-prodotto-sx",
-          "descrizione": "ETICHETTA PRODOTTO SX",
-          "quantita": 35,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 7.7,
-      "tasse": 1.694,
-      "totale": 9.394,
-      "note": "Ordine di fornitura merci."
-    },
-    {
-      "id": "orda_sim_26",
-      "codice": "OAC-2026026",
-      "fornitore": "forn_emc-colosio",
-      "data": "2026-05-15",
-      "stato": "confermato",
-      "righe": [
-        {
-          "prodotto": "prod_auto-scheda-led-std-12-led",
-          "descrizione": "scheda led STD 12 LED",
-          "quantita": 13,
-          "prezzoUnitario": 12.93,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 3,
-          "prezzoUnitario": 0.4,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10031",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 1,
-          "prezzoUnitario": 5.25,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10014",
-          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
-          "quantita": 7,
-          "prezzoUnitario": 0.18,
-          "sconto": 10
-        }
-      ],
-      "imponibile": 175.67399999999998,
-      "tasse": 38.64827999999999,
-      "totale": 214.32227999999998,
-      "note": "Ordine di fornitura merci."
-    },
-    {
-      "id": "orda_sim_27",
-      "codice": "OAC-2026027",
-      "fornitore": "forn_mef",
-      "data": "2026-02-13",
-      "stato": "confermato",
-      "righe": [
-        {
-          "prodotto": "prod_10217",
-          "descrizione": "scheda driver interna std",
-          "quantita": 20,
-          "prezzoUnitario": 16.07,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_033-01-20",
-          "descrizione": "O-RING X VITI CHIUSURA",
-          "quantita": 27,
-          "prezzoUnitario": 0.17,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 23,
-          "prezzoUnitario": 3.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 8,
-          "prezzoUnitario": 0.21,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10277",
-          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
-          "quantita": 23,
-          "prezzoUnitario": 0.23,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 407.25,
-      "tasse": 89.595,
-      "totale": 496.84499999999997,
-      "note": "Ordine di fornitura merci."
-    },
-    {
-      "id": "orda_sim_28",
-      "codice": "OAC-2026028",
-      "fornitore": "forn_mef",
-      "data": "2026-02-24",
-      "stato": "confermato",
-      "righe": [
-        {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 9,
-          "prezzoUnitario": 3.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_033-01-20",
-          "descrizione": "O-RING X VITI CHIUSURA",
-          "quantita": 50,
-          "prezzoUnitario": 0.17,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 31,
-          "prezzoUnitario": 3.23,
-          "sconto": 15
-        },
-        {
-          "prodotto": "prod_auto-etichetta-marchi-dx",
-          "descrizione": "ETICHETTA MARCHI DX",
-          "quantita": 31,
-          "prezzoUnitario": 0.22,
-          "sconto": 15
-        }
-      ],
-      "imponibile": 128.4775,
-      "tasse": 28.26505,
-      "totale": 156.74255,
-      "note": "Ordine di fornitura merci."
-    },
-    {
-      "id": "orda_sim_29",
-      "codice": "OAC-2026029",
-      "fornitore": "forn_gore",
-      "data": "2026-06-03",
-      "stato": "ricevuto",
-      "righe": [
-        {
-          "prodotto": "prod_auto-scheda-led-std-12-led",
-          "descrizione": "scheda led STD 12 LED",
-          "quantita": 18,
-          "prezzoUnitario": 12.93,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 33,
-          "prezzoUnitario": 3.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_032-01-20",
-          "descrizione": "CAVO H05RN-F 2x0,75",
-          "quantita": 4,
-          "prezzoUnitario": 1.83,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-marchi-dx",
-          "descrizione": "ETICHETTA MARCHI DX",
-          "quantita": 9,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
-          "quantita": 4,
-          "prezzoUnitario": 3.78,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10014",
-          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
-          "quantita": 40,
-          "prezzoUnitario": 0.18,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10277",
-          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
-          "quantita": 38,
-          "prezzoUnitario": 0.23,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_sideis_one_cc",
-          "descrizione": "Faretto SIDEis ONE CC",
-          "quantita": 23,
-          "prezzoUnitario": 62.37,
-          "sconto": 10
-        }
-      ],
-      "imponibile": 1669.875,
-      "tasse": 367.3725,
-      "totale": 2037.2475,
-      "note": "Ordine di fornitura merci."
-    },
-    {
-      "id": "orda_sim_30",
-      "codice": "OAC-2026030",
+      "numero": "OAC-2026019",
       "fornitore": "forn_casagrande",
-      "data": "2026-05-23",
-      "stato": "confermato",
-      "righe": [
-        {
-          "prodotto": "prod_10031",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 7,
-          "prezzoUnitario": 5.25,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 36.75,
-      "tasse": 8.085,
-      "totale": 44.835,
-      "note": "Ordine di fornitura merci."
-    },
-    {
-      "id": "orda_sim_31",
-      "codice": "OAC-2026031",
-      "fornitore": "forn_gore",
-      "data": "2026-03-09",
-      "stato": "ricevuto",
-      "righe": [
-        {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 47,
-          "prezzoUnitario": 7.9,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-scheda-led-std-12-led",
-          "descrizione": "scheda led STD 12 LED",
-          "quantita": 7,
-          "prezzoUnitario": 12.93,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10217",
-          "descrizione": "scheda driver interna std",
-          "quantita": 47,
-          "prezzoUnitario": 16.07,
-          "sconto": 15
-        }
-      ],
-      "imponibile": 1103.8065,
-      "tasse": 242.83742999999998,
-      "totale": 1346.64393,
-      "note": "Ordine di fornitura merci."
-    },
-    {
-      "id": "orda_sim_32",
-      "codice": "OAC-2026032",
-      "fornitore": "forn_fornitore-da-definire",
-      "data": "2026-06-17",
-      "stato": "ricevuto",
-      "righe": [
-        {
-          "prodotto": "prod_10250",
-          "descrizione": "PASTA TERMOCONDUTTIVA",
-          "quantita": 44,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-scheda-led-std-12-led",
-          "descrizione": "scheda led STD 12 LED",
-          "quantita": 42,
-          "prezzoUnitario": 12.93,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
-          "quantita": 29,
-          "prezzoUnitario": 0.22,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 42,
-          "prezzoUnitario": 0.4,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
-          "quantita": 46,
-          "prezzoUnitario": 3.78,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_sideis_one_cv",
-          "descrizione": "Faretto SIDEis ONE CV",
-          "quantita": 3,
-          "prezzoUnitario": 79.82,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_033-01-20",
-          "descrizione": "O-RING X VITI CHIUSURA",
-          "quantita": 44,
-          "prezzoUnitario": 0.17,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 3,
-          "prezzoUnitario": 0.4,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 979.0339999999999,
-      "tasse": 215.38747999999998,
-      "totale": 1194.4214799999997,
-      "note": "Ordine di fornitura merci."
-    },
-    {
-      "id": "orda_sim_33",
-      "codice": "OAC-2026033",
-      "fornitore": "forn_casagrande",
-      "data": "2026-04-14",
+      "data": "2026-05-31",
       "stato": "confermato",
       "righe": [
         {
           "prodotto": "prod_10274",
           "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 13,
-          "prezzoUnitario": 0.21,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 27,
-          "prezzoUnitario": 3.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-marchi-dx",
-          "descrizione": "ETICHETTA MARCHI DX",
-          "quantita": 7,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 16,
-          "prezzoUnitario": 0.4,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10017",
-          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
-          "quantita": 6,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10014",
-          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
-          "quantita": 29,
-          "prezzoUnitario": 0.18,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-marchi-dx",
-          "descrizione": "ETICHETTA MARCHI DX",
-          "quantita": 37,
-          "prezzoUnitario": 0.22,
-          "sconto": 15
-        }
-      ],
-      "imponibile": 110.946,
-      "tasse": 24.40812,
-      "totale": 135.35412,
-      "note": "Ordine di fornitura merci."
-    },
-    {
-      "id": "orda_sim_34",
-      "codice": "OAC-2026034",
-      "fornitore": "forn_emc-colosio",
-      "data": "2026-03-15",
-      "stato": "confermato",
-      "righe": [
-        {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
-          "quantita": 10,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 2.2,
-      "tasse": 0.48400000000000004,
-      "totale": 2.684,
-      "note": "Ordine di fornitura merci."
-    },
-    {
-      "id": "orda_sim_35",
-      "codice": "OAC-2026035",
-      "fornitore": "forn_casagrande",
-      "data": "2026-03-12",
-      "stato": "confermato",
-      "righe": [
-        {
-          "prodotto": "prod_025-01-20",
-          "descrizione": "dado pressacavo",
-          "quantita": 10,
-          "prezzoUnitario": 0.4,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_033-01-20",
-          "descrizione": "O-RING X VITI CHIUSURA",
           "quantita": 21,
-          "prezzoUnitario": 0.17,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_033-01-20",
-          "descrizione": "O-RING X VITI CHIUSURA",
-          "quantita": 14,
-          "prezzoUnitario": 0.17,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_auto-scheda-led-std-12-led",
-          "descrizione": "scheda led STD 12 LED",
-          "quantita": 32,
-          "prezzoUnitario": 12.93,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10017",
-          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
-          "quantita": 44,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 11,
-          "prezzoUnitario": 9.49,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
-          "quantita": 5,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 537.005,
-      "tasse": 118.1411,
-      "totale": 655.1460999999999,
-      "note": "Ordine di fornitura merci."
-    },
-    {
-      "id": "orda_sim_36",
-      "codice": "OAC-2026036",
-      "fornitore": "forn_emc-colosio",
-      "data": "2026-05-24",
-      "stato": "fatturato",
-      "righe": [
-        {
-          "prodotto": "prod_10036",
-          "descrizione": "passacavo M12x1,5",
-          "quantita": 37,
-          "prezzoUnitario": 0.32,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
-          "quantita": 3,
-          "prezzoUnitario": 3.78,
-          "sconto": 10
+          "prezzoUnitario": 0.06,
+          "sconto": 15
         },
         {
           "prodotto": "prod_10274",
           "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 17,
-          "prezzoUnitario": 0.21,
-          "sconto": 5
-        },
-        {
-          "prodotto": "prod_auto-scheda-led-std-12-led",
-          "descrizione": "scheda led STD 12 LED",
-          "quantita": 27,
-          "prezzoUnitario": 12.93,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 374.5475,
-      "tasse": 82.40045,
-      "totale": 456.94795,
-      "note": "Ordine di fornitura merci."
-    },
-    {
-      "id": "orda_sim_37",
-      "codice": "OAC-2026037",
-      "fornitore": "forn_gore",
-      "data": "2026-06-12",
-      "stato": "fatturato",
-      "righe": [
-        {
-          "prodotto": "prod_auto-etichetta-prodotto-sx",
-          "descrizione": "ETICHETTA PRODOTTO SX",
           "quantita": 8,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_033-01-20",
-          "descrizione": "O-RING X VITI CHIUSURA",
-          "quantita": 10,
-          "prezzoUnitario": 0.17,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 40,
-          "prezzoUnitario": 0.29,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10217",
-          "descrizione": "scheda driver interna std",
-          "quantita": 21,
-          "prezzoUnitario": 16.07,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 41,
-          "prezzoUnitario": 3.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_003-01-22",
-          "descrizione": "DISSIPATORE SIDEIS",
-          "quantita": 44,
-          "prezzoUnitario": 4.87,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 699.07,
-      "tasse": 153.7954,
-      "totale": 852.8654,
-      "note": "Ordine di fornitura merci."
-    },
-    {
-      "id": "orda_sim_38",
-      "codice": "OAC-2026038",
-      "fornitore": "forn_ispa",
-      "data": "2026-02-22",
-      "stato": "ricevuto",
-      "righe": [
-        {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 19,
-          "prezzoUnitario": 0.29,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 5.51,
-      "tasse": 1.2122,
-      "totale": 6.7222,
-      "note": "Ordine di fornitura merci."
-    },
-    {
-      "id": "orda_sim_39",
-      "codice": "OAC-2026039",
-      "fornitore": "forn_casagrande",
-      "data": "2026-01-15",
-      "stato": "inviato",
-      "righe": [
-        {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 22,
-          "prezzoUnitario": 0.4,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 8.8,
-      "tasse": 1.9360000000000002,
-      "totale": 10.736,
-      "note": "Ordine di fornitura merci."
-    },
-    {
-      "id": "orda_sim_40",
-      "codice": "OAC-2026040",
-      "fornitore": "forn_gore",
-      "data": "2026-02-07",
-      "stato": "confermato",
-      "righe": [
-        {
-          "prodotto": "prod_10014",
-          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
-          "quantita": 33,
-          "prezzoUnitario": 0.18,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10014",
-          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
-          "quantita": 42,
-          "prezzoUnitario": 0.18,
-          "sconto": 15
-        },
-        {
-          "prodotto": "prod_sideis_one_cv",
-          "descrizione": "Faretto SIDEis ONE CV",
-          "quantita": 42,
-          "prezzoUnitario": 79.82,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-marchi-dx",
-          "descrizione": "ETICHETTA MARCHI DX",
-          "quantita": 10,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10250",
-          "descrizione": "PASTA TERMOCONDUTTIVA",
-          "quantita": 44,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10250",
-          "descrizione": "PASTA TERMOCONDUTTIVA",
-          "quantita": 17,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 29,
-          "prezzoUnitario": 0.21,
-          "sconto": 15
-        },
-        {
-          "prodotto": "prod_10031",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 31,
-          "prezzoUnitario": 5.25,
-          "sconto": 5
-        }
-      ],
-      "imponibile": 3538.995,
-      "tasse": 778.5789,
-      "totale": 4317.573899999999,
-      "note": "Ordine di fornitura merci."
-    },
-    {
-      "id": "orda_sim_41",
-      "codice": "OAC-2026041",
-      "fornitore": "forn_elektrozubehor",
-      "data": "2026-01-14",
-      "stato": "confermato",
-      "righe": [
-        {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 46,
-          "prezzoUnitario": 0.4,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_032-01-20",
-          "descrizione": "CAVO H05RN-F 2x0,75",
-          "quantita": 17,
-          "prezzoUnitario": 1.83,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10031",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 3,
-          "prezzoUnitario": 5.25,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10277",
-          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
-          "quantita": 24,
-          "prezzoUnitario": 0.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-prodotto-sx",
-          "descrizione": "ETICHETTA PRODOTTO SX",
-          "quantita": 38,
-          "prezzoUnitario": 0.22,
-          "sconto": 5
-        },
-        {
-          "prodotto": "prod_10250",
-          "descrizione": "PASTA TERMOCONDUTTIVA",
-          "quantita": 24,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 83.52199999999999,
-      "tasse": 18.37484,
-      "totale": 101.89683999999998,
-      "note": "Ordine di fornitura merci."
-    },
-    {
-      "id": "orda_sim_42",
-      "codice": "OAC-2026042",
-      "fornitore": "forn_ispa",
-      "data": "2026-04-03",
-      "stato": "ricevuto",
-      "righe": [
-        {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 43,
-          "prezzoUnitario": 7.9,
-          "sconto": 15
-        },
-        {
-          "prodotto": "prod_10014",
-          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
-          "quantita": 16,
-          "prezzoUnitario": 0.18,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10017",
-          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
-          "quantita": 32,
-          "prezzoUnitario": 0.2,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_032-01-20",
-          "descrizione": "CAVO H05RN-F 2x0,75",
-          "quantita": 36,
-          "prezzoUnitario": 1.83,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_003-01-22",
-          "descrizione": "DISSIPATORE SIDEIS",
-          "quantita": 35,
-          "prezzoUnitario": 4.87,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 16,
-          "prezzoUnitario": 0.4,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_auto-etichetta-marchi-dx",
-          "descrizione": "ETICHETTA MARCHI DX",
-          "quantita": 24,
-          "prezzoUnitario": 0.22,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 11,
-          "prezzoUnitario": 9.49,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 648.617,
-      "tasse": 142.69574,
-      "totale": 791.31274,
-      "note": "Ordine di fornitura merci."
-    },
-    {
-      "id": "orda_sim_43",
-      "codice": "OAC-2026043",
-      "fornitore": "forn_elektrozubehor",
-      "data": "2026-01-16",
-      "stato": "fatturato",
-      "righe": [
-        {
-          "prodotto": "prod_10217",
-          "descrizione": "scheda driver interna std",
-          "quantita": 50,
-          "prezzoUnitario": 16.07,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_012-01-20",
-          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
-          "quantita": 37,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-marchi-dx",
-          "descrizione": "ETICHETTA MARCHI DX",
-          "quantita": 6,
-          "prezzoUnitario": 0.22,
-          "sconto": 15
-        },
-        {
-          "prodotto": "prod_10017",
-          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
-          "quantita": 17,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_033-01-20",
-          "descrizione": "O-RING X VITI CHIUSURA",
-          "quantita": 49,
-          "prezzoUnitario": 0.17,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10031",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 47,
-          "prezzoUnitario": 5.25,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 1070.502,
-      "tasse": 235.51044,
-      "totale": 1306.01244,
-      "note": "Ordine di fornitura merci."
-    },
-    {
-      "id": "orda_sim_44",
-      "codice": "OAC-2026044",
-      "fornitore": "forn_mascherpa-cecchi",
-      "data": "2026-05-02",
-      "stato": "ricevuto",
-      "righe": [
-        {
-          "prodotto": "prod_10250",
-          "descrizione": "PASTA TERMOCONDUTTIVA",
-          "quantita": 26,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10217",
-          "descrizione": "scheda driver interna std",
-          "quantita": 49,
-          "prezzoUnitario": 16.07,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 39,
-          "prezzoUnitario": 0.29,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_032-01-20",
-          "descrizione": "CAVO H05RN-F 2x0,75",
-          "quantita": 49,
-          "prezzoUnitario": 1.83,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10014",
-          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
-          "quantita": 41,
-          "prezzoUnitario": 0.18,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 3,
-          "prezzoUnitario": 0.21,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10277",
-          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
-          "quantita": 24,
-          "prezzoUnitario": 0.23,
+          "prezzoUnitario": 0.06,
           "sconto": 0
         },
         {
           "prodotto": "prod_033-01-20",
           "descrizione": "O-RING X VITI CHIUSURA",
           "quantita": 25,
-          "prezzoUnitario": 0.17,
+          "prezzoUnitario": 0.02,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10017",
+          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
+          "quantita": 26,
+          "prezzoUnitario": 0.05,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_032-01-20",
+          "descrizione": "CAVO H05RN-F 2x0,75",
+          "quantita": 21,
+          "prezzoUnitario": 0.78,
+          "sconto": 10
+        },
+        {
+          "prodotto": "prod_012-01-20",
+          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
+          "quantita": 12,
+          "prezzoUnitario": 0.05,
           "sconto": 0
         }
       ],
-      "imponibile": 911.39,
-      "tasse": 200.5058,
-      "totale": 1111.8958,
+      "imponibile": 18.693,
+      "tasse": 4.1124600000000004,
+      "totale": 22.80546,
       "note": "Ordine di fornitura merci."
     },
     {
-      "id": "orda_sim_45",
-      "codice": "OAC-2026045",
-      "fornitore": "forn_entity",
-      "data": "2026-06-25",
+      "id": "orda_sim_20",
+      "numero": "OAC-2026020",
+      "fornitore": "forn_emc-colosio",
+      "data": "2026-01-31",
+      "stato": "ricevuto",
+      "righe": [
+        {
+          "prodotto": "prod_10036",
+          "descrizione": "passacavo M12x1,5",
+          "quantita": 9,
+          "prezzoUnitario": 0.15,
+          "sconto": 15
+        },
+        {
+          "prodotto": "prod_10274",
+          "descrizione": "DADO FLANGIATO M6 A2",
+          "quantita": 42,
+          "prezzoUnitario": 0.06,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-etichetta-marchi-dx",
+          "descrizione": "ETICHETTA MARCHI DX",
+          "quantita": 22,
+          "prezzoUnitario": 0.07,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-scheda-led-std-12-led",
+          "descrizione": "scheda led STD 12 LED",
+          "quantita": 3,
+          "prezzoUnitario": 5.5,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_032-01-20",
+          "descrizione": "CAVO H05RN-F 2x0,75",
+          "quantita": 10,
+          "prezzoUnitario": 0.78,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_001-05-23",
+          "descrizione": "LENTE ASIMMETRICA SIDEIS",
+          "quantita": 16,
+          "prezzoUnitario": 4.52,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10277",
+          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
+          "quantita": 46,
+          "prezzoUnitario": 0.08,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-scheda-led-std-12-led",
+          "descrizione": "scheda led STD 12 LED",
+          "quantita": 14,
+          "prezzoUnitario": 5.5,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 182.5075,
+      "tasse": 40.15165,
+      "totale": 222.65914999999998,
+      "note": "Ordine di fornitura merci."
+    },
+    {
+      "id": "orda_sim_21",
+      "numero": "OAC-2026021",
+      "fornitore": "forn_gore",
+      "data": "2026-01-21",
       "stato": "confermato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 40,
+          "prezzoUnitario": 24.46,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-scheda-led-std-12-led",
+          "descrizione": "scheda led STD 12 LED",
+          "quantita": 42,
+          "prezzoUnitario": 5.5,
+          "sconto": 15
+        },
+        {
+          "prodotto": "prod_10277",
+          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
+          "quantita": 19,
+          "prezzoUnitario": 0.08,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-scheda-led-std-12-led",
+          "descrizione": "scheda led STD 12 LED",
+          "quantita": 43,
+          "prezzoUnitario": 5.5,
+          "sconto": 15
+        },
+        {
+          "prodotto": "prod_10031",
+          "descrizione": "LENTE ASIMMETRICA SIDEIS",
+          "quantita": 13,
+          "prezzoUnitario": 2.5,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_003-01-22",
+          "descrizione": "DISSIPATORE SIDEIS",
+          "quantita": 50,
+          "prezzoUnitario": 2.32,
+          "sconto": 15
+        },
+        {
+          "prodotto": "prod_10274",
+          "descrizione": "DADO FLANGIATO M6 A2",
+          "quantita": 14,
+          "prezzoUnitario": 0.06,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 1509.235,
+      "tasse": 332.0317,
+      "totale": 1841.2667,
+      "note": "Ordine di fornitura merci."
+    },
+    {
+      "id": "orda_sim_22",
+      "numero": "OAC-2026022",
+      "fornitore": "forn_casagrande",
+      "data": "2026-01-30",
+      "stato": "confermato",
+      "righe": [
+        {
+          "prodotto": "prod_auto-etichetta-bandiera-cavo",
+          "descrizione": "ETICHETTA BANDIERA CAVO",
+          "quantita": 5,
+          "prezzoUnitario": 0.14,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10009",
+          "descrizione": "VASSOIO contenitore 8 PZ",
+          "quantita": 40,
+          "prezzoUnitario": 0.19,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 28,
+          "prezzoUnitario": 31.3,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 884.6999999999999,
+      "tasse": 194.634,
+      "totale": 1079.3339999999998,
+      "note": "Ordine di fornitura merci."
+    },
+    {
+      "id": "orda_sim_23",
+      "numero": "OAC-2026023",
+      "fornitore": "forn_mef",
+      "data": "2026-02-06",
+      "stato": "inviato",
+      "righe": [
+        {
+          "prodotto": "prod_10031",
+          "descrizione": "LENTE ASIMMETRICA SIDEIS",
+          "quantita": 46,
+          "prezzoUnitario": 2.5,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_024-01-20",
+          "descrizione": "pressacavo",
+          "quantita": 2,
+          "prezzoUnitario": 1.54,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_032-01-20",
+          "descrizione": "CAVO H05RN-F 2x0,75",
+          "quantita": 49,
+          "prezzoUnitario": 0.78,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10250",
+          "descrizione": "PASTA TERMOCONDUTTIVA",
+          "quantita": 37,
+          "prezzoUnitario": 0.05,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_027-01-20",
+          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
+          "quantita": 6,
+          "prezzoUnitario": 1.8,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10278",
+          "descrizione": "IMBALLO",
+          "quantita": 42,
+          "prezzoUnitario": 0.07,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_001-05-23",
+          "descrizione": "LENTE ASIMMETRICA SIDEIS",
+          "quantita": 4,
+          "prezzoUnitario": 4.52,
+          "sconto": 15
+        },
+        {
+          "prodotto": "prod_10250",
+          "descrizione": "PASTA TERMOCONDUTTIVA",
+          "quantita": 34,
+          "prezzoUnitario": 0.05,
+          "sconto": 5
+        }
+      ],
+      "imponibile": 188.87300000000002,
+      "tasse": 41.552060000000004,
+      "totale": 230.42506000000003,
+      "note": "Ordine di fornitura merci."
+    },
+    {
+      "id": "orda_sim_24",
+      "numero": "OAC-2026024",
+      "fornitore": "forn_casagrande",
+      "data": "2026-06-11",
+      "stato": "ricevuto",
+      "righe": [
+        {
+          "prodotto": "prod_10248",
+          "descrizione": "SILICONE",
+          "quantita": 8,
+          "prezzoUnitario": 0.23,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-etichetta-prodotto-sx",
+          "descrizione": "ETICHETTA PRODOTTO SX",
+          "quantita": 22,
+          "prezzoUnitario": 0.07,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_033-01-20",
+          "descrizione": "O-RING X VITI CHIUSURA",
+          "quantita": 40,
+          "prezzoUnitario": 0.02,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_003-01-22",
+          "descrizione": "DISSIPATORE SIDEIS",
+          "quantita": 16,
+          "prezzoUnitario": 2.32,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-etichetta-bandiera-cavo",
+          "descrizione": "ETICHETTA BANDIERA CAVO",
+          "quantita": 42,
+          "prezzoUnitario": 0.14,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10250",
+          "descrizione": "PASTA TERMOCONDUTTIVA",
+          "quantita": 41,
+          "prezzoUnitario": 0.05,
+          "sconto": 10
+        }
+      ],
+      "imponibile": 49.025,
+      "tasse": 10.785499999999999,
+      "totale": 59.8105,
+      "note": "Ordine di fornitura merci."
+    },
+    {
+      "id": "orda_sim_25",
+      "numero": "OAC-2026025",
+      "fornitore": "forn_fornitore-da-definire",
+      "data": "2026-01-29",
+      "stato": "ricevuto",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 31,
+          "prezzoUnitario": 31.3,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_012-01-20",
+          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
+          "quantita": 34,
+          "prezzoUnitario": 0.05,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_027-01-20",
+          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
+          "quantita": 14,
+          "prezzoUnitario": 1.8,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-etichetta-marchi-dx",
+          "descrizione": "ETICHETTA MARCHI DX",
+          "quantita": 29,
+          "prezzoUnitario": 0.07,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 999.2300000000001,
+      "tasse": 219.83060000000003,
+      "totale": 1219.0606,
+      "note": "Ordine di fornitura merci."
+    },
+    {
+      "id": "orda_sim_26",
+      "numero": "OAC-2026026",
+      "fornitore": "forn_emc-colosio",
+      "data": "2026-05-10",
+      "stato": "ricevuto",
+      "righe": [
+        {
+          "prodotto": "prod_025-01-20",
+          "descrizione": "dado pressacavo",
+          "quantita": 25,
+          "prezzoUnitario": 0.19,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10017",
+          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
+          "quantita": 41,
+          "prezzoUnitario": 0.05,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10009",
+          "descrizione": "VASSOIO contenitore 8 PZ",
+          "quantita": 13,
+          "prezzoUnitario": 0.19,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10014",
+          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
+          "quantita": 46,
+          "prezzoUnitario": 0.03,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-etichetta-prodotto-sx",
+          "descrizione": "ETICHETTA PRODOTTO SX",
+          "quantita": 9,
+          "prezzoUnitario": 0.07,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 6,
+          "prezzoUnitario": 31.3,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_001-05-23",
+          "descrizione": "LENTE ASIMMETRICA SIDEIS",
+          "quantita": 2,
+          "prezzoUnitario": 4.52,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 208.12,
+      "tasse": 45.7864,
+      "totale": 253.9064,
+      "note": "Ordine di fornitura merci."
+    },
+    {
+      "id": "orda_sim_27",
+      "numero": "OAC-2026027",
+      "fornitore": "forn_emc-colosio",
+      "data": "2026-03-28",
+      "stato": "inviato",
+      "righe": [
+        {
+          "prodotto": "prod_auto-scheda-led-std-12-led",
+          "descrizione": "scheda led STD 12 LED",
+          "quantita": 38,
+          "prezzoUnitario": 5.5,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10277",
+          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
+          "quantita": 41,
+          "prezzoUnitario": 0.08,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10250",
+          "descrizione": "PASTA TERMOCONDUTTIVA",
+          "quantita": 1,
+          "prezzoUnitario": 0.05,
+          "sconto": 15
+        },
+        {
+          "prodotto": "prod_024-01-20",
+          "descrizione": "pressacavo",
+          "quantita": 2,
+          "prezzoUnitario": 1.54,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10017",
+          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
+          "quantita": 11,
+          "prezzoUnitario": 0.05,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10277",
+          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
+          "quantita": 36,
+          "prezzoUnitario": 0.08,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 218.8325,
+      "tasse": 48.143150000000006,
+      "totale": 266.97565000000003,
+      "note": "Ordine di fornitura merci."
+    },
+    {
+      "id": "orda_sim_28",
+      "numero": "OAC-2026028",
+      "fornitore": "forn_mef",
+      "data": "2026-02-24",
+      "stato": "inviato",
+      "righe": [
+        {
+          "prodotto": "prod_033-01-20",
+          "descrizione": "O-RING X VITI CHIUSURA",
+          "quantita": 49,
+          "prezzoUnitario": 0.02,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-etichetta-prodotto-sx",
+          "descrizione": "ETICHETTA PRODOTTO SX",
+          "quantita": 17,
+          "prezzoUnitario": 0.07,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-etichetta-marchi-dx",
+          "descrizione": "ETICHETTA MARCHI DX",
+          "quantita": 48,
+          "prezzoUnitario": 0.07,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 50,
+          "prezzoUnitario": 31.3,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_003-01-22",
+          "descrizione": "DISSIPATORE SIDEIS",
+          "quantita": 34,
+          "prezzoUnitario": 2.32,
+          "sconto": 5
+        },
+        {
+          "prodotto": "prod_027-01-20",
+          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
+          "quantita": 46,
+          "prezzoUnitario": 1.8,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 1728.2659999999998,
+      "tasse": 380.21851999999996,
+      "totale": 2108.48452,
+      "note": "Ordine di fornitura merci."
+    },
+    {
+      "id": "orda_sim_29",
+      "numero": "OAC-2026029",
+      "fornitore": "forn_entity",
+      "data": "2026-04-02",
+      "stato": "inviato",
+      "righe": [
+        {
+          "prodotto": "prod_027-01-20",
+          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
+          "quantita": 7,
+          "prezzoUnitario": 1.8,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_002-01-22",
+          "descrizione": "SCOCCA BASE SIDEIS",
+          "quantita": 4,
+          "prezzoUnitario": 3.76,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_001-05-23",
+          "descrizione": "LENTE ASIMMETRICA SIDEIS",
+          "quantita": 28,
+          "prezzoUnitario": 4.52,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-etichetta-prodotto-sx",
+          "descrizione": "ETICHETTA PRODOTTO SX",
+          "quantita": 44,
+          "prezzoUnitario": 0.07,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 157.28,
+      "tasse": 34.6016,
+      "totale": 191.8816,
+      "note": "Ordine di fornitura merci."
+    },
+    {
+      "id": "orda_sim_30",
+      "numero": "OAC-2026030",
+      "fornitore": "forn_entity",
+      "data": "2026-05-06",
+      "stato": "fatturato",
+      "righe": [
+        {
+          "prodotto": "prod_024-01-20",
+          "descrizione": "pressacavo",
+          "quantita": 34,
+          "prezzoUnitario": 1.54,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_003-01-22",
+          "descrizione": "DISSIPATORE SIDEIS",
+          "quantita": 21,
+          "prezzoUnitario": 2.32,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 101.08,
+      "tasse": 22.2376,
+      "totale": 123.3176,
+      "note": "Ordine di fornitura merci."
+    },
+    {
+      "id": "orda_sim_31",
+      "numero": "OAC-2026031",
+      "fornitore": "forn_ispa",
+      "data": "2026-05-12",
+      "stato": "confermato",
+      "righe": [
+        {
+          "prodotto": "prod_auto-etichetta-prodotto-sx",
+          "descrizione": "ETICHETTA PRODOTTO SX",
+          "quantita": 29,
+          "prezzoUnitario": 0.07,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_003-01-22",
+          "descrizione": "DISSIPATORE SIDEIS",
+          "quantita": 12,
+          "prezzoUnitario": 2.32,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 47,
+          "prezzoUnitario": 31.3,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_033-01-20",
+          "descrizione": "O-RING X VITI CHIUSURA",
+          "quantita": 41,
+          "prezzoUnitario": 0.02,
+          "sconto": 10
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 17,
+          "prezzoUnitario": 31.3,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10014",
+          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
+          "quantita": 23,
+          "prezzoUnitario": 0.03,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_001-05-23",
+          "descrizione": "LENTE ASIMMETRICA SIDEIS",
+          "quantita": 30,
+          "prezzoUnitario": 4.52,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 2170.098,
+      "tasse": 477.42156,
+      "totale": 2647.5195599999997,
+      "note": "Ordine di fornitura merci."
+    },
+    {
+      "id": "orda_sim_32",
+      "numero": "OAC-2026032",
+      "fornitore": "forn_mascherpa-cecchi",
+      "data": "2026-05-23",
+      "stato": "fatturato",
+      "righe": [
+        {
+          "prodotto": "prod_10031",
+          "descrizione": "LENTE ASIMMETRICA SIDEIS",
+          "quantita": 31,
+          "prezzoUnitario": 2.5,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10036",
+          "descrizione": "passacavo M12x1,5",
+          "quantita": 35,
+          "prezzoUnitario": 0.15,
+          "sconto": 10
+        },
+        {
+          "prodotto": "prod_10217",
+          "descrizione": "scheda driver interna std",
+          "quantita": 1,
+          "prezzoUnitario": 6.84,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-etichetta-marchi-dx",
+          "descrizione": "ETICHETTA MARCHI DX",
+          "quantita": 25,
+          "prezzoUnitario": 0.07,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_012-01-20",
+          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
+          "quantita": 26,
+          "prezzoUnitario": 0.05,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_027-01-20",
+          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
+          "quantita": 45,
+          "prezzoUnitario": 1.8,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 173.115,
+      "tasse": 38.085300000000004,
+      "totale": 211.2003,
+      "note": "Ordine di fornitura merci."
+    },
+    {
+      "id": "orda_sim_33",
+      "numero": "OAC-2026033",
+      "fornitore": "forn_bossard",
+      "data": "2026-01-10",
+      "stato": "inviato",
+      "righe": [
+        {
+          "prodotto": "prod_001-05-23",
+          "descrizione": "LENTE ASIMMETRICA SIDEIS",
+          "quantita": 10,
+          "prezzoUnitario": 4.52,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10250",
+          "descrizione": "PASTA TERMOCONDUTTIVA",
+          "quantita": 48,
+          "prezzoUnitario": 0.05,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_033-01-20",
+          "descrizione": "O-RING X VITI CHIUSURA",
+          "quantita": 32,
+          "prezzoUnitario": 0.02,
+          "sconto": 15
+        },
+        {
+          "prodotto": "prod_025-01-20",
+          "descrizione": "dado pressacavo",
+          "quantita": 11,
+          "prezzoUnitario": 0.19,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 44,
+          "prezzoUnitario": 31.3,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10036",
+          "descrizione": "passacavo M12x1,5",
+          "quantita": 20,
+          "prezzoUnitario": 0.15,
+          "sconto": 10
+        },
+        {
+          "prodotto": "prod_025-01-20",
+          "descrizione": "dado pressacavo",
+          "quantita": 2,
+          "prezzoUnitario": 0.19,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 1430.5140000000001,
+      "tasse": 314.71308000000005,
+      "totale": 1745.2270800000001,
+      "note": "Ordine di fornitura merci."
+    },
+    {
+      "id": "orda_sim_34",
+      "numero": "OAC-2026034",
+      "fornitore": "forn_mascherpa-cecchi",
+      "data": "2026-02-15",
+      "stato": "ricevuto",
+      "righe": [
+        {
+          "prodotto": "prod_10250",
+          "descrizione": "PASTA TERMOCONDUTTIVA",
+          "quantita": 14,
+          "prezzoUnitario": 0.05,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-scheda-led-std-12-led",
+          "descrizione": "scheda led STD 12 LED",
+          "quantita": 46,
+          "prezzoUnitario": 5.5,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10274",
+          "descrizione": "DADO FLANGIATO M6 A2",
+          "quantita": 33,
+          "prezzoUnitario": 0.06,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-etichetta-prodotto-sx",
+          "descrizione": "ETICHETTA PRODOTTO SX",
+          "quantita": 48,
+          "prezzoUnitario": 0.07,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10248",
+          "descrizione": "SILICONE",
+          "quantita": 37,
+          "prezzoUnitario": 0.23,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 267.54999999999995,
+      "tasse": 58.86099999999999,
+      "totale": 326.41099999999994,
+      "note": "Ordine di fornitura merci."
+    },
+    {
+      "id": "orda_sim_35",
+      "numero": "OAC-2026035",
+      "fornitore": "forn_fornitore-da-definire",
+      "data": "2026-06-12",
+      "stato": "ricevuto",
+      "righe": [
+        {
+          "prodotto": "prod_auto-etichetta-bandiera-cavo",
+          "descrizione": "ETICHETTA BANDIERA CAVO",
+          "quantita": 10,
+          "prezzoUnitario": 0.14,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10014",
+          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
+          "quantita": 7,
+          "prezzoUnitario": 0.03,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_012-01-20",
+          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
+          "quantita": 36,
+          "prezzoUnitario": 0.05,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 3.41,
+      "tasse": 0.7502000000000001,
+      "totale": 4.1602,
+      "note": "Ordine di fornitura merci."
+    },
+    {
+      "id": "orda_sim_36",
+      "numero": "OAC-2026036",
+      "fornitore": "forn_gore",
+      "data": "2026-02-10",
+      "stato": "inviato",
+      "righe": [
+        {
+          "prodotto": "prod_10014",
+          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
+          "quantita": 42,
+          "prezzoUnitario": 0.03,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10248",
+          "descrizione": "SILICONE",
+          "quantita": 45,
+          "prezzoUnitario": 0.23,
+          "sconto": 10
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 29,
+          "prezzoUnitario": 24.46,
+          "sconto": 15
+        },
+        {
+          "prodotto": "prod_10036",
+          "descrizione": "passacavo M12x1,5",
+          "quantita": 21,
+          "prezzoUnitario": 0.15,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_012-01-20",
+          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
+          "quantita": 35,
+          "prezzoUnitario": 0.05,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_025-01-20",
+          "descrizione": "dado pressacavo",
+          "quantita": 36,
+          "prezzoUnitario": 0.19,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 625.254,
+      "tasse": 137.55588,
+      "totale": 762.80988,
+      "note": "Ordine di fornitura merci."
+    },
+    {
+      "id": "orda_sim_37",
+      "numero": "OAC-2026037",
+      "fornitore": "forn_elektrozubehor",
+      "data": "2026-02-24",
+      "stato": "fatturato",
       "righe": [
         {
           "prodotto": "prod_002-01-22",
           "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 22,
-          "prezzoUnitario": 7.9,
+          "quantita": 30,
+          "prezzoUnitario": 3.76,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 31.3,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-scheda-led-std-12-led",
+          "descrizione": "scheda led STD 12 LED",
+          "quantita": 43,
+          "prezzoUnitario": 5.5,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_003-01-22",
+          "descrizione": "DISSIPATORE SIDEIS",
+          "quantita": 35,
+          "prezzoUnitario": 2.32,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-etichetta-bandiera-cavo",
+          "descrizione": "ETICHETTA BANDIERA CAVO",
+          "quantita": 40,
+          "prezzoUnitario": 0.14,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10017",
+          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
+          "quantita": 28,
+          "prezzoUnitario": 0.05,
           "sconto": 0
         }
       ],
-      "imponibile": 173.8,
-      "tasse": 38.236000000000004,
-      "totale": 212.036,
+      "imponibile": 750.5,
+      "tasse": 165.11,
+      "totale": 915.61,
+      "note": "Ordine di fornitura merci."
+    },
+    {
+      "id": "orda_sim_38",
+      "numero": "OAC-2026038",
+      "fornitore": "forn_fornitore-da-definire",
+      "data": "2026-02-23",
+      "stato": "confermato",
+      "righe": [
+        {
+          "prodotto": "prod_10248",
+          "descrizione": "SILICONE",
+          "quantita": 3,
+          "prezzoUnitario": 0.23,
+          "sconto": 5
+        },
+        {
+          "prodotto": "prod_033-01-20",
+          "descrizione": "O-RING X VITI CHIUSURA",
+          "quantita": 26,
+          "prezzoUnitario": 0.02,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_002-01-22",
+          "descrizione": "SCOCCA BASE SIDEIS",
+          "quantita": 1,
+          "prezzoUnitario": 3.76,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_032-01-20",
+          "descrizione": "CAVO H05RN-F 2x0,75",
+          "quantita": 29,
+          "prezzoUnitario": 0.78,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_001-05-23",
+          "descrizione": "LENTE ASIMMETRICA SIDEIS",
+          "quantita": 10,
+          "prezzoUnitario": 4.52,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-etichetta-marchi-dx",
+          "descrizione": "ETICHETTA MARCHI DX",
+          "quantita": 5,
+          "prezzoUnitario": 0.07,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_033-01-20",
+          "descrizione": "O-RING X VITI CHIUSURA",
+          "quantita": 19,
+          "prezzoUnitario": 0.02,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 73.48549999999999,
+      "tasse": 16.166809999999998,
+      "totale": 89.65230999999999,
+      "note": "Ordine di fornitura merci."
+    },
+    {
+      "id": "orda_sim_39",
+      "numero": "OAC-2026039",
+      "fornitore": "forn_mascherpa-cecchi",
+      "data": "2026-04-21",
+      "stato": "confermato",
+      "righe": [
+        {
+          "prodotto": "prod_auto-etichetta-marchi-dx",
+          "descrizione": "ETICHETTA MARCHI DX",
+          "quantita": 39,
+          "prezzoUnitario": 0.07,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 2.7300000000000004,
+      "tasse": 0.6006000000000001,
+      "totale": 3.3306000000000004,
+      "note": "Ordine di fornitura merci."
+    },
+    {
+      "id": "orda_sim_40",
+      "numero": "OAC-2026040",
+      "fornitore": "forn_casagrande",
+      "data": "2026-05-27",
+      "stato": "confermato",
+      "righe": [
+        {
+          "prodotto": "prod_10014",
+          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
+          "quantita": 2,
+          "prezzoUnitario": 0.03,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10036",
+          "descrizione": "passacavo M12x1,5",
+          "quantita": 41,
+          "prezzoUnitario": 0.15,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_002-01-22",
+          "descrizione": "SCOCCA BASE SIDEIS",
+          "quantita": 8,
+          "prezzoUnitario": 3.76,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10278",
+          "descrizione": "IMBALLO",
+          "quantita": 21,
+          "prezzoUnitario": 0.07,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_033-01-20",
+          "descrizione": "O-RING X VITI CHIUSURA",
+          "quantita": 10,
+          "prezzoUnitario": 0.02,
+          "sconto": 15
+        },
+        {
+          "prodotto": "prod_auto-etichetta-marchi-dx",
+          "descrizione": "ETICHETTA MARCHI DX",
+          "quantita": 50,
+          "prezzoUnitario": 0.07,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10009",
+          "descrizione": "VASSOIO contenitore 8 PZ",
+          "quantita": 50,
+          "prezzoUnitario": 0.19,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 50.93,
+      "tasse": 11.2046,
+      "totale": 62.1346,
+      "note": "Ordine di fornitura merci."
+    },
+    {
+      "id": "orda_sim_41",
+      "numero": "OAC-2026041",
+      "fornitore": "forn_emc-colosio",
+      "data": "2026-01-28",
+      "stato": "confermato",
+      "righe": [
+        {
+          "prodotto": "prod_10250",
+          "descrizione": "PASTA TERMOCONDUTTIVA",
+          "quantita": 46,
+          "prezzoUnitario": 0.05,
+          "sconto": 10
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 19,
+          "prezzoUnitario": 31.3,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10014",
+          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
+          "quantita": 45,
+          "prezzoUnitario": 0.03,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_003-01-22",
+          "descrizione": "DISSIPATORE SIDEIS",
+          "quantita": 4,
+          "prezzoUnitario": 2.32,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-etichetta-prodotto-sx",
+          "descrizione": "ETICHETTA PRODOTTO SX",
+          "quantita": 20,
+          "prezzoUnitario": 0.07,
+          "sconto": 5
+        }
+      ],
+      "imponibile": 608.7300000000001,
+      "tasse": 133.92060000000004,
+      "totale": 742.6506000000002,
+      "note": "Ordine di fornitura merci."
+    },
+    {
+      "id": "orda_sim_42",
+      "numero": "OAC-2026042",
+      "fornitore": "forn_emc-colosio",
+      "data": "2026-02-25",
+      "stato": "ricevuto",
+      "righe": [
+        {
+          "prodotto": "prod_027-01-20",
+          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
+          "quantita": 45,
+          "prezzoUnitario": 1.8,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_025-01-20",
+          "descrizione": "dado pressacavo",
+          "quantita": 29,
+          "prezzoUnitario": 0.19,
+          "sconto": 10
+        }
+      ],
+      "imponibile": 85.959,
+      "tasse": 18.910980000000002,
+      "totale": 104.86998,
+      "note": "Ordine di fornitura merci."
+    },
+    {
+      "id": "orda_sim_43",
+      "numero": "OAC-2026043",
+      "fornitore": "forn_mef",
+      "data": "2026-05-15",
+      "stato": "inviato",
+      "righe": [
+        {
+          "prodotto": "prod_10217",
+          "descrizione": "scheda driver interna std",
+          "quantita": 40,
+          "prezzoUnitario": 6.84,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10036",
+          "descrizione": "passacavo M12x1,5",
+          "quantita": 34,
+          "prezzoUnitario": 0.15,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-scheda-led-std-12-led",
+          "descrizione": "scheda led STD 12 LED",
+          "quantita": 22,
+          "prezzoUnitario": 5.5,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 399.70000000000005,
+      "tasse": 87.93400000000001,
+      "totale": 487.63400000000007,
+      "note": "Ordine di fornitura merci."
+    },
+    {
+      "id": "orda_sim_44",
+      "numero": "OAC-2026044",
+      "fornitore": "forn_bossard",
+      "data": "2026-01-24",
+      "stato": "ricevuto",
+      "righe": [
+        {
+          "prodotto": "prod_024-01-20",
+          "descrizione": "pressacavo",
+          "quantita": 13,
+          "prezzoUnitario": 1.54,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10248",
+          "descrizione": "SILICONE",
+          "quantita": 28,
+          "prezzoUnitario": 0.23,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_002-01-22",
+          "descrizione": "SCOCCA BASE SIDEIS",
+          "quantita": 19,
+          "prezzoUnitario": 3.76,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_012-01-20",
+          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
+          "quantita": 24,
+          "prezzoUnitario": 0.05,
+          "sconto": 15
+        },
+        {
+          "prodotto": "prod_10017",
+          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
+          "quantita": 14,
+          "prezzoUnitario": 0.05,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10217",
+          "descrizione": "scheda driver interna std",
+          "quantita": 10,
+          "prezzoUnitario": 6.84,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10009",
+          "descrizione": "VASSOIO contenitore 8 PZ",
+          "quantita": 39,
+          "prezzoUnitario": 0.19,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 175.43,
+      "tasse": 38.5946,
+      "totale": 214.0246,
+      "note": "Ordine di fornitura merci."
+    },
+    {
+      "id": "orda_sim_45",
+      "numero": "OAC-2026045",
+      "fornitore": "forn_gore",
+      "data": "2026-04-19",
+      "stato": "fatturato",
+      "righe": [
+        {
+          "prodotto": "prod_10009",
+          "descrizione": "VASSOIO contenitore 8 PZ",
+          "quantita": 29,
+          "prezzoUnitario": 0.19,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10250",
+          "descrizione": "PASTA TERMOCONDUTTIVA",
+          "quantita": 10,
+          "prezzoUnitario": 0.05,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_012-01-20",
+          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
+          "quantita": 46,
+          "prezzoUnitario": 0.05,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 8.31,
+      "tasse": 1.8282,
+      "totale": 10.138200000000001,
       "note": "Ordine di fornitura merci."
     }
   ],
   "ddtAcquisto": [
     {
       "id": "ddta_sim_1",
-      "codice": "DDA-2026001",
-      "fornitore": "forn_bossard",
-      "data": "2026-04-20",
-      "stato": "registrato",
+      "numero": "DDA-2026001",
+      "fornitore": "forn_casagrande",
+      "data": "2026-03-26",
+      "stato": "fatturato",
       "righe": [
         {
-          "prodotto": "prod_auto-etichetta-marchi-dx",
-          "descrizione": "ETICHETTA MARCHI DX",
-          "quantita": 39,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 29,
+          "prezzoUnitario": 31.3,
+          "sconto": 10
         },
         {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 34,
-          "prezzoUnitario": 0.21,
-          "sconto": 0
+          "prodotto": "prod_10009",
+          "descrizione": "VASSOIO contenitore 8 PZ",
+          "quantita": 12,
+          "prezzoUnitario": 0.19,
+          "sconto": 15
         },
         {
           "prodotto": "prod_auto-scheda-led-std-12-led",
           "descrizione": "scheda led STD 12 LED",
-          "quantita": 38,
-          "prezzoUnitario": 12.93,
+          "quantita": 10,
+          "prezzoUnitario": 5.5,
+          "sconto": 5
+        },
+        {
+          "prodotto": "prod_032-01-20",
+          "descrizione": "CAVO H05RN-F 2x0,75",
+          "quantita": 46,
+          "prezzoUnitario": 0.78,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10009",
+          "descrizione": "VASSOIO contenitore 8 PZ",
+          "quantita": 27,
+          "prezzoUnitario": 0.19,
+          "sconto": 10
+        },
+        {
+          "prodotto": "prod_033-01-20",
+          "descrizione": "O-RING X VITI CHIUSURA",
+          "quantita": 50,
+          "prezzoUnitario": 0.02,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10277",
+          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
+          "quantita": 47,
+          "prezzoUnitario": 0.08,
           "sconto": 0
         }
       ],
-      "imponibile": 507.05999999999995,
-      "tasse": 111.55319999999999,
-      "totale": 618.6131999999999,
+      "imponibile": 916.375,
+      "tasse": 201.6025,
+      "totale": 1117.9775,
       "ordineOrigine": "orda_sim_1",
       "vettore": "Mittente",
       "note": "Ricezione merce da fornitore."
     },
     {
       "id": "ddta_sim_2",
-      "codice": "DDA-2026002",
-      "fornitore": "forn_mascherpa-cecchi",
-      "data": "2026-04-15",
+      "numero": "DDA-2026002",
+      "fornitore": "forn_emc-colosio",
+      "data": "2026-03-27",
       "stato": "registrato",
       "righe": [
         {
-          "prodotto": "prod_025-01-20",
-          "descrizione": "dado pressacavo",
-          "quantita": 2,
-          "prezzoUnitario": 0.4,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_10017",
-          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
-          "quantita": 28,
-          "prezzoUnitario": 0.2,
+          "prodotto": "prod_032-01-20",
+          "descrizione": "CAVO H05RN-F 2x0,75",
+          "quantita": 31,
+          "prezzoUnitario": 0.78,
           "sconto": 0
-        },
-        {
-          "prodotto": "prod_10277",
-          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
-          "quantita": 7,
-          "prezzoUnitario": 0.23,
-          "sconto": 10
         }
       ],
-      "imponibile": 7.769,
-      "tasse": 1.7091800000000001,
-      "totale": 9.47818,
-      "ordineOrigine": "orda_sim_2",
+      "imponibile": 24.18,
+      "tasse": 5.3196,
+      "totale": 29.499599999999997,
+      "ordineOrigine": "orda_sim_3",
       "vettore": "Mittente",
       "note": "Ricezione merce da fornitore."
     },
     {
       "id": "ddta_sim_3",
-      "codice": "DDA-2026003",
-      "fornitore": "forn_emc-colosio",
-      "data": "2026-01-11",
+      "numero": "DDA-2026003",
+      "fornitore": "forn_elektrozubehor",
+      "data": "2026-06-08",
       "stato": "registrato",
       "righe": [
         {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 2,
-          "prezzoUnitario": 7.9,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
-          "quantita": 43,
-          "prezzoUnitario": 0.22,
+          "prodotto": "prod_10274",
+          "descrizione": "DADO FLANGIATO M6 A2",
+          "quantita": 4,
+          "prezzoUnitario": 0.06,
           "sconto": 0
         },
         {
-          "prodotto": "prod_10036",
-          "descrizione": "passacavo M12x1,5",
-          "quantita": 38,
-          "prezzoUnitario": 0.32,
+          "prodotto": "prod_10017",
+          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
+          "quantita": 45,
+          "prezzoUnitario": 0.05,
           "sconto": 0
         },
         {
-          "prodotto": "prod_auto-etichetta-prodotto-sx",
-          "descrizione": "ETICHETTA PRODOTTO SX",
-          "quantita": 20,
-          "prezzoUnitario": 0.22,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 12,
-          "prezzoUnitario": 3.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
-          "quantita": 39,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 8,
-          "prezzoUnitario": 9.49,
+          "prodotto": "prod_025-01-20",
+          "descrizione": "dado pressacavo",
+          "quantita": 17,
+          "prezzoUnitario": 0.19,
           "sconto": 0
         }
       ],
-      "imponibile": 163.06,
-      "tasse": 35.873200000000004,
-      "totale": 198.9332,
+      "imponibile": 5.720000000000001,
+      "tasse": 1.2584000000000002,
+      "totale": 6.978400000000001,
       "ordineOrigine": "orda_sim_4",
       "vettore": "Mittente",
       "note": "Ricezione merce da fornitore."
     },
     {
       "id": "ddta_sim_4",
-      "codice": "DDA-2026004",
-      "fornitore": "forn_elektrozubehor",
-      "data": "2026-02-24",
-      "stato": "fatturato",
+      "numero": "DDA-2026004",
+      "fornitore": "forn_entity",
+      "data": "2026-05-02",
+      "stato": "registrato",
       "righe": [
         {
-          "prodotto": "prod_10014",
-          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
-          "quantita": 30,
-          "prezzoUnitario": 0.18,
+          "prodotto": "prod_10274",
+          "descrizione": "DADO FLANGIATO M6 A2",
+          "quantita": 13,
+          "prezzoUnitario": 0.06,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 19,
+          "prezzoUnitario": 31.3,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-etichetta-prodotto-sx",
+          "descrizione": "ETICHETTA PRODOTTO SX",
+          "quantita": 37,
+          "prezzoUnitario": 0.07,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_012-01-20",
+          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
+          "quantita": 4,
+          "prezzoUnitario": 0.05,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_012-01-20",
+          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
+          "quantita": 3,
+          "prezzoUnitario": 0.05,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10017",
+          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
+          "quantita": 16,
+          "prezzoUnitario": 0.05,
+          "sconto": 10
+        },
+        {
+          "prodotto": "prod_024-01-20",
+          "descrizione": "pressacavo",
+          "quantita": 11,
+          "prezzoUnitario": 1.54,
           "sconto": 0
         }
       ],
-      "imponibile": 5.3999999999999995,
-      "tasse": 1.188,
-      "totale": 6.587999999999999,
+      "imponibile": 616.0800000000002,
+      "tasse": 135.53760000000003,
+      "totale": 751.6176000000002,
       "ordineOrigine": "orda_sim_5",
       "vettore": "Mittente",
       "note": "Ricezione merce da fornitore."
     },
     {
       "id": "ddta_sim_5",
-      "codice": "DDA-2026005",
-      "fornitore": "forn_mascherpa-cecchi",
-      "data": "2026-02-25",
+      "numero": "DDA-2026005",
+      "fornitore": "forn_entity",
+      "data": "2026-06-09",
       "stato": "fatturato",
       "righe": [
         {
-          "prodotto": "prod_025-01-20",
-          "descrizione": "dado pressacavo",
-          "quantita": 21,
-          "prezzoUnitario": 0.4,
+          "prodotto": "prod_10014",
+          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
+          "quantita": 41,
+          "prezzoUnitario": 0.03,
           "sconto": 0
         },
         {
-          "prodotto": "prod_025-01-20",
-          "descrizione": "dado pressacavo",
-          "quantita": 28,
-          "prezzoUnitario": 0.4,
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 33,
+          "prezzoUnitario": 24.46,
+          "sconto": 15
+        },
+        {
+          "prodotto": "prod_10277",
+          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
+          "quantita": 20,
+          "prezzoUnitario": 0.08,
           "sconto": 0
         },
         {
           "prodotto": "prod_012-01-20",
           "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
-          "quantita": 23,
-          "prezzoUnitario": 0.2,
-          "sconto": 5
+          "quantita": 13,
+          "prezzoUnitario": 0.05,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 19,
+          "prezzoUnitario": 31.3,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 37,
+          "prezzoUnitario": 24.46,
+          "sconto": 0
         }
       ],
-      "imponibile": 23.970000000000002,
-      "tasse": 5.2734000000000005,
-      "totale": 29.2434,
-      "ordineOrigine": "orda_sim_6",
+      "imponibile": 2189.303,
+      "tasse": 481.64666,
+      "totale": 2670.9496599999998,
+      "ordineOrigine": "orda_sim_8",
       "vettore": "Mittente",
       "note": "Ricezione merce da fornitore."
     },
     {
       "id": "ddta_sim_6",
-      "codice": "DDA-2026006",
-      "fornitore": "forn_fornitore-da-definire",
-      "data": "2026-02-05",
-      "stato": "fatturato",
-      "righe": [
-        {
-          "prodotto": "prod_sideis_one_cv",
-          "descrizione": "Faretto SIDEis ONE CV",
-          "quantita": 40,
-          "prezzoUnitario": 79.82,
-          "sconto": 15
-        },
-        {
-          "prodotto": "prod_012-01-20",
-          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
-          "quantita": 3,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10014",
-          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
-          "quantita": 23,
-          "prezzoUnitario": 0.18,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-marchi-dx",
-          "descrizione": "ETICHETTA MARCHI DX",
-          "quantita": 33,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_012-01-20",
-          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
-          "quantita": 5,
-          "prezzoUnitario": 0.2,
-          "sconto": 5
-        },
-        {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 10,
-          "prezzoUnitario": 7.9,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10277",
-          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
-          "quantita": 35,
-          "prezzoUnitario": 0.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 23,
-          "prezzoUnitario": 0.29,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 2820.5499999999997,
-      "tasse": 620.521,
-      "totale": 3441.0709999999995,
-      "ordineOrigine": "orda_sim_7",
-      "vettore": "Mittente",
-      "note": "Ricezione merce da fornitore."
-    },
-    {
-      "id": "ddta_sim_7",
-      "codice": "DDA-2026007",
+      "numero": "DDA-2026006",
       "fornitore": "forn_casagrande",
-      "data": "2026-03-26",
+      "data": "2026-05-27",
       "stato": "registrato",
       "righe": [
         {
-          "prodotto": "prod_sideis_one_cv",
-          "descrizione": "Faretto SIDEis ONE CV",
-          "quantita": 48,
-          "prezzoUnitario": 79.82,
+          "prodotto": "prod_auto-etichetta-bandiera-cavo",
+          "descrizione": "ETICHETTA BANDIERA CAVO",
+          "quantita": 8,
+          "prezzoUnitario": 0.14,
           "sconto": 0
-        },
-        {
-          "prodotto": "prod_10017",
-          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
-          "quantita": 28,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10014",
-          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
-          "quantita": 30,
-          "prezzoUnitario": 0.18,
-          "sconto": 15
         }
       ],
-      "imponibile": 3841.5499999999997,
-      "tasse": 845.141,
-      "totale": 4686.691,
+      "imponibile": 1.12,
+      "tasse": 0.24640000000000004,
+      "totale": 1.3664,
       "ordineOrigine": "orda_sim_9",
       "vettore": "Mittente",
       "note": "Ricezione merce da fornitore."
     },
     {
-      "id": "ddta_sim_8",
-      "codice": "DDA-2026008",
-      "fornitore": "forn_mef",
-      "data": "2026-01-09",
-      "stato": "registrato",
-      "righe": [
-        {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 27,
-          "prezzoUnitario": 0.21,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_auto-scheda-led-std-12-led",
-          "descrizione": "scheda led STD 12 LED",
-          "quantita": 49,
-          "prezzoUnitario": 12.93,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
-          "quantita": 28,
-          "prezzoUnitario": 3.78,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_003-01-22",
-          "descrizione": "DISSIPATORE SIDEIS",
-          "quantita": 43,
-          "prezzoUnitario": 4.87,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 953.9229999999999,
-      "tasse": 209.86306,
-      "totale": 1163.78606,
-      "ordineOrigine": "orda_sim_10",
-      "vettore": "Mittente",
-      "note": "Ricezione merce da fornitore."
-    },
-    {
-      "id": "ddta_sim_9",
-      "codice": "DDA-2026009",
+      "id": "ddta_sim_7",
+      "numero": "DDA-2026007",
       "fornitore": "forn_casagrande",
-      "data": "2026-05-21",
+      "data": "2026-01-12",
       "stato": "fatturato",
       "righe": [
         {
           "prodotto": "prod_033-01-20",
           "descrizione": "O-RING X VITI CHIUSURA",
-          "quantita": 22,
-          "prezzoUnitario": 0.17,
+          "quantita": 45,
+          "prezzoUnitario": 0.02,
           "sconto": 0
         },
         {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
-          "quantita": 11,
-          "prezzoUnitario": 3.78,
-          "sconto": 10
+          "prodotto": "prod_10014",
+          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
+          "quantita": 42,
+          "prezzoUnitario": 0.03,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-etichetta-bandiera-cavo",
+          "descrizione": "ETICHETTA BANDIERA CAVO",
+          "quantita": 7,
+          "prezzoUnitario": 0.14,
+          "sconto": 0
         }
       ],
-      "imponibile": 41.162,
-      "tasse": 9.05564,
-      "totale": 50.217639999999996,
-      "ordineOrigine": "orda_sim_11",
+      "imponibile": 3.14,
+      "tasse": 0.6908000000000001,
+      "totale": 3.8308,
+      "ordineOrigine": "orda_sim_10",
+      "vettore": "Mittente",
+      "note": "Ricezione merce da fornitore."
+    },
+    {
+      "id": "ddta_sim_8",
+      "numero": "DDA-2026008",
+      "fornitore": "forn_entity",
+      "data": "2026-06-03",
+      "stato": "registrato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 38,
+          "prezzoUnitario": 31.3,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_024-01-20",
+          "descrizione": "pressacavo",
+          "quantita": 7,
+          "prezzoUnitario": 1.54,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 1200.18,
+      "tasse": 264.0396,
+      "totale": 1464.2196000000001,
+      "ordineOrigine": "orda_sim_12",
+      "vettore": "Mittente",
+      "note": "Ricezione merce da fornitore."
+    },
+    {
+      "id": "ddta_sim_9",
+      "numero": "DDA-2026009",
+      "fornitore": "forn_casagrande",
+      "data": "2026-02-07",
+      "stato": "registrato",
+      "righe": [
+        {
+          "prodotto": "prod_033-01-20",
+          "descrizione": "O-RING X VITI CHIUSURA",
+          "quantita": 21,
+          "prezzoUnitario": 0.02,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-scheda-led-std-12-led",
+          "descrizione": "scheda led STD 12 LED",
+          "quantita": 3,
+          "prezzoUnitario": 5.5,
+          "sconto": 15
+        },
+        {
+          "prodotto": "prod_025-01-20",
+          "descrizione": "dado pressacavo",
+          "quantita": 46,
+          "prezzoUnitario": 0.19,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_025-01-20",
+          "descrizione": "dado pressacavo",
+          "quantita": 6,
+          "prezzoUnitario": 0.19,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 24.325000000000003,
+      "tasse": 5.351500000000001,
+      "totale": 29.676500000000004,
+      "ordineOrigine": "orda_sim_13",
       "vettore": "Mittente",
       "note": "Ricezione merce da fornitore."
     },
     {
       "id": "ddta_sim_10",
-      "codice": "DDA-2026010",
-      "fornitore": "forn_casagrande",
-      "data": "2026-04-20",
-      "stato": "registrato",
+      "numero": "DDA-2026010",
+      "fornitore": "forn_mef",
+      "data": "2026-03-28",
+      "stato": "fatturato",
       "righe": [
         {
-          "prodotto": "prod_10248",
-          "descrizione": "SILICONE",
-          "quantita": 36,
-          "prezzoUnitario": 0.48,
+          "prodotto": "prod_10031",
+          "descrizione": "LENTE ASIMMETRICA SIDEIS",
+          "quantita": 15,
+          "prezzoUnitario": 2.5,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-scheda-led-std-12-led",
+          "descrizione": "scheda led STD 12 LED",
+          "quantita": 4,
+          "prezzoUnitario": 5.5,
           "sconto": 5
+        },
+        {
+          "prodotto": "prod_003-01-22",
+          "descrizione": "DISSIPATORE SIDEIS",
+          "quantita": 45,
+          "prezzoUnitario": 2.32,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-etichetta-prodotto-sx",
+          "descrizione": "ETICHETTA PRODOTTO SX",
+          "quantita": 40,
+          "prezzoUnitario": 0.07,
+          "sconto": 10
+        },
+        {
+          "prodotto": "prod_032-01-20",
+          "descrizione": "CAVO H05RN-F 2x0,75",
+          "quantita": 14,
+          "prezzoUnitario": 0.78,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_003-01-22",
+          "descrizione": "DISSIPATORE SIDEIS",
+          "quantita": 9,
+          "prezzoUnitario": 2.32,
+          "sconto": 0
         }
       ],
-      "imponibile": 16.416,
-      "tasse": 3.61152,
-      "totale": 20.02752,
+      "imponibile": 197.11999999999998,
+      "tasse": 43.36639999999999,
+      "totale": 240.48639999999997,
       "ordineOrigine": "orda_sim_14",
       "vettore": "Mittente",
       "note": "Ricezione merce da fornitore."
     },
     {
       "id": "ddta_sim_11",
-      "codice": "DDA-2026011",
-      "fornitore": "forn_mef",
-      "data": "2026-02-28",
+      "numero": "DDA-2026011",
+      "fornitore": "forn_casagrande",
+      "data": "2026-06-23",
       "stato": "registrato",
       "righe": [
         {
-          "prodotto": "prod_sideis_one_cc",
-          "descrizione": "Faretto SIDEis ONE CC",
-          "quantita": 37,
-          "prezzoUnitario": 62.37,
-          "sconto": 0
+          "prodotto": "prod_10248",
+          "descrizione": "SILICONE",
+          "quantita": 47,
+          "prezzoUnitario": 0.23,
+          "sconto": 15
         },
         {
-          "prodotto": "prod_032-01-20",
-          "descrizione": "CAVO H05RN-F 2x0,75",
-          "quantita": 46,
-          "prezzoUnitario": 1.83,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 26,
-          "prezzoUnitario": 3.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
-          "quantita": 40,
-          "prezzoUnitario": 0.22,
+          "prodotto": "prod_auto-etichetta-bandiera-cavo",
+          "descrizione": "ETICHETTA BANDIERA CAVO",
+          "quantita": 5,
+          "prezzoUnitario": 0.14,
           "sconto": 5
-        },
-        {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 40,
-          "prezzoUnitario": 3.23,
-          "sconto": 0
         }
       ],
-      "imponibile": 2604.992,
-      "tasse": 573.09824,
-      "totale": 3178.09024,
+      "imponibile": 9.8535,
+      "tasse": 2.16777,
+      "totale": 12.02127,
       "ordineOrigine": "orda_sim_15",
       "vettore": "Mittente",
       "note": "Ricezione merce da fornitore."
     },
     {
       "id": "ddta_sim_12",
-      "codice": "DDA-2026012",
-      "fornitore": "forn_mef",
-      "data": "2026-04-15",
+      "numero": "DDA-2026012",
+      "fornitore": "forn_mascherpa-cecchi",
+      "data": "2026-05-17",
       "stato": "fatturato",
       "righe": [
         {
-          "prodotto": "prod_10036",
-          "descrizione": "passacavo M12x1,5",
-          "quantita": 44,
-          "prezzoUnitario": 0.32,
+          "prodotto": "prod_027-01-20",
+          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
+          "quantita": 36,
+          "prezzoUnitario": 1.8,
           "sconto": 0
         },
         {
-          "prodotto": "prod_sideis_one_cv",
-          "descrizione": "Faretto SIDEis ONE CV",
+          "prodotto": "prod_auto-etichetta-marchi-dx",
+          "descrizione": "ETICHETTA MARCHI DX",
           "quantita": 26,
-          "prezzoUnitario": 79.82,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 47,
-          "prezzoUnitario": 9.49,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 2535.43,
-      "tasse": 557.7946,
-      "totale": 3093.2245999999996,
-      "ordineOrigine": "orda_sim_16",
-      "vettore": "Mittente",
-      "note": "Ricezione merce da fornitore."
-    },
-    {
-      "id": "ddta_sim_14",
-      "codice": "DDA-2026014",
-      "fornitore": "forn_fornitore-da-definire",
-      "data": "2026-02-02",
-      "stato": "fatturato",
-      "righe": [
-        {
-          "prodotto": "prod_10014",
-          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
-          "quantita": 46,
-          "prezzoUnitario": 0.18,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
-          "quantita": 10,
-          "prezzoUnitario": 0.22,
+          "prezzoUnitario": 0.07,
           "sconto": 0
         },
         {
           "prodotto": "prod_10277",
           "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
-          "quantita": 1,
-          "prezzoUnitario": 0.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10031",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 38,
-          "prezzoUnitario": 5.25,
+          "quantita": 25,
+          "prezzoUnitario": 0.08,
           "sconto": 0
         },
         {
           "prodotto": "prod_033-01-20",
           "descrizione": "O-RING X VITI CHIUSURA",
-          "quantita": 22,
-          "prezzoUnitario": 0.17,
+          "quantita": 40,
+          "prezzoUnitario": 0.02,
           "sconto": 0
         },
         {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 9,
-          "prezzoUnitario": 3.23,
-          "sconto": 10
+          "prodotto": "prod_10250",
+          "descrizione": "PASTA TERMOCONDUTTIVA",
+          "quantita": 13,
+          "prezzoUnitario": 0.05,
+          "sconto": 0
         },
         {
-          "prodotto": "prod_sideis_one_cc",
-          "descrizione": "Faretto SIDEis ONE CC",
-          "quantita": 6,
-          "prezzoUnitario": 62.37,
+          "prodotto": "prod_10031",
+          "descrizione": "LENTE ASIMMETRICA SIDEIS",
+          "quantita": 2,
+          "prezzoUnitario": 2.5,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10031",
+          "descrizione": "LENTE ASIMMETRICA SIDEIS",
+          "quantita": 37,
+          "prezzoUnitario": 2.5,
           "sconto": 0
         }
       ],
-      "imponibile": 614.333,
-      "tasse": 135.15326,
-      "totale": 749.4862599999999,
+      "imponibile": 167.57,
+      "tasse": 36.8654,
+      "totale": 204.4354,
+      "ordineOrigine": "orda_sim_17",
+      "vettore": "Mittente",
+      "note": "Ricezione merce da fornitore."
+    },
+    {
+      "id": "ddta_sim_13",
+      "numero": "DDA-2026013",
+      "fornitore": "forn_elektrozubehor",
+      "data": "2026-06-19",
+      "stato": "fatturato",
+      "righe": [
+        {
+          "prodotto": "prod_auto-scheda-led-std-12-led",
+          "descrizione": "scheda led STD 12 LED",
+          "quantita": 3,
+          "prezzoUnitario": 5.5,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10009",
+          "descrizione": "VASSOIO contenitore 8 PZ",
+          "quantita": 13,
+          "prezzoUnitario": 0.19,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_033-01-20",
+          "descrizione": "O-RING X VITI CHIUSURA",
+          "quantita": 5,
+          "prezzoUnitario": 0.02,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10250",
+          "descrizione": "PASTA TERMOCONDUTTIVA",
+          "quantita": 28,
+          "prezzoUnitario": 0.05,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-scheda-led-std-12-led",
+          "descrizione": "scheda led STD 12 LED",
+          "quantita": 11,
+          "prezzoUnitario": 5.5,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10017",
+          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
+          "quantita": 21,
+          "prezzoUnitario": 0.05,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_001-05-23",
+          "descrizione": "LENTE ASIMMETRICA SIDEIS",
+          "quantita": 32,
+          "prezzoUnitario": 4.52,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 226.65999999999997,
+      "tasse": 49.865199999999994,
+      "totale": 276.5251999999999,
       "ordineOrigine": "orda_sim_18",
       "vettore": "Mittente",
       "note": "Ricezione merce da fornitore."
     },
     {
-      "id": "ddta_sim_15",
-      "codice": "DDA-2026015",
-      "fornitore": "forn_emc-colosio",
-      "data": "2026-02-24",
-      "stato": "registrato",
-      "righe": [
-        {
-          "prodotto": "prod_032-01-20",
-          "descrizione": "CAVO H05RN-F 2x0,75",
-          "quantita": 27,
-          "prezzoUnitario": 1.83,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10248",
-          "descrizione": "SILICONE",
-          "quantita": 1,
-          "prezzoUnitario": 0.48,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-prodotto-sx",
-          "descrizione": "ETICHETTA PRODOTTO SX",
-          "quantita": 40,
-          "prezzoUnitario": 0.22,
-          "sconto": 15
-        },
-        {
-          "prodotto": "prod_sideis_one_cv",
-          "descrizione": "Faretto SIDEis ONE CV",
-          "quantita": 12,
-          "prezzoUnitario": 79.82,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_sideis_one_cc",
-          "descrizione": "Faretto SIDEis ONE CC",
-          "quantita": 24,
-          "prezzoUnitario": 62.37,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10248",
-          "descrizione": "SILICONE",
-          "quantita": 6,
-          "prezzoUnitario": 0.48,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_025-01-20",
-          "descrizione": "dado pressacavo",
-          "quantita": 14,
-          "prezzoUnitario": 0.4,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_sideis_one_cc",
-          "descrizione": "Faretto SIDEis ONE CC",
-          "quantita": 18,
-          "prezzoUnitario": 62.37,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 3642.9419999999996,
-      "tasse": 801.4472399999999,
-      "totale": 4444.3892399999995,
-      "ordineOrigine": "orda_sim_19",
-      "vettore": "Mittente",
-      "note": "Ricezione merce da fornitore."
-    },
-    {
-      "id": "ddta_sim_16",
-      "codice": "DDA-2026016",
-      "fornitore": "forn_entity",
-      "data": "2026-05-21",
-      "stato": "registrato",
-      "righe": [
-        {
-          "prodotto": "prod_003-01-22",
-          "descrizione": "DISSIPATORE SIDEIS",
-          "quantita": 10,
-          "prezzoUnitario": 4.87,
-          "sconto": 15
-        },
-        {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 2,
-          "prezzoUnitario": 7.9,
-          "sconto": 5
-        },
-        {
-          "prodotto": "prod_10017",
-          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
-          "quantita": 2,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10248",
-          "descrizione": "SILICONE",
-          "quantita": 28,
-          "prezzoUnitario": 0.48,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 32,
-          "prezzoUnitario": 0.21,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10036",
-          "descrizione": "passacavo M12x1,5",
-          "quantita": 31,
-          "prezzoUnitario": 0.32,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 8,
-          "prezzoUnitario": 3.23,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 112.72500000000001,
-      "tasse": 24.799500000000002,
-      "totale": 137.52450000000002,
-      "ordineOrigine": "orda_sim_20",
-      "vettore": "Mittente",
-      "note": "Ricezione merce da fornitore."
-    },
-    {
-      "id": "ddta_sim_17",
-      "codice": "DDA-2026017",
-      "fornitore": "forn_bossard",
-      "data": "2026-03-03",
-      "stato": "registrato",
-      "righe": [
-        {
-          "prodotto": "prod_10031",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 4,
-          "prezzoUnitario": 5.25,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10248",
-          "descrizione": "SILICONE",
-          "quantita": 23,
-          "prezzoUnitario": 0.48,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 49,
-          "prezzoUnitario": 0.4,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 16,
-          "prezzoUnitario": 3.23,
-          "sconto": 15
-        },
-        {
-          "prodotto": "prod_10036",
-          "descrizione": "passacavo M12x1,5",
-          "quantita": 23,
-          "prezzoUnitario": 0.32,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_012-01-20",
-          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
-          "quantita": 8,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_sideis_one_cc",
-          "descrizione": "Faretto SIDEis ONE CC",
-          "quantita": 29,
-          "prezzoUnitario": 62.37,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 1913.258,
-      "tasse": 420.91676,
-      "totale": 2334.17476,
-      "ordineOrigine": "orda_sim_22",
-      "vettore": "Mittente",
-      "note": "Ricezione merce da fornitore."
-    },
-    {
-      "id": "ddta_sim_18",
-      "codice": "DDA-2026018",
-      "fornitore": "forn_ispa",
-      "data": "2026-03-06",
-      "stato": "registrato",
-      "righe": [
-        {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 35,
-          "prezzoUnitario": 0.21,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
-          "quantita": 47,
-          "prezzoUnitario": 3.78,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 12,
-          "prezzoUnitario": 7.9,
-          "sconto": 5
-        },
-        {
-          "prodotto": "prod_10017",
-          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
-          "quantita": 38,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10014",
-          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
-          "quantita": 43,
-          "prezzoUnitario": 0.18,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 289.67500000000007,
-      "tasse": 63.72850000000002,
-      "totale": 353.40350000000007,
-      "ordineOrigine": "orda_sim_23",
-      "vettore": "Mittente",
-      "note": "Ricezione merce da fornitore."
-    },
-    {
-      "id": "ddta_sim_19",
-      "codice": "DDA-2026019",
-      "fornitore": "forn_emc-colosio",
-      "data": "2026-04-21",
-      "stato": "fatturato",
-      "righe": [
-        {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 11,
-          "prezzoUnitario": 9.49,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_012-01-20",
-          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
-          "quantita": 27,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
-          "quantita": 33,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 117.05000000000001,
-      "tasse": 25.751,
-      "totale": 142.80100000000002,
-      "ordineOrigine": "orda_sim_24",
-      "vettore": "Mittente",
-      "note": "Ricezione merce da fornitore."
-    },
-    {
-      "id": "ddta_sim_20",
-      "codice": "DDA-2026020",
-      "fornitore": "forn_emc-colosio",
-      "data": "2026-06-04",
-      "stato": "registrato",
-      "righe": [
-        {
-          "prodotto": "prod_auto-scheda-led-std-12-led",
-          "descrizione": "scheda led STD 12 LED",
-          "quantita": 13,
-          "prezzoUnitario": 12.93,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 3,
-          "prezzoUnitario": 0.4,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10031",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 1,
-          "prezzoUnitario": 5.25,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10014",
-          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
-          "quantita": 7,
-          "prezzoUnitario": 0.18,
-          "sconto": 10
-        }
-      ],
-      "imponibile": 175.67399999999998,
-      "tasse": 38.64827999999999,
-      "totale": 214.32227999999998,
-      "ordineOrigine": "orda_sim_26",
-      "vettore": "Mittente",
-      "note": "Ricezione merce da fornitore."
-    },
-    {
-      "id": "ddta_sim_21",
-      "codice": "DDA-2026021",
-      "fornitore": "forn_mef",
-      "data": "2026-02-19",
-      "stato": "registrato",
-      "righe": [
-        {
-          "prodotto": "prod_10217",
-          "descrizione": "scheda driver interna std",
-          "quantita": 20,
-          "prezzoUnitario": 16.07,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_033-01-20",
-          "descrizione": "O-RING X VITI CHIUSURA",
-          "quantita": 27,
-          "prezzoUnitario": 0.17,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 23,
-          "prezzoUnitario": 3.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 8,
-          "prezzoUnitario": 0.21,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10277",
-          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
-          "quantita": 23,
-          "prezzoUnitario": 0.23,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 407.25,
-      "tasse": 89.595,
-      "totale": 496.84499999999997,
-      "ordineOrigine": "orda_sim_27",
-      "vettore": "Mittente",
-      "note": "Ricezione merce da fornitore."
-    },
-    {
-      "id": "ddta_sim_22",
-      "codice": "DDA-2026022",
-      "fornitore": "forn_mef",
-      "data": "2026-03-01",
-      "stato": "registrato",
-      "righe": [
-        {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 9,
-          "prezzoUnitario": 3.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_033-01-20",
-          "descrizione": "O-RING X VITI CHIUSURA",
-          "quantita": 50,
-          "prezzoUnitario": 0.17,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 31,
-          "prezzoUnitario": 3.23,
-          "sconto": 15
-        },
-        {
-          "prodotto": "prod_auto-etichetta-marchi-dx",
-          "descrizione": "ETICHETTA MARCHI DX",
-          "quantita": 31,
-          "prezzoUnitario": 0.22,
-          "sconto": 15
-        }
-      ],
-      "imponibile": 128.4775,
-      "tasse": 28.26505,
-      "totale": 156.74255,
-      "ordineOrigine": "orda_sim_28",
-      "vettore": "Mittente",
-      "note": "Ricezione merce da fornitore."
-    },
-    {
-      "id": "ddta_sim_23",
-      "codice": "DDA-2026023",
-      "fornitore": "forn_gore",
-      "data": "2026-06-05",
-      "stato": "fatturato",
-      "righe": [
-        {
-          "prodotto": "prod_auto-scheda-led-std-12-led",
-          "descrizione": "scheda led STD 12 LED",
-          "quantita": 18,
-          "prezzoUnitario": 12.93,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 33,
-          "prezzoUnitario": 3.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_032-01-20",
-          "descrizione": "CAVO H05RN-F 2x0,75",
-          "quantita": 4,
-          "prezzoUnitario": 1.83,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-marchi-dx",
-          "descrizione": "ETICHETTA MARCHI DX",
-          "quantita": 9,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
-          "quantita": 4,
-          "prezzoUnitario": 3.78,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10014",
-          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
-          "quantita": 40,
-          "prezzoUnitario": 0.18,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10277",
-          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
-          "quantita": 38,
-          "prezzoUnitario": 0.23,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_sideis_one_cc",
-          "descrizione": "Faretto SIDEis ONE CC",
-          "quantita": 23,
-          "prezzoUnitario": 62.37,
-          "sconto": 10
-        }
-      ],
-      "imponibile": 1669.875,
-      "tasse": 367.3725,
-      "totale": 2037.2475,
-      "ordineOrigine": "orda_sim_29",
-      "vettore": "Mittente",
-      "note": "Ricezione merce da fornitore."
-    },
-    {
-      "id": "ddta_sim_24",
-      "codice": "DDA-2026024",
-      "fornitore": "forn_gore",
-      "data": "2026-03-19",
-      "stato": "registrato",
-      "righe": [
-        {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 47,
-          "prezzoUnitario": 7.9,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-scheda-led-std-12-led",
-          "descrizione": "scheda led STD 12 LED",
-          "quantita": 7,
-          "prezzoUnitario": 12.93,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10217",
-          "descrizione": "scheda driver interna std",
-          "quantita": 47,
-          "prezzoUnitario": 16.07,
-          "sconto": 15
-        }
-      ],
-      "imponibile": 1103.8065,
-      "tasse": 242.83742999999998,
-      "totale": 1346.64393,
-      "ordineOrigine": "orda_sim_31",
-      "vettore": "Mittente",
-      "note": "Ricezione merce da fornitore."
-    },
-    {
-      "id": "ddta_sim_25",
-      "codice": "DDA-2026025",
-      "fornitore": "forn_fornitore-da-definire",
-      "data": "2026-06-22",
-      "stato": "registrato",
-      "righe": [
-        {
-          "prodotto": "prod_10250",
-          "descrizione": "PASTA TERMOCONDUTTIVA",
-          "quantita": 44,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-scheda-led-std-12-led",
-          "descrizione": "scheda led STD 12 LED",
-          "quantita": 42,
-          "prezzoUnitario": 12.93,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10278",
-          "descrizione": "IMBALLO",
-          "quantita": 29,
-          "prezzoUnitario": 0.22,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 42,
-          "prezzoUnitario": 0.4,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
-          "quantita": 46,
-          "prezzoUnitario": 3.78,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_sideis_one_cv",
-          "descrizione": "Faretto SIDEis ONE CV",
-          "quantita": 3,
-          "prezzoUnitario": 79.82,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_033-01-20",
-          "descrizione": "O-RING X VITI CHIUSURA",
-          "quantita": 44,
-          "prezzoUnitario": 0.17,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 3,
-          "prezzoUnitario": 0.4,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 979.0339999999999,
-      "tasse": 215.38747999999998,
-      "totale": 1194.4214799999997,
-      "ordineOrigine": "orda_sim_32",
-      "vettore": "Mittente",
-      "note": "Ricezione merce da fornitore."
-    },
-    {
-      "id": "ddta_sim_26",
-      "codice": "DDA-2026026",
-      "fornitore": "forn_emc-colosio",
-      "data": "2026-06-11",
-      "stato": "registrato",
-      "righe": [
-        {
-          "prodotto": "prod_10036",
-          "descrizione": "passacavo M12x1,5",
-          "quantita": 37,
-          "prezzoUnitario": 0.32,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_027-01-20",
-          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
-          "quantita": 3,
-          "prezzoUnitario": 3.78,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 17,
-          "prezzoUnitario": 0.21,
-          "sconto": 5
-        },
-        {
-          "prodotto": "prod_auto-scheda-led-std-12-led",
-          "descrizione": "scheda led STD 12 LED",
-          "quantita": 27,
-          "prezzoUnitario": 12.93,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 374.5475,
-      "tasse": 82.40045,
-      "totale": 456.94795,
-      "ordineOrigine": "orda_sim_36",
-      "vettore": "Mittente",
-      "note": "Ricezione merce da fornitore."
-    },
-    {
-      "id": "ddta_sim_27",
-      "codice": "DDA-2026027",
-      "fornitore": "forn_gore",
-      "data": "2026-06-25",
-      "stato": "fatturato",
-      "righe": [
-        {
-          "prodotto": "prod_auto-etichetta-prodotto-sx",
-          "descrizione": "ETICHETTA PRODOTTO SX",
-          "quantita": 8,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_033-01-20",
-          "descrizione": "O-RING X VITI CHIUSURA",
-          "quantita": 10,
-          "prezzoUnitario": 0.17,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 40,
-          "prezzoUnitario": 0.29,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10217",
-          "descrizione": "scheda driver interna std",
-          "quantita": 21,
-          "prezzoUnitario": 16.07,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_024-01-20",
-          "descrizione": "pressacavo",
-          "quantita": 41,
-          "prezzoUnitario": 3.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_003-01-22",
-          "descrizione": "DISSIPATORE SIDEIS",
-          "quantita": 44,
-          "prezzoUnitario": 4.87,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 699.07,
-      "tasse": 153.7954,
-      "totale": 852.8654,
-      "ordineOrigine": "orda_sim_37",
-      "vettore": "Mittente",
-      "note": "Ricezione merce da fornitore."
-    },
-    {
-      "id": "ddta_sim_28",
-      "codice": "DDA-2026028",
-      "fornitore": "forn_ispa",
-      "data": "2026-02-25",
-      "stato": "fatturato",
-      "righe": [
-        {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 19,
-          "prezzoUnitario": 0.29,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 5.51,
-      "tasse": 1.2122,
-      "totale": 6.7222,
-      "ordineOrigine": "orda_sim_38",
-      "vettore": "Mittente",
-      "note": "Ricezione merce da fornitore."
-    },
-    {
-      "id": "ddta_sim_29",
-      "codice": "DDA-2026029",
+      "id": "ddta_sim_14",
+      "numero": "DDA-2026014",
       "fornitore": "forn_casagrande",
-      "data": "2026-01-31",
-      "stato": "fatturato",
-      "righe": [
-        {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 22,
-          "prezzoUnitario": 0.4,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 8.8,
-      "tasse": 1.9360000000000002,
-      "totale": 10.736,
-      "ordineOrigine": "orda_sim_39",
-      "vettore": "Mittente",
-      "note": "Ricezione merce da fornitore."
-    },
-    {
-      "id": "ddta_sim_30",
-      "codice": "DDA-2026030",
-      "fornitore": "forn_gore",
-      "data": "2026-02-20",
+      "data": "2026-06-08",
       "stato": "registrato",
       "righe": [
         {
-          "prodotto": "prod_10014",
-          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
-          "quantita": 33,
-          "prezzoUnitario": 0.18,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10014",
-          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
-          "quantita": 42,
-          "prezzoUnitario": 0.18,
+          "prodotto": "prod_10274",
+          "descrizione": "DADO FLANGIATO M6 A2",
+          "quantita": 21,
+          "prezzoUnitario": 0.06,
           "sconto": 15
-        },
-        {
-          "prodotto": "prod_sideis_one_cv",
-          "descrizione": "Faretto SIDEis ONE CV",
-          "quantita": 42,
-          "prezzoUnitario": 79.82,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-marchi-dx",
-          "descrizione": "ETICHETTA MARCHI DX",
-          "quantita": 10,
-          "prezzoUnitario": 0.22,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10250",
-          "descrizione": "PASTA TERMOCONDUTTIVA",
-          "quantita": 44,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10250",
-          "descrizione": "PASTA TERMOCONDUTTIVA",
-          "quantita": 17,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
         },
         {
           "prodotto": "prod_10274",
           "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 29,
-          "prezzoUnitario": 0.21,
-          "sconto": 15
-        },
-        {
-          "prodotto": "prod_10031",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 31,
-          "prezzoUnitario": 5.25,
-          "sconto": 5
-        }
-      ],
-      "imponibile": 3538.995,
-      "tasse": 778.5789,
-      "totale": 4317.573899999999,
-      "ordineOrigine": "orda_sim_40",
-      "vettore": "Mittente",
-      "note": "Ricezione merce da fornitore."
-    },
-    {
-      "id": "ddta_sim_31",
-      "codice": "DDA-2026031",
-      "fornitore": "forn_elektrozubehor",
-      "data": "2026-02-01",
-      "stato": "registrato",
-      "righe": [
-        {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 46,
-          "prezzoUnitario": 0.4,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_032-01-20",
-          "descrizione": "CAVO H05RN-F 2x0,75",
-          "quantita": 17,
-          "prezzoUnitario": 1.83,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10031",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 3,
-          "prezzoUnitario": 5.25,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10277",
-          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
-          "quantita": 24,
-          "prezzoUnitario": 0.23,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-prodotto-sx",
-          "descrizione": "ETICHETTA PRODOTTO SX",
-          "quantita": 38,
-          "prezzoUnitario": 0.22,
-          "sconto": 5
-        },
-        {
-          "prodotto": "prod_10250",
-          "descrizione": "PASTA TERMOCONDUTTIVA",
-          "quantita": 24,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 83.52199999999999,
-      "tasse": 18.37484,
-      "totale": 101.89683999999998,
-      "ordineOrigine": "orda_sim_41",
-      "vettore": "Mittente",
-      "note": "Ricezione merce da fornitore."
-    },
-    {
-      "id": "ddta_sim_32",
-      "codice": "DDA-2026032",
-      "fornitore": "forn_ispa",
-      "data": "2026-04-18",
-      "stato": "registrato",
-      "righe": [
-        {
-          "prodotto": "prod_002-01-22",
-          "descrizione": "SCOCCA BASE SIDEIS",
-          "quantita": 43,
-          "prezzoUnitario": 7.9,
-          "sconto": 15
-        },
-        {
-          "prodotto": "prod_10014",
-          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
-          "quantita": 16,
-          "prezzoUnitario": 0.18,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10017",
-          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
-          "quantita": 32,
-          "prezzoUnitario": 0.2,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_032-01-20",
-          "descrizione": "CAVO H05RN-F 2x0,75",
-          "quantita": 36,
-          "prezzoUnitario": 1.83,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_003-01-22",
-          "descrizione": "DISSIPATORE SIDEIS",
-          "quantita": 35,
-          "prezzoUnitario": 4.87,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10009",
-          "descrizione": "VASSOIO contenitore 8 PZ",
-          "quantita": 16,
-          "prezzoUnitario": 0.4,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_auto-etichetta-marchi-dx",
-          "descrizione": "ETICHETTA MARCHI DX",
-          "quantita": 24,
-          "prezzoUnitario": 0.22,
-          "sconto": 10
-        },
-        {
-          "prodotto": "prod_001-05-23",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 11,
-          "prezzoUnitario": 9.49,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 648.617,
-      "tasse": 142.69574,
-      "totale": 791.31274,
-      "ordineOrigine": "orda_sim_42",
-      "vettore": "Mittente",
-      "note": "Ricezione merce da fornitore."
-    },
-    {
-      "id": "ddta_sim_33",
-      "codice": "DDA-2026033",
-      "fornitore": "forn_elektrozubehor",
-      "data": "2026-02-04",
-      "stato": "fatturato",
-      "righe": [
-        {
-          "prodotto": "prod_10217",
-          "descrizione": "scheda driver interna std",
-          "quantita": 50,
-          "prezzoUnitario": 16.07,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_012-01-20",
-          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
-          "quantita": 37,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-marchi-dx",
-          "descrizione": "ETICHETTA MARCHI DX",
-          "quantita": 6,
-          "prezzoUnitario": 0.22,
-          "sconto": 15
-        },
-        {
-          "prodotto": "prod_10017",
-          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
-          "quantita": 17,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_033-01-20",
-          "descrizione": "O-RING X VITI CHIUSURA",
-          "quantita": 49,
-          "prezzoUnitario": 0.17,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10031",
-          "descrizione": "LENTE ASIMMETRICA SIDEIS",
-          "quantita": 47,
-          "prezzoUnitario": 5.25,
-          "sconto": 0
-        }
-      ],
-      "imponibile": 1070.502,
-      "tasse": 235.51044,
-      "totale": 1306.01244,
-      "ordineOrigine": "orda_sim_43",
-      "vettore": "Mittente",
-      "note": "Ricezione merce da fornitore."
-    },
-    {
-      "id": "ddta_sim_34",
-      "codice": "DDA-2026034",
-      "fornitore": "forn_mascherpa-cecchi",
-      "data": "2026-05-06",
-      "stato": "registrato",
-      "righe": [
-        {
-          "prodotto": "prod_10250",
-          "descrizione": "PASTA TERMOCONDUTTIVA",
-          "quantita": 26,
-          "prezzoUnitario": 0.2,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10217",
-          "descrizione": "scheda driver interna std",
-          "quantita": 49,
-          "prezzoUnitario": 16.07,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_auto-etichetta-bandiera-cavo",
-          "descrizione": "ETICHETTA BANDIERA CAVO",
-          "quantita": 39,
-          "prezzoUnitario": 0.29,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_032-01-20",
-          "descrizione": "CAVO H05RN-F 2x0,75",
-          "quantita": 49,
-          "prezzoUnitario": 1.83,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10014",
-          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
-          "quantita": 41,
-          "prezzoUnitario": 0.18,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10274",
-          "descrizione": "DADO FLANGIATO M6 A2",
-          "quantita": 3,
-          "prezzoUnitario": 0.21,
-          "sconto": 0
-        },
-        {
-          "prodotto": "prod_10277",
-          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
-          "quantita": 24,
-          "prezzoUnitario": 0.23,
+          "quantita": 8,
+          "prezzoUnitario": 0.06,
           "sconto": 0
         },
         {
           "prodotto": "prod_033-01-20",
           "descrizione": "O-RING X VITI CHIUSURA",
           "quantita": 25,
-          "prezzoUnitario": 0.17,
+          "prezzoUnitario": 0.02,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10017",
+          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
+          "quantita": 26,
+          "prezzoUnitario": 0.05,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_032-01-20",
+          "descrizione": "CAVO H05RN-F 2x0,75",
+          "quantita": 21,
+          "prezzoUnitario": 0.78,
+          "sconto": 10
+        },
+        {
+          "prodotto": "prod_012-01-20",
+          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
+          "quantita": 12,
+          "prezzoUnitario": 0.05,
           "sconto": 0
         }
       ],
-      "imponibile": 911.39,
-      "tasse": 200.5058,
-      "totale": 1111.8958,
+      "imponibile": 18.693,
+      "tasse": 4.1124600000000004,
+      "totale": 22.80546,
+      "ordineOrigine": "orda_sim_19",
+      "vettore": "Mittente",
+      "note": "Ricezione merce da fornitore."
+    },
+    {
+      "id": "ddta_sim_15",
+      "numero": "DDA-2026015",
+      "fornitore": "forn_emc-colosio",
+      "data": "2026-02-19",
+      "stato": "fatturato",
+      "righe": [
+        {
+          "prodotto": "prod_10036",
+          "descrizione": "passacavo M12x1,5",
+          "quantita": 9,
+          "prezzoUnitario": 0.15,
+          "sconto": 15
+        },
+        {
+          "prodotto": "prod_10274",
+          "descrizione": "DADO FLANGIATO M6 A2",
+          "quantita": 42,
+          "prezzoUnitario": 0.06,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-etichetta-marchi-dx",
+          "descrizione": "ETICHETTA MARCHI DX",
+          "quantita": 22,
+          "prezzoUnitario": 0.07,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-scheda-led-std-12-led",
+          "descrizione": "scheda led STD 12 LED",
+          "quantita": 3,
+          "prezzoUnitario": 5.5,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_032-01-20",
+          "descrizione": "CAVO H05RN-F 2x0,75",
+          "quantita": 10,
+          "prezzoUnitario": 0.78,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_001-05-23",
+          "descrizione": "LENTE ASIMMETRICA SIDEIS",
+          "quantita": 16,
+          "prezzoUnitario": 4.52,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10277",
+          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
+          "quantita": 46,
+          "prezzoUnitario": 0.08,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-scheda-led-std-12-led",
+          "descrizione": "scheda led STD 12 LED",
+          "quantita": 14,
+          "prezzoUnitario": 5.5,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 182.5075,
+      "tasse": 40.15165,
+      "totale": 222.65914999999998,
+      "ordineOrigine": "orda_sim_20",
+      "vettore": "Mittente",
+      "note": "Ricezione merce da fornitore."
+    },
+    {
+      "id": "ddta_sim_16",
+      "numero": "DDA-2026016",
+      "fornitore": "forn_gore",
+      "data": "2026-01-28",
+      "stato": "fatturato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cc",
+          "descrizione": "Faretto SIDEis ONE CC",
+          "quantita": 40,
+          "prezzoUnitario": 24.46,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-scheda-led-std-12-led",
+          "descrizione": "scheda led STD 12 LED",
+          "quantita": 42,
+          "prezzoUnitario": 5.5,
+          "sconto": 15
+        },
+        {
+          "prodotto": "prod_10277",
+          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
+          "quantita": 19,
+          "prezzoUnitario": 0.08,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-scheda-led-std-12-led",
+          "descrizione": "scheda led STD 12 LED",
+          "quantita": 43,
+          "prezzoUnitario": 5.5,
+          "sconto": 15
+        },
+        {
+          "prodotto": "prod_10031",
+          "descrizione": "LENTE ASIMMETRICA SIDEIS",
+          "quantita": 13,
+          "prezzoUnitario": 2.5,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_003-01-22",
+          "descrizione": "DISSIPATORE SIDEIS",
+          "quantita": 50,
+          "prezzoUnitario": 2.32,
+          "sconto": 15
+        },
+        {
+          "prodotto": "prod_10274",
+          "descrizione": "DADO FLANGIATO M6 A2",
+          "quantita": 14,
+          "prezzoUnitario": 0.06,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 1509.235,
+      "tasse": 332.0317,
+      "totale": 1841.2667,
+      "ordineOrigine": "orda_sim_21",
+      "vettore": "Mittente",
+      "note": "Ricezione merce da fornitore."
+    },
+    {
+      "id": "ddta_sim_17",
+      "numero": "DDA-2026017",
+      "fornitore": "forn_casagrande",
+      "data": "2026-02-09",
+      "stato": "registrato",
+      "righe": [
+        {
+          "prodotto": "prod_auto-etichetta-bandiera-cavo",
+          "descrizione": "ETICHETTA BANDIERA CAVO",
+          "quantita": 5,
+          "prezzoUnitario": 0.14,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10009",
+          "descrizione": "VASSOIO contenitore 8 PZ",
+          "quantita": 40,
+          "prezzoUnitario": 0.19,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 28,
+          "prezzoUnitario": 31.3,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 884.6999999999999,
+      "tasse": 194.634,
+      "totale": 1079.3339999999998,
+      "ordineOrigine": "orda_sim_22",
+      "vettore": "Mittente",
+      "note": "Ricezione merce da fornitore."
+    },
+    {
+      "id": "ddta_sim_18",
+      "numero": "DDA-2026018",
+      "fornitore": "forn_mef",
+      "data": "2026-02-09",
+      "stato": "fatturato",
+      "righe": [
+        {
+          "prodotto": "prod_10031",
+          "descrizione": "LENTE ASIMMETRICA SIDEIS",
+          "quantita": 46,
+          "prezzoUnitario": 2.5,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_024-01-20",
+          "descrizione": "pressacavo",
+          "quantita": 2,
+          "prezzoUnitario": 1.54,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_032-01-20",
+          "descrizione": "CAVO H05RN-F 2x0,75",
+          "quantita": 49,
+          "prezzoUnitario": 0.78,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10250",
+          "descrizione": "PASTA TERMOCONDUTTIVA",
+          "quantita": 37,
+          "prezzoUnitario": 0.05,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_027-01-20",
+          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
+          "quantita": 6,
+          "prezzoUnitario": 1.8,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10278",
+          "descrizione": "IMBALLO",
+          "quantita": 42,
+          "prezzoUnitario": 0.07,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_001-05-23",
+          "descrizione": "LENTE ASIMMETRICA SIDEIS",
+          "quantita": 4,
+          "prezzoUnitario": 4.52,
+          "sconto": 15
+        },
+        {
+          "prodotto": "prod_10250",
+          "descrizione": "PASTA TERMOCONDUTTIVA",
+          "quantita": 34,
+          "prezzoUnitario": 0.05,
+          "sconto": 5
+        }
+      ],
+      "imponibile": 188.87300000000002,
+      "tasse": 41.552060000000004,
+      "totale": 230.42506000000003,
+      "ordineOrigine": "orda_sim_23",
+      "vettore": "Mittente",
+      "note": "Ricezione merce da fornitore."
+    },
+    {
+      "id": "ddta_sim_19",
+      "numero": "DDA-2026019",
+      "fornitore": "forn_casagrande",
+      "data": "2026-06-14",
+      "stato": "registrato",
+      "righe": [
+        {
+          "prodotto": "prod_10248",
+          "descrizione": "SILICONE",
+          "quantita": 8,
+          "prezzoUnitario": 0.23,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-etichetta-prodotto-sx",
+          "descrizione": "ETICHETTA PRODOTTO SX",
+          "quantita": 22,
+          "prezzoUnitario": 0.07,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_033-01-20",
+          "descrizione": "O-RING X VITI CHIUSURA",
+          "quantita": 40,
+          "prezzoUnitario": 0.02,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_003-01-22",
+          "descrizione": "DISSIPATORE SIDEIS",
+          "quantita": 16,
+          "prezzoUnitario": 2.32,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-etichetta-bandiera-cavo",
+          "descrizione": "ETICHETTA BANDIERA CAVO",
+          "quantita": 42,
+          "prezzoUnitario": 0.14,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10250",
+          "descrizione": "PASTA TERMOCONDUTTIVA",
+          "quantita": 41,
+          "prezzoUnitario": 0.05,
+          "sconto": 10
+        }
+      ],
+      "imponibile": 49.025,
+      "tasse": 10.785499999999999,
+      "totale": 59.8105,
+      "ordineOrigine": "orda_sim_24",
+      "vettore": "Mittente",
+      "note": "Ricezione merce da fornitore."
+    },
+    {
+      "id": "ddta_sim_20",
+      "numero": "DDA-2026020",
+      "fornitore": "forn_fornitore-da-definire",
+      "data": "2026-02-11",
+      "stato": "fatturato",
+      "righe": [
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 31,
+          "prezzoUnitario": 31.3,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_012-01-20",
+          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
+          "quantita": 34,
+          "prezzoUnitario": 0.05,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_027-01-20",
+          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
+          "quantita": 14,
+          "prezzoUnitario": 1.8,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-etichetta-marchi-dx",
+          "descrizione": "ETICHETTA MARCHI DX",
+          "quantita": 29,
+          "prezzoUnitario": 0.07,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 999.2300000000001,
+      "tasse": 219.83060000000003,
+      "totale": 1219.0606,
+      "ordineOrigine": "orda_sim_25",
+      "vettore": "Mittente",
+      "note": "Ricezione merce da fornitore."
+    },
+    {
+      "id": "ddta_sim_21",
+      "numero": "DDA-2026021",
+      "fornitore": "forn_emc-colosio",
+      "data": "2026-05-26",
+      "stato": "fatturato",
+      "righe": [
+        {
+          "prodotto": "prod_025-01-20",
+          "descrizione": "dado pressacavo",
+          "quantita": 25,
+          "prezzoUnitario": 0.19,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10017",
+          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
+          "quantita": 41,
+          "prezzoUnitario": 0.05,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10009",
+          "descrizione": "VASSOIO contenitore 8 PZ",
+          "quantita": 13,
+          "prezzoUnitario": 0.19,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10014",
+          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
+          "quantita": 46,
+          "prezzoUnitario": 0.03,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-etichetta-prodotto-sx",
+          "descrizione": "ETICHETTA PRODOTTO SX",
+          "quantita": 9,
+          "prezzoUnitario": 0.07,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 6,
+          "prezzoUnitario": 31.3,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_001-05-23",
+          "descrizione": "LENTE ASIMMETRICA SIDEIS",
+          "quantita": 2,
+          "prezzoUnitario": 4.52,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 208.12,
+      "tasse": 45.7864,
+      "totale": 253.9064,
+      "ordineOrigine": "orda_sim_26",
+      "vettore": "Mittente",
+      "note": "Ricezione merce da fornitore."
+    },
+    {
+      "id": "ddta_sim_22",
+      "numero": "DDA-2026022",
+      "fornitore": "forn_emc-colosio",
+      "data": "2026-04-12",
+      "stato": "registrato",
+      "righe": [
+        {
+          "prodotto": "prod_auto-scheda-led-std-12-led",
+          "descrizione": "scheda led STD 12 LED",
+          "quantita": 38,
+          "prezzoUnitario": 5.5,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10277",
+          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
+          "quantita": 41,
+          "prezzoUnitario": 0.08,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10250",
+          "descrizione": "PASTA TERMOCONDUTTIVA",
+          "quantita": 1,
+          "prezzoUnitario": 0.05,
+          "sconto": 15
+        },
+        {
+          "prodotto": "prod_024-01-20",
+          "descrizione": "pressacavo",
+          "quantita": 2,
+          "prezzoUnitario": 1.54,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10017",
+          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
+          "quantita": 11,
+          "prezzoUnitario": 0.05,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10277",
+          "descrizione": "VITE TRILOBATA M4 X 12 TORX A2",
+          "quantita": 36,
+          "prezzoUnitario": 0.08,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 218.8325,
+      "tasse": 48.143150000000006,
+      "totale": 266.97565000000003,
+      "ordineOrigine": "orda_sim_27",
+      "vettore": "Mittente",
+      "note": "Ricezione merce da fornitore."
+    },
+    {
+      "id": "ddta_sim_23",
+      "numero": "DDA-2026023",
+      "fornitore": "forn_mef",
+      "data": "2026-03-09",
+      "stato": "fatturato",
+      "righe": [
+        {
+          "prodotto": "prod_033-01-20",
+          "descrizione": "O-RING X VITI CHIUSURA",
+          "quantita": 49,
+          "prezzoUnitario": 0.02,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-etichetta-prodotto-sx",
+          "descrizione": "ETICHETTA PRODOTTO SX",
+          "quantita": 17,
+          "prezzoUnitario": 0.07,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-etichetta-marchi-dx",
+          "descrizione": "ETICHETTA MARCHI DX",
+          "quantita": 48,
+          "prezzoUnitario": 0.07,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 50,
+          "prezzoUnitario": 31.3,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_003-01-22",
+          "descrizione": "DISSIPATORE SIDEIS",
+          "quantita": 34,
+          "prezzoUnitario": 2.32,
+          "sconto": 5
+        },
+        {
+          "prodotto": "prod_027-01-20",
+          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
+          "quantita": 46,
+          "prezzoUnitario": 1.8,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 1728.2659999999998,
+      "tasse": 380.21851999999996,
+      "totale": 2108.48452,
+      "ordineOrigine": "orda_sim_28",
+      "vettore": "Mittente",
+      "note": "Ricezione merce da fornitore."
+    },
+    {
+      "id": "ddta_sim_24",
+      "numero": "DDA-2026024",
+      "fornitore": "forn_entity",
+      "data": "2026-04-05",
+      "stato": "registrato",
+      "righe": [
+        {
+          "prodotto": "prod_027-01-20",
+          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
+          "quantita": 7,
+          "prezzoUnitario": 1.8,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_002-01-22",
+          "descrizione": "SCOCCA BASE SIDEIS",
+          "quantita": 4,
+          "prezzoUnitario": 3.76,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_001-05-23",
+          "descrizione": "LENTE ASIMMETRICA SIDEIS",
+          "quantita": 28,
+          "prezzoUnitario": 4.52,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-etichetta-prodotto-sx",
+          "descrizione": "ETICHETTA PRODOTTO SX",
+          "quantita": 44,
+          "prezzoUnitario": 0.07,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 157.28,
+      "tasse": 34.6016,
+      "totale": 191.8816,
+      "ordineOrigine": "orda_sim_29",
+      "vettore": "Mittente",
+      "note": "Ricezione merce da fornitore."
+    },
+    {
+      "id": "ddta_sim_25",
+      "numero": "DDA-2026025",
+      "fornitore": "forn_entity",
+      "data": "2026-05-12",
+      "stato": "registrato",
+      "righe": [
+        {
+          "prodotto": "prod_024-01-20",
+          "descrizione": "pressacavo",
+          "quantita": 34,
+          "prezzoUnitario": 1.54,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_003-01-22",
+          "descrizione": "DISSIPATORE SIDEIS",
+          "quantita": 21,
+          "prezzoUnitario": 2.32,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 101.08,
+      "tasse": 22.2376,
+      "totale": 123.3176,
+      "ordineOrigine": "orda_sim_30",
+      "vettore": "Mittente",
+      "note": "Ricezione merce da fornitore."
+    },
+    {
+      "id": "ddta_sim_26",
+      "numero": "DDA-2026026",
+      "fornitore": "forn_mascherpa-cecchi",
+      "data": "2026-06-07",
+      "stato": "registrato",
+      "righe": [
+        {
+          "prodotto": "prod_10031",
+          "descrizione": "LENTE ASIMMETRICA SIDEIS",
+          "quantita": 31,
+          "prezzoUnitario": 2.5,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10036",
+          "descrizione": "passacavo M12x1,5",
+          "quantita": 35,
+          "prezzoUnitario": 0.15,
+          "sconto": 10
+        },
+        {
+          "prodotto": "prod_10217",
+          "descrizione": "scheda driver interna std",
+          "quantita": 1,
+          "prezzoUnitario": 6.84,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-etichetta-marchi-dx",
+          "descrizione": "ETICHETTA MARCHI DX",
+          "quantita": 25,
+          "prezzoUnitario": 0.07,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_012-01-20",
+          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
+          "quantita": 26,
+          "prezzoUnitario": 0.05,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_027-01-20",
+          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
+          "quantita": 45,
+          "prezzoUnitario": 1.8,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 173.115,
+      "tasse": 38.085300000000004,
+      "totale": 211.2003,
+      "ordineOrigine": "orda_sim_32",
+      "vettore": "Mittente",
+      "note": "Ricezione merce da fornitore."
+    },
+    {
+      "id": "ddta_sim_27",
+      "numero": "DDA-2026027",
+      "fornitore": "forn_bossard",
+      "data": "2026-01-29",
+      "stato": "fatturato",
+      "righe": [
+        {
+          "prodotto": "prod_001-05-23",
+          "descrizione": "LENTE ASIMMETRICA SIDEIS",
+          "quantita": 10,
+          "prezzoUnitario": 4.52,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10250",
+          "descrizione": "PASTA TERMOCONDUTTIVA",
+          "quantita": 48,
+          "prezzoUnitario": 0.05,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_033-01-20",
+          "descrizione": "O-RING X VITI CHIUSURA",
+          "quantita": 32,
+          "prezzoUnitario": 0.02,
+          "sconto": 15
+        },
+        {
+          "prodotto": "prod_025-01-20",
+          "descrizione": "dado pressacavo",
+          "quantita": 11,
+          "prezzoUnitario": 0.19,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 44,
+          "prezzoUnitario": 31.3,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10036",
+          "descrizione": "passacavo M12x1,5",
+          "quantita": 20,
+          "prezzoUnitario": 0.15,
+          "sconto": 10
+        },
+        {
+          "prodotto": "prod_025-01-20",
+          "descrizione": "dado pressacavo",
+          "quantita": 2,
+          "prezzoUnitario": 0.19,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 1430.5140000000001,
+      "tasse": 314.71308000000005,
+      "totale": 1745.2270800000001,
+      "ordineOrigine": "orda_sim_33",
+      "vettore": "Mittente",
+      "note": "Ricezione merce da fornitore."
+    },
+    {
+      "id": "ddta_sim_28",
+      "numero": "DDA-2026028",
+      "fornitore": "forn_mascherpa-cecchi",
+      "data": "2026-02-17",
+      "stato": "registrato",
+      "righe": [
+        {
+          "prodotto": "prod_10250",
+          "descrizione": "PASTA TERMOCONDUTTIVA",
+          "quantita": 14,
+          "prezzoUnitario": 0.05,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-scheda-led-std-12-led",
+          "descrizione": "scheda led STD 12 LED",
+          "quantita": 46,
+          "prezzoUnitario": 5.5,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10274",
+          "descrizione": "DADO FLANGIATO M6 A2",
+          "quantita": 33,
+          "prezzoUnitario": 0.06,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-etichetta-prodotto-sx",
+          "descrizione": "ETICHETTA PRODOTTO SX",
+          "quantita": 48,
+          "prezzoUnitario": 0.07,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10248",
+          "descrizione": "SILICONE",
+          "quantita": 37,
+          "prezzoUnitario": 0.23,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 267.54999999999995,
+      "tasse": 58.86099999999999,
+      "totale": 326.41099999999994,
+      "ordineOrigine": "orda_sim_34",
+      "vettore": "Mittente",
+      "note": "Ricezione merce da fornitore."
+    },
+    {
+      "id": "ddta_sim_30",
+      "numero": "DDA-2026030",
+      "fornitore": "forn_elektrozubehor",
+      "data": "2026-03-04",
+      "stato": "registrato",
+      "righe": [
+        {
+          "prodotto": "prod_002-01-22",
+          "descrizione": "SCOCCA BASE SIDEIS",
+          "quantita": 30,
+          "prezzoUnitario": 3.76,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 10,
+          "prezzoUnitario": 31.3,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-scheda-led-std-12-led",
+          "descrizione": "scheda led STD 12 LED",
+          "quantita": 43,
+          "prezzoUnitario": 5.5,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_003-01-22",
+          "descrizione": "DISSIPATORE SIDEIS",
+          "quantita": 35,
+          "prezzoUnitario": 2.32,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-etichetta-bandiera-cavo",
+          "descrizione": "ETICHETTA BANDIERA CAVO",
+          "quantita": 40,
+          "prezzoUnitario": 0.14,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10017",
+          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
+          "quantita": 28,
+          "prezzoUnitario": 0.05,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 750.5,
+      "tasse": 165.11,
+      "totale": 915.61,
+      "ordineOrigine": "orda_sim_37",
+      "vettore": "Mittente",
+      "note": "Ricezione merce da fornitore."
+    },
+    {
+      "id": "ddta_sim_31",
+      "numero": "DDA-2026031",
+      "fornitore": "forn_mascherpa-cecchi",
+      "data": "2026-04-30",
+      "stato": "fatturato",
+      "righe": [
+        {
+          "prodotto": "prod_auto-etichetta-marchi-dx",
+          "descrizione": "ETICHETTA MARCHI DX",
+          "quantita": 39,
+          "prezzoUnitario": 0.07,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 2.7300000000000004,
+      "tasse": 0.6006000000000001,
+      "totale": 3.3306000000000004,
+      "ordineOrigine": "orda_sim_39",
+      "vettore": "Mittente",
+      "note": "Ricezione merce da fornitore."
+    },
+    {
+      "id": "ddta_sim_32",
+      "numero": "DDA-2026032",
+      "fornitore": "forn_casagrande",
+      "data": "2026-05-29",
+      "stato": "fatturato",
+      "righe": [
+        {
+          "prodotto": "prod_10014",
+          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
+          "quantita": 2,
+          "prezzoUnitario": 0.03,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10036",
+          "descrizione": "passacavo M12x1,5",
+          "quantita": 41,
+          "prezzoUnitario": 0.15,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_002-01-22",
+          "descrizione": "SCOCCA BASE SIDEIS",
+          "quantita": 8,
+          "prezzoUnitario": 3.76,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10278",
+          "descrizione": "IMBALLO",
+          "quantita": 21,
+          "prezzoUnitario": 0.07,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_033-01-20",
+          "descrizione": "O-RING X VITI CHIUSURA",
+          "quantita": 10,
+          "prezzoUnitario": 0.02,
+          "sconto": 15
+        },
+        {
+          "prodotto": "prod_auto-etichetta-marchi-dx",
+          "descrizione": "ETICHETTA MARCHI DX",
+          "quantita": 50,
+          "prezzoUnitario": 0.07,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10009",
+          "descrizione": "VASSOIO contenitore 8 PZ",
+          "quantita": 50,
+          "prezzoUnitario": 0.19,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 50.93,
+      "tasse": 11.2046,
+      "totale": 62.1346,
+      "ordineOrigine": "orda_sim_40",
+      "vettore": "Mittente",
+      "note": "Ricezione merce da fornitore."
+    },
+    {
+      "id": "ddta_sim_33",
+      "numero": "DDA-2026033",
+      "fornitore": "forn_emc-colosio",
+      "data": "2026-02-15",
+      "stato": "registrato",
+      "righe": [
+        {
+          "prodotto": "prod_10250",
+          "descrizione": "PASTA TERMOCONDUTTIVA",
+          "quantita": 46,
+          "prezzoUnitario": 0.05,
+          "sconto": 10
+        },
+        {
+          "prodotto": "prod_sideis_one_cv",
+          "descrizione": "Faretto SIDEis ONE CV",
+          "quantita": 19,
+          "prezzoUnitario": 31.3,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10014",
+          "descrizione": "VITE TRILOBATA M4 X 10 TORX A2",
+          "quantita": 45,
+          "prezzoUnitario": 0.03,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_003-01-22",
+          "descrizione": "DISSIPATORE SIDEIS",
+          "quantita": 4,
+          "prezzoUnitario": 2.32,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-etichetta-prodotto-sx",
+          "descrizione": "ETICHETTA PRODOTTO SX",
+          "quantita": 20,
+          "prezzoUnitario": 0.07,
+          "sconto": 5
+        }
+      ],
+      "imponibile": 608.7300000000001,
+      "tasse": 133.92060000000004,
+      "totale": 742.6506000000002,
+      "ordineOrigine": "orda_sim_41",
+      "vettore": "Mittente",
+      "note": "Ricezione merce da fornitore."
+    },
+    {
+      "id": "ddta_sim_34",
+      "numero": "DDA-2026034",
+      "fornitore": "forn_emc-colosio",
+      "data": "2026-03-02",
+      "stato": "fatturato",
+      "righe": [
+        {
+          "prodotto": "prod_027-01-20",
+          "descrizione": "VALVOLA DI SFIATO (POLY VENT XS PMF200125)",
+          "quantita": 45,
+          "prezzoUnitario": 1.8,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_025-01-20",
+          "descrizione": "dado pressacavo",
+          "quantita": 29,
+          "prezzoUnitario": 0.19,
+          "sconto": 10
+        }
+      ],
+      "imponibile": 85.959,
+      "tasse": 18.910980000000002,
+      "totale": 104.86998,
+      "ordineOrigine": "orda_sim_42",
+      "vettore": "Mittente",
+      "note": "Ricezione merce da fornitore."
+    },
+    {
+      "id": "ddta_sim_35",
+      "numero": "DDA-2026035",
+      "fornitore": "forn_mef",
+      "data": "2026-06-01",
+      "stato": "fatturato",
+      "righe": [
+        {
+          "prodotto": "prod_10217",
+          "descrizione": "scheda driver interna std",
+          "quantita": 40,
+          "prezzoUnitario": 6.84,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10036",
+          "descrizione": "passacavo M12x1,5",
+          "quantita": 34,
+          "prezzoUnitario": 0.15,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_auto-scheda-led-std-12-led",
+          "descrizione": "scheda led STD 12 LED",
+          "quantita": 22,
+          "prezzoUnitario": 5.5,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 399.70000000000005,
+      "tasse": 87.93400000000001,
+      "totale": 487.63400000000007,
+      "ordineOrigine": "orda_sim_43",
+      "vettore": "Mittente",
+      "note": "Ricezione merce da fornitore."
+    },
+    {
+      "id": "ddta_sim_36",
+      "numero": "DDA-2026036",
+      "fornitore": "forn_bossard",
+      "data": "2026-02-07",
+      "stato": "registrato",
+      "righe": [
+        {
+          "prodotto": "prod_024-01-20",
+          "descrizione": "pressacavo",
+          "quantita": 13,
+          "prezzoUnitario": 1.54,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10248",
+          "descrizione": "SILICONE",
+          "quantita": 28,
+          "prezzoUnitario": 0.23,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_002-01-22",
+          "descrizione": "SCOCCA BASE SIDEIS",
+          "quantita": 19,
+          "prezzoUnitario": 3.76,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_012-01-20",
+          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
+          "quantita": 24,
+          "prezzoUnitario": 0.05,
+          "sconto": 15
+        },
+        {
+          "prodotto": "prod_10017",
+          "descrizione": "RONDELLA distanziale isolante 4,2x8 H5",
+          "quantita": 14,
+          "prezzoUnitario": 0.05,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10217",
+          "descrizione": "scheda driver interna std",
+          "quantita": 10,
+          "prezzoUnitario": 6.84,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10009",
+          "descrizione": "VASSOIO contenitore 8 PZ",
+          "quantita": 39,
+          "prezzoUnitario": 0.19,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 175.43,
+      "tasse": 38.5946,
+      "totale": 214.0246,
       "ordineOrigine": "orda_sim_44",
+      "vettore": "Mittente",
+      "note": "Ricezione merce da fornitore."
+    },
+    {
+      "id": "ddta_sim_37",
+      "numero": "DDA-2026037",
+      "fornitore": "forn_gore",
+      "data": "2026-04-24",
+      "stato": "fatturato",
+      "righe": [
+        {
+          "prodotto": "prod_10009",
+          "descrizione": "VASSOIO contenitore 8 PZ",
+          "quantita": 29,
+          "prezzoUnitario": 0.19,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_10250",
+          "descrizione": "PASTA TERMOCONDUTTIVA",
+          "quantita": 10,
+          "prezzoUnitario": 0.05,
+          "sconto": 0
+        },
+        {
+          "prodotto": "prod_012-01-20",
+          "descrizione": "VITE TRILOBATA M3 X 10 TORX A2 TESTA SVASATA",
+          "quantita": 46,
+          "prezzoUnitario": 0.05,
+          "sconto": 0
+        }
+      ],
+      "imponibile": 8.31,
+      "tasse": 1.8282,
+      "totale": 10.138200000000001,
+      "ordineOrigine": "orda_sim_45",
       "vettore": "Mittente",
       "note": "Ricezione merce da fornitore."
     }

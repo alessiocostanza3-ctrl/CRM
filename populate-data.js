@@ -36,8 +36,8 @@ const numOrdiniAcquisto = 45;
 const numDdtAcquisto = 40;
 
 const fornitoriIds = data.fornitori.map(f => f.id);
-const prodottiList = data.prodotti;
-
+const prodottiFiniti = data.prodotti.filter(p => String(p.categoria).toLowerCase() === 'prodotti finiti');
+const prodottiComponenti = data.prodotti.filter(p => String(p.categoria).toLowerCase() !== 'prodotti finiti');
 const clienti = [];
 for (let i = 1; i <= numClients; i++) {
     const isCompany = Math.random() > 0.3;
@@ -64,13 +64,14 @@ for (let i = 1; i <= numClients; i++) {
     });
 }
 
-function generateRighe(min, max, maxPezzi = 10) {
+function generateRighe(min, max, maxPezzi = 10, isVendita = true) {
     const numRighe = randomInt(min, max);
     const righe = [];
+    const list = isVendita ? prodottiFiniti : data.prodotti;
     for (let i = 0; i < numRighe; i++) {
-        const prod = randomElement(prodottiList);
+        const prod = randomElement(list);
         const qta = randomInt(1, maxPezzi);
-        const prezzo = prod.prezzoVendita || randomInt(10, 500);
+        const prezzo = (isVendita ? prod.prezzoVendita : prod.prezzoAcquisto) || randomInt(10, 500);
         righe.push({
             prodotto: prod.id,
             descrizione: prod.nome,
@@ -95,7 +96,7 @@ for (let i = 1; i <= numPreventivi; i++) {
     const imponibile = calculateTotale(righe);
     preventivi.push({
         id: `prev_sim_${i}`,
-        codice: `PRE-${2026000 + i}`,
+        numero: `PRE-${2026000 + i}`,
         cliente: cliente.id,
         data: formatDate(date),
         dataScadenza: formatDate(scadenza),
@@ -116,10 +117,10 @@ for (let i = 1; i <= numOrdiniVendita; i++) {
     if(date > endDate) continue;
     ordiniVendita.push({
         id: `ordv_sim_${i}`,
-        codice: `ORD-${2026000 + i}`,
+        numero: `ORD-${2026000 + i}`,
         cliente: prev.cliente,
         data: formatDate(date),
-        stato: randomElement(['confermato', 'in_lavorazione', 'spedito', 'fatturato', 'annullato']),
+        stato: randomElement(['confermato', 'inlavorazione', 'spedito', 'fatturato', 'annullato']),
         righe: prev.righe,
         imponibile: prev.imponibile,
         tasse: prev.tasse,
@@ -138,7 +139,7 @@ for (let i = 1; i <= numDdtVendita; i++) {
     if(date > endDate) continue;
     ddtVendita.push({
         id: `ddtv_sim_${i}`,
-        codice: `DDT-${2026000 + i}`,
+        numero: `DDT-${2026000 + i}`,
         cliente: ord.cliente,
         data: formatDate(date),
         stato: randomElement(['da_fatturare', 'fatturato']),
@@ -156,11 +157,11 @@ const ordiniAcquisto = [];
 for (let i = 1; i <= numOrdiniAcquisto; i++) {
     const fornitoreId = randomElement(fornitoriIds);
     const date = randomDate(startDate, endDate);
-    const righe = generateRighe(1, 8, 50);
+    const righe = generateRighe(1, 8, 50, false);
     const imponibile = calculateTotale(righe);
     ordiniAcquisto.push({
         id: `orda_sim_${i}`,
-        codice: `OAC-${2026000 + i}`,
+        numero: `OAC-${2026000 + i}`,
         fornitore: fornitoreId,
         data: formatDate(date),
         stato: randomElement(['inviato', 'confermato', 'ricevuto', 'fatturato']),
@@ -181,7 +182,7 @@ for (let i = 1; i <= numDdtAcquisto; i++) {
     if(date > endDate) continue;
     ddtAcquisto.push({
         id: `ddta_sim_${i}`,
-        codice: `DDA-${2026000 + i}`,
+        numero: `DDA-${2026000 + i}`,
         fornitore: ord.fornitore,
         data: formatDate(date),
         stato: randomElement(['registrato', 'fatturato']),

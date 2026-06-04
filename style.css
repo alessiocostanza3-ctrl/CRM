@@ -7130,6 +7130,38 @@ body[data-theme="dark"] .crm-table tr:hover td {
     pointer-events: auto;
 }
 
+/* Document custom styling inside crm-drawer (renders as centered modal overlay) */
+.crm-drawer-overlay.is-document {
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 24px !important;
+}
+
+.crm-drawer-overlay.is-document .crm-drawer-content {
+    width: min(1380px, 95vw) !important;
+    height: min(85vh, 880px) !important;
+    border-radius: var(--radius-drawer, 20px) !important;
+    transform: translateY(20px) scale(0.96) !important;
+    box-shadow: var(--shadow-premium-lg) !important;
+    border: 1px solid var(--border-color) !important;
+    opacity: 0;
+    transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.3s ease, background-color 0.3s, border-color 0.3s !important;
+}
+
+.crm-drawer-overlay.active.is-document .crm-drawer-content {
+    transform: translateY(0) scale(1) !important;
+    opacity: 1 !important;
+}
+
+@media (min-width: 769px) {
+    .crm-drawer-overlay.is-document .drawer-info-grid {
+        grid-template-columns: repeat(4, 1fr) !important;
+    }
+    .crm-drawer-overlay.is-document .crm-drawer-body.modal-form-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    }
+}
+
 .crm-drawer-content {
     width: min(560px, 90vw);
     height: 100%;

@@ -7124,6 +7124,9 @@ function apriCrmDrawer(pageName, recordId) {
     const drawer = document.getElementById('crm-drawer');
     if (!drawer) return;
 
+    const isDoc = !!config.isDocument;
+    drawer.classList.toggle('is-document', isDoc);
+
     // Header info
     document.getElementById('crm-drawer-eyebrow').innerText = config.eyebrow || config.title;
     document.getElementById('crm-drawer-title').innerText = record.numero || record.azienda || record.nome || record.titolo || recordId;
@@ -7163,7 +7166,10 @@ function apriCrmDrawer(pageName, recordId) {
 
 function chiudiCrmDrawer() {
     const drawer = document.getElementById('crm-drawer');
-    if (drawer) drawer.classList.remove('active');
+    if (drawer) {
+        drawer.classList.remove('active');
+        drawer.classList.remove('is-document');
+    }
     
     // Reimposta la classe del body a quella del drawer standard prima di svuotare
     const body = document.getElementById('crm-drawer-body');

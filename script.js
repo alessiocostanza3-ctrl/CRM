@@ -134,7 +134,7 @@ const prodotti = [
 
 const THEME_STORAGE_KEY = 'crm_ui_theme';
 const DEFAULT_THEME = 'light';
-const DATASETS_STORAGE_KEY = 'crm_datasets_v2';
+const DATASETS_STORAGE_KEY = 'crm_datasets_v3';
 const LEGACY_DATASET_STORAGE_KEYS = ['crm_datasets_v1'];
 const NAV_PAGE_STORAGE_KEY = 'crm_current_page_state_v1';
 const DEFAULT_PAGE = 'dashboard_operativa';

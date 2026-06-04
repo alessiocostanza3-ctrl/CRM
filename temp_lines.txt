@@ -1,0 +1,10 @@
+    catalogo: {
+        title: 'Catalogo',
+        items: [
+            { page: 'prodotti', label: 'Prodotti' },
+            { page: 'distintaBase', label: 'Distinte' },
+            { page: 'magazzino', label: 'Magazzino' },
+            { page: 'fornitori', label: 'Fornitori' }
+        ]
+    }
+};

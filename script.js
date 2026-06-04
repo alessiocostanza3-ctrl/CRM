@@ -1356,7 +1356,13 @@ const SIDEBAR_SUBNAV = {
         items: [
             { page: 'prodotti', label: 'Prodotti' },
             { page: 'distintaBase', label: 'Distinte' },
-            { page: 'magazzino', label: 'Magazzino' },
+            { page: 'magazzino', label: 'Magazzino' }
+        ]
+    },
+    anagrafiche: {
+        title: 'Anagrafiche',
+        items: [
+            { page: 'clienti', label: 'Clienti' },
             { page: 'fornitori', label: 'Fornitori' }
         ]
     }

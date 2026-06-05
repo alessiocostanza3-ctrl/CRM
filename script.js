@@ -5574,7 +5574,11 @@ function apriModalGenericCrea() {
         formNode.appendChild(fieldsContainer.firstChild);
     }
 
-    body.className = `crm-drawer-body modal-fields-container ${config.isDocument || paginaAttuale === 'fornitori' ? 'modal-form-grid' : ''}`;
+    if (paginaAttuale === 'preventivi') {
+        body.className = 'crm-drawer-body modal-fields-container preventivi-drawer-custom';
+    } else {
+        body.className = `crm-drawer-body modal-fields-container ${config.isDocument || paginaAttuale === 'fornitori' ? 'modal-form-grid' : ''}`;
+    }
 
     footer.innerHTML = `
         <button type="button" class="btn-secondary" onclick="chiudiCrmDrawer()">Annulla</button>
@@ -7704,7 +7708,11 @@ function attivaModificaInDrawer(pageName, recordId) {
     }
 
     const config = TABLE_CONFIGS[pageName];
-    body.className = `crm-drawer-body modal-fields-container ${config.isDocument || pageName === 'fornitori' ? 'modal-form-grid' : ''}`;
+    if (pageName === 'preventivi') {
+        body.className = 'crm-drawer-body modal-fields-container preventivi-drawer-custom';
+    } else {
+        body.className = `crm-drawer-body modal-fields-container ${config.isDocument || pageName === 'fornitori' ? 'modal-form-grid' : ''}`;
+    }
 
     footer.innerHTML = `
         <button type="button" class="btn-secondary" onclick="annullaModificaInDrawer('${pageName}', '${recordId}')">Annulla</button>
@@ -7764,7 +7772,7 @@ function costruisciCampiFormModalPreventivi(fieldsContainer, record = null) {
     fieldsContainer.innerHTML = '';
     
     let gridHtml = `
-        <div class="preventivi-form-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; width: 100%;">
+        <div class="preventivi-form-grid">
             <div class="form-field field-full" style="grid-column: span 4;">
                 <label class="modal-label">Titolo Preventivo <span class="required">*</span></label>
                 <input type="text" id="field-titolo" class="input-field-modern" value="${record ? escapeHtmlAttr(record.titolo) : ''}" placeholder="Esempio: Fornitura faretti per villa Rossi" required style="width: 100%;">
@@ -7866,59 +7874,58 @@ function costruisciCampiFormModalPreventivi(fieldsContainer, record = null) {
     `;
     
     let switchesHtml = `
-        <div class="preventivi-switches-panel" style="display: flex; gap: 24px; flex-wrap: wrap; margin-top: 20px; padding: 12px 16px; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0; width: 100%;">
-            <div class="form-switch-item" style="display: flex; align-items: center; gap: 8px;">
+        <div class="preventivi-switches-panel">
+            <div class="form-switch-item">
                 <label class="switch-control" style="position: relative; display: inline-block; width: 44px; height: 24px;">
                     <input type="checkbox" id="field-mostraImponibile" ${!record || record.mostraImponibile ? 'checked' : ''} style="opacity: 0; width: 0; height: 0;" onchange="aggiornaVisibilitaColonnePreventivi()">
                     <span class="switch-slider" style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #cbd5e1; transition: .4s; border-radius: 24px;"></span>
                 </label>
-                <span class="switch-label" style="font-size: 13px; font-weight: 500; color: #334155;">Mostra costi imponibile</span>
+                <span class="switch-label">Mostra costi imponibile</span>
             </div>
 
-            <div class="form-switch-item" style="display: flex; align-items: center; gap: 8px;">
+            <div class="form-switch-item">
                 <label class="switch-control" style="position: relative; display: inline-block; width: 44px; height: 24px;">
                     <input type="checkbox" id="field-mostraIva" ${!record || record.mostraIva ? 'checked' : ''} style="opacity: 0; width: 0; height: 0;" onchange="aggiornaVisibilitaColonnePreventivi()">
                     <span class="switch-slider" style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #cbd5e1; transition: .4s; border-radius: 24px;"></span>
                 </label>
-                <span class="switch-label" style="font-size: 13px; font-weight: 500; color: #334155;">Mostra costi IVA</span>
+                <span class="switch-label">Mostra costi IVA</span>
             </div>
 
-            <div class="form-switch-item" style="display: flex; align-items: center; gap: 8px;">
+            <div class="form-switch-item">
                 <label class="switch-control" style="position: relative; display: inline-block; width: 44px; height: 24px;">
                     <input type="checkbox" id="field-mostraScontiRiga" ${!record || record.mostraScontiRiga ? 'checked' : ''} style="opacity: 0; width: 0; height: 0;" onchange="aggiornaVisibilitaColonnePreventivi()">
                     <span class="switch-slider" style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #cbd5e1; transition: .4s; border-radius: 24px;"></span>
                 </label>
-                <span class="switch-label" style="font-size: 13px; font-weight: 500; color: #334155;">Mostra sconti riga</span>
+                <span class="switch-label">Mostra sconti riga</span>
             </div>
 
-            <div class="form-switch-item" style="display: flex; align-items: center; gap: 8px;">
+            <div class="form-switch-item">
                 <label class="switch-control" style="position: relative; display: inline-block; width: 44px; height: 24px;">
                     <input type="checkbox" id="field-mostraScontiTotali" ${!record || record.mostraScontiTotali ? 'checked' : ''} style="opacity: 0; width: 0; height: 0;" onchange="aggiornaVisibilitaColonnePreventivi()">
                     <span class="switch-slider" style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #cbd5e1; transition: .4s; border-radius: 24px;"></span>
                 </label>
-                <span class="switch-label" style="font-size: 13px; font-weight: 500; color: #334155;">Mostra sconti totali</span>
+                <span class="switch-label">Mostra sconti totali</span>
             </div>
 
-            <div class="form-switch-item" style="display: flex; align-items: center; gap: 8px;">
+            <div class="form-switch-item">
                 <label class="switch-control" style="position: relative; display: inline-block; width: 44px; height: 24px;">
                     <input type="checkbox" id="field-esportato" ${record && record.esportato ? 'checked' : ''} style="opacity: 0; width: 0; height: 0;">
                     <span class="switch-slider" style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #cbd5e1; transition: .4s; border-radius: 24px;"></span>
                 </label>
-                <span class="switch-label" style="font-size: 13px; font-weight: 500; color: #334155;">Esportato</span>
+                <span class="switch-label">Esportato</span>
             </div>
         </div>
     `;
 
     let tabsHtml = `
-        <div class="preventivi-tabs-container" style="width: 100%; margin-top: 20px; border: 1px solid #cbd5e1; border-radius: 8px; overflow: hidden;">
-            <div class="preventivi-tabs-header" style="display: flex; background: #f1f5f9; border-bottom: 1px solid #cbd5e1; padding: 4px 8px 0 8px;">
-                <button type="button" class="tab-header-btn active" onclick="cambiaTabTestoPreventivo(this, 'tab-desc')" style="padding: 8px 16px; border: 1px solid transparent; border-bottom: none; border-radius: 6px 6px 0 0; background: none; font-size: 13px; font-weight: 600; color: #475569; cursor: pointer;">Descrizione</button>
-                <button type="button" class="tab-header-btn" onclick="cambiaTabTestoPreventivo(this, 'tab-note-int')" style="padding: 8px 16px; border: 1px solid transparent; border-bottom: none; border-radius: 6px 6px 0 0; background: none; font-size: 13px; font-weight: 600; color: #475569; cursor: pointer;">Note interne</button>
-                <button type="button" class="tab-header-btn" onclick="cambiaTabTestoPreventivo(this, 'tab-testo-fondo')" style="padding: 8px 16px; border: 1px solid transparent; border-bottom: none; border-radius: 6px 6px 0 0; background: none; font-size: 13px; font-weight: 600; color: #475569; cursor: pointer;">Testo aggiuntivo fondo pagina</button>
+        <div class="preventivi-tabs-container">
+            <div class="preventivi-tabs-header">
+                <button type="button" class="tab-header-btn active" onclick="cambiaTabTestoPreventivo(this, 'tab-desc')">Descrizione</button>
+                <button type="button" class="tab-header-btn" onclick="cambiaTabTestoPreventivo(this, 'tab-note-int')">Note interne</button>
+                <button type="button" class="tab-header-btn" onclick="cambiaTabTestoPreventivo(this, 'tab-testo-fondo')">Testo aggiuntivo fondo pagina</button>
             </div>
             
-            <div class="preventivi-tabs-body" style="background: #fff; min-height: 160px; padding: 12px; position: relative;">
-                
+            <div class="preventivi-tabs-body">
                 <div id="tab-desc" class="tab-body-pane active" style="display: block;">
                     ${costruisciRichEditorHtml('field-note', record ? record.note || '' : '')}
                 </div>
@@ -7930,7 +7937,6 @@ function costruisciCampiFormModalPreventivi(fieldsContainer, record = null) {
                 <div id="tab-testo-fondo" class="tab-body-pane" style="display: none;">
                     ${costruisciRichEditorHtml('field-testoFondo', record ? record.testoFondo || '' : '')}
                 </div>
-                
             </div>
         </div>
     `;
@@ -7964,24 +7970,24 @@ function cambiaTabTestoPreventivo(btn, tabId) {
 
 function costruisciRichEditorHtml(fieldId, initialValue) {
     return `
-        <div class="rich-editor-wrapper" style="border: 1px solid #cbd5e1; border-radius: 6px; overflow: hidden; background: #fff; width: 100%;">
-            <div class="rich-editor-toolbar" style="display: flex; gap: 4px; padding: 6px; background: #f8fafc; border-bottom: 1px solid #cbd5e1; flex-wrap: wrap; align-items: center;">
-                <button type="button" class="toolbar-btn" onclick="execEditorCommand('${fieldId}', 'bold')" style="width: 26px; height: 26px; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; border: 1px solid #e2e8f0; background: #fff; border-radius: 4px; cursor: pointer; color:#334155;" title="Grassetto">B</button>
-                <button type="button" class="toolbar-btn" onclick="execEditorCommand('${fieldId}', 'italic')" style="width: 26px; height: 26px; display: inline-flex; align-items: center; justify-content: center; font-style: italic; border: 1px solid #e2e8f0; background: #fff; border-radius: 4px; cursor: pointer; color:#334155;" title="Corsivo">I</button>
-                <button type="button" class="toolbar-btn" onclick="execEditorCommand('${fieldId}', 'underline')" style="width: 26px; height: 26px; display: inline-flex; align-items: center; justify-content: center; text-decoration: underline; border: 1px solid #e2e8f0; background: #fff; border-radius: 4px; cursor: pointer; color:#334155;" title="Sottolineato">U</button>
-                <button type="button" class="toolbar-btn" onclick="execEditorCommand('${fieldId}', 'strikeThrough')" style="width: 26px; height: 26px; display: inline-flex; align-items: center; justify-content: center; text-decoration: line-through; border: 1px solid #e2e8f0; background: #fff; border-radius: 4px; cursor: pointer; color:#334155;" title="Sbarrato">S</button>
-                <div style="width: 1px; height: 16px; background: #cbd5e1; margin: 0 4px;"></div>
-                <button type="button" class="toolbar-btn" onclick="execEditorCommand('${fieldId}', 'insertUnorderedList')" style="width: 26px; height: 26px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid #e2e8f0; background: #fff; border-radius: 4px; cursor: pointer; color:#334155;" title="Elenco puntato"><i class="fas fa-list-ul"></i></button>
-                <button type="button" class="toolbar-btn" onclick="execEditorCommand('${fieldId}', 'insertOrderedList')" style="width: 26px; height: 26px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid #e2e8f0; background: #fff; border-radius: 4px; cursor: pointer; color:#334155;" title="Elenco numerato"><i class="fas fa-list-ol"></i></button>
-                <div style="width: 1px; height: 16px; background: #cbd5e1; margin: 0 4px;"></div>
-                <button type="button" class="toolbar-btn" onclick="execEditorCommand('${fieldId}', 'justifyLeft')" style="width: 26px; height: 26px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid #e2e8f0; background: #fff; border-radius: 4px; cursor: pointer; color:#334155;" title="Allinea a sinistra"><i class="fas fa-align-left"></i></button>
-                <button type="button" class="toolbar-btn" onclick="execEditorCommand('${fieldId}', 'justifyCenter')" style="width: 26px; height: 26px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid #e2e8f0; background: #fff; border-radius: 4px; cursor: pointer; color:#334155;" title="Allinea al centro"><i class="fas fa-align-center"></i></button>
-                <button type="button" class="toolbar-btn" onclick="execEditorCommand('${fieldId}', 'justifyRight')" style="width: 26px; height: 26px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid #e2e8f0; background: #fff; border-radius: 4px; cursor: pointer; color:#334155;" title="Allinea a destra"><i class="fas fa-align-right"></i></button>
-                <div style="width: 1px; height: 16px; background: #cbd5e1; margin: 0 4px;"></div>
-                <button type="button" class="toolbar-btn" onclick="execEditorLinkPrompt('${fieldId}')" style="width: 26px; height: 26px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid #e2e8f0; background: #fff; border-radius: 4px; cursor: pointer; color:#334155;" title="Inserisci link"><i class="fas fa-link"></i></button>
-                <button type="button" class="toolbar-btn" onclick="execEditorCommand('${fieldId}', 'removeFormat')" style="width: 26px; height: 26px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid #e2e8f0; background: #fff; border-radius: 4px; cursor: pointer; color:#334155;" title="Rimuovi formattazione"><i class="fas fa-eraser"></i></button>
+        <div class="rich-editor-wrapper">
+            <div class="rich-editor-toolbar">
+                <button type="button" class="toolbar-btn" onclick="execEditorCommand('${fieldId}', 'bold')" title="Grassetto">B</button>
+                <button type="button" class="toolbar-btn" onclick="execEditorCommand('${fieldId}', 'italic')" title="Corsivo">I</button>
+                <button type="button" class="toolbar-btn" onclick="execEditorCommand('${fieldId}', 'underline')" title="Sottolineato">U</button>
+                <button type="button" class="toolbar-btn" onclick="execEditorCommand('${fieldId}', 'strikeThrough')" title="Sbarrato">S</button>
+                <div class="toolbar-divider" style="width: 1px; height: 16px; background: var(--border-color); margin: 0 4px;"></div>
+                <button type="button" class="toolbar-btn" onclick="execEditorCommand('${fieldId}', 'insertUnorderedList')" title="Elenco puntato"><i class="fas fa-list-ul"></i></button>
+                <button type="button" class="toolbar-btn" onclick="execEditorCommand('${fieldId}', 'insertOrderedList')" title="Elenco numerato"><i class="fas fa-list-ol"></i></button>
+                <div class="toolbar-divider" style="width: 1px; height: 16px; background: var(--border-color); margin: 0 4px;"></div>
+                <button type="button" class="toolbar-btn" onclick="execEditorCommand('${fieldId}', 'justifyLeft')" title="Allinea a sinistra"><i class="fas fa-align-left"></i></button>
+                <button type="button" class="toolbar-btn" onclick="execEditorCommand('${fieldId}', 'justifyCenter')" title="Allinea al centro"><i class="fas fa-align-center"></i></button>
+                <button type="button" class="toolbar-btn" onclick="execEditorCommand('${fieldId}', 'justifyRight')" title="Allinea a destra"><i class="fas fa-align-right"></i></button>
+                <div class="toolbar-divider" style="width: 1px; height: 16px; background: var(--border-color); margin: 0 4px;"></div>
+                <button type="button" class="toolbar-btn" onclick="execEditorLinkPrompt('${fieldId}')" title="Inserisci link"><i class="fas fa-link"></i></button>
+                <button type="button" class="toolbar-btn" onclick="execEditorCommand('${fieldId}', 'removeFormat')" title="Rimuovi formattazione"><i class="fas fa-eraser"></i></button>
             </div>
-            <div id="editable-${fieldId}" contenteditable="true" class="rich-editor-editable-area" style="min-height: 120px; max-height: 250px; padding: 12px; overflow-y: auto; font-size: 13.5px; line-height: 1.5; color: #1e293b; outline: none; text-align: left;" oninput="syncEditableToTextarea('${fieldId}')">${initialValue}</div>
+            <div id="editable-${fieldId}" contenteditable="true" class="rich-editor-editable-area" oninput="syncEditableToTextarea('${fieldId}')">${initialValue}</div>
             <textarea id="${fieldId}" style="display: none;">${initialValue}</textarea>
         </div>
     `;
@@ -8026,16 +8032,16 @@ function costruisciEditorRigheDocumentoPreventivi(record = null) {
     return `
         <div class="preventivi-lines-editor field-full" style="width: 100%; margin-top: 24px;">
             <div class="lines-editor-title" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-                <h3 style="font-size: 15px; font-weight: 600; color: #1e293b; margin:0;">Prodotti e Articoli Offerti</h3>
-                <button type="button" class="btn-line-add" onclick="aggiungiRigaPreventivo()" style="cursor: pointer; display: flex; align-items: center; gap: 6px; padding: 6px 12px; background: #eab308; color: #000; border: none; border-radius: 6px; font-size: 12.5px; font-weight: 600;">
+                <h3 style="font-size: 15px; font-weight: 600; color: var(--text-main); margin:0;">Prodotti e Articoli Offerti</h3>
+                <button type="button" class="btn-line-add" onclick="aggiungiRigaPreventivo()" style="cursor: pointer; display: flex; align-items: center; gap: 6px; padding: 6px 12px; background: var(--brand-primary, #eab308); color: #000; border: none; border-radius: 6px; font-size: 12.5px; font-weight: 600;">
                     <i class="fas fa-plus"></i> Aggiungi Prodotto
                 </button>
             </div>
             
-            <div class="table-responsive-wrapper" style="overflow-x: auto; border: 1px solid #cbd5e1; border-radius: 8px; width: 100%; background: #fff;">
+            <div class="table-responsive-wrapper" style="overflow-x: auto; border: 1px solid var(--border-color); border-radius: 8px; width: 100%; background: var(--bg-surface-strong);">
                 <table class="crm-lines-table-preventivi" style="width: 100%; border-collapse: collapse; min-width: 1200px;">
                     <thead>
-                        <tr style="background: #f8fafc; border-bottom: 1px solid #cbd5e1; font-size: 11px; text-transform: uppercase; color: #475569;">
+                        <tr style="background: var(--bg-surface-soft); border-bottom: 1px solid var(--border-color); font-size: 11px; text-transform: uppercase; color: var(--text-muted);">
                             <th style="padding: 10px; width: 40px; text-align: center;">#</th>
                             <th class="col-linea" style="padding: 10px; width: 90px; text-align: left;">Linea</th>
                             <th class="col-codice" style="padding: 10px; width: 100px; text-align: left;">Codice</th>
@@ -8061,31 +8067,31 @@ function costruisciEditorRigheDocumentoPreventivi(record = null) {
             </div>
 
             <div class="preventivi-totals-grid" style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 12px; margin-top: 16px; width: 100%;">
-                <div class="totals-badge-card card-imponibile" style="background: #e0f2fe; border: 1px solid #bae6fd; padding: 12px 8px; border-radius: 8px; text-align: center; color: #0369a1;">
+                <div class="totals-badge-card card-imponibile">
                     <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 4px;">Imponibile</span>
                     <strong id="badge-total-imponibile" style="font-size: 16px; font-weight: 800;">0,00 €</strong>
                 </div>
-                <div class="totals-badge-card card-sconto" style="background: #ffedd5; border: 1px solid #fed7aa; padding: 12px 8px; border-radius: 8px; text-align: center; color: #c2410c;">
+                <div class="totals-badge-card card-sconto">
                     <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 4px;">Sconto Totale</span>
                     <strong id="badge-total-sconto" style="font-size: 16px; font-weight: 800;">0,00 €</strong>
                 </div>
-                <div class="totals-badge-card card-iva" style="background: #dbeafe; border: 1px solid #bfdbfe; padding: 12px 8px; border-radius: 8px; text-align: center; color: #1d4ed8;">
+                <div class="totals-badge-card card-iva">
                     <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 4px;">Iva Totale</span>
                     <strong id="badge-total-iva" style="font-size: 16px; font-weight: 800;">0,00 €</strong>
                 </div>
-                <div class="totals-badge-card card-totale" style="background: #fef9c3; border: 1px solid #fef08a; padding: 12px 8px; border-radius: 8px; text-align: center; color: #a16207;">
+                <div class="totals-badge-card card-totale">
                     <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 4px;">Totale</span>
                     <strong id="badge-total-totale" style="font-size: 16px; font-weight: 800;">0,00 €</strong>
                 </div>
-                <div class="totals-badge-card card-costo" style="background: #fee2e2; border: 1px solid #fecaca; padding: 12px 8px; border-radius: 8px; text-align: center; color: #b91c1c;">
+                <div class="totals-badge-card card-costo">
                     <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 4px;">Costo</span>
                     <strong id="badge-total-costo" style="font-size: 16px; font-weight: 800;">0,00 €</strong>
                 </div>
-                <div class="totals-badge-card card-margine" style="background: #f3e8ff; border: 1px solid #e9d5ff; padding: 12px 8px; border-radius: 8px; text-align: center; color: #6b21a8;">
+                <div class="totals-badge-card card-margine">
                     <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 4px;">Margine</span>
                     <strong id="badge-total-margine" style="font-size: 16px; font-weight: 800;">0%</strong>
                 </div>
-                <div class="totals-badge-card card-peso" style="background: #dcfce7; border: 1px solid #bbf7d0; padding: 12px 8px; border-radius: 8px; text-align: center; color: #15803d;">
+                <div class="totals-badge-card card-peso">
                     <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 4px;">Totale Peso</span>
                     <strong id="badge-total-peso" style="font-size: 16px; font-weight: 800;">0,00 kg</strong>
                 </div>
@@ -8109,47 +8115,47 @@ function costruisciRigaPreventivoHtml(riga = {}, idx = 0) {
     const tipo = riga.tipologia || (selectedProduct.categoria && String(selectedProduct.categoria).toLowerCase() === 'prodotti finiti' ? 'prodotto' : 'componente');
 
     return `
-        <tr class="preventivi-line-row" style="border-bottom: 1px solid #e2e8f0; font-size: 13px;">
-            <td style="text-align: center; font-weight: 600; color: #64748b; padding: 8px;">${idx + 1}</td>
-            <td class="col-linea" style="padding: 6px;"><input type="text" class="line-input line-linea" value="${riga.linea || ''}" style="width: 100%; border: 1px solid #cbd5e1; padding: 4px; border-radius: 4px;" placeholder="Linea"></td>
-            <td class="col-codice" style="padding: 6px;"><input type="text" class="line-input line-sku" value="${selectedProduct.codice || riga.sku || ''}" style="width: 100%; border: 1px solid #cbd5e1; padding: 4px; border-radius: 4px; font-family: monospace;" placeholder="Codice" readonly></td>
+        <tr class="preventivi-line-row" style="border-bottom: 1px solid var(--border-color); font-size: 13px;">
+            <td style="text-align: center; font-weight: 600; color: var(--text-muted); padding: 8px;">${idx + 1}</td>
+            <td class="col-linea" style="padding: 6px;"><input type="text" class="line-input line-linea" value="${riga.linea || ''}" placeholder="Linea"></td>
+            <td class="col-codice" style="padding: 6px;"><input type="text" class="line-input line-sku" value="${selectedProduct.codice || riga.sku || ''}" style="font-family: monospace;" placeholder="Codice" readonly></td>
             <td style="padding: 6px;">
-                <select class="line-input line-select line-product" onchange="aggiornaDettagliRigaPreventivo(this)" style="width: 100%; border: 1px solid #cbd5e1; padding: 4px; border-radius: 4px; background: #fff;">
+                <select class="line-input line-select line-product" onchange="aggiornaDettagliRigaPreventivo(this)">
                     <option value="">Seleziona...</option>
                     ${productOptions}
                 </select>
             </td>
-            <td style="padding: 6px;"><input type="text" class="line-input line-description" value="${selectedProduct.nome || riga.descrizione || ''}" style="width: 100%; border: 1px solid #cbd5e1; padding: 4px; border-radius: 4px;" placeholder="Descrizione"></td>
-            <td class="col-desc-agg" style="padding: 6px;"><input type="text" class="line-input line-desc-agg" value="${riga.descrizioneAggiuntiva || ''}" style="width: 100%; border: 1px solid #cbd5e1; padding: 4px; border-radius: 4px;" placeholder="Desc. aggiuntiva"></td>
-            <td style="padding: 6px;"><input type="number" min="0" step="1" class="line-input line-qty" value="${riga.quantita || 1}" oninput="aggiornaTotaliDocumentoModalPreventivi()" style="width: 100%; border: 1px solid #cbd5e1; padding: 4px; border-radius: 4px; text-align: center;"></td>
+            <td style="padding: 6px;"><input type="text" class="line-input line-description" value="${selectedProduct.nome || riga.descrizione || ''}" placeholder="Descrizione"></td>
+            <td class="col-desc-agg" style="padding: 6px;"><input type="text" class="line-input line-desc-agg" value="${riga.descrizioneAggiuntiva || ''}" placeholder="Desc. aggiuntiva"></td>
+            <td style="padding: 6px;"><input type="number" min="0" step="1" class="line-input line-qty" value="${riga.quantita || 1}" oninput="aggiornaTotaliDocumentoModalPreventivi()" style="text-align: center;"></td>
             <td style="padding: 6px;">
-                <select class="line-input line-select line-uom" onchange="aggiornaTotaliDocumentoModalPreventivi()" style="width: 100%; border: 1px solid #cbd5e1; padding: 4px; border-radius: 4px; background: #fff;">
+                <select class="line-input line-select line-uom" onchange="aggiornaTotaliDocumentoModalPreventivi()">
                     <option value="pz" ${uom === 'pz' ? 'selected' : ''}>Pz</option>
                     <option value="m" ${uom === 'm' ? 'selected' : ''}>m</option>
                     <option value="kg" ${uom === 'kg' ? 'selected' : ''}>kg</option>
                     <option value="scatola" ${uom === 'scatola' ? 'selected' : ''}>Scatola</option>
                 </select>
             </td>
-            <td class="col-costo-conf" style="padding: 6px;"><input type="number" min="0" step="0.01" class="line-input line-packprice" value="${riga.prezzoConfezione || ''}" placeholder="Auto" oninput="aggiornaTotaliDocumentoModalPreventivi()" style="width: 100%; border: 1px solid #cbd5e1; padding: 4px; border-radius: 4px; text-align: right;"></td>
+            <td class="col-costo-conf" style="padding: 6px;"><input type="number" min="0" step="0.01" class="line-input line-packprice" value="${riga.prezzoConfezione || ''}" placeholder="Auto" oninput="aggiornaTotaliDocumentoModalPreventivi()" style="text-align: right;"></td>
             <td class="col-tipologia" style="padding: 6px;">
-                <select class="line-input line-select line-tipologia" onchange="aggiornaTotaliDocumentoModalPreventivi()" style="width: 100%; border: 1px solid #cbd5e1; padding: 4px; border-radius: 4px; background: #fff;">
+                <select class="line-input line-select line-tipologia" onchange="aggiornaTotaliDocumentoModalPreventivi()">
                     <option value="prodotto" ${tipo === 'prodotto' ? 'selected' : ''}>Prodotto Finito</option>
                     <option value="componente" ${tipo === 'componente' ? 'selected' : ''}>Componente</option>
                     <option value="servizio" ${tipo === 'servizio' ? 'selected' : ''}>Servizio</option>
                 </select>
             </td>
-            <td class="col-sconto" style="padding: 6px;"><input type="number" min="0" max="100" step="0.01" class="line-input line-discount1" value="${riga.sconto1 || 0}" oninput="aggiornaTotaliDocumentoModalPreventivi()" style="width: 100%; border: 1px solid #cbd5e1; padding: 4px; border-radius: 4px; text-align: center;"></td>
-            <td class="col-sconto" style="padding: 6px;"><input type="number" min="0" max="100" step="0.01" class="line-input line-discount2" value="${riga.sconto2 || 0}" oninput="aggiornaTotaliDocumentoModalPreventivi()" style="width: 100%; border: 1px solid #cbd5e1; padding: 4px; border-radius: 4px; text-align: center;"></td>
-            <td class="col-sconto" style="padding: 6px;"><input type="number" min="0" max="100" step="0.01" class="line-input line-discount3" value="${riga.sconto3 || 0}" oninput="aggiornaTotaliDocumentoModalPreventivi()" style="width: 100%; border: 1px solid #cbd5e1; padding: 4px; border-radius: 4px; text-align: center;"></td>
+            <td class="col-sconto" style="padding: 6px;"><input type="number" min="0" max="100" step="0.01" class="line-input line-discount1" value="${riga.sconto1 || 0}" oninput="aggiornaTotaliDocumentoModalPreventivi()" style="text-align: center;"></td>
+            <td class="col-sconto" style="padding: 6px;"><input type="number" min="0" max="100" step="0.01" class="line-input line-discount2" value="${riga.sconto2 || 0}" oninput="aggiornaTotaliDocumentoModalPreventivi()" style="text-align: center;"></td>
+            <td class="col-sconto" style="padding: 6px;"><input type="number" min="0" max="100" step="0.01" class="line-input line-discount3" value="${riga.sconto3 || 0}" oninput="aggiornaTotaliDocumentoModalPreventivi()" style="text-align: center;"></td>
             <td style="padding: 6px;">
-                <select class="line-input line-select line-tax" onchange="aggiornaTotaliDocumentoModalPreventivi()" style="width: 100%; border: 1px solid #cbd5e1; padding: 4px; border-radius: 4px; background: #fff;">
+                <select class="line-input line-select line-tax" onchange="aggiornaTotaliDocumentoModalPreventivi()">
                     <option value="22" ${ivaRate === '22' ? 'selected' : ''}>22%</option>
                     <option value="10" ${ivaRate === '10' ? 'selected' : ''}>10%</option>
                     <option value="4" ${ivaRate === '4' ? 'selected' : ''}>4%</option>
                     <option value="0" ${ivaRate === '0' ? 'selected' : ''}>0%</option>
                 </select>
             </td>
-            <td class="line-total-cell-preventivo" style="padding: 8px; text-align: right; font-weight: 700; color: #1e293b;">0,00 €</td>
+            <td class="line-total-cell-preventivo" style="padding: 8px; text-align: right; font-weight: 700; color: var(--text-main);">0,00 €</td>
             <td style="text-align: center; padding: 6px;">
                 <button type="button" class="line-delete-btn" onclick="rimuoviRigaPreventivo(this)" title="Elimina riga" style="cursor: pointer; background: none; border: none; color: #ef4444; font-size: 14px; padding: 4px;"><i class="fas fa-trash-alt"></i></button>
                 <input type="hidden" class="line-price" value="${riga.prezzo || ''}">

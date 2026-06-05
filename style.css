@@ -7794,3 +7794,232 @@ body[data-theme="dark"] .preventivi-line-row:hover {
 .crm-table {
     table-layout: auto !important;
 }
+
+/* ==========================================================================
+   PREVENTIVI DRAWER CUSTOM STYLING & REDESIGN
+   ========================================================================== */
+
+/* Drawer Custom Container */
+.crm-drawer-body.preventivi-drawer-custom {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+    width: 100% !important;
+    padding: 24px 32px !important;
+    box-sizing: border-box !important;
+}
+
+.crm-drawer-body.preventivi-drawer-custom #drawer-edit-form {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+    width: 100% !important;
+}
+
+/* Metadata Form Grid */
+.preventivi-form-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    width: 100%;
+}
+
+@media (max-width: 991px) {
+    .preventivi-form-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 575px) {
+    .preventivi-form-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Switches Panel */
+.preventivi-switches-panel {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    padding: 16px 20px;
+    background: var(--bg-surface-soft);
+    border-radius: var(--radius-sm, 10px);
+    border: 1px solid var(--border-color);
+    width: 100%;
+    align-items: center;
+}
+
+.preventivi-switches-panel .form-switch-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.preventivi-switches-panel .switch-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+/* Tabs Container */
+.preventivi-tabs-container {
+    width: 100%;
+    margin-top: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm, 10px);
+    overflow: hidden;
+}
+
+.preventivi-tabs-header {
+    display: flex;
+    background: var(--bg-surface-soft);
+    border-bottom: 1px solid var(--border-color);
+    padding: 6px 10px 0 10px;
+    gap: 6px;
+}
+
+.preventivi-tabs-header .tab-header-btn {
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-bottom: none;
+    border-radius: 6px 6px 0 0;
+    background: none;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-muted) !important;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.preventivi-tabs-header .tab-header-btn:hover {
+    color: var(--text-main) !important;
+    background: var(--accent-soft) !important;
+}
+
+.preventivi-tabs-header .tab-header-btn.active {
+    background: var(--bg-surface-strong) !important;
+    border-color: var(--border-color) var(--border-color) transparent var(--border-color) !important;
+    color: var(--brand-primary, #eab308) !important;
+}
+
+.preventivi-tabs-body {
+    background: var(--bg-surface-strong);
+    min-height: 160px;
+    padding: 16px;
+    position: relative;
+}
+
+/* Rich Editor Wrapper */
+.rich-editor-wrapper {
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    overflow: hidden;
+    background: var(--bg-surface-strong);
+    width: 100%;
+}
+
+.rich-editor-toolbar {
+    display: flex;
+    gap: 4px;
+    padding: 6px;
+    background: var(--bg-surface-soft);
+    border-bottom: 1px solid var(--border-color);
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.rich-editor-toolbar .toolbar-btn {
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--border-color);
+    background: var(--bg-surface-strong);
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--text-main) !important;
+    transition: all 0.15s ease;
+    font-size: 12px;
+}
+
+.rich-editor-toolbar .toolbar-btn:hover {
+    background: var(--accent-soft) !important;
+    color: var(--brand-primary, #eab308) !important;
+    border-color: var(--brand-primary, #eab308);
+}
+
+.rich-editor-editable-area {
+    min-height: 120px;
+    max-height: 250px;
+    padding: 12px;
+    overflow-y: auto;
+    font-size: 13.5px;
+    line-height: 1.5;
+    color: var(--text-main);
+    outline: none;
+    text-align: left;
+    background: var(--bg-surface-strong);
+}
+
+/* Row Inputs for Product Table */
+.preventivi-line-row .line-input {
+    width: 100%;
+    border: 1px solid var(--border-color) !important;
+    background: var(--bg-surface-strong) !important;
+    color: var(--text-main) !important;
+    padding: 6px 8px !important;
+    border-radius: 6px !important;
+    font-size: 13px !important;
+    font-family: inherit !important;
+    outline: none !important;
+    transition: border-color var(--transition-fast) ease, box-shadow var(--transition-fast) ease !important;
+}
+
+.preventivi-line-row .line-input:focus {
+    border-color: var(--brand-primary, #eab308) !important;
+    box-shadow: 0 0 0 3px rgba(234, 179, 8, 0.15) !important;
+}
+
+.preventivi-line-row select.line-input {
+    background-color: var(--bg-surface-strong) !important;
+    cursor: pointer;
+}
+
+/* Totals Cards Adaptation */
+.totals-badge-card {
+    padding: 12px 8px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s, border-color 0.2s;
+}
+
+/* Light mode colors (kept from screenshot style for light mode) */
+.totals-badge-card.card-imponibile { background: #e0f2fe; border: 1px solid #bae6fd; color: #0369a1; }
+.totals-badge-card.card-sconto { background: #ffedd5; border: 1px solid #fed7aa; color: #c2410c; }
+.totals-badge-card.card-iva { background: #dbeafe; border: 1px solid #bfdbfe; color: #1d4ed8; }
+.totals-badge-card.card-totale { background: #fef9c3; border: 1px solid #fef08a; color: #a16207; }
+.totals-badge-card.card-costo { background: #fee2e2; border: 1px solid #fecaca; color: #b91c1c; }
+.totals-badge-card.card-margine { background: #f3e8ff; border: 1px solid #e9d5ff; color: #6b21a8; }
+.totals-badge-card.card-peso { background: #dcfce7; border: 1px solid #bbf7d0; color: #15803d; }
+
+/* Dark mode colors - glassmorphism */
+body[data-theme="dark"] .totals-badge-card.card-imponibile { background: rgba(3, 105, 161, 0.15); border: 1px solid rgba(3, 105, 161, 0.3); color: #38bdf8; }
+body[data-theme="dark"] .totals-badge-card.card-sconto { background: rgba(194, 65, 12, 0.15); border: 1px solid rgba(194, 65, 12, 0.3); color: #fb923c; }
+body[data-theme="dark"] .totals-badge-card.card-iva { background: rgba(29, 78, 216, 0.15); border: 1px solid rgba(29, 78, 216, 0.3); color: #60a5fa; }
+body[data-theme="dark"] .totals-badge-card.card-totale { background: rgba(161, 98, 7, 0.15); border: 1px solid rgba(161, 98, 7, 0.3); color: #facc15; }
+body[data-theme="dark"] .totals-badge-card.card-costo { background: rgba(185, 28, 28, 0.15); border: 1px solid rgba(185, 28, 28, 0.3); color: #f87171; }
+body[data-theme="dark"] .totals-badge-card.card-margine { background: rgba(107, 33, 168, 0.15); border: 1px solid rgba(107, 33, 168, 0.3); color: #c084fc; }
+body[data-theme="dark"] .totals-badge-card.card-peso { background: rgba(21, 128, 61, 0.15); border: 1px solid rgba(21, 128, 61, 0.3); color: #4ade80; }
+
+@media (max-width: 991px) {
+    .preventivi-totals-grid {
+        grid-template-columns: repeat(4, 1fr) !important;
+    }
+}
+@media (max-width: 575px) {
+    .preventivi-totals-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}

@@ -5185,14 +5185,14 @@ function costruisciRigaDocumentoHtml(riga = {}, idx = 0) {
                 <button type="button" class="line-delete-btn" onclick="rimuoviRigaDocumentoModal(this)" title="Elimina riga"><i class="fas fa-trash-alt"></i></button>
             </div>
             <div class="line-card-grid">
-                <div class="line-field col-span-2">
+                <div class="line-field">
                     <label>Articolo</label>
                     <div class="line-articolo-stack">
                         <select class="line-input line-select line-product" onchange="aggiornaPrezzoRigaDocumento(this); aggiornaTotaliDocumentoModal()"><option value="">Seleziona articolo</option>${productOptions}</select>
                         <input type="hidden" class="line-sku" value="${selectedProduct.codice || ''}">
                     </div>
                 </div>
-                <div class="line-field col-span-2">
+                <div class="line-field">
                     <label>Descrizione</label>
                     <input type="text" class="line-input line-description" value="${selectedProduct.nome || riga.descrizione || ''}" placeholder="Descrizione articolo">
                 </div>
@@ -5216,7 +5216,7 @@ function costruisciRigaDocumentoHtml(riga = {}, idx = 0) {
                     <label>Importo</label>
                     <div class="line-total-cell">EUR 0,00</div>
                 </div>
-                <div class="line-field summary-field col-span-1" style="display: flex; align-items: flex-end;">
+                <div class="line-field summary-field" style="display: flex; align-items: flex-end;">
                     <button type="button" class="btn-secondary btn-sm" onclick="toggleRigaAvanzata(this)" style="width: 100%; height: 26px; padding: 0;"><i class="fas fa-sliders-h"></i> Dett.</button>
                 </div>
             </div>

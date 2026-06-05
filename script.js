@@ -5209,10 +5209,6 @@ function costruisciRigaDocumentoHtml(riga = {}, idx = 0) {
                     <input type="number" min="0" step="0.01" class="line-input line-price" value="${riga.prezzo || ''}" placeholder="Auto" oninput="aggiornaTotaliDocumentoModal()">
                 </div>
                 <div class="line-field">
-                    <label>Sc. %</label>
-                    <input type="number" min="0" max="100" step="0.01" class="line-input line-discount1" value="${riga.sconto1 || 0}" placeholder="%" oninput="aggiornaTotaliDocumentoModal()">
-                </div>
-                <div class="line-field">
                     <label>IVA</label>
                     <select class="line-input line-select line-tax" onchange="aggiornaTotaliDocumentoModal()"><option value="22" ${selectedIva === '22' ? 'selected' : ''}>22%</option><option value="10" ${selectedIva === '10' ? 'selected' : ''}>10%</option><option value="4" ${selectedIva === '4' ? 'selected' : ''}>4%</option><option value="0" ${selectedIva === '0' ? 'selected' : ''}>0%</option></select>
                 </div>
@@ -5235,6 +5231,10 @@ function costruisciRigaDocumentoHtml(riga = {}, idx = 0) {
                         <div class="line-advanced-field">
                             <label>Q.ta per confezione</label>
                             <input type="number" min="0" step="1" class="line-input line-packqty" value="${riga.quantitaConfezione || 1}" oninput="aggiornaTotaliDocumentoModal()">
+                        </div>
+                        <div class="line-advanced-field">
+                            <label>Sconto 1</label>
+                            <input type="number" min="0" max="100" step="0.01" class="line-input line-discount1" value="${riga.sconto1 || 0}" oninput="aggiornaTotaliDocumentoModal()">
                         </div>
                         <div class="line-advanced-field">
                             <label>Sconto 2</label>

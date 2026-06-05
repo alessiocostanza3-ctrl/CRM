@@ -2665,6 +2665,7 @@ textarea:focus {
     flex-direction: column;
     gap: 0;
     min-width: 0;
+    width: 100%;
 }
 
 .lines-editor-table .line-input {
@@ -7225,7 +7226,7 @@ body[data-theme="dark"] .crm-table tr:hover td {
     }
     .line-card-grid {
         display: grid;
-        grid-template-columns: 1.5fr 1fr 65px 60px 80px 75px 100px 70px;
+        grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr) 65px 60px 80px 75px 100px 70px;
         gap: 8px 10px;
         align-items: end;
     }
@@ -7234,6 +7235,8 @@ body[data-theme="dark"] .crm-table tr:hover td {
         flex-direction: column;
         gap: 4px;
         align-items: flex-start;
+        width: 100%;
+        min-width: 0;
     }
     .line-field label {
         font-size: 9px;
@@ -7260,14 +7263,6 @@ body[data-theme="dark"] .crm-table tr:hover td {
         text-align: right;
     }
     
-    input[type="number"]::-webkit-outer-spin-button, 
-    input[type="number"]::-webkit-inner-spin-button { 
-        -webkit-appearance: none; 
-        margin: 0; 
-    }
-    input[type="number"] {
-        -moz-appearance: textfield;
-    }
     .crm-drawer-overlay.is-document .lines-editor-title {
         font-size: 12px;
         margin-bottom: 6px;
@@ -7466,3 +7461,12 @@ textarea:focus {
     box-shadow: 0 0 0 3px var(--brand-primary-glow) !important;
 }
 
+/* Rimuovi freccette spin globalmente per tutti gli input number */
+input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-inner-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}

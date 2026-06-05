@@ -7139,7 +7139,7 @@ body[data-theme="dark"] .crm-table tr:hover td {
 
 .crm-drawer-overlay.is-document .crm-drawer-content {
     width: min(1380px, 95vw) !important;
-    height: min(85vh, 880px) !important;
+    height: min(95vh, 960px) !important;
     border-radius: var(--radius-drawer, 20px) !important;
     transform: translateY(20px) scale(0.96) !important;
     box-shadow: var(--shadow-premium-lg) !important;
@@ -7159,12 +7159,25 @@ body[data-theme="dark"] .crm-table tr:hover td {
     }
     .crm-drawer-overlay.is-document .crm-drawer-body.modal-form-grid {
         grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+        gap: 10px 14px !important;
+        padding: 16px 24px !important;
     }
     .crm-drawer-overlay.is-document .drawer-info-item.full-width {
         grid-column: 1 / -1 !important;
     }
     .crm-drawer-overlay.is-document .field-full {
         grid-column: 1 / -1 !important;
+    }
+    .crm-drawer-overlay.is-document .form-field {
+        gap: 4px;
+    }
+    .crm-drawer-overlay.is-document .input-field-modern {
+        min-height: 36px;
+        padding: 0 10px;
+        font-size: 12.5px;
+    }
+    .crm-drawer-overlay.is-document .modal-label {
+        font-size: 10px;
     }
 }
 
@@ -7177,6 +7190,7 @@ body[data-theme="dark"] .crm-table tr:hover td {
     flex-direction: column;
     transform: translateX(100%);
     transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+    overflow: hidden;
 }
 
 body[data-theme="dark"] .crm-drawer-content {

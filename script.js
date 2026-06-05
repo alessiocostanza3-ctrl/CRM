@@ -5149,6 +5149,8 @@ function costruisciEditorRigheDocumento(record = null) {
                             <th>U.M.</th>
                             <th>Q.ta</th>
                             <th>Prezzo</th>
+                            <th>Sc. %</th>
+                            <th>Imponibile</th>
                             <th>IVA</th>
                             <th>Totale</th>
                             <th>Dettagli</th>
@@ -5194,6 +5196,8 @@ function costruisciRigaDocumentoHtml(riga = {}, idx = 0) {
             <td><select class="line-input line-select line-uom" onchange="aggiornaTotaliDocumentoModal()"><option value="pz" ${selectedUom === 'pz' ? 'selected' : ''}>Pz</option><option value="m" ${selectedUom === 'm' ? 'selected' : ''}>m</option><option value="kg" ${selectedUom === 'kg' ? 'selected' : ''}>kg</option><option value="scatola" ${selectedUom === 'scatola' ? 'selected' : ''}>Scatola</option></select></td>
             <td><input type="number" min="0" step="1" class="line-input line-qty" value="${riga.quantita || 1}" oninput="aggiornaTotaliDocumentoModal()"></td>
             <td><input type="number" min="0" step="0.01" class="line-input line-price" value="${riga.prezzo || ''}" placeholder="Auto" oninput="aggiornaTotaliDocumentoModal()"></td>
+            <td><input type="number" min="0" max="100" step="0.01" class="line-input line-discount1" value="${riga.sconto1 || 0}" placeholder="%" oninput="aggiornaTotaliDocumentoModal()"></td>
+            <td class="line-imponibile-cell">EUR 0,00</td>
             <td><select class="line-input line-select line-tax" onchange="aggiornaTotaliDocumentoModal()"><option value="22" ${selectedIva === '22' ? 'selected' : ''}>22%</option><option value="10" ${selectedIva === '10' ? 'selected' : ''}>10%</option><option value="4" ${selectedIva === '4' ? 'selected' : ''}>4%</option><option value="0" ${selectedIva === '0' ? 'selected' : ''}>0%</option></select></td>
             <td class="line-total-cell">EUR 0,00</td>
             <td><button type="button" class="line-advanced-toggle" onclick="toggleRigaAvanzata(this)" title="Dettagli riga"><i class="fas fa-sliders-h"></i></button></td>
@@ -5210,10 +5214,6 @@ function costruisciRigaDocumentoHtml(riga = {}, idx = 0) {
                         <div class="line-advanced-field">
                             <label>Q.ta per confezione</label>
                             <input type="number" min="0" step="1" class="line-input line-packqty" value="${riga.quantitaConfezione || 1}" oninput="aggiornaTotaliDocumentoModal()">
-                        </div>
-                        <div class="line-advanced-field">
-                            <label>Sconto 1</label>
-                            <input type="number" min="0" max="100" step="0.01" class="line-input line-discount1" value="${riga.sconto1 || 0}" oninput="aggiornaTotaliDocumentoModal()">
                         </div>
                         <div class="line-advanced-field">
                             <label>Sconto 2</label>
@@ -5280,22 +5280,25 @@ function aggiornaPrezzoRigaDocumento(selectEl) {
 }
 
 function leggiRigheDocumentoModal() {
-    return Array.from(document.querySelectorAll('#document-lines-body tr')).map(row => ({
-        prodotto: row.querySelector('.line-product')?.value || '',
-        sku: row.querySelector('.line-sku')?.value || '',
-        quantita: Number(row.querySelector('.line-qty')?.value || 0),
-        prezzo: Number(row.querySelector('.line-price')?.value || 0) || prezzoProdottoPerDocumento(row.querySelector('.line-product')?.value || '', paginaAttuale),
-        prezzoConfezione: Number(row.querySelector('.line-packprice')?.value || 0),
-        quantitaConfezione: Number(row.querySelector('.line-packqty')?.value || 0),
-        sconto1: Number(row.querySelector('.line-discount1')?.value || 0),
-        sconto2: Number(row.querySelector('.line-discount2')?.value || 0),
-        sconto3: Number(row.querySelector('.line-discount3')?.value || 0),
-        iva: Number(row.querySelector('.line-tax')?.value || 0),
-        dataConsegna: row.querySelector('.line-delivery')?.value || '',
-        unitaMisura: row.querySelector('.line-uom')?.value || 'pz',
-        descrizione: row.querySelector('.line-description')?.value || '',
-        note: row.querySelector('.line-notes')?.value || ''
-    })).filter(riga => riga.prodotto && riga.quantita > 0);
+    return Array.from(document.querySelectorAll('#document-lines-body tr.document-line-row')).map(row => {
+        const advancedRow = row.nextElementSibling && row.nextElementSibling.classList.contains('document-line-advanced') ? row.nextElementSibling : null;
+        return {
+            prodotto: row.querySelector('.line-product')?.value || '',
+            sku: row.querySelector('.line-sku')?.value || '',
+            quantita: Number(row.querySelector('.line-qty')?.value || 0),
+            prezzo: Number(row.querySelector('.line-price')?.value || 0) || prezzoProdottoPerDocumento(row.querySelector('.line-product')?.value || '', paginaAttuale),
+            prezzoConfezione: Number(advancedRow?.querySelector('.line-packprice')?.value || 0),
+            quantitaConfezione: Number(advancedRow?.querySelector('.line-packqty')?.value || 0),
+            sconto1: Number(row.querySelector('.line-discount1')?.value || 0),
+            sconto2: Number(advancedRow?.querySelector('.line-discount2')?.value || 0),
+            sconto3: Number(advancedRow?.querySelector('.line-discount3')?.value || 0),
+            iva: Number(row.querySelector('.line-tax')?.value || 0),
+            dataConsegna: advancedRow?.querySelector('.line-delivery')?.value || '',
+            unitaMisura: row.querySelector('.line-uom')?.value || 'pz',
+            descrizione: row.querySelector('.line-description')?.value || '',
+            note: advancedRow?.querySelector('.line-notes')?.value || ''
+        };
+    }).filter(riga => riga.prodotto && riga.quantita > 0);
 }
 
 function aggiornaTotaliDocumentoModal() {
@@ -5309,13 +5312,18 @@ function aggiornaTotaliDocumentoModal() {
         iva += netto * ((riga.iva || 0) / 100);
     });
     const format = value => `EUR ${value.toLocaleString('it-IT', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
-    document.querySelectorAll('#document-lines-body tr').forEach(row => {
+    document.querySelectorAll('#document-lines-body tr.document-line-row').forEach(row => {
+        const advancedRow = row.nextElementSibling && row.nextElementSibling.classList.contains('document-line-advanced') ? row.nextElementSibling : null;
         const qty = Number(row.querySelector('.line-qty')?.value || 0);
         const price = Number(row.querySelector('.line-price')?.value || 0);
         const discount1 = Number(row.querySelector('.line-discount1')?.value || 0);
-        const discount2 = Number(row.querySelector('.line-discount2')?.value || 0);
-        const discount3 = Number(row.querySelector('.line-discount3')?.value || 0);
+        const discount2 = Number(advancedRow?.querySelector('.line-discount2')?.value || 0);
+        const discount3 = Number(advancedRow?.querySelector('.line-discount3')?.value || 0);
         const discount = discount1 + discount2 + discount3;
+        
+        const imponibileCell = row.querySelector('.line-imponibile-cell');
+        if (imponibileCell) imponibileCell.textContent = format(qty * price);
+        
         const totalCell = row.querySelector('.line-total-cell');
         if (totalCell) totalCell.textContent = format(qty * price * (1 - discount / 100));
     });

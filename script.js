@@ -884,12 +884,22 @@ const TABLE_CONFIGS = {
         title: "Preventivi",
         eyebrow: "Offerte e Quotazioni",
         isDocument: true,
-        headers: ["Cod. Preventivo", "Cliente", "Data / Scadenza", "Articoli Offerti", "Totale Lordo", "Stato", "Workflow", "Azioni"],
+        headers: ["", "Azioni", "Numero", "Sezionale", "Titolo", "Opportunità", "Azienda", "Destinazione", "Agente", "Cond. Pagamento", "Stato", "Data p."],
         fields: [
-            { key: "numero", label: "Numero Preventivo", type: "text", required: true, placeholder: "PRV-2026-004" },
+            { key: "numero", label: "Numero Preventivo", type: "text", required: true, placeholder: "PRE-2026-001" },
+            { key: "sezionale", label: "Sezionale", type: "text", placeholder: "00" },
+            { key: "titolo", label: "Titolo Preventivo", type: "text", required: true, placeholder: "Fornitura Luci showroom" },
             { key: "cliente", label: "Cliente di Riferimento", type: "select", required: true, dynamicOptions: "clienti" },
+            { key: "azienda", label: "Azienda", type: "select", required: true, dynamicOptions: "clienti" },
+            { key: "agente", label: "Agente", type: "select", options: [
+                { value: "Roberto Pagliai", label: "Roberto Pagliai" },
+                { value: "Marco Ferri", label: "Marco Ferri" },
+                { value: "Giacomo", label: "Giacomo" }
+            ]},
+            { key: "destinazione", label: "Destinazione", type: "text", placeholder: "Magazzino Principale" },
             { key: "data", label: "Data Offerta", type: "date", required: true },
             { key: "dataScadenza", label: "Valido Fino Al (Scadenza)", type: "date", required: true },
+            { key: "aliquotaIva", label: "Aliquota IVA (%)", type: "number", placeholder: "22" },
             { key: "terminiPagamento", label: "Condizioni di Pagamento", type: "select", required: true, options: [
                 { value: "vista_fattura", label: "Vista Fattura" },
                 { value: "bonifico_30", label: "Bonifico 30 gg DF" },
@@ -900,14 +910,28 @@ const TABLE_CONFIGS = {
                 { value: "franco", label: "Porto Franco (A carico mittente)" },
                 { value: "assegnato", label: "Porto Assegnato (A carico destinatario)" }
             ]},
+            { key: "listino", label: "Listino", type: "select", options: [
+                { value: "Standard", label: "Standard" },
+                { value: "Rivenditori", label: "Rivenditori" },
+                { value: "Premium", label: "Premium" }
+            ]},
+            { key: "mostraImponibile", label: "Mostra costi imponibile", type: "checkbox" },
+            { key: "mostraIva", label: "Mostra costi IVA", type: "checkbox" },
+            { key: "mostraScontiRiga", label: "Mostra sconti riga", type: "checkbox" },
+            { key: "mostraScontiTotali", label: "Mostra sconti totali", type: "checkbox" },
+            { key: "esportato", label: "Esportato", type: "checkbox" },
+            { key: "note", label: "Descrizione", type: "textarea" },
+            { key: "noteInterne", label: "Note Interne", type: "textarea" },
+            { key: "testoFondo", label: "Testo aggiuntivo fondo pagina", type: "textarea" },
             { key: "stato", label: "Stato Preventivo", type: "select", required: true, options: [
                 { value: "bozza", label: "Bozza" },
+                { value: "nuovo", label: "Nuovo" },
                 { value: "inviato", label: "Inviato" },
                 { value: "accettato", label: "Accettato / Confermato" },
                 { value: "rifiutato", label: "Rifiutato" }
             ]}
         ],
-        csvTemplate: "numero,cliente,data,dataScadenza,terminiPagamento,porto,stato"
+        csvTemplate: "numero,sezionale,titolo,cliente,azienda,agente,destinazione,data,dataScadenza,aliquotaIva,terminiPagamento,porto,listino,mostraImponibile,mostraIva,mostraScontiRiga,mostraScontiTotali,esportato,note,noteInterne,testoFondo,stato"
     },
     preventiviAcquisto: {
         title: "Preventivi di Acquisto",
@@ -4110,6 +4134,44 @@ function applyDdtVenditaStock(record) {
     return { ok: true, message: `Componenti scaricati automaticamente in base alla distinta dell’ordine ${ordine.numero}.` };
 }
 
+const paginationState = {};
+
+function toggleSelectAllRows(checked) {
+    const checkboxes = document.querySelectorAll('#crm-table-body-rows .row-checkbox');
+    checkboxes.forEach(cb => {
+        cb.checked = checked;
+    });
+    aggiornaConteggioSelezionati();
+}
+
+function aggiornaConteggioSelezionati() {
+    const checkboxes = document.querySelectorAll('#crm-table-body-rows .row-checkbox');
+    const checkedCount = Array.from(checkboxes).filter(cb => cb.checked).length;
+    const label = document.getElementById('crm-selected-count-label');
+    if (label) {
+        label.textContent = `${checkedCount} Selezionati`;
+    }
+}
+
+function vaiAPagina(pageName, pageNum) {
+    if (!paginationState[pageName]) paginationState[pageName] = { page: 1, limit: 10 };
+    paginationState[pageName].page = pageNum;
+    const contentEl = document.getElementById('contenitore-dati');
+    if (contentEl) {
+        renderDatabaseTable(contentEl, pageName);
+    }
+}
+
+function cambiaRighePerPagina(pageName, limitNum) {
+    if (!paginationState[pageName]) paginationState[pageName] = { page: 1, limit: 10 };
+    paginationState[pageName].limit = parseInt(limitNum, 10);
+    paginationState[pageName].page = 1;
+    const contentEl = document.getElementById('contenitore-dati');
+    if (contentEl) {
+        renderDatabaseTable(contentEl, pageName);
+    }
+}
+
 function renderDatabaseTable(container, pageName) {
     const config = TABLE_CONFIGS[pageName];
     const dataset = getVisibleDataset(pageName);
@@ -4119,6 +4181,19 @@ function renderDatabaseTable(container, pageName) {
     const viewMode = getPageViewMode(pageName);
     const insightSummary = getPageInsightSummary(pageName, sortedDataset);
 
+    if (!paginationState[pageName]) paginationState[pageName] = { page: 1, limit: 10 };
+    const limit = paginationState[pageName].limit;
+    const currentPage = paginationState[pageName].page;
+    const totalCount = sortedDataset.length;
+    const totalPages = Math.ceil(totalCount / limit) || 1;
+    
+    if (currentPage > totalPages) paginationState[pageName].page = totalPages;
+    const activePage = paginationState[pageName].page || 1;
+
+    const startIndex = totalCount === 0 ? 0 : (activePage - 1) * limit + 1;
+    const endIndex = Math.min(activePage * limit, totalCount);
+    const paginatedDataset = sortedDataset.slice((activePage - 1) * limit, activePage * limit);
+
     let html = `
         <section class="crm-workbench crm-workbench--dense">
         <div class="crm-page-header">
@@ -4126,7 +4201,7 @@ function renderDatabaseTable(container, pageName) {
                 <div class="crm-header-info">
                     <span class="crm-header-eyebrow">${cleanUiText(config.eyebrow)}</span>
                     <h2 class="crm-header-title">${cleanUiText(config.title)}</h2>
-                    <p class="crm-header-subtitle">${sortedDataset.length} record visibili su ${dataset.length} totali nel modulo corrente</p>
+                    <p class="crm-header-subtitle">${paginatedDataset.length} record visibili su ${dataset.length} totali nel modulo corrente</p>
                 </div>
                 <div class="crm-header-actions">
                     ${renderKpiMiniDock(pageName, sortedDataset)}
@@ -4158,7 +4233,7 @@ function renderDatabaseTable(container, pageName) {
                     <span class="crm-table-eyebrow">${mobileViewport ? 'Vista mobile' : viewMode === 'board' ? 'Board operativa' : 'Vista tabellare'}</span>
                     <strong>${cleanUiText(config.title)}</strong>
                 </div>
-                <span class="crm-table-count">${sortedDataset.length} righe</span>
+                <span class="crm-table-count">${totalCount} righe</span>
             </div>
     `;
 
@@ -4176,10 +4251,21 @@ function renderDatabaseTable(container, pageName) {
         config.headers.forEach((h, idx) => {
             const sortState = getColumnSortState(pageName, idx);
             const badge = sortState === 'asc' ? '1' : (sortState === 'desc' ? '2' : '');
+            
+            let headerContent = cleanUiText(h);
+            let thClass = `crm-th-sortable ${sortState !== 'none' ? 'is-sorted' : ''}`;
+            let thClick = `toggleColumnSort(${idx})`;
+            
+            if (pageName === 'preventivi' && idx === 0) {
+                headerContent = `<input type="checkbox" id="header-select-all" onchange="toggleSelectAllRows(this.checked)" style="cursor: pointer; transform: scale(1.15);">`;
+                thClass = '';
+                thClick = '';
+            }
+            
             html += `
-                <th class="crm-th-sortable ${sortState !== 'none' ? 'is-sorted' : ''}" onclick="toggleColumnSort(${idx})">
-                    <span>${cleanUiText(h)}</span>
-                    <span class="crm-th-sort-badge">${badge}</span>
+                <th class="${thClass}" ${thClick ? `onclick="${thClick}"` : ''}>
+                    <span>${headerContent}</span>
+                    ${badge ? `<span class="crm-th-sort-badge">${badge}</span>` : ''}
                 </th>
             `;
         });
@@ -4189,8 +4275,8 @@ function renderDatabaseTable(container, pageName) {
                 <tbody id="crm-table-body-rows">
         `;
 
-        if (sortedDataset && sortedDataset.length > 0) {
-            sortedDataset.forEach(record => {
+        if (paginatedDataset && paginatedDataset.length > 0) {
+            paginatedDataset.forEach(record => {
                 html += renderRigaTabella(pageName, record);
             });
         } else {
@@ -4200,6 +4286,33 @@ function renderDatabaseTable(container, pageName) {
         html += `
                 </tbody>
             </table>
+        `;
+        
+        // Paginazione footer
+        html += `
+            <div class="crm-table-pagination-footer">
+                <div class="pagination-left">
+                    <span>Righe per pagina:</span>
+                    <select class="pagination-select" onchange="cambiaRighePerPagina('${pageName}', this.value)" style="padding: 4px; border-radius: 4px; border: 1px solid #cbd5e1; outline: none; background: #fff; cursor: pointer;">
+                        <option value="5" ${limit === 5 ? 'selected' : ''}>5</option>
+                        <option value="10" ${limit === 10 ? 'selected' : ''}>10</option>
+                        <option value="25" ${limit === 25 ? 'selected' : ''}>25</option>
+                        <option value="50" ${limit === 50 ? 'selected' : ''}>50</option>
+                    </select>
+                </div>
+                <div class="pagination-center">
+                    <span id="crm-selected-count-label" style="font-weight: 600; color: #475569; font-size: 12px; background: #f1f5f9; padding: 4px 10px; border-radius: 9999px;">0 Selezionati</span>
+                </div>
+                <div class="pagination-right" style="display: flex; align-items: center; gap: 12px;">
+                    <span class="pagination-info" style="font-size: 13px; color: #475569;">Da ${startIndex} a ${endIndex} di ${totalCount}</span>
+                    <div class="pagination-buttons" style="display: flex; gap: 4px;">
+                        <button class="pagination-btn" onclick="vaiAPagina('${pageName}', 1)" ${activePage === 1 ? 'disabled' : ''} style="cursor: pointer; padding: 4px 8px; border: 1px solid #cbd5e1; background: #fff; border-radius: 4px;" title="Prima pagina"><i class="fas fa-angle-double-left"></i></button>
+                        <button class="pagination-btn" onclick="vaiAPagina('${pageName}', ${activePage - 1})" ${activePage === 1 ? 'disabled' : ''} style="cursor: pointer; padding: 4px 8px; border: 1px solid #cbd5e1; background: #fff; border-radius: 4px;" title="Precedente"><i class="fas fa-angle-left"></i></button>
+                        <button class="pagination-btn" onclick="vaiAPagina('${pageName}', ${activePage + 1})" ${activePage >= totalPages ? 'disabled' : ''} style="cursor: pointer; padding: 4px 8px; border: 1px solid #cbd5e1; background: #fff; border-radius: 4px;" title="Successiva"><i class="fas fa-angle-right"></i></button>
+                        <button class="pagination-btn" onclick="vaiAPagina('${pageName}', ${totalPages})" ${activePage >= totalPages ? 'disabled' : ''} style="cursor: pointer; padding: 4px 8px; border: 1px solid #cbd5e1; background: #fff; border-radius: 4px;" title="Ultima pagina"><i class="fas fa-angle-double-right"></i></button>
+                    </div>
+                </div>
+            </div>
         `;
     }
 
@@ -4428,37 +4541,32 @@ function renderRigaTabella(pageName, r) {
             </td>
         `;
     } else if (pageName === 'preventivi') {
-        const cli = DATASETS.clienti.find(c => c.id === r.cliente) || { azienda: "Sconosciuto" };
-        const righeCount = r.righe ? r.righe.length : 0;
-        const quoteDays = daysFromToday(r.dataScadenza);
-        const righeDesc = r.righe ? r.righe.map(li => {
-            const p = prodotti.find(item => item.id === li.prodotto);
-            return `${p ? p.codice : li.prodotto} (x${li.quantita})`;
-        }).join(', ') : 'Nessun articolo';
+        const cli = DATASETS.clienti.find(c => c.id === r.cliente) || { azienda: "DA DEFINIRE" };
+        const opp = DATASETS.segnalazioni ? DATASETS.segnalazioni.find(s => s.id === r.opportunita || s.id === r.preventivoOrigine) : null;
+        const oppTitolo = opp ? opp.titolo : (r.opportunita || '-');
+        const condPag = r.condizioniPagamento ? r.condizioniPagamento.replace(/_/g, ' ').toUpperCase() : 'VISTA FATTURA';
 
         rigaHtml += `
-            <td onclick="apriRecordDettaglio('preventivi', '${r.id}')" style="font-weight: 700; cursor: pointer;">${r.numero}<div class="crm-inline-tags"><span class="crm-inline-tag ${quoteDays !== null && quoteDays <= 3 ? 'is-danger' : ''}">${formatRelativeDays(quoteDays)}</span></div></td>
-            <td>${cli.azienda}</td>
-            <td>
-                <div>Offerta: ${r.data}</div>
-                <div class="client-company-sub" style="color: #ef4444; font-weight: 600;">Scad: ${r.dataScadenza || 'N/D'}</div>
+            <td onclick="event.stopPropagation()" style="text-align: center; width: 40px;">
+                <input type="checkbox" class="row-checkbox" data-record-id="${r.id}" onchange="aggiornaConteggioSelezionati()" style="cursor: pointer; transform: scale(1.15);">
             </td>
-            <td>
-                <div style="font-size: 11px; max-width: 220px; line-height: 1.4; color: var(--text-muted);" title="${righeDesc}">
-                    <strong>${righeCount} righe:</strong> ${righeDesc.length > 35 ? righeDesc.slice(0, 33) + '...' : righeDesc}
-                </div>
+            <td onclick="event.stopPropagation()" class="actions-cell" style="width: 60px; text-align: center;">
+                <button class="action-icon-btn btn-edit" onclick="apriModalGenericModifica('${r.id}')" title="Modifica" style="color: #0ea5e9; background: none; border: none; font-size: 13px; cursor: pointer; padding: 2px 4px; display: inline-flex; align-items: center; justify-content: center;">
+                    <i class="fas fa-pencil-alt"></i>
+                </button>
             </td>
-            <td style="font-weight: 700; color: #1e293b;">${formatCrmMoney(r.totale || 0)}</td>
+            <td onclick="apriRecordDettaglio('preventivi', '${r.id}')" style="font-weight: 700; cursor: pointer; color: #0f172a; width: 100px;">${r.numero || ''}</td>
+            <td style="width: 70px;">${r.sezionale || '00'}</td>
+            <td onclick="apriRecordDettaglio('preventivi', '${r.id}')" style="font-weight: 500; cursor: pointer; color: #1e293b; max-width: 200px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${r.titolo || ''}">${r.titolo || 'Senza titolo'}</td>
+            <td style="max-width: 150px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${oppTitolo}</td>
+            <td style="font-weight: 500; max-width: 150px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${r.azienda || cli.azienda || 'DA DEFINIRE'}</td>
+            <td>${r.destinazione || '-'}</td>
+            <td>${r.agente || '-'}</td>
+            <td style="font-size: 11px; max-width: 130px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">${condPag}</td>
             <td>
                 <span class="status-pill status-${r.stato}">${mappaNomeStato(r.stato)}</span>
             </td>
-            <td>
-                ${r.stato !== 'accettato' ? `
-                    <button class="btn-primary btn-workflow-next" style="min-height: 28px; height:28px; padding: 0 10px; font-size:11px; border-radius:6px;" onclick="convertiPreventivoInOrdine('${r.id}')" title="Accetta l'offerta e crea l'ordine di vendita">
-                        <i class="fas fa-file-signature"></i> Crea Ordine
-                    </button>
-                ` : `<span style="font-size: 11px; color: #10b981; font-weight: 700;"><i class="fas fa-check-double"></i> Approvato</span>`}
-            </td>
+            <td style="white-space: nowrap;">${r.data || ''}</td>
         `;
     } else if (pageName === 'preventiviAcquisto') {
         const forn = DATASETS.fornitori.find(f => f.id === r.fornitore) || { nome: "Sconosciuto" };
@@ -4675,19 +4783,22 @@ function renderRigaTabella(pageName, r) {
     }
 
     // CRUD action buttons
-    rigaHtml += `
-        <td class="actions-cell" onclick="event.stopPropagation()">
-            <button class="action-icon-btn btn-edit" onclick="apriModalGenericModifica('${r.id}')" title="Modifica">
-                <i class="fas fa-pencil-alt"></i>
-            </button>
-            <button class="action-icon-btn btn-duplicate" onclick="duplicaRecord('${r.id}')" title="Duplica">
-                <i class="far fa-copy"></i>
-            </button>
-            <button class="action-icon-btn btn-delete" onclick="eliminaRecord('${r.id}')" title="Elimina">
-                <i class="far fa-trash-alt"></i>
-            </button>
-        </td>
-    </tr>`;
+    if (pageName !== 'preventivi') {
+        rigaHtml += `
+            <td class="actions-cell" onclick="event.stopPropagation()">
+                <button class="action-icon-btn btn-edit" onclick="apriModalGenericModifica('${r.id}')" title="Modifica">
+                    <i class="fas fa-pencil-alt"></i>
+                </button>
+                <button class="action-icon-btn btn-duplicate" onclick="duplicaRecord('${r.id}')" title="Duplica">
+                    <i class="far fa-copy"></i>
+                </button>
+                <button class="action-icon-btn btn-delete" onclick="eliminaRecord('${r.id}')" title="Elimina">
+                    <i class="far fa-trash-alt"></i>
+                </button>
+            </td>
+        `;
+    }
+    rigaHtml += `</tr>`;
 
     return rigaHtml;
 }
@@ -5015,6 +5126,11 @@ function costruisciCampiFormModal(pageName, record = null) {
     const fieldsContainer = document.getElementById('modal-generic-fields');
     fieldsContainer.innerHTML = '';
     
+    if (pageName === 'preventivi') {
+        costruisciCampiFormModalPreventivi(fieldsContainer, record);
+        return;
+    }
+    
     const config = TABLE_CONFIGS[pageName];
     const fieldsConfig = [...config.fields];
     if (pageName === 'ordiniVendita') {
@@ -5322,6 +5438,32 @@ function aggiornaPrezzoRigaDocumento(selectEl) {
 }
 
 function leggiRigheDocumentoModal() {
+    if (paginaAttuale === 'preventivi') {
+        return Array.from(document.querySelectorAll('#preventivi-lines-body .preventivi-line-row')).map(row => {
+            const prodSelect = row.querySelector('.line-product');
+            const prodId = prodSelect?.value || '';
+            const product = DATASETS.prodotti.find(p => p.id === prodId) || {};
+            
+            return {
+                prodotto: prodId,
+                sku: row.querySelector('.line-sku')?.value || product.codice || '',
+                linea: row.querySelector('.line-linea')?.value || '',
+                descrizione: row.querySelector('.line-description')?.value || product.nome || '',
+                descrizioneAggiuntiva: row.querySelector('.line-desc-agg')?.value || '',
+                quantita: Number(row.querySelector('.line-qty')?.value || 0),
+                unitaMisura: row.querySelector('.line-uom')?.value || 'pz',
+                prezzo: Number(row.querySelector('.line-price')?.value || 0) || product.prezzoVendita || 0,
+                prezzoConfezione: Number(row.querySelector('.line-packprice')?.value || 0) || product.prezzoAcquisto || 0,
+                tipologia: row.querySelector('.line-tipologia')?.value || 'prodotto',
+                sconto1: Number(row.querySelector('.line-discount1')?.value || 0),
+                sconto2: Number(row.querySelector('.line-discount2')?.value || 0),
+                sconto3: Number(row.querySelector('.line-discount3')?.value || 0),
+                iva: Number(row.querySelector('.line-tax')?.value || 22),
+                note: row.querySelector('.line-desc-agg')?.value || ''
+            };
+        }).filter(riga => riga.prodotto && riga.quantita > 0);
+    }
+    
     return Array.from(document.querySelectorAll('#document-lines-body .document-line-card')).map(row => {
         const advancedRow = row.querySelector('.document-line-advanced');
         return {
@@ -5483,17 +5625,22 @@ function confermaSalvaGeneric() {
     config.fields.forEach(field => {
         const inputEl = document.getElementById(`field-${field.key}`);
         if (inputEl) {
-            let val = inputEl.value.trim();
-            
-            if (field.required && !val) {
-                formValido = false;
-                inputEl.classList.add('error');
+            let val;
+            if (field.type === 'checkbox') {
+                val = inputEl.checked;
             } else {
-                inputEl.classList.remove('error');
-            }
-            
-            if (field.type === 'number') {
-                val = Number(val) || 0;
+                val = inputEl.value.trim();
+                
+                if (field.required && !val) {
+                    formValido = false;
+                    inputEl.classList.add('error');
+                } else {
+                    inputEl.classList.remove('error');
+                }
+                
+                if (field.type === 'number') {
+                    val = Number(val) || 0;
+                }
             }
 
             recordSalvato[field.key] = val;
@@ -5519,8 +5666,13 @@ function confermaSalvaGeneric() {
         
         righeDocumento.forEach(riga => {
             const prezzo = riga.prezzo || prezzoProdottoPerDocumento(riga.prodotto, pageName);
-            const scontoTotale = [riga.sconto1, riga.sconto2, riga.sconto3].filter(v => Number.isFinite(v) && v > 0).reduce((acc, v) => acc + v, 0);
-            const netto = riga.quantita * prezzo * (1 - (scontoTotale || 0) / 100);
+            let netto = riga.quantita * prezzo;
+            if (riga.sconto1) netto *= (1 - riga.sconto1 / 100);
+            if (riga.sconto2) netto *= (1 - riga.sconto2 / 100);
+            if (riga.sconto3) netto *= (1 - riga.sconto3 / 100);
+            if (riga.sconto && !riga.sconto1 && !riga.sconto2 && !riga.sconto3) {
+                netto *= (1 - riga.sconto / 100);
+            }
             imponibile += netto;
             iva += netto * (1 - globalDiscount / 100) * ((riga.iva || 0) / 100);
         });
@@ -7599,6 +7751,545 @@ function aggiungiNotaRapidaDrawer(clientId) {
     input.value = '';
     renderDrawerTabContent();
     mostraNotifica("Nota aggiunta al cliente", "success");
+}
+
+function apriRegistraAttivitaDrawer(clientId) {
+    chiudiCrmDrawer();
+    apriModalInterazione(clientId);
+}
+
+// ── CUSTOM PREVENTIVI FORM BUILDERS & LOGIC ──
+
+function costruisciCampiFormModalPreventivi(fieldsContainer, record = null) {
+    fieldsContainer.innerHTML = '';
+    
+    let gridHtml = `
+        <div class="preventivi-form-grid" style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; width: 100%;">
+            <div class="form-field field-full" style="grid-column: span 4;">
+                <label class="modal-label">Titolo Preventivo <span class="required">*</span></label>
+                <input type="text" id="field-titolo" class="input-field-modern" value="${record ? escapeHtmlAttr(record.titolo) : ''}" placeholder="Esempio: Fornitura faretti per villa Rossi" required style="width: 100%;">
+            </div>
+            
+            <div class="form-field">
+                <label class="modal-label">Numero Preventivo <span class="required">*</span></label>
+                <input type="text" id="field-numero" class="input-field-modern" value="${record ? escapeHtmlAttr(record.numero) : (getSezionali()['preventivi'] || 1)}" style="width: 100%;">
+            </div>
+            
+            <div class="form-field">
+                <label class="modal-label">Sezionale</label>
+                <input type="text" id="field-sezionale" class="input-field-modern" value="${record ? escapeHtmlAttr(record.sezionale) : '00'}" placeholder="00" style="width: 100%;">
+            </div>
+
+            <div class="form-field">
+                <label class="modal-label">Cliente <span class="required">*</span></label>
+                <select id="field-cliente" class="input-field-modern select-custom" required onchange="syncAziendaFromCliente(this.value)" style="width: 100%;">
+                    <option value="" disabled ${!record ? 'selected' : ''}>Seleziona cliente...</option>
+                    ${DATASETS.clienti.map(c => `<option value="${c.id}" ${record && record.cliente === c.id ? 'selected' : ''}>${c.azienda ? `${c.azienda} (${c.nome})` : c.nome}</option>`).join('')}
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label class="modal-label">Azienda <span class="required">*</span></label>
+                <select id="field-azienda" class="input-field-modern select-custom" required style="width: 100%;">
+                    <option value="" disabled ${!record ? 'selected' : ''}>Seleziona azienda...</option>
+                    ${DATASETS.clienti.map(c => `<option value="${c.azienda || c.nome}" ${record && (record.azienda === c.azienda || record.azienda === c.nome) ? 'selected' : ''}>${c.azienda || c.nome}</option>`).join('')}
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label class="modal-label">Agente</label>
+                <select id="field-agente" class="input-field-modern select-custom" style="width: 100%;">
+                    <option value="" ${!record || !record.agente ? 'selected' : ''}>Seleziona agente...</option>
+                    <option value="Roberto Pagliai" ${record && record.agente === 'Roberto Pagliai' ? 'selected' : ''}>Roberto Pagliai</option>
+                    <option value="Marco Ferri" ${record && record.agente === 'Marco Ferri' ? 'selected' : ''}>Marco Ferri</option>
+                    <option value="Giacomo" ${record && record.agente === 'Giacomo' ? 'selected' : ''}>Giacomo</option>
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label class="modal-label">Destinazione</label>
+                <input type="text" id="field-destinazione" class="input-field-modern" value="${record ? escapeHtmlAttr(record.destinazione) : ''}" placeholder="Es. Cantiere Roma" style="width: 100%;">
+            </div>
+
+            <div class="form-field">
+                <label class="modal-label">Data Offerta <span class="required">*</span></label>
+                <input type="date" id="field-data" class="input-field-modern" value="${record ? record.data || '' : new Date().toISOString().slice(0, 10)}" required style="width: 100%;">
+            </div>
+
+            <div class="form-field">
+                <label class="modal-label">Data Scadenza <span class="required">*</span></label>
+                <input type="date" id="field-dataScadenza" class="input-field-modern" value="${record ? record.dataScadenza || '' : new Date(Date.now() + 30*24*60*60*1000).toISOString().slice(0, 10)}" required style="width: 100%;">
+            </div>
+
+            <div class="form-field">
+                <label class="modal-label">Aliquota IVA (%)</label>
+                <input type="number" id="field-aliquotaIva" class="input-field-modern" value="${record ? record.aliquotaIva ?? 22 : 22}" placeholder="22" style="width: 100%;">
+            </div>
+
+            <div class="form-field">
+                <label class="modal-label">Condizioni di Pagamento <span class="required">*</span></label>
+                <select id="field-terminiPagamento" class="input-field-modern select-custom" required style="width: 100%;">
+                    <option value="vista_fattura" ${record && record.terminiPagamento === 'vista_fattura' ? 'selected' : ''}>Vista Fattura</option>
+                    <option value="bonifico_30" ${record && record.terminiPagamento === 'bonifico_30' ? 'selected' : ''}>Bonifico 30 gg DF</option>
+                    <option value="bonifico_60" ${record && record.terminiPagamento === 'bonifico_60' ? 'selected' : ''}>Bonifico 60 gg DF</option>
+                    <option value="riba_30_60" ${record && record.terminiPagamento === 'riba_30_60' ? 'selected' : ''}>Ri.Ba. 30/60 gg DF</option>
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label class="modal-label">Resa Porto <span class="required">*</span></label>
+                <select id="field-porto" class="input-field-modern select-custom" required style="width: 100%;">
+                    <option value="franco" ${record && record.porto === 'franco' ? 'selected' : ''}>Porto Franco (A carico mittente)</option>
+                    <option value="assegnato" ${record && record.porto === 'assegnato' ? 'selected' : ''}>Porto Assegnato (A carico destinatario)</option>
+                </select>
+            </div>
+
+            <div class="form-field">
+                <label class="modal-label">Listino</label>
+                <select id="field-listino" class="input-field-modern select-custom" style="width: 100%;">
+                    <option value="Standard" ${record && record.listino === 'Standard' ? 'selected' : ''}>Standard</option>
+                    <option value="Rivenditori" ${record && record.listino === 'Rivenditori' ? 'selected' : ''}>Rivenditori</option>
+                    <option value="Premium" ${record && record.listino === 'Premium' ? 'selected' : ''}>Premium</option>
+                </select>
+            </div>
+            
+            <div class="form-field" style="display: none;">
+                <select id="field-stato">
+                    <option value="bozza" ${!record || record.stato === 'bozza' ? 'selected' : ''}>Bozza</option>
+                    <option value="nuovo" ${record && record.stato === 'nuovo' ? 'selected' : ''}>Nuovo</option>
+                    <option value="inviato" ${record && record.stato === 'inviato' ? 'selected' : ''}>Inviato</option>
+                    <option value="accettato" ${record && record.stato === 'accettato' ? 'selected' : ''}>Accettato</option>
+                    <option value="rifiutato" ${record && record.stato === 'rifiutato' ? 'selected' : ''}>Rifiutato</option>
+                </select>
+            </div>
+        </div>
+    `;
+    
+    let switchesHtml = `
+        <div class="preventivi-switches-panel" style="display: flex; gap: 24px; flex-wrap: wrap; margin-top: 20px; padding: 12px 16px; background: #f8fafc; border-radius: 8px; border: 1px solid #e2e8f0; width: 100%;">
+            <div class="form-switch-item" style="display: flex; align-items: center; gap: 8px;">
+                <label class="switch-control" style="position: relative; display: inline-block; width: 44px; height: 24px;">
+                    <input type="checkbox" id="field-mostraImponibile" ${!record || record.mostraImponibile ? 'checked' : ''} style="opacity: 0; width: 0; height: 0;" onchange="aggiornaVisibilitaColonnePreventivi()">
+                    <span class="switch-slider" style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #cbd5e1; transition: .4s; border-radius: 24px;"></span>
+                </label>
+                <span class="switch-label" style="font-size: 13px; font-weight: 500; color: #334155;">Mostra costi imponibile</span>
+            </div>
+
+            <div class="form-switch-item" style="display: flex; align-items: center; gap: 8px;">
+                <label class="switch-control" style="position: relative; display: inline-block; width: 44px; height: 24px;">
+                    <input type="checkbox" id="field-mostraIva" ${!record || record.mostraIva ? 'checked' : ''} style="opacity: 0; width: 0; height: 0;" onchange="aggiornaVisibilitaColonnePreventivi()">
+                    <span class="switch-slider" style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #cbd5e1; transition: .4s; border-radius: 24px;"></span>
+                </label>
+                <span class="switch-label" style="font-size: 13px; font-weight: 500; color: #334155;">Mostra costi IVA</span>
+            </div>
+
+            <div class="form-switch-item" style="display: flex; align-items: center; gap: 8px;">
+                <label class="switch-control" style="position: relative; display: inline-block; width: 44px; height: 24px;">
+                    <input type="checkbox" id="field-mostraScontiRiga" ${!record || record.mostraScontiRiga ? 'checked' : ''} style="opacity: 0; width: 0; height: 0;" onchange="aggiornaVisibilitaColonnePreventivi()">
+                    <span class="switch-slider" style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #cbd5e1; transition: .4s; border-radius: 24px;"></span>
+                </label>
+                <span class="switch-label" style="font-size: 13px; font-weight: 500; color: #334155;">Mostra sconti riga</span>
+            </div>
+
+            <div class="form-switch-item" style="display: flex; align-items: center; gap: 8px;">
+                <label class="switch-control" style="position: relative; display: inline-block; width: 44px; height: 24px;">
+                    <input type="checkbox" id="field-mostraScontiTotali" ${!record || record.mostraScontiTotali ? 'checked' : ''} style="opacity: 0; width: 0; height: 0;" onchange="aggiornaVisibilitaColonnePreventivi()">
+                    <span class="switch-slider" style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #cbd5e1; transition: .4s; border-radius: 24px;"></span>
+                </label>
+                <span class="switch-label" style="font-size: 13px; font-weight: 500; color: #334155;">Mostra sconti totali</span>
+            </div>
+
+            <div class="form-switch-item" style="display: flex; align-items: center; gap: 8px;">
+                <label class="switch-control" style="position: relative; display: inline-block; width: 44px; height: 24px;">
+                    <input type="checkbox" id="field-esportato" ${record && record.esportato ? 'checked' : ''} style="opacity: 0; width: 0; height: 0;">
+                    <span class="switch-slider" style="position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; background-color: #cbd5e1; transition: .4s; border-radius: 24px;"></span>
+                </label>
+                <span class="switch-label" style="font-size: 13px; font-weight: 500; color: #334155;">Esportato</span>
+            </div>
+        </div>
+    `;
+
+    let tabsHtml = `
+        <div class="preventivi-tabs-container" style="width: 100%; margin-top: 20px; border: 1px solid #cbd5e1; border-radius: 8px; overflow: hidden;">
+            <div class="preventivi-tabs-header" style="display: flex; background: #f1f5f9; border-bottom: 1px solid #cbd5e1; padding: 4px 8px 0 8px;">
+                <button type="button" class="tab-header-btn active" onclick="cambiaTabTestoPreventivo(this, 'tab-desc')" style="padding: 8px 16px; border: 1px solid transparent; border-bottom: none; border-radius: 6px 6px 0 0; background: none; font-size: 13px; font-weight: 600; color: #475569; cursor: pointer;">Descrizione</button>
+                <button type="button" class="tab-header-btn" onclick="cambiaTabTestoPreventivo(this, 'tab-note-int')" style="padding: 8px 16px; border: 1px solid transparent; border-bottom: none; border-radius: 6px 6px 0 0; background: none; font-size: 13px; font-weight: 600; color: #475569; cursor: pointer;">Note interne</button>
+                <button type="button" class="tab-header-btn" onclick="cambiaTabTestoPreventivo(this, 'tab-testo-fondo')" style="padding: 8px 16px; border: 1px solid transparent; border-bottom: none; border-radius: 6px 6px 0 0; background: none; font-size: 13px; font-weight: 600; color: #475569; cursor: pointer;">Testo aggiuntivo fondo pagina</button>
+            </div>
+            
+            <div class="preventivi-tabs-body" style="background: #fff; min-height: 160px; padding: 12px; position: relative;">
+                
+                <div id="tab-desc" class="tab-body-pane active" style="display: block;">
+                    ${costruisciRichEditorHtml('field-note', record ? record.note || '' : '')}
+                </div>
+                
+                <div id="tab-note-int" class="tab-body-pane" style="display: none;">
+                    ${costruisciRichEditorHtml('field-noteInterne', record ? record.noteInterne || '' : '')}
+                </div>
+                
+                <div id="tab-testo-fondo" class="tab-body-pane" style="display: none;">
+                    ${costruisciRichEditorHtml('field-testoFondo', record ? record.testoFondo || '' : '')}
+                </div>
+                
+            </div>
+        </div>
+    `;
+
+    fieldsContainer.innerHTML = gridHtml + switchesHtml + tabsHtml;
+    fieldsContainer.innerHTML += costruisciEditorRigheDocumentoPreventivi(record);
+    aggiornaTotaliDocumentoModalPreventivi();
+    
+    setTimeout(() => {
+        aggiornaVisibilitaColonnePreventivi();
+    }, 50);
+}
+
+function syncAziendaFromCliente(clientId) {
+    const c = DATASETS.clienti.find(item => item.id === clientId);
+    const aziendaSelect = document.getElementById('field-azienda');
+    if (c && aziendaSelect) {
+        aziendaSelect.value = c.azienda || c.nome;
+    }
+}
+
+function cambiaTabTestoPreventivo(btn, tabId) {
+    const container = btn.closest('.preventivi-tabs-container');
+    container.querySelectorAll('.tab-header-btn').forEach(b => b.classList.remove('active'));
+    container.querySelectorAll('.tab-body-pane').forEach(p => p.style.display = 'none');
+    
+    btn.classList.add('active');
+    const targetPane = document.getElementById(tabId);
+    if (targetPane) targetPane.style.display = 'block';
+}
+
+function costruisciRichEditorHtml(fieldId, initialValue) {
+    return `
+        <div class="rich-editor-wrapper" style="border: 1px solid #cbd5e1; border-radius: 6px; overflow: hidden; background: #fff; width: 100%;">
+            <div class="rich-editor-toolbar" style="display: flex; gap: 4px; padding: 6px; background: #f8fafc; border-bottom: 1px solid #cbd5e1; flex-wrap: wrap; align-items: center;">
+                <button type="button" class="toolbar-btn" onclick="execEditorCommand('${fieldId}', 'bold')" style="width: 26px; height: 26px; display: inline-flex; align-items: center; justify-content: center; font-weight: bold; border: 1px solid #e2e8f0; background: #fff; border-radius: 4px; cursor: pointer; color:#334155;" title="Grassetto">B</button>
+                <button type="button" class="toolbar-btn" onclick="execEditorCommand('${fieldId}', 'italic')" style="width: 26px; height: 26px; display: inline-flex; align-items: center; justify-content: center; font-style: italic; border: 1px solid #e2e8f0; background: #fff; border-radius: 4px; cursor: pointer; color:#334155;" title="Corsivo">I</button>
+                <button type="button" class="toolbar-btn" onclick="execEditorCommand('${fieldId}', 'underline')" style="width: 26px; height: 26px; display: inline-flex; align-items: center; justify-content: center; text-decoration: underline; border: 1px solid #e2e8f0; background: #fff; border-radius: 4px; cursor: pointer; color:#334155;" title="Sottolineato">U</button>
+                <button type="button" class="toolbar-btn" onclick="execEditorCommand('${fieldId}', 'strikeThrough')" style="width: 26px; height: 26px; display: inline-flex; align-items: center; justify-content: center; text-decoration: line-through; border: 1px solid #e2e8f0; background: #fff; border-radius: 4px; cursor: pointer; color:#334155;" title="Sbarrato">S</button>
+                <div style="width: 1px; height: 16px; background: #cbd5e1; margin: 0 4px;"></div>
+                <button type="button" class="toolbar-btn" onclick="execEditorCommand('${fieldId}', 'insertUnorderedList')" style="width: 26px; height: 26px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid #e2e8f0; background: #fff; border-radius: 4px; cursor: pointer; color:#334155;" title="Elenco puntato"><i class="fas fa-list-ul"></i></button>
+                <button type="button" class="toolbar-btn" onclick="execEditorCommand('${fieldId}', 'insertOrderedList')" style="width: 26px; height: 26px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid #e2e8f0; background: #fff; border-radius: 4px; cursor: pointer; color:#334155;" title="Elenco numerato"><i class="fas fa-list-ol"></i></button>
+                <div style="width: 1px; height: 16px; background: #cbd5e1; margin: 0 4px;"></div>
+                <button type="button" class="toolbar-btn" onclick="execEditorCommand('${fieldId}', 'justifyLeft')" style="width: 26px; height: 26px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid #e2e8f0; background: #fff; border-radius: 4px; cursor: pointer; color:#334155;" title="Allinea a sinistra"><i class="fas fa-align-left"></i></button>
+                <button type="button" class="toolbar-btn" onclick="execEditorCommand('${fieldId}', 'justifyCenter')" style="width: 26px; height: 26px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid #e2e8f0; background: #fff; border-radius: 4px; cursor: pointer; color:#334155;" title="Allinea al centro"><i class="fas fa-align-center"></i></button>
+                <button type="button" class="toolbar-btn" onclick="execEditorCommand('${fieldId}', 'justifyRight')" style="width: 26px; height: 26px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid #e2e8f0; background: #fff; border-radius: 4px; cursor: pointer; color:#334155;" title="Allinea a destra"><i class="fas fa-align-right"></i></button>
+                <div style="width: 1px; height: 16px; background: #cbd5e1; margin: 0 4px;"></div>
+                <button type="button" class="toolbar-btn" onclick="execEditorLinkPrompt('${fieldId}')" style="width: 26px; height: 26px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid #e2e8f0; background: #fff; border-radius: 4px; cursor: pointer; color:#334155;" title="Inserisci link"><i class="fas fa-link"></i></button>
+                <button type="button" class="toolbar-btn" onclick="execEditorCommand('${fieldId}', 'removeFormat')" style="width: 26px; height: 26px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid #e2e8f0; background: #fff; border-radius: 4px; cursor: pointer; color:#334155;" title="Rimuovi formattazione"><i class="fas fa-eraser"></i></button>
+            </div>
+            <div id="editable-${fieldId}" contenteditable="true" class="rich-editor-editable-area" style="min-height: 120px; max-height: 250px; padding: 12px; overflow-y: auto; font-size: 13.5px; line-height: 1.5; color: #1e293b; outline: none; text-align: left;" oninput="syncEditableToTextarea('${fieldId}')">${initialValue}</div>
+            <textarea id="${fieldId}" style="display: none;">${initialValue}</textarea>
+        </div>
+    `;
+}
+
+function execEditorCommand(fieldId, command) {
+    const editArea = document.getElementById(`editable-${fieldId}`);
+    if (editArea) {
+        editArea.focus();
+        document.execCommand(command, false, null);
+        syncEditableToTextarea(fieldId);
+    }
+}
+
+function execEditorLinkPrompt(fieldId) {
+    const editArea = document.getElementById(`editable-${fieldId}`);
+    if (editArea) {
+        editArea.focus();
+        const url = prompt("Inserisci l'URL del link (es. https://example.com):");
+        if (url) {
+            document.execCommand('createLink', false, url);
+            syncEditableToTextarea(fieldId);
+        }
+    }
+}
+
+function syncEditableToTextarea(fieldId) {
+    const editArea = document.getElementById(`editable-${fieldId}`);
+    const textarea = document.getElementById(fieldId);
+    if (editArea && textarea) {
+        textarea.value = editArea.innerHTML;
+    }
+}
+
+function costruisciEditorRigheDocumentoPreventivi(record = null) {
+    const righe = record && Array.isArray(record.righe) && record.righe.length 
+        ? record.righe 
+        : [{ prodotto: '', quantita: 1, sconto1: 0, sconto2: 0, sconto3: 0 }];
+    
+    const rowsHtml = righe.map((riga, idx) => costruisciRigaPreventivoHtml(riga, idx)).join('');
+
+    return `
+        <div class="preventivi-lines-editor field-full" style="width: 100%; margin-top: 24px;">
+            <div class="lines-editor-title" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                <h3 style="font-size: 15px; font-weight: 600; color: #1e293b; margin:0;">Prodotti e Articoli Offerti</h3>
+                <button type="button" class="btn-line-add" onclick="aggiungiRigaPreventivo()" style="cursor: pointer; display: flex; align-items: center; gap: 6px; padding: 6px 12px; background: #eab308; color: #000; border: none; border-radius: 6px; font-size: 12.5px; font-weight: 600;">
+                    <i class="fas fa-plus"></i> Aggiungi Prodotto
+                </button>
+            </div>
+            
+            <div class="table-responsive-wrapper" style="overflow-x: auto; border: 1px solid #cbd5e1; border-radius: 8px; width: 100%; background: #fff;">
+                <table class="crm-lines-table-preventivi" style="width: 100%; border-collapse: collapse; min-width: 1200px;">
+                    <thead>
+                        <tr style="background: #f8fafc; border-bottom: 1px solid #cbd5e1; font-size: 11px; text-transform: uppercase; color: #475569;">
+                            <th style="padding: 10px; width: 40px; text-align: center;">#</th>
+                            <th class="col-linea" style="padding: 10px; width: 90px; text-align: left;">Linea</th>
+                            <th class="col-codice" style="padding: 10px; width: 100px; text-align: left;">Codice</th>
+                            <th style="padding: 10px; width: 220px; text-align: left;">Prodotto</th>
+                            <th style="padding: 10px; width: 180px; text-align: left;">Descrizione</th>
+                            <th class="col-desc-agg" style="padding: 10px; width: 150px; text-align: left;">Desc. Aggiuntiva</th>
+                            <th style="padding: 10px; width: 70px; text-align: center;">Quantità</th>
+                            <th style="padding: 10px; width: 70px; text-align: center;">Unità</th>
+                            <th class="col-costo-conf" style="padding: 10px; width: 90px; text-align: right;">Costo Conf.</th>
+                            <th class="col-tipologia" style="padding: 10px; width: 110px; text-align: left;">Tipologia</th>
+                            <th class="col-sconto" style="padding: 10px; width: 60px; text-align: center;">Sconto 1 %</th>
+                            <th class="col-sconto" style="padding: 10px; width: 60px; text-align: center;">Sconto 2 %</th>
+                            <th class="col-sconto" style="padding: 10px; width: 60px; text-align: center;">Sconto 3 %</th>
+                            <th style="padding: 10px; width: 70px; text-align: center;">IVA</th>
+                            <th style="padding: 10px; width: 90px; text-align: right;">Importo</th>
+                            <th style="padding: 10px; width: 50px; text-align: center;"></th>
+                        </tr>
+                    </thead>
+                    <tbody id="preventivi-lines-body">
+                        ${rowsHtml}
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="preventivi-totals-grid" style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 12px; margin-top: 16px; width: 100%;">
+                <div class="totals-badge-card card-imponibile" style="background: #e0f2fe; border: 1px solid #bae6fd; padding: 12px 8px; border-radius: 8px; text-align: center; color: #0369a1;">
+                    <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 4px;">Imponibile</span>
+                    <strong id="badge-total-imponibile" style="font-size: 16px; font-weight: 800;">0,00 €</strong>
+                </div>
+                <div class="totals-badge-card card-sconto" style="background: #ffedd5; border: 1px solid #fed7aa; padding: 12px 8px; border-radius: 8px; text-align: center; color: #c2410c;">
+                    <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 4px;">Sconto Totale</span>
+                    <strong id="badge-total-sconto" style="font-size: 16px; font-weight: 800;">0,00 €</strong>
+                </div>
+                <div class="totals-badge-card card-iva" style="background: #dbeafe; border: 1px solid #bfdbfe; padding: 12px 8px; border-radius: 8px; text-align: center; color: #1d4ed8;">
+                    <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 4px;">Iva Totale</span>
+                    <strong id="badge-total-iva" style="font-size: 16px; font-weight: 800;">0,00 €</strong>
+                </div>
+                <div class="totals-badge-card card-totale" style="background: #fef9c3; border: 1px solid #fef08a; padding: 12px 8px; border-radius: 8px; text-align: center; color: #a16207;">
+                    <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 4px;">Totale</span>
+                    <strong id="badge-total-totale" style="font-size: 16px; font-weight: 800;">0,00 €</strong>
+                </div>
+                <div class="totals-badge-card card-costo" style="background: #fee2e2; border: 1px solid #fecaca; padding: 12px 8px; border-radius: 8px; text-align: center; color: #b91c1c;">
+                    <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 4px;">Costo</span>
+                    <strong id="badge-total-costo" style="font-size: 16px; font-weight: 800;">0,00 €</strong>
+                </div>
+                <div class="totals-badge-card card-margine" style="background: #f3e8ff; border: 1px solid #e9d5ff; padding: 12px 8px; border-radius: 8px; text-align: center; color: #6b21a8;">
+                    <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 4px;">Margine</span>
+                    <strong id="badge-total-margine" style="font-size: 16px; font-weight: 800;">0%</strong>
+                </div>
+                <div class="totals-badge-card card-peso" style="background: #dcfce7; border: 1px solid #bbf7d0; padding: 12px 8px; border-radius: 8px; text-align: center; color: #15803d;">
+                    <span style="font-size: 10px; font-weight: 700; text-transform: uppercase; display: block; margin-bottom: 4px;">Totale Peso</span>
+                    <strong id="badge-total-peso" style="font-size: 16px; font-weight: 800;">0,00 kg</strong>
+                </div>
+            </div>
+        </div>
+    `;
+}
+
+function costruisciRigaPreventivoHtml(riga = {}, idx = 0) {
+    const productOptions = getSelectableProducts({
+        pageName: 'preventivi',
+        documentType: 'vendita'
+    }).map(p => {
+        const selected = p.id === riga.prodotto ? 'selected' : '';
+        return `<option value="${p.id}" ${selected}>${p.codice} - ${p.nome}</option>`;
+    }).join('');
+
+    const selectedProduct = DATASETS.prodotti.find(p => p.id === riga.prodotto) || {};
+    const uom = riga.unitaMisura || selectedProduct.unitaMisura || 'pz';
+    const ivaRate = String(riga.iva ?? selectedProduct.iva ?? 22);
+    const tipo = riga.tipologia || (selectedProduct.categoria && String(selectedProduct.categoria).toLowerCase() === 'prodotti finiti' ? 'prodotto' : 'componente');
+
+    return `
+        <tr class="preventivi-line-row" style="border-bottom: 1px solid #e2e8f0; font-size: 13px;">
+            <td style="text-align: center; font-weight: 600; color: #64748b; padding: 8px;">${idx + 1}</td>
+            <td class="col-linea" style="padding: 6px;"><input type="text" class="line-input line-linea" value="${riga.linea || ''}" style="width: 100%; border: 1px solid #cbd5e1; padding: 4px; border-radius: 4px;" placeholder="Linea"></td>
+            <td class="col-codice" style="padding: 6px;"><input type="text" class="line-input line-sku" value="${selectedProduct.codice || riga.sku || ''}" style="width: 100%; border: 1px solid #cbd5e1; padding: 4px; border-radius: 4px; font-family: monospace;" placeholder="Codice" readonly></td>
+            <td style="padding: 6px;">
+                <select class="line-input line-select line-product" onchange="aggiornaDettagliRigaPreventivo(this)" style="width: 100%; border: 1px solid #cbd5e1; padding: 4px; border-radius: 4px; background: #fff;">
+                    <option value="">Seleziona...</option>
+                    ${productOptions}
+                </select>
+            </td>
+            <td style="padding: 6px;"><input type="text" class="line-input line-description" value="${selectedProduct.nome || riga.descrizione || ''}" style="width: 100%; border: 1px solid #cbd5e1; padding: 4px; border-radius: 4px;" placeholder="Descrizione"></td>
+            <td class="col-desc-agg" style="padding: 6px;"><input type="text" class="line-input line-desc-agg" value="${riga.descrizioneAggiuntiva || ''}" style="width: 100%; border: 1px solid #cbd5e1; padding: 4px; border-radius: 4px;" placeholder="Desc. aggiuntiva"></td>
+            <td style="padding: 6px;"><input type="number" min="0" step="1" class="line-input line-qty" value="${riga.quantita || 1}" oninput="aggiornaTotaliDocumentoModalPreventivi()" style="width: 100%; border: 1px solid #cbd5e1; padding: 4px; border-radius: 4px; text-align: center;"></td>
+            <td style="padding: 6px;">
+                <select class="line-input line-select line-uom" onchange="aggiornaTotaliDocumentoModalPreventivi()" style="width: 100%; border: 1px solid #cbd5e1; padding: 4px; border-radius: 4px; background: #fff;">
+                    <option value="pz" ${uom === 'pz' ? 'selected' : ''}>Pz</option>
+                    <option value="m" ${uom === 'm' ? 'selected' : ''}>m</option>
+                    <option value="kg" ${uom === 'kg' ? 'selected' : ''}>kg</option>
+                    <option value="scatola" ${uom === 'scatola' ? 'selected' : ''}>Scatola</option>
+                </select>
+            </td>
+            <td class="col-costo-conf" style="padding: 6px;"><input type="number" min="0" step="0.01" class="line-input line-packprice" value="${riga.prezzoConfezione || ''}" placeholder="Auto" oninput="aggiornaTotaliDocumentoModalPreventivi()" style="width: 100%; border: 1px solid #cbd5e1; padding: 4px; border-radius: 4px; text-align: right;"></td>
+            <td class="col-tipologia" style="padding: 6px;">
+                <select class="line-input line-select line-tipologia" onchange="aggiornaTotaliDocumentoModalPreventivi()" style="width: 100%; border: 1px solid #cbd5e1; padding: 4px; border-radius: 4px; background: #fff;">
+                    <option value="prodotto" ${tipo === 'prodotto' ? 'selected' : ''}>Prodotto Finito</option>
+                    <option value="componente" ${tipo === 'componente' ? 'selected' : ''}>Componente</option>
+                    <option value="servizio" ${tipo === 'servizio' ? 'selected' : ''}>Servizio</option>
+                </select>
+            </td>
+            <td class="col-sconto" style="padding: 6px;"><input type="number" min="0" max="100" step="0.01" class="line-input line-discount1" value="${riga.sconto1 || 0}" oninput="aggiornaTotaliDocumentoModalPreventivi()" style="width: 100%; border: 1px solid #cbd5e1; padding: 4px; border-radius: 4px; text-align: center;"></td>
+            <td class="col-sconto" style="padding: 6px;"><input type="number" min="0" max="100" step="0.01" class="line-input line-discount2" value="${riga.sconto2 || 0}" oninput="aggiornaTotaliDocumentoModalPreventivi()" style="width: 100%; border: 1px solid #cbd5e1; padding: 4px; border-radius: 4px; text-align: center;"></td>
+            <td class="col-sconto" style="padding: 6px;"><input type="number" min="0" max="100" step="0.01" class="line-input line-discount3" value="${riga.sconto3 || 0}" oninput="aggiornaTotaliDocumentoModalPreventivi()" style="width: 100%; border: 1px solid #cbd5e1; padding: 4px; border-radius: 4px; text-align: center;"></td>
+            <td style="padding: 6px;">
+                <select class="line-input line-select line-tax" onchange="aggiornaTotaliDocumentoModalPreventivi()" style="width: 100%; border: 1px solid #cbd5e1; padding: 4px; border-radius: 4px; background: #fff;">
+                    <option value="22" ${ivaRate === '22' ? 'selected' : ''}>22%</option>
+                    <option value="10" ${ivaRate === '10' ? 'selected' : ''}>10%</option>
+                    <option value="4" ${ivaRate === '4' ? 'selected' : ''}>4%</option>
+                    <option value="0" ${ivaRate === '0' ? 'selected' : ''}>0%</option>
+                </select>
+            </td>
+            <td class="line-total-cell-preventivo" style="padding: 8px; text-align: right; font-weight: 700; color: #1e293b;">0,00 €</td>
+            <td style="text-align: center; padding: 6px;">
+                <button type="button" class="line-delete-btn" onclick="rimuoviRigaPreventivo(this)" title="Elimina riga" style="cursor: pointer; background: none; border: none; color: #ef4444; font-size: 14px; padding: 4px;"><i class="fas fa-trash-alt"></i></button>
+                <input type="hidden" class="line-price" value="${riga.prezzo || ''}">
+            </td>
+        </tr>
+    `;
+}
+
+function aggiungiRigaPreventivo() {
+    const tbody = document.getElementById('preventivi-lines-body');
+    if (!tbody) return;
+    tbody.insertAdjacentHTML('beforeend', costruisciRigaPreventivoHtml({}, tbody.children.length));
+    aggiornaTotaliDocumentoModalPreventivi();
+    aggiornaVisibilitaColonnePreventivi();
+}
+
+function rimuoviRigaPreventivo(button) {
+    const tbody = document.getElementById('preventivi-lines-body');
+    if (!tbody || tbody.children.length <= 1) return;
+    const row = button.closest('.preventivi-line-row');
+    row?.remove();
+    
+    Array.from(tbody.querySelectorAll('.preventivi-line-row')).forEach((tr, idx) => {
+        tr.cells[0].textContent = idx + 1;
+    });
+    aggiornaTotaliDocumentoModalPreventivi();
+}
+
+function aggiornaDettagliRigaPreventivo(selectEl) {
+    const row = selectEl.closest('.preventivi-line-row');
+    const prodotto = DATASETS.prodotti.find(p => p.id === selectEl.value);
+    
+    const priceInput = row.querySelector('.line-price');
+    const descInput = row.querySelector('.line-description');
+    const skuInput = row.querySelector('.line-sku');
+    const packPriceInput = row.querySelector('.line-packprice');
+    
+    if (prodotto) {
+        if (priceInput) priceInput.value = Number(prodotto.prezzoVendita || 0).toFixed(2);
+        if (descInput) descInput.value = prodotto.nome || '';
+        if (skuInput) skuInput.value = prodotto.codice || '';
+        if (packPriceInput) packPriceInput.value = Number(prodotto.prezzoAcquisto || 0).toFixed(2);
+    }
+    aggiornaTotaliDocumentoModalPreventivi();
+}
+
+function aggiornaVisibilitaColonnePreventivi() {
+    const showImponibile = document.getElementById('field-mostraImponibile')?.checked ?? true;
+    const showIva = document.getElementById('field-mostraIva')?.checked ?? true;
+    const showScontiRiga = document.getElementById('field-mostraScontiRiga')?.checked ?? true;
+    const showScontiTotali = document.getElementById('field-mostraScontiTotali')?.checked ?? true;
+    
+    document.querySelectorAll('.col-costo-conf').forEach(el => el.style.display = showImponibile ? '' : 'none');
+    const costBadge = document.querySelector('.card-costo');
+    const marginBadge = document.querySelector('.card-margine');
+    if (costBadge) costBadge.style.display = showImponibile ? '' : 'none';
+    if (marginBadge) marginBadge.style.display = showImponibile ? '' : 'none';
+
+    document.querySelectorAll('.col-tax, th:nth-child(14), td:nth-child(14)').forEach(el => el.style.display = showIva ? '' : 'none');
+    const ivaBadge = document.querySelector('.card-iva');
+    if (ivaBadge) ivaBadge.style.display = showIva ? '' : 'none';
+
+    document.querySelectorAll('.col-sconto').forEach(el => el.style.display = showScontiRiga ? '' : 'none');
+    const discountBadge = document.querySelector('.card-sconto');
+    if (discountBadge) discountBadge.style.display = showScontiTotali ? '' : 'none';
+}
+
+function aggiornaTotaliDocumentoModalPreventivi() {
+    const rows = Array.from(document.querySelectorAll('#preventivi-lines-body .preventivi-line-row'));
+    
+    let imponibileTotale = 0;
+    let scontoTotaleAmt = 0;
+    let ivaTotaleAmt = 0;
+    let costoTotaleAmt = 0;
+    let pesoTotaleAmt = 0;
+    
+    const generalIvaRate = Number(document.getElementById('field-aliquotaIva')?.value || 22);
+
+    rows.forEach(row => {
+        const prodSelect = row.querySelector('.line-product');
+        const prodId = prodSelect?.value;
+        if (!prodId) return;
+
+        const product = DATASETS.prodotti.find(p => p.id === prodId) || {};
+        
+        const qty = Number(row.querySelector('.line-qty')?.value || 0);
+        const price = Number(row.querySelector('.line-price')?.value || 0) || Number(product.prezzoVendita || 0);
+        const packPrice = Number(row.querySelector('.line-packprice')?.value || 0) || Number(product.prezzoAcquisto || 0);
+        
+        const s1 = Number(row.querySelector('.line-discount1')?.value || 0);
+        const s2 = Number(row.querySelector('.line-discount2')?.value || 0);
+        const s3 = Number(row.querySelector('.line-discount3')?.value || 0);
+        
+        const rowIvaRate = Number(row.querySelector('.line-tax')?.value || generalIvaRate);
+        
+        let rowNet = qty * price;
+        const grossRow = rowNet;
+        
+        if (s1) rowNet *= (1 - s1 / 100);
+        if (s2) rowNet *= (1 - s2 / 100);
+        if (s3) rowNet *= (1 - s3 / 100);
+        
+        const rowDiscount = grossRow - rowNet;
+        const rowIva = rowNet * (rowIvaRate / 100);
+        const rowCost = qty * packPrice;
+        const rowWeight = qty * Number(product.peso || 0);
+        
+        imponibileTotale += rowNet;
+        scontoTotaleAmt += rowDiscount;
+        ivaTotaleAmt += rowIva;
+        costoTotaleAmt += rowCost;
+        pesoTotaleAmt += rowWeight;
+        
+        const totalCell = row.querySelector('.line-total-cell-preventivo');
+        if (totalCell) {
+            totalCell.textContent = formatCrmMoney(rowNet);
+        }
+    });
+
+    const grandTotale = imponibileTotale + ivaTotaleAmt;
+    let marginPerc = 0;
+    if (imponibileTotale > 0) {
+        marginPerc = ((imponibileTotale - costoTotaleAmt) / imponibileTotale) * 100;
+    }
+
+    const elImponibile = document.getElementById('badge-total-imponibile');
+    const elSconto = document.getElementById('badge-total-sconto');
+    const elIva = document.getElementById('badge-total-iva');
+    const elTotale = document.getElementById('badge-total-totale');
+    const elCosto = document.getElementById('badge-total-costo');
+    const elMargine = document.getElementById('badge-total-margine');
+    const elPeso = document.getElementById('badge-total-peso');
+    
+    if (elImponibile) elImponibile.textContent = formatCrmMoney(imponibileTotale);
+    if (elSconto) elSconto.textContent = formatCrmMoney(scontoTotaleAmt);
+    if (elIva) elIva.textContent = formatCrmMoney(ivaTotaleAmt);
+    if (elTotale) elTotale.textContent = formatCrmMoney(grandTotale);
+    if (elCosto) elCosto.textContent = formatCrmMoney(costoTotaleAmt);
+    if (elMargine) elMargine.textContent = `${marginPerc.toFixed(1)}%`;
+    if (elPeso) elPeso.textContent = `${pesoTotaleAmt.toFixed(2)} kg`;
 }
 
 function apriRegistraAttivitaDrawer(clientId) {

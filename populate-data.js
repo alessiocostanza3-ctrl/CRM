@@ -74,14 +74,29 @@ function generateRighe(min, max, maxPezzi = 10, isVendita = true) {
             descrizione: prod.nome,
             quantita: qta,
             prezzoUnitario: prezzo,
-            sconto: Math.random() > 0.8 ? randomElement([5, 10, 15]) : 0
+            sconto1: Math.random() > 0.8 ? randomElement([5, 10, 15]) : 0,
+            sconto2: 0,
+            sconto3: 0,
+            linea: isVendita ? "Illuminazione" : "Componenti",
+            descrizioneAggiuntiva: Math.random() > 0.7 ? "Finitura Standard" : "",
+            costoConfezione: (prod.prezzoAcquisto || 10) * 2,
+            quantitaConfezione: 1,
+            tipologia: isVendita ? "prodotto" : "componente",
+            iva: 22,
+            unitaMisura: "pz"
         });
     }
     return righe;
 }
 
 function calculateTotale(righe) {
-    return righe.reduce((sum, r) => sum + (r.quantita * r.prezzoUnitario * (1 - (r.sconto||0)/100)), 0);
+    return righe.reduce((sum, r) => {
+        let net = r.quantita * r.prezzoUnitario;
+        if (r.sconto1) net *= (1 - r.sconto1 / 100);
+        if (r.sconto2) net *= (1 - r.sconto2 / 100);
+        if (r.sconto3) net *= (1 - r.sconto3 / 100);
+        return sum + net;
+    }, 0);
 }
 
 // 1. Preventivi Vendita (10)
@@ -95,7 +110,21 @@ for (let i = 1; i <= 10; i++) {
     preventivi.push({
         id: `prev_sim_${i}`,
         numero: `PRE-${2026000 + i}`,
+        sezionale: "00",
+        titolo: randomElement(["Fornitura faretti led", "Progetto illuminazione villa", "Luci per showroom", "Sostituzione faretti esterni", "Illuminazione uffici"]),
         cliente: cliente.id,
+        azienda: cliente.azienda || "DA DEFINIRE",
+        destinazione: randomElement(["Sede Cliente", "Magazzino Milano", "Cantiere Roma", ""]),
+        agente: randomElement(["Roberto Pagliai", "Marco Ferri", "Giacomo"]),
+        condizioniPagamento: randomElement(["vista_fattura", "bonifico_30", "bonifico_60", "riba_30_60"]),
+        porto: randomElement(["franco", "assegnato"]),
+        listino: "Standard",
+        ivaGenerale: 22,
+        mostraImponibile: true,
+        mostraIva: true,
+        mostraScontiRiga: true,
+        mostraScontiTotali: true,
+        esportato: Math.random() > 0.5,
         data: formatDate(date),
         dataScadenza: formatDate(scadenza),
         stato: i <= 8 ? 'accettato' : randomElement(['bozza', 'inviato', 'rifiutato', 'scaduto']),
@@ -103,7 +132,9 @@ for (let i = 1; i <= 10; i++) {
         imponibile: imponibile,
         tasse: imponibile * 0.22,
         totale: imponibile * 1.22,
-        note: "Preventivo di vendita."
+        note: "Preventivo di vendita.",
+        noteInterne: "Verificare disponibilità componenti prima dell'invio.",
+        testoFondo: "Grazie per la collaborazione. Validità offerta: 30gg."
     });
 }
 

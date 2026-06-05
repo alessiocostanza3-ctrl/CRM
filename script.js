@@ -5141,28 +5141,12 @@ function costruisciEditorRigheDocumento(record = null) {
                 <span>Righe documento</span>
                 <button type="button" class="btn-line-add" onclick="aggiungiRigaDocumentoModal()"><i class="fas fa-plus"></i> Aggiungi riga</button>
             </div>
-            <div class="lines-editor-table-wrapper">
-                <table class="lines-editor-table">
-                    <thead>
-                        <tr>
-                            <th>Articolo</th>
-                            <th>Descrizione</th>
-                            <th>U.M.</th>
-                            <th>Q.ta</th>
-                            <th>Prezzo</th>
-                            <th>Sc. %</th>
-                            <th>Imponibile</th>
-                            <th>IVA</th>
-                            <th>Totale</th>
-                            <th>Dettagli</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody id="document-lines-body">${rows}</tbody>
-                </table>
+            <div id="document-lines-body" class="document-lines-list">
+                ${rows}
             </div>
             <div class="document-totals-panel">
                 <div class="document-totals-card">
+                    <div class="totals-row"><span>Sconto Globale %</span><input type="number" id="doc-global-discount" class="line-input global-discount-input" min="0" max="100" value="0" placeholder="%" oninput="aggiornaTotaliDocumentoModal()" style="max-width: 60px; text-align: right; background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.2);"></div>
                     <div class="totals-row"><span>Imponibile</span><span id="doc-subtotal">EUR 0,00</span></div>
                     <div class="totals-row"><span>IVA stimata</span><span id="doc-tax">EUR 0,00</span></div>
                     <div class="totals-row totals-final"><span>Totale documento</span><span id="doc-grandtotal">EUR 0,00</span></div>
@@ -5186,26 +5170,57 @@ function costruisciRigaDocumentoHtml(riga = {}, idx = 0) {
     const selectedUom = riga.unitaMisura || selectedProduct.unitaMisura || 'pz';
     const selectedIva = String(riga.iva ?? selectedProduct.iva ?? 22);
     return `
-        <tr class="document-line-row">
-            <td>
-                <div class="line-articolo-stack">
-                    <select class="line-input line-select line-product" onchange="aggiornaPrezzoRigaDocumento(this); aggiornaTotaliDocumentoModal()"><option value="">Seleziona articolo</option>${productOptions}</select>
-                    <input type="hidden" class="line-sku" value="${selectedProduct.codice || ''}">
+        <div class="document-line-card document-line-row">
+            <div class="line-card-header">
+                <span class="line-card-index">Riga ${idx + 1}</span>
+                <button type="button" class="line-delete-btn" onclick="rimuoviRigaDocumentoModal(this)" title="Elimina riga"><i class="fas fa-trash-alt"></i></button>
+            </div>
+            <div class="line-card-grid">
+                <div class="line-field col-span-2">
+                    <label>Articolo</label>
+                    <div class="line-articolo-stack">
+                        <select class="line-input line-select line-product" onchange="aggiornaPrezzoRigaDocumento(this); aggiornaTotaliDocumentoModal()"><option value="">Seleziona articolo</option>${productOptions}</select>
+                        <input type="hidden" class="line-sku" value="${selectedProduct.codice || ''}">
+                    </div>
                 </div>
-            </td>
-            <td><input type="text" class="line-input line-description" value="${selectedProduct.nome || riga.descrizione || ''}" placeholder="Descrizione articolo"></td>
-            <td><select class="line-input line-select line-uom" onchange="aggiornaTotaliDocumentoModal()"><option value="pz" ${selectedUom === 'pz' ? 'selected' : ''}>Pz</option><option value="m" ${selectedUom === 'm' ? 'selected' : ''}>m</option><option value="kg" ${selectedUom === 'kg' ? 'selected' : ''}>kg</option><option value="scatola" ${selectedUom === 'scatola' ? 'selected' : ''}>Scatola</option></select></td>
-            <td><input type="number" min="0" step="1" class="line-input line-qty" value="${riga.quantita || 1}" oninput="aggiornaTotaliDocumentoModal()"></td>
-            <td><input type="number" min="0" step="0.01" class="line-input line-price" value="${riga.prezzo || ''}" placeholder="Auto" oninput="aggiornaTotaliDocumentoModal()"></td>
-            <td><input type="number" min="0" max="100" step="0.01" class="line-input line-discount1" value="${riga.sconto1 || 0}" placeholder="%" oninput="aggiornaTotaliDocumentoModal()"></td>
-            <td class="line-imponibile-cell">EUR 0,00</td>
-            <td><select class="line-input line-select line-tax" onchange="aggiornaTotaliDocumentoModal()"><option value="22" ${selectedIva === '22' ? 'selected' : ''}>22%</option><option value="10" ${selectedIva === '10' ? 'selected' : ''}>10%</option><option value="4" ${selectedIva === '4' ? 'selected' : ''}>4%</option><option value="0" ${selectedIva === '0' ? 'selected' : ''}>0%</option></select></td>
-            <td class="line-total-cell">EUR 0,00</td>
-            <td><button type="button" class="line-advanced-toggle" onclick="toggleRigaAvanzata(this)" title="Dettagli riga"><i class="fas fa-sliders-h"></i></button></td>
-            <td><button type="button" class="line-delete-btn" onclick="rimuoviRigaDocumentoModal(this)" title="Elimina riga"><i class="fas fa-trash-alt"></i></button></td>
-        </tr>
-        <tr class="document-line-advanced">
-            <td colspan="7">
+                <div class="line-field col-span-2">
+                    <label>Descrizione</label>
+                    <input type="text" class="line-input line-description" value="${selectedProduct.nome || riga.descrizione || ''}" placeholder="Descrizione articolo">
+                </div>
+                <div class="line-field">
+                    <label>U.M.</label>
+                    <select class="line-input line-select line-uom" onchange="aggiornaTotaliDocumentoModal()"><option value="pz" ${selectedUom === 'pz' ? 'selected' : ''}>Pz</option><option value="m" ${selectedUom === 'm' ? 'selected' : ''}>m</option><option value="kg" ${selectedUom === 'kg' ? 'selected' : ''}>kg</option><option value="scatola" ${selectedUom === 'scatola' ? 'selected' : ''}>Scatola</option></select>
+                </div>
+                <div class="line-field">
+                    <label>Q.ta</label>
+                    <input type="number" min="0" step="1" class="line-input line-qty" value="${riga.quantita || 1}" oninput="aggiornaTotaliDocumentoModal()">
+                </div>
+                <div class="line-field">
+                    <label>Prezzo</label>
+                    <input type="number" min="0" step="0.01" class="line-input line-price" value="${riga.prezzo || ''}" placeholder="Auto" oninput="aggiornaTotaliDocumentoModal()">
+                </div>
+                <div class="line-field">
+                    <label>Sc. %</label>
+                    <input type="number" min="0" max="100" step="0.01" class="line-input line-discount1" value="${riga.sconto1 || 0}" placeholder="%" oninput="aggiornaTotaliDocumentoModal()">
+                </div>
+                <div class="line-field">
+                    <label>IVA</label>
+                    <select class="line-input line-select line-tax" onchange="aggiornaTotaliDocumentoModal()"><option value="22" ${selectedIva === '22' ? 'selected' : ''}>22%</option><option value="10" ${selectedIva === '10' ? 'selected' : ''}>10%</option><option value="4" ${selectedIva === '4' ? 'selected' : ''}>4%</option><option value="0" ${selectedIva === '0' ? 'selected' : ''}>0%</option></select>
+                </div>
+                <div class="line-field summary-field">
+                    <label>Imponibile</label>
+                    <div class="line-imponibile-cell">EUR 0,00</div>
+                </div>
+                <div class="line-field summary-field">
+                    <label>Totale netto</label>
+                    <div class="line-total-cell">EUR 0,00</div>
+                </div>
+                <div class="line-field summary-field col-span-1" style="display: flex; align-items: flex-end;">
+                    <button type="button" class="btn-secondary btn-sm" onclick="toggleRigaAvanzata(this)" style="width: 100%; height: 26px; padding: 0;"><i class="fas fa-sliders-h"></i> Dett.</button>
+                </div>
+            </div>
+            
+            <div class="document-line-advanced" style="display: none;">
                 <div class="line-advanced-panel">
                     <div class="line-advanced-grid">
                         <div class="line-advanced-field">
@@ -5234,8 +5249,8 @@ function costruisciRigaDocumentoHtml(riga = {}, idx = 0) {
                         </div>
                     </div>
                 </div>
-            </td>
-        </tr>
+            </div>
+        </div>
     `;
 }
 
@@ -5249,25 +5264,30 @@ function aggiungiRigaDocumentoModal() {
 function rimuoviRigaDocumentoModal(button) {
     const tbody = document.getElementById('document-lines-body');
     if (!tbody || tbody.children.length <= 1) return;
-    const row = button.closest('tr');
-    const nextRow = row?.nextElementSibling;
-    if (nextRow && nextRow.classList.contains('document-line-advanced')) {
-        nextRow.remove();
-    }
+    const row = button.closest('.document-line-card');
     row?.remove();
+    // Update indices
+    Array.from(tbody.querySelectorAll('.document-line-card')).forEach((card, idx) => {
+        const indexEl = card.querySelector('.line-card-index');
+        if (indexEl) indexEl.textContent = `Riga ${idx + 1}`;
+    });
     aggiornaTotaliDocumentoModal();
 }
 
 function toggleRigaAvanzata(button) {
-    const row = button.closest('tr');
-    const advanced = row?.nextElementSibling;
-    if (advanced && advanced.classList.contains('document-line-advanced')) {
-        advanced.classList.toggle('active');
+    const row = button.closest('.document-line-card');
+    const advanced = row?.querySelector('.document-line-advanced');
+    if (advanced) {
+        if (advanced.style.display === 'none') {
+            advanced.style.display = 'block';
+        } else {
+            advanced.style.display = 'none';
+        }
     }
 }
 
 function aggiornaPrezzoRigaDocumento(selectEl) {
-    const row = selectEl.closest('tr');
+    const row = selectEl.closest('.document-line-card');
     const prodotto = DATASETS.prodotti.find(p => p.id === selectEl.value);
     const priceInput = row.querySelector('.line-price');
     const descInput = row.querySelector('.line-description');
@@ -5281,8 +5301,8 @@ function aggiornaPrezzoRigaDocumento(selectEl) {
 }
 
 function leggiRigheDocumentoModal() {
-    return Array.from(document.querySelectorAll('#document-lines-body tr.document-line-row')).map(row => {
-        const advancedRow = row.nextElementSibling && row.nextElementSibling.classList.contains('document-line-advanced') ? row.nextElementSibling : null;
+    return Array.from(document.querySelectorAll('#document-lines-body .document-line-card')).map(row => {
+        const advancedRow = row.querySelector('.document-line-advanced');
         return {
             prodotto: row.querySelector('.line-product')?.value || '',
             sku: row.querySelector('.line-sku')?.value || '',
@@ -5306,15 +5326,22 @@ function aggiornaTotaliDocumentoModal() {
     const righe = leggiRigheDocumentoModal();
     let imponibile = 0;
     let iva = 0;
+    const globalDiscountInput = document.getElementById('doc-global-discount');
+    const globalDiscount = globalDiscountInput ? Number(globalDiscountInput.value || 0) : 0;
+    
     righe.forEach(riga => {
         const scontoTotale = [riga.sconto1, riga.sconto2, riga.sconto3].filter(v => Number.isFinite(v) && v > 0).reduce((acc, v) => acc + v, 0);
         const netto = riga.quantita * riga.prezzo * (1 - (scontoTotale || 0) / 100);
         imponibile += netto;
-        iva += netto * ((riga.iva || 0) / 100);
+        iva += netto * (1 - globalDiscount / 100) * ((riga.iva || 0) / 100);
     });
+    
+    // applica sconto globale all'imponibile per il totale doc
+    imponibile = imponibile * (1 - globalDiscount / 100);
+    
     const format = value => `EUR ${value.toLocaleString('it-IT', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
-    document.querySelectorAll('#document-lines-body tr.document-line-row').forEach(row => {
-        const advancedRow = row.nextElementSibling && row.nextElementSibling.classList.contains('document-line-advanced') ? row.nextElementSibling : null;
+    document.querySelectorAll('#document-lines-body .document-line-card').forEach(row => {
+        const advancedRow = row.querySelector('.document-line-advanced');
         const qty = Number(row.querySelector('.line-qty')?.value || 0);
         const price = Number(row.querySelector('.line-price')?.value || 0);
         const discount1 = Number(row.querySelector('.line-discount1')?.value || 0);

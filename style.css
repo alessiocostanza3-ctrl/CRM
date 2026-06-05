@@ -7189,21 +7189,70 @@ body[data-theme="dark"] .crm-table tr:hover td {
         margin-bottom: 6px;
         padding-bottom: 2px;
     }
-    .crm-drawer-overlay.is-document .lines-editor-table th, 
-    .crm-drawer-overlay.is-document .lines-editor-table td {
-        padding: 4px;
-        font-size: 10px;
-    }
     .crm-drawer-overlay.is-document .line-input {
         min-height: 24px;
         font-size: 10px;
-        padding: 0 4px;
+        padding: 0 6px;
+        width: 100%;
     }
-    .crm-drawer-overlay.is-document .line-qty { max-width: 50px; }
-    .crm-drawer-overlay.is-document .line-price { max-width: 70px; }
-    .crm-drawer-overlay.is-document .line-discount1 { max-width: 50px; }
-    .crm-drawer-overlay.is-document .line-uom, 
-    .crm-drawer-overlay.is-document .line-tax { max-width: 65px; }
+    
+    .document-lines-list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    .document-line-card {
+        background: #f8fafc;
+        border: 1px solid var(--border-color);
+        border-radius: 8px;
+        padding: 10px 14px;
+    }
+    body[data-theme="dark"] .document-line-card {
+        background: rgba(255,255,255,0.03);
+    }
+    .line-card-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 8px;
+        padding-bottom: 6px;
+        border-bottom: 1px solid var(--border-color);
+    }
+    .line-card-index {
+        font-size: 11px;
+        font-weight: 600;
+        color: var(--text-color);
+    }
+    .line-card-grid {
+        display: grid;
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        gap: 8px 12px;
+        align-items: start;
+    }
+    .line-field {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+    .line-field label {
+        font-size: 9px;
+        color: var(--text-muted);
+        font-weight: 600;
+        text-transform: uppercase;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .line-card-grid .col-span-2 { grid-column: span 2; }
+    .line-card-grid .col-span-1 { grid-column: span 1; }
+    
+    .line-imponibile-cell, .line-total-cell {
+        font-size: 11px;
+        font-weight: 600;
+        height: 24px;
+        display: flex;
+        align-items: center;
+    }
     
     .crm-drawer-overlay.is-document .lines-editor-title {
         font-size: 12px;

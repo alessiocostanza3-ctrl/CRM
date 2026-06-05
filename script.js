@@ -4903,12 +4903,25 @@ function convertiPreventivoInOrdine(prevId) {
     if (!prev) return;
 
     const righeClonate = Array.isArray(prev.righe) ? JSON.parse(JSON.stringify(prev.righe)) : [];
-    const totaleDaRighe = righeClonate.reduce((sum, riga) => {
+    
+    // Calcolo fallback in caso in cui prev.totale non sia presente
+    let imponibile = 0;
+    let iva = 0;
+    const globalDiscount = Number(prev.scontoGlobale || 0);
+
+    righeClonate.forEach(riga => {
         const prezzo = Number(riga.prezzo || prezzoProdottoPerDocumento(riga.prodotto, 'ordiniVendita') || 0);
         const qty = Number(riga.quantita || 0);
-        const sconto = Number(riga.sconto || 0);
-        return sum + (qty * prezzo * (1 - sconto / 100));
-    }, 0);
+        const scontoTotale = [riga.sconto1, riga.sconto2, riga.sconto3].filter(v => Number.isFinite(v) && v > 0).reduce((acc, v) => acc + v, 0);
+        const netto = qty * prezzo * (1 - scontoTotale / 100);
+        imponibile += netto;
+        iva += netto * (1 - globalDiscount / 100) * (Number(riga.iva || 0) / 100);
+    });
+
+    const globalDiscountAmount = imponibile * (globalDiscount / 100);
+    imponibile = imponibile - globalDiscountAmount;
+    
+    const fallbackTotale = imponibile + iva;
 
     // Crea in automatico l'ordine di vendita
     const nuovoId = "ov_" + (DATASETS.ordiniVendita.length + 1) + "_" + Date.now().toString().slice(-4);
@@ -4923,7 +4936,10 @@ function convertiPreventivoInOrdine(prevId) {
         cliente: prev.cliente,
         data: new Date().toISOString().slice(0, 10),
         righe: righeClonate,
-        totale: Number(prev.totale || 0) || totaleDaRighe,
+        scontoGlobale: Number(prev.scontoGlobale || globalDiscount),
+        imponibile: Number(prev.imponibile || imponibile),
+        tasse: Number(prev.tasse || iva),
+        totale: Number(prev.totale || fallbackTotale),
         stato: "daelaborare"
     };
 
@@ -5496,10 +5512,26 @@ function confermaSalvaGeneric() {
             return;
         }
         recordSalvato.righe = righeDocumento;
-        recordSalvato.totale = righeDocumento.reduce((sum, riga) => {
+        
+        let imponibile = 0;
+        let iva = 0;
+        const globalDiscount = Number(document.getElementById('doc-global-discount')?.value || 0);
+        
+        righeDocumento.forEach(riga => {
             const prezzo = riga.prezzo || prezzoProdottoPerDocumento(riga.prodotto, pageName);
-            return sum + (riga.quantita * prezzo * (1 - (riga.sconto || 0) / 100));
-        }, 0);
+            const scontoTotale = [riga.sconto1, riga.sconto2, riga.sconto3].filter(v => Number.isFinite(v) && v > 0).reduce((acc, v) => acc + v, 0);
+            const netto = riga.quantita * prezzo * (1 - (scontoTotale || 0) / 100);
+            imponibile += netto;
+            iva += netto * (1 - globalDiscount / 100) * ((riga.iva || 0) / 100);
+        });
+        
+        const globalDiscountAmount = imponibile * (globalDiscount / 100);
+        imponibile = imponibile - globalDiscountAmount;
+        
+        recordSalvato.scontoGlobale = globalDiscount;
+        recordSalvato.imponibile = imponibile;
+        recordSalvato.tasse = iva;
+        recordSalvato.totale = imponibile + iva;
     }
 
     if (pageName === 'ddtVendita' && Array.isArray(window.__pendingDdtVenditaLines)) {

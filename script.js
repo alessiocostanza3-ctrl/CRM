@@ -5146,8 +5146,17 @@ function costruisciEditorRigheDocumento(record = null) {
             </div>
             <div class="document-totals-panel">
                 <div class="document-totals-card">
-                    <div class="totals-row"><span>Sconto Globale %</span><input type="number" id="doc-global-discount" class="line-input global-discount-input" min="0" max="100" value="0" placeholder="%" oninput="aggiornaTotaliDocumentoModal()" style="max-width: 60px; text-align: right; background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.2);"></div>
-                    <div class="totals-row"><span>Imponibile</span><span id="doc-subtotal">EUR 0,00</span></div>
+                    <div class="totals-row"><span>Subtotale righe</span><span id="doc-lines-total">EUR 0,00</span></div>
+                    <div class="totals-row">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span>Sconto Globale %</span>
+                            <input type="number" id="doc-global-discount" class="line-input global-discount-input" min="0" max="100" value="0" placeholder="0" oninput="aggiornaTotaliDocumentoModal()" style="max-width: 50px; text-align: right; background: rgba(255,255,255,0.1); color: white; border: 1px solid rgba(255,255,255,0.2); min-height: 22px; font-size: 11px;">
+                        </div>
+                        <span id="doc-global-discount-amount" style="color: #ff6b6b; font-size: 11px;">- EUR 0,00</span>
+                    </div>
+                    <div class="totals-row" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 6px; margin-top: 2px;">
+                        <span>Imponibile netto</span><span id="doc-subtotal">EUR 0,00</span>
+                    </div>
                     <div class="totals-row"><span>IVA stimata</span><span id="doc-tax">EUR 0,00</span></div>
                     <div class="totals-row totals-final"><span>Totale documento</span><span id="doc-grandtotal">EUR 0,00</span></div>
                 </div>
@@ -5208,11 +5217,7 @@ function costruisciRigaDocumentoHtml(riga = {}, idx = 0) {
                     <select class="line-input line-select line-tax" onchange="aggiornaTotaliDocumentoModal()"><option value="22" ${selectedIva === '22' ? 'selected' : ''}>22%</option><option value="10" ${selectedIva === '10' ? 'selected' : ''}>10%</option><option value="4" ${selectedIva === '4' ? 'selected' : ''}>4%</option><option value="0" ${selectedIva === '0' ? 'selected' : ''}>0%</option></select>
                 </div>
                 <div class="line-field summary-field">
-                    <label>Imponibile</label>
-                    <div class="line-imponibile-cell">EUR 0,00</div>
-                </div>
-                <div class="line-field summary-field">
-                    <label>Totale netto</label>
+                    <label>Importo</label>
                     <div class="line-total-cell">EUR 0,00</div>
                 </div>
                 <div class="line-field summary-field col-span-1" style="display: flex; align-items: flex-end;">
@@ -5336,10 +5341,8 @@ function aggiornaTotaliDocumentoModal() {
         iva += netto * (1 - globalDiscount / 100) * ((riga.iva || 0) / 100);
     });
     
-    // applica sconto globale all'imponibile per il totale doc
-    imponibile = imponibile * (1 - globalDiscount / 100);
-    
     const format = value => `EUR ${value.toLocaleString('it-IT', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+    
     document.querySelectorAll('#document-lines-body .document-line-card').forEach(row => {
         const advancedRow = row.querySelector('.document-line-advanced');
         const qty = Number(row.querySelector('.line-qty')?.value || 0);
@@ -5349,12 +5352,27 @@ function aggiornaTotaliDocumentoModal() {
         const discount3 = Number(advancedRow?.querySelector('.line-discount3')?.value || 0);
         const discount = discount1 + discount2 + discount3;
         
-        const imponibileCell = row.querySelector('.line-imponibile-cell');
-        if (imponibileCell) imponibileCell.textContent = format(qty * price);
-        
         const totalCell = row.querySelector('.line-total-cell');
         if (totalCell) totalCell.textContent = format(qty * price * (1 - discount / 100));
     });
+    
+    const linesTotalEl = document.getElementById('doc-lines-total');
+    if (linesTotalEl) linesTotalEl.textContent = format(imponibile);
+    
+    const globalDiscountAmount = imponibile * (globalDiscount / 100);
+    const globalDiscountAmountEl = document.getElementById('doc-global-discount-amount');
+    if (globalDiscountAmountEl) {
+        if (globalDiscount > 0) {
+            globalDiscountAmountEl.textContent = `- ${format(globalDiscountAmount)}`;
+            globalDiscountAmountEl.style.display = 'block';
+        } else {
+            globalDiscountAmountEl.style.display = 'none';
+        }
+    }
+    
+    // applica sconto globale all'imponibile per il totale doc
+    imponibile = imponibile - globalDiscountAmount;
+    
     const subtotalEl = document.getElementById('doc-subtotal');
     const taxEl = document.getElementById('doc-tax');
     const totalEl = document.getElementById('doc-grandtotal');

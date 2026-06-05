@@ -7155,10 +7155,10 @@ body[data-theme="dark"] .crm-table tr:hover td {
 
 @media (min-width: 769px) {
     .crm-drawer-overlay.is-document .drawer-info-grid {
-        grid-template-columns: repeat(4, 1fr) !important;
+        grid-template-columns: repeat(6, 1fr) !important;
     }
     .crm-drawer-overlay.is-document .crm-drawer-body.modal-form-grid {
-        grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+        grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
         gap: 6px 10px !important;
         padding: 10px 16px !important;
     }
@@ -7199,6 +7199,12 @@ body[data-theme="dark"] .crm-table tr:hover td {
         font-size: 10px;
         padding: 0 4px;
     }
+    .crm-drawer-overlay.is-document .line-qty { max-width: 50px; }
+    .crm-drawer-overlay.is-document .line-price { max-width: 70px; }
+    .crm-drawer-overlay.is-document .line-discount1 { max-width: 50px; }
+    .crm-drawer-overlay.is-document .line-uom, 
+    .crm-drawer-overlay.is-document .line-tax { max-width: 65px; }
+    
     .crm-drawer-overlay.is-document .lines-editor-title {
         font-size: 12px;
         margin-bottom: 6px;

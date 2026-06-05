@@ -5106,8 +5106,9 @@ function costruisciCampiFormModal(pageName, record = null) {
 
 function getFormFieldGroup(pageName, key, type) {
     if (type === 'textarea' || key === 'note') return 'note';
-    if (pageName === 'ordiniVendita' && ['numero', 'cliente', 'contatto', 'rifCliente', 'referente', 'agente', 'listaPrezzi', 'canale', 'data'].includes(key)) return 'identita';
-    if (pageName === 'ordiniVendita' && ['dataConsegna', 'priorita', 'stato', 'terminiPagamento', 'statoPagamento', 'porto', 'vettore', 'dataPrevistaFattura'].includes(key)) return 'stato';
+    if (['preventivi', 'ordiniVendita', 'ddtVendita', 'preventiviAcquisto', 'ordiniAcquisto', 'ddtAcquisto'].includes(pageName)) {
+        return 'identita';
+    }
     if (['email', 'telefono', 'referente'].includes(key)) return 'contatti';
     if (pageName === 'prodotti' && ['codice', 'alias', 'nome', 'tipo', 'categoria', 'sottocategoria', 'gruppo', 'brand', 'produttore', 'sku', 'barcode', 'metel', 'codDocumento'].includes(key)) return 'identita';
     if (pageName === 'prodotti' && ['prezzoVendita', 'prezzoAcquisto', 'iva', 'unitaMisura', 'quantitaConfezione', 'quantitaEsistente', 'provvigione', 'magazzino', 'peso', 'volume'].includes(key)) return 'tecnico';

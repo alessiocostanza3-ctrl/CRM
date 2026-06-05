@@ -4134,7 +4134,7 @@ function renderDatabaseTable(container, pageName) {
                         <i class="fas fa-upload"></i> Carica CSV
                     </button>
                     <button class="btn-primary" onclick="apriModalGenericCrea()">
-                        <i class="fas fa-plus"></i> Aggiungi Record
+                        <i class="fas fa-plus"></i> Nuovo
                     </button>
                 </div>
             </div>
@@ -5346,7 +5346,7 @@ function apriModalGenericCrea() {
         </button>
     `;
 
-    drawer.classList.add('active');
+    drawer.classList.add('active', 'is-document');
 
     const body = document.getElementById('crm-drawer-body');
     const footer = document.getElementById('crm-drawer-footer');
@@ -5394,7 +5394,7 @@ function apriModalGenericModifica(id) {
         </button>
     `;
 
-    drawer.classList.add('active');
+    drawer.classList.add('active', 'is-document');
     attivaModificaInDrawer(paginaAttuale, id);
 }
 

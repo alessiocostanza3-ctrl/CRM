@@ -7163,6 +7163,9 @@ body[data-theme="dark"] .crm-table tr:hover td {
     .crm-drawer-overlay.is-document .drawer-info-item.full-width {
         grid-column: 1 / -1 !important;
     }
+    .crm-drawer-overlay.is-document .form-field.field-full {
+        grid-column: 1 / -1 !important;
+    }
 }
 
 .crm-drawer-content {
